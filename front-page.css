@@ -1,18 +1,41 @@
+/*This Block of code is global, Placed this css code here until site will turn to responsive*/
+/******Global CSS start from here******/
+#mainWrapper {width: 100% !important;}
+#content_wrapper {padding: 0 !important;}
+/*Temp Code End Here*/
 .page .content {
-  width: 100%;
-  max-width: 100%;
+  width: auto;
+  max-width: 80rem;
   padding: 0;
   font-family: ubuntu;
-  color: #303030
+  color: #303030;
+  margin: 0.5rem;
 }
 
-.ui-mobile-viewport .page .content {
-  padding: 0
+/*Global CSS end here*/
+
+/****Mobile Theme CSS Code Start Here******/
+
+
+/*Mobile Theme CSS Code End Here*/
+
+/*Front Page Specific CSS code End Here*/
+
+
+/*******Front Page Specific CSS code Start Here*******/
+.col-row {display: flex;flex-direction: column;}
+.col-deal, .col-afg {
+  width: 100%;
+}
+@media (min-width: 980px){
+  .col-row {flex-direction: row;}
+  .col-deal, .col-afg {
+    width: 50%;
+  }
 }
 
-#content_wrapper {
-  padding-top: 0
-}
+/*Front Page Specific CSS code End Here*/
+
 
 .featuredItems,
 .experts-carousel {
@@ -499,18 +522,6 @@ p.vfHeading {
 p.vfCaption {
   font-size: .7em;
   color: #707070
-}
-
-.container.home {
-  position: relative;
-  z-index: 3;
-  max-width: 1170px;
-  padding: 0;
-  overflow: hidden
-}
-
-.homeWrapper {
-  position: relative
 }
 
 .hpBlueBar {
@@ -1371,11 +1382,7 @@ a.tcell span {
   postion: relative;
   height: 100%
 }
-
-.col-deal {
-  margin-right: 10px;
-}
-
+.col-deal
 span.dealShop {
   display: block;
   text-align: center;
@@ -1386,37 +1393,6 @@ span.dealShop {
   font-weight: 500;
   position: relative;
   z-index: 1
-}
-
-.col-deal,
-.col-afg {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.col-row {
-  display: flex;
-  flex-wrap: wrap
-}
-
-.col-row:after {
-  clear: both;
-  display: table;
-  content: '';
-}
-
-.col-deal {
-  float: left;
-  max-width: 622px;
-  width: 60%;
-  flex: 1 1 60%
-}
-
-.col-afg {
-  float: right;
-  width: 40%;
-  flex: 1 1 40%
 }
 
 a.dealBanner {
@@ -1434,21 +1410,6 @@ a.dealBanner:active {
 
 .dealBanner img {
   max-width: 100%;
-}
-
-@media (min-width:768px) {
-  .col-row {
-    display: flex;
-    flex-wrap: inherit;
-  }
-}
-
-
-.ui-mobile-viewport .col-deal,
-.ui-mobile-viewport .col-afg {
-  width: 100%;
-  float: none;
-  flex: 100%
 }
 
 .imgIco.stereo {
@@ -1515,10 +1476,6 @@ a.dealBanner:active {
 span.icoLabel {
   display: block;
   padding: 5px
-}
-
-.ui-mobile-viewport .col-deal {
-  padding-left: 10px;
 }
 
 .dealBannerImg {
