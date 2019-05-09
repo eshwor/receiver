@@ -665,7 +665,8 @@ span.sliderCta {
 }
 
 .promoUnit .promoContent {
-  overflow: hidden
+  overflow: hidden;
+  max-width: 50%;
 }
 
 .promoContent,
@@ -685,8 +686,9 @@ a .promoContent span {
 }
 
 .promoUnit .promoImg {
-  float: left;
-  margin: 10px 15px 0 0
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 .promoUnit a img {
