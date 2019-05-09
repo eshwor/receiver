@@ -1673,35 +1673,38 @@ border:solid 1px #014a77;
 
 
 /*Extra Small devices as default as the project is mobile first design*/
-body {
-  background: black;
+.catMenu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+  justify-content: center;
 }
+.catMenu .catItemWrapper {
+  width: 30%;
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
-  body{
-    background: blue;
-  }
+  
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
- body {
-   background: green;
- }
-
+  .catMenu .catItemWrapper {
+    width: 20%;
+  }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
-  body {
-    background: yellow;
+  .catMenu .catItemWrapper {
+    width: 12.5%;
   }
-
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
-  body {
-    background: gray;
-  }
+  
 }
