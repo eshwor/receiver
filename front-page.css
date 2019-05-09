@@ -13,6 +13,9 @@
     padding: 0 !important;
     margin: 1rem auto !important;
 }
+#heroWrapper + div {
+  margin: 0.5rem;
+}
 .page { 
   max-width: 75rem;
   margin: 0 auto;
