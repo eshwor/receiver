@@ -1,15 +1,4 @@
 
-.bootstrap-iso .mix {
-  float: left;
-  width: 25%;
-  padding: 7px
-}
-
-.ui-mobile-viewport .bootstrap-iso .mix {
-  width: 100%;
-  padding: 5px
-}
-
 .infoContainer,
 .bootstrap-iso .mix a.brand {
   position: relative;
@@ -557,10 +546,6 @@ p.vinfo {
   margin: 0;
   background: #fff;
   padding: 8px
-}
-
-.product-carousel {
-  padding: 7px
 }
 
 .ui-mobile-viewport .saleBanner {
@@ -1639,7 +1624,7 @@ ul.catMenu li.brandItemWrapper a:active {
 }
 
 /*Nosto Product Carousel Which Is Related You've Visited*/
-.nosto-product-carousel .fProd {
+.nosto-product-carousel .fProd, .sales-item-wrapper .product-carousel {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1647,12 +1632,19 @@ ul.catMenu li.brandItemWrapper a:active {
 .nosto-product-carousel .fProd .nosto.mix {
   width: 50% !important;
   float: none!important;
-  border: 1px solid;
   padding: 1rem;
 }
+
+/**Sales Item**/
+.sales-item-wrapper .product-carousel .mix.saleItem {
+  width: 100%;
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
-  
+  .sales-item-wrapper .product-carousel .mix.saleItem {
+    width: 50%;
+  }
 }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
@@ -1670,6 +1662,9 @@ ul.catMenu li.brandItemWrapper a:active {
   }
   .nosto-product-carousel .fProd .nosto.mix {
     width: 20% !important;
+  }
+  .sales-item-wrapper .product-carousel .mix.saleItem {
+    width: 25%;
   }
 }
 /* Extra large devices (large desktops, 1200px and up)*/
