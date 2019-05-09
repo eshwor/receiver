@@ -3,6 +3,9 @@
 #mainWrapper {
   width: 100% !important;
 }
+.afgWrapper {
+  padding: 0 !important;
+}
 /*Temp Code End Here*/
 #heroWrapper {
     border: 1px solid red;
@@ -17,6 +20,7 @@
   max-width: 75rem;
   margin: 0 auto; /*make it center*/
   border: 1px solid red;
+  padding: 0rem;
 }
 .page .content:not(.container) {
   width: auto;
@@ -47,9 +51,17 @@
   width: 100%;
 }
 @media (min-width: 980px){
-  .col-row {flex-direction: row;}
+  .col-row {
+    flex-direction: row;
+  }
   .col-afg {
     width: 60%;
+    flex: 1 60%;
+    margin-left: 0.5rem;
+  }
+  .col-deal {
+    margin-right: 0.5rem;
+    width: 50%;
   }
 }
 
@@ -566,11 +578,7 @@ p.vfCaption {
 }
 
 .homeWrapper .afg-content {
-  display: block;
-  padding: 15px;
-  height: auto;
-  border: none;
-  background-position: 65% 20%
+  padding: 1rem;
 }
 
 .afgBrand img {
