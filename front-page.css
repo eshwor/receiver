@@ -46,7 +46,10 @@
 
 
 /*******Front Page Specific CSS code Start Here*******/
-.col-row {display: flex;flex-direction: column;}
+.col-row {
+  display: none;
+  flex-direction: column;
+}
 .col-deal, .col-afg {
   width: 100%;
 }
