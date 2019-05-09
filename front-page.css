@@ -1,10 +1,4 @@
 
-.featuredItems,
-.experts-carousel {
-  position: relative;
-  margin-bottom: 15px
-}
-
 .bootstrap-iso .mix {
   float: left;
   width: 25%;
@@ -1610,7 +1604,8 @@ border:solid 1px #014a77;
 
 
 /*Extra Small devices as default as the project is mobile first design*/
-.catMenu {
+/*Featured catMenu, car stereos, car subwoofers, car speacker etc*/
+.featuredItems .catMenu {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -1618,7 +1613,7 @@ border:solid 1px #014a77;
   padding: 0;
   justify-content: center;
 }
-.catMenu .catItemWrapper {
+.featuredItems .catMenu .catItemWrapper {
   width: 30%;
 }
 
@@ -1643,25 +1638,41 @@ ul.catMenu li.brandItemWrapper a:active {
   background: #eee
 }
 
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { 
-  
+/*Nosto Product Carousel Which Is Related You've Visited*/
+.nosto-product-carousel .nostoSlideWrapper .featContain .fProd {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+  width: 50%;
 }
 
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+  .nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+    width: 25%;
+  }
+}
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
-  .catMenu .catItemWrapper {
+  .featuredItems .catMenu .catItemWrapper {
+    width: 20%;
+  }
+  .nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+    width: 25%;
+  }
+}
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  .featuredItems .catMenu .catItemWrapper {
+    width: 12.5%;
+  }
+  .nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
     width: 20%;
   }
 }
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { 
-  .catMenu .catItemWrapper {
-    width: 12.5%;
-  }
-}
-
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
   
