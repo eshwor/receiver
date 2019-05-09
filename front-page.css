@@ -11,6 +11,12 @@
   color: #303030;
   margin: 0.5rem;
 }
+@media (min-width: 980px){
+  .page .content {
+    margin: 0.5rem auto;
+  }
+}
+
 
 /*Global CSS end here*/
 
