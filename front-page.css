@@ -1639,19 +1639,17 @@ ul.catMenu li.brandItemWrapper a:active {
 }
 
 /*Nosto Product Carousel Which Is Related You've Visited*/
-.nosto-product-carousel .nostoSlideWrapper .featContain .fProd {
-  display: flex;
+.nosto-product-carousel .fProd {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+.nosto-product-carousel .fProd .nosto.mix {
   width: 50%;
 }
-
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
-  .nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+  .nosto-product-carousel .fProd .nosto.mix {
     width: 25%;
   }
 }
@@ -1660,7 +1658,7 @@ ul.catMenu li.brandItemWrapper a:active {
   .featuredItems .catMenu .catItemWrapper {
     width: 20%;
   }
-  .nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+  .nosto-product-carousel .fProd .nosto.mix {
     width: 25%;
   }
 }
@@ -1669,7 +1667,7 @@ ul.catMenu li.brandItemWrapper a:active {
   .featuredItems .catMenu .catItemWrapper {
     width: 12.5%;
   }
-  .nosto-product-carousel .nostoSlideWrapper .featContain .fProd .nosto.mix {
+  .nosto-product-carousel .fProd .nosto.mix {
     width: 20%;
   }
 }
