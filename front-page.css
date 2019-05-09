@@ -13,7 +13,7 @@
     padding: 0 !important;
     margin: 1rem auto !important;
 }
-#heroWrapper + div {
+#heroWrapper:first-child {
   margin: 0.5rem;
 }
 .page { 
