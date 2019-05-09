@@ -3,9 +3,6 @@
 #mainWrapper {
   width: 100% !important;
 }
-#content_wrapper {
-  padding: 0 !important;
-}
 /*Temp Code End Here*/
 #heroWrapper {
     border: 1px solid red;
@@ -21,7 +18,7 @@
   margin: 0 auto; /*make it center*/
   border: 1px solid red;
 }
-.page .content {
+.page .content:not(.container) {
   width: auto;
   padding: 0;
   font-family: ubuntu;
