@@ -1612,7 +1612,7 @@ ul.catMenu li.brandItemWrapper a:active {
 }
 
 /*Nosto Product Carousel Which Is Related You've Visited*/
-.nosto-product-carousel .fProd, .sales-item-wrapper .product-carousel, .promo-item-wrapper {
+.nosto-product-carousel .fProd, .sales-item-wrapper .product-carousel, .promo-item-wrapper .clearfix {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
