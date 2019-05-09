@@ -1624,21 +1624,15 @@ span.hpbannerCta {
   font-weight: 500;
   border-radius: 0 0 3px 3px
 }
-
 .banner3-container {
-      overflow: hidden;
-      border-radius: 0.2rem;
-      margin-right: 0.5rem;
-      text-align:center;
-      max-width:1162px;
-   
-    }
-
-
-      .banner3ImageMobile {
-border:solid 1px #014a77;
-       display:none;
-     }
+  border-radius: 3px;
+  text-align:center;
+  overflow: hidden;
+}
+.banner3ImageMobile {
+  border:solid 1px #014a77;
+  display:none;
+}
 
 .banner3-container .cerwin-head {
       display: inline-block;
