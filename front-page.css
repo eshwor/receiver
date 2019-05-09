@@ -1645,13 +1645,14 @@ ul.catMenu li.brandItemWrapper a:active {
   flex-wrap: wrap;
 }
 .nosto-product-carousel .fProd .nosto.mix {
-  width: 50%;
+  width: 50% !important;
+  float: none!important;
+  border: 1px solid;
+  padding: 1rem;
 }
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
-  .nosto-product-carousel .fProd .nosto.mix {
-    width: 25%;
-  }
+  
 }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
