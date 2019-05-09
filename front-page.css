@@ -428,10 +428,9 @@ p.sectionHeading {
 }
 
 ul.catMenu {
-  list-style: none;
-  margin: 0;
-  padding: 0 4px
+
 }
+
 
 ul.catMenu li.catItemWrapper {
   float: left;
@@ -518,6 +517,8 @@ ul.catMenu li.brandItemWrapper a:hover,
 .ui-mobile-viewport ul.catMenu li a {
   border-color: #d1d1d1
 }
+/*New Catmenu Start from here*/
+
 
 .afg-mobile-home-content .drop-down-container::after {
   margin-top: -12px;
@@ -1677,3 +1678,37 @@ border:solid 1px #014a77;
       display:none;
     }
     }
+
+
+
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+  body{
+    background: blue;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+ body {
+   background: green;
+ }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  body {
+    background: yellow;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+  body {
+    background: gray;
+  }
+}
