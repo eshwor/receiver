@@ -1555,6 +1555,7 @@ a.tcell {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     margin-right: 0.5rem;
+    max-width: 532px;
   }
   .featuredItems .catMenu .catItemWrapper {
     width: 20%;
