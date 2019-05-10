@@ -411,7 +411,7 @@ p.vfCaption {
 }
 
 .homeWrapper .afg-content {
-  padding: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
 }
 
 .afgBrand img {
@@ -1453,6 +1453,9 @@ span.hpbannerCta {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .col-deal, .col-afg {
@@ -1545,16 +1548,14 @@ a.tcell {
 
 @media (min-width: 1024px) {
   .col-afg {
-    width: 50%;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    margin-left: 0.5rem;
+    width: 49%;
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
   }
   .col-deal {
     width: 50%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    margin-right: 0.5rem;
     max-width: 532px;
   }
   .col-deal {

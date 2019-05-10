@@ -409,7 +409,7 @@ p.vfCaption {
 }
 
 .homeWrapper .afg-content {
-  padding: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
 }
 
 .afgBrand img {
@@ -1431,6 +1431,7 @@ span.hpbannerCta {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 1rem 0;
+    justify-content: space-between;
 }
 .col-deal, .col-afg {
   width: 100%
@@ -1503,14 +1504,12 @@ a.tcell {
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .col-afg {
-        width: 50%;
-        flex-basis: 50%;
-        margin-left: 0.5rem;
+        width: 49%;
+        flex-basis: 49%;
     }
     .col-deal {
         width: 50%;
         flex-basis: 50%;
-        margin-right: 0.5rem;
         max-width: 532px;
     } 
     .col-deal {margin-bottom: 0;} /*reset it for desktop view*/
