@@ -1386,8 +1386,7 @@ span.hlign {
 
 span.hpbannerCta {
   display: block;
-  padding: 10px;
-  padding-top: 0;
+  padding: 10px 0;
   text-align: center;
   color: #fff;
   background: #000000;
@@ -1561,6 +1560,19 @@ a.tcell {
     margin-bottom: 0;
   }
   /*reset it for desktop view*/
+  /*Adjust the deal Banner for desktop view*/
+  a.dealBanner {
+    height: 100%;
+  }
+  a.dealBanner .hpbannerCta {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  a.dealBanner img {
+    position: absolute;
+    height: 100%;
+  }
   .featuredItems .catMenu .catItemWrapper {
     width: 20%;
   }
