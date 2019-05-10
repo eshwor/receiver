@@ -1540,6 +1540,11 @@ a.tcell {
   .sales-item-wrapper .product-carousel .mix.saleItem, .promo-item-wrapper .clearfix .promoUnit {
     width: 50%;
   }
+  /*Bootstrap Override * Temp*/
+  .col-sm-3 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
 
 }
 @media (min-width: map-get($grid-breakpoints, md)) { 
