@@ -22,7 +22,7 @@
     padding: 0rem;
   }
   .page .content:not(.container) {
-    width: auto;
+    width: auto !important;
     padding: 0;
     font-family: ubuntu;
     color: #303030;
