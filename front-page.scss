@@ -1525,8 +1525,8 @@ a.tcell {
         }
     }
     .featuredItems .catMenu .catItemWrapper {
-        width: 20%;
-    }
+        width: 12.5%;
+      }
   .nosto-product-carousel .fProd .nosto.mix {
     width: 25% !important;
   }
@@ -1536,9 +1536,6 @@ a.tcell {
 
 }
 @media (min-width: map-get($grid-breakpoints, md)) { 
-  .featuredItems .catMenu .catItemWrapper {
-    width: 12.5%;
-  }
   .nosto-product-carousel .fProd .nosto.mix {
     width: 20% !important;
   }
