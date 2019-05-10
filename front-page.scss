@@ -1426,25 +1426,9 @@ span.hpbannerCta {
 }
 
 /*******Front Page Specific CSS code Start Here*******/
-.col-row {
-  flex-direction: column;
-}
+
 .col-deal, .col-afg {
   width: 100%;
-}
-@media (min-width: 980px){
-  .col-row {
-    flex-direction: row;
-  }
-  .col-afg {
-    width: 60%;
-    flex: 1 60%;
-    margin-left: 0.5rem;
-  }
-  .col-deal {
-    margin-right: 0.5rem;
-    width: 50%;
-  }
 }
 .featuredItems .catMenu {
   display: flex;
@@ -1510,10 +1494,22 @@ a.tcell {
   width: 100%;
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) { 
-  .featuredItems .catMenu .catItemWrapper {
-    width: 20%;
-  }
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .col-row {
+        flex-direction: row;
+        }
+        .col-afg {
+        width: 60%;
+        flex: 1 60%;
+        margin-left: 0.5rem;
+        }
+        .col-deal {
+        margin-right: 0.5rem;
+        width: 50%;
+    } 
+    .featuredItems .catMenu .catItemWrapper {
+        width: 20%;
+    }
   .nosto-product-carousel .fProd .nosto.mix {
     width: 25% !important;
   }
