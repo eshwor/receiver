@@ -1452,6 +1452,7 @@ span.hpbannerCta {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 1rem 0;
 }
 
 .col-deal, .col-afg {
@@ -1543,22 +1544,17 @@ a.tcell {
 }
 
 @media (min-width: 1024px) {
-  .col-row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   .col-afg {
-    width: 60%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 60%;
-            flex: 1 60%;
+    width: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     margin-left: 0.5rem;
   }
   .col-deal {
-    margin-right: 0.5rem;
     width: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-right: 0.5rem;
   }
   .featuredItems .catMenu .catItemWrapper {
     width: 20%;

@@ -1430,6 +1430,7 @@ span.hpbannerCta {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 1rem 0;
 }
 .col-deal, .col-afg {
   width: 100%
@@ -1501,17 +1502,15 @@ a.tcell {
 }
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
-    .col-row {
-        flex-direction: row;
-        }
-        .col-afg {
-        width: 60%;
-        flex: 1 60%;
-        margin-left: 0.5rem;
-        }
-        .col-deal {
-        margin-right: 0.5rem;
+    .col-afg {
         width: 50%;
+        flex-basis: 50%;
+        margin-left: 0.5rem;
+    }
+    .col-deal {
+        width: 50%;
+        flex-basis: 50%;
+        margin-right: 0.5rem;
     } 
     .featuredItems .catMenu .catItemWrapper {
         width: 20%;
