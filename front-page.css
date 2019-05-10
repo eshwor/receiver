@@ -1190,6 +1190,8 @@ a.dealBanner {
   position: relative;
   border-radius: 3px 3px 0 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 a.dealBanner:hover,
@@ -1556,7 +1558,6 @@ a.tcell {
     width: 50%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    max-width: 532px;
   }
   .col-deal {
     margin-bottom: 0;

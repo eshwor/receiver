@@ -1182,7 +1182,9 @@ a.dealBanner {
   display: block;
   position: relative;
   border-radius: 3px 3px 0 0;
-  overflow: hidden
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 a.dealBanner:hover,
@@ -1510,7 +1512,6 @@ a.tcell {
     .col-deal {
         width: 50%;
         flex-basis: 50%;
-        max-width: 532px;
     } 
     .col-deal {margin-bottom: 0;} /*reset it for desktop view*/
     .featuredItems .catMenu .catItemWrapper {
