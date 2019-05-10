@@ -1545,6 +1545,15 @@ a.tcell {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .featuredItems .catMenu .catItemWrapper {
+    width: 25%;
+  }
+  .promo-item-wrapper .clearfix .promoUnit {
+    width: 50%;
+  }
+}
+
 @media (min-width: 1024px) {
   .col-afg {
     width: 49%;

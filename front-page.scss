@@ -1501,6 +1501,14 @@ a.tcell {
   width: 100%;
 }
 
+@media (min-width: map-get($grid-breakpoints, tbl)) {
+    .featuredItems .catMenu .catItemWrapper {
+        width: 25%;
+      }
+      .promo-item-wrapper .clearfix .promoUnit {
+        width: 50%;
+      }
+}
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .col-afg {
         width: 49%;
