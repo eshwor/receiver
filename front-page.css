@@ -1451,7 +1451,7 @@ span.hpbannerCta {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
