@@ -1557,6 +1557,10 @@ a.tcell {
     margin-right: 0.5rem;
     max-width: 532px;
   }
+  .col-deal {
+    margin-bottom: 0;
+  }
+  /*reset it for desktop view*/
   .featuredItems .catMenu .catItemWrapper {
     width: 20%;
   }
