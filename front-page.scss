@@ -1427,7 +1427,6 @@ span.hpbannerCta {
 
 /*******Front Page Specific CSS code Start Here*******/
 .col-row {
-  display: none;
   flex-direction: column;
 }
 .col-deal, .col-afg {
@@ -1447,13 +1446,6 @@ span.hpbannerCta {
     width: 50%;
   }
 }
-
-/*Front Page Specific CSS code End Here*/
-
-
-
-/*Extra Small devices as default as the project is mobile first design*/
-/*Featured catMenu, car stereos, car subwoofers, car speacker etc*/
 .featuredItems .catMenu {
   display: flex;
   flex-wrap: wrap;
@@ -1552,9 +1544,9 @@ a.tcell {
 
 }
 @media (min-width: map-get($grid-breakpoints, lg)) { 
-
+    
 }
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: map-get($grid-breakpoints, xl)) { 
-
+   
 }

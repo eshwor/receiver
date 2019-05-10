@@ -1443,7 +1443,6 @@ span.hpbannerCta {
 
 /*******Front Page Specific CSS code Start Here*******/
 .col-row {
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1474,9 +1473,6 @@ span.hpbannerCta {
   }
 }
 
-/*Front Page Specific CSS code End Here*/
-/*Extra Small devices as default as the project is mobile first design*/
-/*Featured catMenu, car stereos, car subwoofers, car speacker etc*/
 .featuredItems .catMenu {
   display: -webkit-box;
   display: -ms-flexbox;
