@@ -103,7 +103,7 @@ span.stars span:last-child {
   white-space: nowrap;
 }
 
-.bootstrap-iso button.ctaOrange {
+button.ctaOrange {
   display: block;
   width: 100%;
   font-size: 16px;
@@ -119,17 +119,17 @@ span.stars span:last-child {
   white-space: nowrap;
 }
 
-.bootstrap-iso button.ctaOrange:disabled {
+button.ctaOrange:disabled {
   opacity: .5;
   cursor: not-allowed;
 }
 
-.bootstrap-iso button.ctaOrange:disabled span,
+button.ctaOrange:disabled span,
 #freehp {
   display: none !important;
 }
 
-.bootstrap-iso .panel {
+.panel {
   margin-bottom: 0;
   background-color: transparent;
   border: none;
@@ -139,7 +139,7 @@ span.stars span:last-child {
   min-width: 350px;
 }
 
-.bootstrap-iso .items:before {
+.items:before {
   content: '';
   clear: both;
   display: table;
@@ -1442,8 +1442,24 @@ span.hpbannerCta {
 }
 
 /*******Front Page Specific CSS code Start Here*******/
+.col-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .col-deal, .col-afg {
   width: 100%;
+}
+
+.col-deal {
+  margin-bottom: 1rem;
 }
 
 .featuredItems .catMenu {
