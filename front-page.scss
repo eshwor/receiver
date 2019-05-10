@@ -1182,9 +1182,7 @@ a.dealBanner {
   display: block;
   position: relative;
   border-radius: 3px 3px 0 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+  overflow: hidden
 }
 
 a.dealBanner:hover,
@@ -1370,16 +1368,14 @@ span.hlign {
 
 span.hpbannerCta {
   display: block;
-  padding: 10px 0;
+  padding: 10px;
   padding-top: 0;
   text-align: center;
   color: #fff;
   background: #000000;
   font-size: 22px;
   font-weight: 500;
-  border-radius: 0 0 3px 3px;
-  position:absolute;
-  bottom: 0;
+  border-radius: 0 0 3px 3px
 }
 .banner3-container {
   border-radius: 3px;
