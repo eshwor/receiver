@@ -1448,52 +1448,6 @@ span.hpbannerCta {
   }
 }
 
-/*This Block of code is global, Placed this css code here until site will turn to responsive*/
-/******Global CSS start from here******/
-#mainWrapper {
-  width: 100% !important;
-}
-
-.afgWrapper {
-  padding: 0 !important;
-}
-
-/*Temp Code End Here*/
-#heroWrapper {
-  border: 1px solid red;
-  max-width: 75rem !important;
-  padding: 0 !important;
-  margin: 0rem auto !important;
-  /*make it center*/
-}
-
-#heroWrapper > div:first-child {
-  margin: 0.5rem;
-}
-
-.page {
-  max-width: 75rem;
-  margin: 0 auto;
-  /*make it center*/
-  border: 1px solid red;
-  padding: 0rem;
-}
-
-.page .content:not(.container) {
-  width: auto;
-  padding: 0;
-  font-family: ubuntu;
-  color: #303030;
-  margin: 0 0.5rem;
-}
-
-.container.content {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/*Global CSS end here*/
 /*******Front Page Specific CSS code Start Here*******/
 .col-row {
   display: none;
