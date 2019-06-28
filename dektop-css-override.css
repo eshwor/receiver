@@ -69,3 +69,4 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     outline:none !important;
 }
 .guidedBrowsingSliderWrapper .left, .guidedBrowsingSliderWrapper .right {background: none !important;}
+.clear_all {background: #115ea7 !important; }
