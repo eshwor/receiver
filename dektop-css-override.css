@@ -66,4 +66,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     background-size: contain;
     top: -7px !important;
 }
+.guidedBrowsingSliderWrapper .slider .ui-slider-handle.ui-state-focus {
+    outline:none !important;
+}
 .guidedBrowsingSliderWrapper .left, .guidedBrowsingSliderWrapper .right {background: none !important;}
