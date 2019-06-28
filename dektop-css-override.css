@@ -53,7 +53,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 #productContainer .belowTheFold > .main #productTabs .tab.active > a:after {    content: "" !important;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #115ea7;top: 100%;}
 #accessoryToolsAndProducts .tabs .tab a {background:#115ea7 !important; color:#FFFFFF !important;}
 #accessoryToolsAndProducts .tabs .tab a:hover {background:#737373 !important;}
-#accessoryToolsAndProducts .tabs .tab.active a, .promotionalContent > div {background:#737373 !important;}
+#accessoryToolsAndProducts .tabs .tab.active a {background:#737373 !important;}
 .promotionalContent div p { margin:0 !important; padding:10px 0;}
 .ui-tooltip, .qtip {border-radius: 10px !important;}
 .ui-tooltip-tipped .ui-tooltip-content {background: #737373ed !important;color: #FFF !important;border-color: #737373 !important;border-radius: 3px !important;border: none !important;padding:1rem !important;}
