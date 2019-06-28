@@ -59,7 +59,6 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .ui-tooltip-tipped .ui-tooltip-content {background: #737373ed !important;color: #FFF !important;border-color: #737373 !important;border-radius: 3px !important;border: none !important;padding:1rem !important;}
 .guidedBrowsingSliderWrapper .slider, .guidedBrowsingSliderWrapper .slider .ui-slider-range {
     background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderBar.png') no-repeat;
-    width: 135px !important;
 }
 .guidedBrowsingSliderWrapper .slider .ui-slider-handle {
     background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderCircle.png') no-repeat;
