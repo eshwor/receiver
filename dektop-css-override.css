@@ -1,3 +1,44 @@
-body {
-    background: blue !important;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
+.itemCount {position: absolute;top: -7px;left: 5px;width: 20px;height: 20px;background: #FCA40A;color: #000000;font-weight: bold;border-radius: 100%;z-index: 2;}
+.itemCount>span {position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);font-size: 12px;}
+.bg-yellow {background: #FCA40A !important;} 
+.bg-blue {background: #115ea7 !important;}
+.bg-dark-blue {background: #034977 !important;}
+.bg-blue-gradient {background-image: linear-gradient(#034977, #115ea7) !important;color: #FFFFFF !important;}
+.bg-gold-gradient {background-image: linear-gradient(#Fdcf77, #FCA40A) !important;color: #000000 !important;}
+.bg-white-gradient {background-image: linear-gradient(#FFFFFF, #C7C7C7) !important;}
+.bg-gray {background: #737373 !important;}
+.bg-lightgray {background: #F1F1F1 !important;}
+.bg-none {background: none !important;}
+.text-link, .text-blue {color: #115ea7 !important;}
+.text-black {color: #000000 !important;}
+.breadcrumbs {color:#115ea7!important; margin:10px !important;}
+.categorySideNavigation>.categoriesList a:hover {color:#115ea7!important;}
+.breadcrumbs a:hover {color: inherit!important;text-decoration: underline;}
+#footer .information .links a, #footer .information .links h3 {color:#FFFFFF !important;}
+#footer .information .links a:hover, #footer .information .links a:focus, #footer .information .links a:active {text-decoration:underline;}
+#productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a {color: #115ea7 !important;}
+.orangeButton {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;}
+.orangeButton:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
+.yellowButton, .greenButton {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;}
+.yellowButton:hover, .greenButton:hover {background-image: linear-gradient(#000000, #737373)!important;}
+.buyWithPaypal {border:2px solid !important;}
+.productName a {color: #115ea7!important;font-weight: bold;}
+.overflowAnchor {color:#737373 !important; padding:2px 5px !important; font-weight:bold;border:1px solid;}
+.categoryLeafTable .productRow .productMedia .mediaLinks a {color:#115ea7!important;}
+a.select-vehicle.afgSelectVehicleNewBtn {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
+a.select-vehicle.afgSelectVehicleNewBtn:hover, a.select-vehicle.afgSelectVehicleNewBtn:focus, a.select-vehicle.afgSelectVehicleNewBtn:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
+#productContainer > .header > h1 {color: #115ea7!important;}
+#freeInstallationAccessories,.seeMore {background: #115ea7 !important;}
+.afg-content .checkVehicleFit .checkVehicleAnchor {color: #115ea7 !important;}
+#productContainer .belowTheFold > .main #productTabs .tab > a {background: #737373 !important;color:#FFFFFF!important;}
+#productContainer .belowTheFold > .main #productTabs .tab > a:hover,#productContainer .belowTheFold > .main #productTabs .tab > a:focus {background: #C7C7C7 !important; color:#000000 !important;}
+#productContainer .belowTheFold > .main #productTabs .tab.active > a {background:#115ea7 !important;color:#FFFFFF!important;}
+#productContainer .belowTheFold > .main #productTabs .tab.active > a:after {    content: "" !important;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #115ea7;top: 100%;}
+#accessoryToolsAndProducts .tabs .tab a {background:#115ea7 !important; color:#FFFFFF !important;}
+#accessoryToolsAndProducts .tabs .tab a:hover {background:#737373 !important;}
+#accessoryToolsAndProducts .tabs .tab.active a, .promotionalContent > div {background:#737373 !important;}
+.promotionalContent div p { margin:0 !important; padding:10px 0;}
+.ui-tooltip, .qtip {border-radius: 10px !important;}
+.ui-tooltip-tipped .ui-tooltip-content {background: #737373ed !important;color: #FFF !important;border-color: #737373 !important;border-radius: 3px !important;border: none !important;padding:1rem !important;}
