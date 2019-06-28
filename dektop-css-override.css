@@ -17,11 +17,11 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .position-absolute {position: absolute !important;}
 .position-relative {position: relative !important;}
 .breadcrumbs {color:#115ea7!important; margin:10px !important;}
-.categorySideNavigation>.categoriesList a:hover {color:#115ea7!important;}
+.categorySideNavigation>.categoriesList a:hover {color:#FFFFFF!important;}
 .breadcrumbs a:hover {color: inherit!important;text-decoration: underline;}
 #footer .information .links a, #footer .information .links h3 {color:#FFFFFF !important;}
 #footer .information .links a:hover, #footer .information .links a:focus, #footer .information .links a:active {text-decoration:underline;}
-#productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a {color: #115ea7 !important;}
+#productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a, .vehicleSpecificAccessoriesContainer a {color: #115ea7 !important;}
 .orangeButton, .checkoutMain {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;}
 .orangeButton:hover, .checkoutMain:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
 .yellowButton, .greenButton, .make_offer {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;}
@@ -70,3 +70,4 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 }
 .guidedBrowsingSliderWrapper .left, .guidedBrowsingSliderWrapper .right {background: none !important;}
 .clear_all {background: #115ea7 !important; }
+.shoppingCart a .itemCount > span {background: none !important; color:#000000 !important;}
