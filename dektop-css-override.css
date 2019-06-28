@@ -62,7 +62,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     width: 135px !important;
 }
 .guidedBrowsingSliderWrapper .slider .ui-slider-handle {
-    background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderCircle.png') !important;
+    background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderCircle.png') no-repeat;
     background-size: contain;
     top: -7px !important;
 }
