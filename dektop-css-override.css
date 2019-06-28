@@ -30,6 +30,14 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     color: #FFFFFF !important;
     border: 1px solid #0299fe !important;
 }
+.blue-btn-unique {
+    left: 1rem;
+    right: 1rem;
+    padding: 10px;
+    bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
 .blue-btn:hover, .blue-btn-unique:hover, a.select-vehicle.afgSelectVehicleNewBtn:hover {background-image: linear-gradient(#115ea7, #0299fe)!important;}
 .buyWithPaypal {border:2px solid !important;}
 .productName a {color: #115ea7!important;font-weight: bold;}
