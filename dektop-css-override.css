@@ -16,14 +16,14 @@
 .information .flex-wrap {display:flex !important;}
 .information .flex-wrap > div {width: 25% !important;}
 #footer .information .links {width: 100% !important;}
-.trackmyorder, .call-expert { width: 50%; padding: 0.5rem; }
+.trackmyorder, .call-expert { width: 50%; padding: 0.5rem; text-align: center;}
 .trackmyorder a, .call-expert a { font-size: calc(1rem + 0.5vw); text-decoration: none; }
 .trackmyorder a:hover, .call-expert a:hover { text-decoration: underline; }
 .pt-4 {padding-top: 1rem;}
 .footer-social-section {padding:1rem; text-align: center;}
 .footer-social-section a {margin: 1rem; }
 .custom-mw-4 {max-width:4rem;}
-.h4 {color: #FFFFFF !important; margin-bottom:5px;font-family: 'Ubuntu', sans-serif !important;display:inline-block;}
+.section span.h4 {color: #FFFFFF !important; margin-bottom:5px;font-family: 'Ubuntu', sans-serif !important;display:inline-block;font-size: 1.3rem;}
 /*FOOTER END*/
 a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .itemCount {position: absolute;top: -7px;left: 5px;width: 20px;height: 20px;background: #FCA40A;color: #000000;font-weight: bold;border-radius: 100%;z-index: 2;}
