@@ -1,3 +1,42 @@
-body {
-    background: green !important;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
+.bg-yellow {background: #FCA40A !important;} 
+.bg-blue {background: #115ea7 !important;}
+.bg-dark-blue {background: #034977 !important;}
+.bg-blue-gradient {background-image: linear-gradient(#034977, #115ea7) !important;color: #FFFFFF !important;}
+.bg-gold-gradient {background-image: linear-gradient(#Fdcf77, #FCA40A) !important;color: #000000 !important;}
+.bg-white-gradient {background-image: linear-gradient(#FFFFFF, #C7C7C7) !important;}
+.bg-gray {background: #737373 !important;}
+.bg-lightgray {background: #F1F1F1 !important;}
+.bg-none {background: none !important;}
+.text-link, .text-blue {color: #115ea7 !important;}
+.text-black {color: #000000 !important;}
+.footer-btn span.ui-btn-inner {background: #115ea7 !important;}
+.footer-tab {border-top: 1px solid #FFFFFF !important;}
+.footer .footer-tab .footer-btn + .footer-btn {border-left: 1px solid #FFFFFF !important;}
+.nav-bar.footer.phone-email a.eSignupBtn {background: #115ea7 !important;border-left: 1px solid #FFFFFF !important;}
+.nav-bar.footer a {background: #115ea7 !important;}
+.carInformation .carInformationProduct #car-edit a, .callInBtn {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important;border: 1px solid #0299fe !important;}
+.carInformation .carInformationProduct #car-edit a:active, .callInBtn:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
+.orangeButton:not(.buyWithPaypal) {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;}
+.orangeButton:not(.buyWithPaypal):active {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
+.yellowButton, .greenButton, .toggleFreshDesk.freshDeskToggle {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;}
+.yellowButton:active, .greenButton:active, .toggleFreshDesk.freshDeskToggle:hover {background-image: linear-gradient(#000000, #737373)!important;}
+.descriptionWrap .description-list .readfull {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
+.descriptionWrap .description-list .readfull {background-image: linear-gradient(#115ea7, #0299fe)!important;}
+.descriptionWrap .description-list .ui-collapsible-heading {background: #115ea7 !important;}
+a.freeinstallpr{color:#737373!important;}
+.priceShipping .pRice {color:#000000 !important;}
+.content-category .ui-btn .ui-btn-inner .ui-btn-text .ui-link-inherit .right-part-cat-leaf .price-div {color: #636363 !important;}
+#categoryLeafContent .pairedPromo p {color:#737373!important;}
+a.navigationArrow.prevArrow.ui-link, a.navigationArrow.nextArrow.ui-link {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important; border: 1px solid #0299fe !important;}
+a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
+.ui-grid-a.photowr .ui-link, #reviewsLink, #bundledSavingsSlider a, a.prodBuyingBuide, .ui-body-c .ui-link {color: #115ea7 !important;}
+.pText {font-size: 12px;padding: 0.5rem;}
+.page > .content .ui-listview .ui-icon-custom-arrow {content: "";position: absolute;right: 5px;top: 40%;border: 3px solid #115ea7;border-bottom: 0;border-right: 0;padding: 0px;-webkit-transform: translate(-50%, -50%) rotate(125deg);transform: translate(-50%, -50%) rotate(125deg);background: none;width: 12px;height: 12px;margin:0 !important;}
+#bundledSavingsSlider .sliderNavigation.next {content: "";position: absolute;right: 5px;top: 50%;border: 5px solid #115ea7;border-bottom: 0;border-right: 0;padding: 0px;-webkit-transform: translate(-50%, -50%) rotate(225deg);transform: translate(-50%, -50%) rotate(125deg);background: none !important; width: 21px;height: 20px;margin: 0 !important;right: 0px;}
+#bundledSavingsSlider .sliderNavigation.prev {content: "";position: absolute;right: 0px;top: 50%;border: 5px solid #115ea7;border-bottom: 0;border-right: 0;padding: 0px;-webkit-transform: translate(-50%, -50%) rotate(-45deg);transform: translate(-50%, -50%) rotate(-45deg);background: none !important;width: 21px;height: 20px;margin: 0 !important;left: 20px;}
+.promotionalContent div p { margin:0 !important; padding:10px 0;}
+.ui-tooltip, .qtip {border-radius: 10px !important;}
+.ui-tooltip-tipped .ui-tooltip-content {background: #737373ed !important;color: #FFF !important;border-color: #737373 !important;border-radius: 3px !important;border: none !important;padding:1rem !important;}
+.cCount {background: #FCA40A !important;border-color: #FCA40A!important;color: #000000 !important;font-size: 12px !important; font-weight: bold !important;border-radius: 100%;padding: 3px;}
