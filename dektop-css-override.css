@@ -10,7 +10,7 @@
 #footer .aboutSonic .contentContainer {background: #178ddf !important; border:none !important;}
 #footer .aboutSonic .contentContainer p {font-size: 1rem !important;}
 #footer .legal {padding:2rem !important;}
-#footer .legal > span, #footer .legal > a { color: #FFFFFF !important; font-size: 1rem !important; display:block !important;adding: 3px;}
+#footer .legal > span, #footer .legal > a { color: #FFFFFF !important; font-size: 1rem !important; display:block !important;padding: 3px;text-align: center;}
 #footer .legal {border:none !important;}
 #footer .innerWrap {background:none !important;}
 .information .flex-wrap {display:flex !important;}
@@ -20,7 +20,7 @@
 .trackmyorder a, .call-expert a { font-size: calc(1rem + 0.5vw); text-decoration: none; }
 .trackmyorder a:hover, .call-expert a:hover { text-decoration: underline; }
 .pt-4 {padding-top: 1rem;}
-.footer-social-section {padding:1rem;}
+.footer-social-section {padding:1rem; text-align: center;}
 .footer-social-section a {margin: 1rem; }
 .custom-mw-4 {max-width:4rem;}
 .h4 {color: #FFFFFF !important; margin-bottom:5px;font-family: 'Ubuntu', sans-serif !important;display:inline-block;}
