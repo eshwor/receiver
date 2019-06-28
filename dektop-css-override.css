@@ -13,8 +13,8 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .bg-none {background: none !important;}
 .text-link, .text-blue {color: #115ea7 !important;}
 .text-black {color: #000000 !important;}
+.position-absolute {position: absolute !important;}
 .position-relative {position: relative !important;}
-.text-link, .text-blue {color: #115ea7 !important;}
 .breadcrumbs {color:#115ea7!important; margin:10px !important;}
 .categorySideNavigation>.categoriesList a:hover {color:#115ea7!important;}
 .breadcrumbs a:hover {color: inherit!important;text-decoration: underline;}
@@ -25,12 +25,16 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .orangeButton:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
 .yellowButton, .greenButton {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;}
 .yellowButton:hover, .greenButton:hover {background-image: linear-gradient(#000000, #737373)!important;}
+.blue-btn, .blue-btn-unique, a.select-vehicle.afgSelectVehicleNewBtn  {
+    background-image: linear-gradient(#0299fe, #115ea7)!important;
+    color: #FFFFFF !important;
+    border: 1px solid #0299fe !important;
+}
+.blue-btn:hover, .blue-btn-unique:hover, a.select-vehicle.afgSelectVehicleNewBtn:hover {background-image: linear-gradient(#115ea7, #0299fe)!important;}
 .buyWithPaypal {border:2px solid !important;}
 .productName a {color: #115ea7!important;font-weight: bold;}
 .overflowAnchor {color:#737373 !important; padding:2px 5px !important; font-weight:bold;border:1px solid;}
 .categoryLeafTable .productRow .productMedia .mediaLinks a {color:#115ea7!important;}
-a.select-vehicle.afgSelectVehicleNewBtn {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
-a.select-vehicle.afgSelectVehicleNewBtn:hover, a.select-vehicle.afgSelectVehicleNewBtn:focus, a.select-vehicle.afgSelectVehicleNewBtn:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
 #productContainer > .header > h1 {color: #115ea7!important;}
 #freeInstallationAccessories,.seeMore {background: #115ea7 !important;}
 .afg-content .checkVehicleFit .checkVehicleAnchor {color: #115ea7 !important;}
