@@ -13,6 +13,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .bg-none {background: none !important;}
 .text-link, .text-blue {color: #115ea7 !important;}
 .text-black {color: #000000 !important;}
+.text-white {color: #FFFFFF !important;}
 .position-absolute {position: absolute !important;}
 .position-relative {position: relative !important;}
 .breadcrumbs {color:#115ea7!important; margin:10px !important;}
