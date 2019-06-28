@@ -13,6 +13,8 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .bg-none {background: none !important;}
 .text-link, .text-blue {color: #115ea7 !important;}
 .text-black {color: #000000 !important;}
+.position-relative {position: relative !important;}
+.text-link, .text-blue {color: #115ea7 !important;}
 .breadcrumbs {color:#115ea7!important; margin:10px !important;}
 .categorySideNavigation>.categoriesList a:hover {color:#115ea7!important;}
 .breadcrumbs a:hover {color: inherit!important;text-decoration: underline;}

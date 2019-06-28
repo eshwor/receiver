@@ -9,6 +9,8 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .bg-gray {background: #737373 !important;}
 .bg-lightgray {background: #F1F1F1 !important;}
 .bg-none {background: none !important;}
+.position-absolute {position: absolute !important;}
+.position-relative {position: relative !important;}
 .text-link, .text-blue {color: #115ea7 !important;}
 .text-black {color: #000000 !important;}
 .footer-btn span.ui-btn-inner {background: #115ea7 !important;}
