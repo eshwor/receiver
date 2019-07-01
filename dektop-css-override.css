@@ -103,3 +103,4 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .afg-content .drop-down-container.error .select2-container--default{box-shadow: 0px 0px 4px 0px red !important; border-color: red !important;}
 .afg-content .drop-down-container.error .errorMessage{color: red !important;}
 .subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
+.paypal-button.paypal-button-color-gold {background: #FFFFFF !important; border: 1px solid !important;}
