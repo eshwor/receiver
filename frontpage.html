@@ -1,2119 +1,340 @@
-<style type="text/css">.page .content {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    font-family: ubuntu;
-    color: #303030
-  }
-
-  .ui-mobile-viewport .page .content {
-    padding: 0
-  }
-
-  #content_wrapper {
-    padding-top: 0
-  }
-
-  .featuredItems,
-  .experts-carousel {
-    position: relative;
-    margin-bottom: 15px
-  }
-
-  .bootstrap-iso .mix {
-    float: left;
-    width: 25%;
-    padding: 7px
-  }
-
-  .ui-mobile-viewport .bootstrap-iso .mix {
-    width: 100%;
-    padding: 5px
-  }
-
-  .infoContainer,
-  .bootstrap-iso .mix a.brand {
-    position: relative;
-    display: block;
-    margin-bottom: 5px;
-    color: #7f7f7f
-  }
-
-  span.stars span {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    color: #ffc107
-  }
-
-  span.stars span:last-child {
-    font-size: .8em
-  }
-
-  .stockCount,
-  .shippingStr {
-    display: none;
-    font-size: 10px;
-    margin-left: 5px
-  }
-
-  .sectionHeading.Gr,
-  .expertSlide .topBar {
-    border-radius: 3px 3px 0 0
-  }
-
-  .bootstrap-iso .mix .thumb {
-    position: relative;
-    display: block;
-    background: #fff;
-    border-radius: 3px;
-    padding-top: 7px;
-    border: 1px solid #d1d1d1;
-    border-bottom: 2px solid #d1d1d1
-  }
-
-  .mix .thumb a {
-    text-decoration: none;
-    font-weight: 400
-  }
-
-  .mix a.name {
-    display: block;
-    white-space: normal;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #0072d9;
-    height: 2.6em;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2
-  }
-
-  .ui-mobile-viewport .mix a.name {
-    height: auto;
-    min-height: 2.6em
-  }
-
-  .thumb .contents {
-    padding: 0 8px;
-    line-height: 1.3;
-    overflow: hidden
-  }
-
-  .mix a.imgContainer {
-    position: relative;
-    z-index: 1;
-    display: table;
-    height: 200px;
-    width: 100%;
-    text-align: center;
-    text-decoration: none
-  }
-
-  .mix .imgContainer {
-    text-align: center
-  }
-
-  .mix a.imgContainer .tabeCell {
-    display: table-cell;
-    vertical-align: middle
-  }
-
-  .mix a.imgContainer img {
-    width: auto;
-    height: auto;
-    max-width: 200px;
-    max-height: 200px;
-    margin: auto
-  }
-
-  .mix .prices {
-    color: #303030;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-    white-space: nowrap
-  }
-
-  .bootstrap-iso button.ctaOrange {
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    display: inline-block;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    background: #00b2ec;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 3px;
-    white-space: nowrap
-  }
-
-  .bootstrap-iso button.ctaOrange:disabled {
-    opacity: .5;
-    cursor: not-allowed
-  }
-
-  .bootstrap-iso button.ctaOrange:disabled span,
-  #freehp {
-    display: none !important
-  }
-
-  .bootstrap-iso .panel {
-    margin-bottom: 0;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    min-width: 350px
-  }
-
-  .bootstrap-iso .items:before {
-    content: '';
-    clear: both;
-    display: table
-  }
-
-  .expertSlide .expertProfile {
-    position: absolute;
-    left: 50%;
-    margin-left: -75px;
-    z-index: 2;
-    top: -25px;
-    text-align: center
-  }
-
-  .expertSlide h4 {
-    font-size: 16px;
-    color: #00579d;
-    font-weight: 700;
-    margin: 0 0 5px;
-    text-transform: uppercase
-  }
-
-  .expertSlide h2 {
-    color: #fff;
-    margin: 0;
-    font-size: 18px;
-    font-weight: 400
-  }
-
-  .expertSlide .headwrap {
-    padding: 15px 10px
-  }
-
-  .expertProfile img.profileImg {
-    width: auto;
-    max-width: 80%;
-    margin: 0 auto 5px
-  }
-
-  .expertSlide .expertType,
-  span.stars span.numberReviews {
-    color: #7f7f7f
-  }
-
-  .expertSlide .topBar {
-    background: #115ea7;
-  }
-
-  .bootstrap-iso p.expertName {
-    font-size: 17px;
-    font-weight: 500;
-    margin: 0 0 5px
-  }
-
-  .bootstrap-iso h2.sectionTitle {
-    color: #00579d;
-    font-weight: 400;
-    text-decoration: none
-  }
-
-  a.learnMore {
-    display: block;
-    color:#115ea7 !important;
-  }
-
-  p.sectionHeading {
-    font-size: 18px;
-    color: #707070;
-    font-weight: 500;
-    line-height: 50px;
-    margin-bottom: 0;
-    padding-left: 8px
-  }
-
-  .homeWrapper .drop-down-placeholder {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 3px;
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 10px;
-    padding: 7px;
-    text-align: left
-  }
-
-  .bootstrap-iso blockquote {
-    border: none;
-    padding: 10px 30px;
-    line-height: 1.5
-  }
-
-  .bootstrap-iso blockquote .quoteIco {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px
-  }
-
-  .ui-mobile-viewport .bootstrap-iso blockquote {
-    padding: 10px 40px
-  }
-
-  .ui-mobile-viewport .bootstrap-iso blockquote .quoteIco {
-    left: 25px
-  }
-
-  .bootstrap-iso .mix a.brand {
-    font-weight: 400
-  }
-
-  .homeWrapper .afgVehicleSelector {
-    position: relative;
-    z-index: 2;
-    background: url(https://www.sonicelectronix.com/img/violator/Desktop_20170615_163059.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 3px;
-    height: 100%
-  }
-
-  .ui-mobile-viewport .bootstrap-iso .homeWrapper .panel {
-    min-width: 100%;
-    height: auto;
-    margin: 0;
-    width: 100%
-  }
-
-  .afg-selector-medium .panel-body {
-    position: relative;
-    margin: 0;
-    padding: 0
-  }
-
-  .ui-body-c .ui-link:active,
-  .ui-body-c .ui-link:hover,
-  .ui-body-c .ui-link:visited,
-  .ui-body-c .ui-link {
-    color: #0072d9;
-    font-weight: 400
-  }
-
-  .ui-mobile-viewport .expertSlide .expertProfile {
-    top: 0;
-    padding: 5px 20px 0;
-    margin: 0;
-    position: relative;
-    left: initial
-  }
-
-  .ui-mobile-viewport .expertInfo {
-    overflow: hidden;
-    text-align: left;
-    padding-top: 15px
-  }
-
-  .ui-mobile-viewport .expertImgWrap {
-    float: left;
-    width: 35%;
-    margin-right: 15px
-  }
-
-  .ui-mobile-viewport .infoContainer {
-    padding-top: 10px
-  }
-
-  .afgBrand:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    margin: 0 -10px -10px 0px;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-top: 10px solid rgba(0, 87, 157, 0.8);
-    border-right: 10px solid transparent
-  }
-
-  .ui-mobile-viewport .afgVehicleSelector {
-    width: 100%;
-    margin: 0;
-    padding: 10px
-  }
-
-  .ui-mobile-viewport .hiddenMobile {
-    display: none !important
-  }
-
-  .ui-mobile-viewport .bootstrap-iso button.ctaOrange:disabled {
-    display: none
-  }
-
-  .ui-mobile-viewport .bootstrap-iso button.ctaOrange {
-    display: block
-  }
-
-  .ui-mobile-viewport .mix:hover .thumb {
-    box-shadow: none
-  }
-
-  ul.catMenu {
-    list-style: none;
-    margin: 0;
-    padding: 0 4px
-  }
-
-  ul.catMenu li.catItemWrapper {
-    float: left;
-    width: 12.5%;
-    padding: 4px
-  }
-
-  ul.catMenu li.catItemWrapper a {
-    background: #fff;
-    min-height: 140px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #0072d9;
-    font-weight: 400;
-    padding: 8px;
-    display: block;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    text-align: center
-  }
-
-  ul.catMenu li.catItemWrapper a:hover {
-    border-color: #0072d9
-  }
-
-  ul.catMenu li.catItemWrapper a:active {
-    background: #eee
-  }
-
-  .ui-mobile-viewport ul.catMenu {
-    padding: 0 4px
-  }
-
-  .ui-mobile-viewport ul.catMenu li {
-    float: left;
-    width: 33.333%;
-    padding: 4px
-  }
-
-  ul.catMenu {
-    list-style: none;
-    margin: 0;
-    padding: 0 4px
-  }
-
-  ul.catMenu li.brandItemWrapper {
-    float: left;
-    width: 16.6667%;
-    padding: 4px
-  }
-
-  ul.catMenu li.brandItemWrapper a {
-    background: #fff;
-    border: 1px solid transparent;
-    text-decoration: none;
-    font-size: 14px;
-    color: #0072d9;
-    font-weight: 400;
-    padding: 8px;
-    display: block;
-    border-radius: 2px;
-    text-align: center
-  }
-
-  ul.catMenu li.brandItemWrapper a:hover {
-    border-color: #0072d9
-  }
-
-  ul.catMenu li.brandItemWrapper a:active {
-    background: #eee
-  }
-
-  .ui-mobile-viewport ul.catMenu {
-    padding: 0 4px
-  }
-
-  .ui-mobile-viewport ul.catMenu li {
-    float: left;
-    width: 33.333%;
-    padding: 4px
-  }
-
-  ul.catMenu li.brandItemWrapper a:hover,
-  .ui-mobile-viewport ul.catMenu li a {
-    border-color: #d1d1d1
-  }
-
-  .afg-mobile-home-content .drop-down-container::after {
-    margin-top: -12px;
-    top: 50%
-  }
-
-  .drop-down-container {
-    margin: 0 0 10px
-  }
-
-  .afgBrand {
-    position: relative;
-    display: table;
-    width: 100%;
-    background: rgba(0, 87, 157, 0.8);
-    padding: 7px;
-    margin-bottom: 15px
-  }
-
-  .afgBrand .afgLogo {
-    float: left;
-    margin-right: 5px;
-    height: 30px;
-    width: 40px;
-    background: url(/themes/mobile/images/cat_leaf/carIcon@2x.png)no-repeat center;
-    background-size: 30px
-  }
-
-  p.vfHeading {
-    font-size: 1.6em;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 5px;
-  }
-
-  p.vfCaption {
-    font-size: .7em;
-    color: #707070
-  }
-
-  .container.home {
-    position: relative;
-    z-index: 3;
-    max-width: 1170px;
-    padding: 0;
-    overflow: hidden
-  }
-
-  .homeWrapper {
-    position: relative
-  }
-
-  .hpBlueBar {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 40px;
-    height: 160px;
-    background: #014982
-  }
-
-  .afgnameContainer {
-    font-size: 14px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: left;
-    padding-left: 10px
-  }
-
-  .columnTD {
-    display: block;
-    padding: 0
-  }
-
-  .homeWrapper .afg-content {
-    display: block;
-    padding: 15px;
-    height: auto;
-    border: none;
-    background-position: 65% 20%
-  }
-
-  .afgBrand img {
-    max-width: 60px
-  }
-
-  .vehicleChoice {
-    display: none;
-    font-size: 20px;
-    color: #fff;
-    margin: 0 0 25px;
-  }
-
-  .vehicleChoice .carselected,
-  p.vinfo {
-    font-size: 1.2em;
-    color: #fff;
-    font-weight: 500
-  }
-
-  .vehicleChoice .cRemove span {
-    font-size: .7em;
-    color: #eee;
-    cursor: pointer
-  }
-
-  .afg-selector.on .formContainer {
-    display: none
-  }
-
-  .afg-selector.on .vehicleChoice {
-    display: block
-  }
-
-  .vehicleChoice .cRemove span:hover,
-  .vehicleChoice .cRemove span:active {
-    opacity: .7
-  }
-
-  .bootstrap-iso button.ctaOrange:hover,
-  .bootstrap-iso button.ctaOrange:active,
-  .bButton:hover,
-  .bButton:active {
-    background: #0468ac
-  }
-
-  .ui-mobile-viewport .sliderControls,
-  .ui-mobile-viewport .droductControls,
-  .ui-mobile-viewport .productControls {
-    display: none
-  }
-
-  .ui-mobile-viewport .formContainer,
-  .ui-mobile-viewport .vehicleChoice {
-    padding: 10px 0 0;
-    margin: 0;
-  }
-
-  .ui-mobile-viewport p.vinfo {
-    margin: 0;
-    padding-left: 10px
-  }
-
-  .expLeft,
-  .expRight {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px
-  }
-
-  .expLeft {
-    width: 20%;
-    float: left
-  }
-
-  .expRight {
-    width: 80%;
-    float: right
-  }
-
-  .ui-mobile-viewport .expLeft,
-  .ui-mobile-viewport .expRight {
-    float: none;
-    width: 100%
-  }
-
-  .ui-mobile-viewport .topBar .expLeft {
-    display: none
-  }
-
-  .featuredSlider {
-    position: relative;
-    background: #f7f7f7;
-    overflow: hidden;
-    padding-top: 35px
-  }
-
-  .sectionHeading.Gr {
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    background: #014982
-  }
-
-  .bottomThumbContent {
-    margin-left: -8px;
-    margin-right: -8px;
-    background: #e7e7e7;
-    padding: 8px
-  }
-
-  .ui-mobile-viewport .bottomThumbContent {
-    margin: 0;
-    background: #fff;
-    padding: 8px
-  }
-
-  .product-carousel {
-    padding: 7px
-  }
-
-  .ui-mobile-viewport .saleBanner {
-    margin: 0
-  }
-
-  .ui-mobile-viewport .product-carousel {
-    padding: 5px
-  }
-
-  .ui-mobile-viewport .mix a.imgContainer img {
-    max-width: 96%
-  }
-
-  .ui-mobile-viewport .product-carousel .mix a.imgContainer {
-    position: relative;
-    float: left;
-    width: 33%;
-    margin-right: 10px;
-    height: 130px
-  }
-
-  .ui-mobile-viewport .product-carousel .mix a.imgContainer .tabeCell img {
-    max-height: 120px
-  }
-
-  .ui-mobile-viewport .OverflowContainer {
-    background: #fff;
-    margin-right: -10px
-  }
-
-  .reviews {
-    height: 20px
-  }
-
-  .ui-mobile-viewport .productsF {
-    background: #014982
-  }
-
-  .ui-mobile-viewport #toTop {
-    background: #014982;
-    display: block;
-    text-align: center;
-    color: #fff;
-    line-height: 50px;
-    font-size: 18px
-  }
-
-  .product-carousel .mix .thumb:hover,
-  .mix .thumb:active {
-    -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15)
-  }
-
-  span.msrp {
-    text-decoration: line-through;
-    font-size: .75em
-  }
-
-  span.sliderCta {
-    position: absolute;
-    right: 50%;
-    bottom: 15%;
-    z-index: 3;
-    padding: 15px 20px;
-    font-size: 18px;
-    width: 195px;
-    margin-right: -80px
-  }
-
-  .ui-mobile-viewport span.sliderCta {
-    right: 3%;
-    bottom: 5%;
-    font-size: 14px;
-    width: auto;
-    margin-right: 0
-  }
-
-  .ui-mobile-viewport select.form-control {
-    width: 100%;
-    padding: 5px 35px 5px 5px;
-    color: #7b7b7b;
-    font-size: 14px;
-    font-weight: 400;
-    border: 1px solid #ababab;
-    height: 44px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    background-image: url(/themes/mobile/images/arrowDown@2x.png);
-    background-size: 24px;
-    background-position: 95% center;
-    background-repeat: no-repeat
-  }
-
-  .promoUnit {
-    float: left;
-    width: 25%;
-    padding: 15px;
-    padding: 15px;
-    transition: 300ms;
-  }
-
-  .promoUnit:hover {
-    transform: scale(1.1);
-  }		  
-
-  .ui-mobile-viewport .promoUnit {
-    width: 100%;
-    float: none;
-    padding: 15px 15px 0
-  }
-
-  .promoUnit a {
-    display: block;
-    position: relative;
-    padding: 7px;
-    text-decoration: none;
-    background: #fff
-  }
-
-  .promoUnit a:hover,
-  .promoUnit a:active {
-    text-decoration: none;
-    border-color: #0072d9
-  }
-
-  .promoUnit .promoContent {
-    overflow: hidden
-  }
-
-  .promoContent,
-  .promoContent span {
-    display: block;
-    margin-bottom: 5px
-  }
-
-  a .promoContent span {
-    color: #303030
-  }
-
-  .promoContent:before {
-    clear: both;
-    display: table;
-    content: ''
-  }
-
-  .promoUnit .promoImg {
-    float: left;
-    margin: 10px 15px 0 0
-  }
-
-  .promoUnit a img {
-    max-width: 100%
-  }
-
-  span.promoText {
-    font-size: 16px;
-    font-weight: 500
-  }
-
-  .imgIco {
-    display: inline-block;
-    vertical-align: middle;
-    background: url(https://www.sonicelectronix.com/landing/catSprt.png) no-repeat;
-  }
-
-  a .promoContent span.free {
-    font-size: 18px;
-    font-weight: 700;
-    color: #f15722
-  }
-
-  .banner {
-    position: relative;
-    max-height: 265px;
-    overflow: hidden
-  }
-
-  .banner-wrapper {
-    display: block;
-    position: relative;
-    max-width: 974px;
-    padding: 0;
-    text-align: center;
-    margin: 0 auto
-  }
-
-  .banner-wrapper img {
-    max-width: 100%
-  }
-
-  span.promoMain,
-  span.promoVal {
-    font-size: 14px
-  }
-
-  a .promoContent span.promoVal {
-    color: #f15722
-  }
-
-  .ui-mobile-viewport .pairedPromos {
-    flex-wrap: wrap
-  }
-
-  #toTop,
-  .hidden-desk {
-    display: none
-  }
-
-  .ui-mobile-viewport #toTop,
-  .ui-mobile-viewport .hidden-desk {
-    display: block
-  }
-
-  .pricesWrapper {
-    font-size: 18px
-  }
-
-  .thumby .price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #303030
-  }
-
-  .promoImg {
-    float: right;
-    margin: 0 3px
-  }
-
-  .promoImg .promoImgWrp {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 2px solid #0372d9;
-    transition: .3s
-  }
-
-  .promoImg .promoImgWrp img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 15px;
-    transform: translate(-50%, -50%);
-    max-width: 80px;
-    max-height: 80px
-  }
-
-  .promoImg.deskTag .promoImgWrp {
-    width: 38px;
-    height: 38px;
-    border-width: 2px;
-    background: #fff
-  }
-
-  .promoImg.deskTag .promoImgWrp img {
-    max-width: 30px;
-    max-height: 30px
-  }
-
-  .pairedOffer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    width: 100%;
-    height: 42px;
-    overflow: hidden
-  }
-
-  .promoName {
-    display: none
-  }
-
-  .promoName.amt-100,
-  .promoName.amt-50 {
-    display: block;
-    text-align: left;
-    overflow: hidden;
-    color: #0cab41;
-    font-size: 12px;
-    padding: 3px;
-    white-space: nowrap;
-    text-overflow: ellipsis
-  }
-
-  button.btn-orange {
-    background: #f15722;
-    display: inline-block;
-    padding: 10px 12px;
-    color: #fff !important;
-    border: none;
-    font-size: 15px;
-    font-weight: 700
-  }
-
-  button.btn-grey {
-    background: #7f7f7f;
-    color: #303030
-  }
-
-  button.showMore {
-    display: none;
-    width: 100%;
-    background: #e7e7e7;
-    color: #7f7f7f;
-    padding: 15px;
-    font-size: 14px;
-    border: none;
-    font-weight: 500
-  }
-
-  .ui-mobile-viewport .mix.condensedList,
-  #recentlyViewedItems {
-    display: none
-  }
-
-  .outofStock {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.8);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    background-size: 100% 100%
-  }
-
-  .outofStock .inside {
-    display: table;
-    height: 100%;
-    width: 100%;
-    padding: 0 10px;
-    text-align: center
-  }
-
-  .outofStock .inside span {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 21px;
-    line-height: 1.3;
-    color: #707070
-  }
-
-  .mix.recentItem {
-    width: 20%;
-    transition: 300ms;
-  }
-
-  .ui-mobile-viewport .mix.recentItem {
-    width: 50%;
-    transition: 300ms;
-  }
-
-  .saleItem.recentItem:hover {
-    transform: scale(1.1);
-}
-
-  .mix.recentItem a.imgContainer {
-    position: relative;
-    display: table;
-    height: 130px;
-    margin: 0 0 5px;
-    width: 100%;
-    text-align: center
-  }
-
-  .mix.recentItem a.imgContainer .tabeCell {
-    display: table-cell;
-    vertical-align: middle
-  }
-
-  .mix.recentItem a.imgContainer img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 130px;
-    margin: auto
-  }
-
-  .bootstrap-iso .mix.recentItem .thumb {
-    padding: 8px;
-    border: none
-  }
-
-  .ui-mobile-viewport .bootstrap-iso .mix.recentItem .thumb {
-    border: 1px solid #d1d1d1
-  }
-
-  .ui-mobile-viewport .recentContainer {
-    padding: 0 5px
-  }
-
-  .ui-mobile-viewport .outofStock .inside span {
-    font-size: 16px
-  }
-
-  .moreContainer {
-    padding: 5px
-  }
-
-  .ui-mobile-viewport button.showMore {
-    display: block
-  }
-
-  .bannerCta {
-    position: absolute;
-    right: 90px;
-    bottom: 20px
-  }
-
-  .ui-mobile-viewport .bannerCta {
-    position: relative;
-    display: block;
-    margin: 10px;
-    right: 0;
-    bottom: 0
-  }
-
-  #mbContent a.item {
-    display: block;
-    overflow: hidden
-  }
-
-  .circles {
-    position: absolute;
-    top: -115%;
-    left: -12%;
-    z-index: 2;
-    width: auto
-  }
-
-  .saleCopyWrapper {
-    display: block;
-    margin-top: 20px
-  }
-
-  .saleCopy {
-    display: block;
-    font-size: 24px;
-    color: #fff;
-    line-height: 1.3
-  }
-
-  .ui-mobile-viewport .saleCopy {
-    font-size: 16px;
-    margin-top: 5px
-  }
-
-  .ui-mobile-viewport .saleCopyWrapper {
-    margin-top: 0
-  }
-
-  .ui-mobile-viewport .deal-column {
-    width: 100%;
-    padding: 0 0 15px
-  }
-
-  .deal-column a {
-    display: block;
-    width: 100%;
-    color: #303030;
-    padding: 10px 15px;
-    height: auto;
-  }
-
-  .deal-column a:hover {
-    text-decoration: none
-  }
-
-  .deal-column {
-    float: left;
-    width: 33.333%;
-    padding: 10px
-  }
-
-  span.depName {
-    display: block;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 16px;
-    display: inline-block
-  }
-
-  span.depDesc {
-    display: block;
-    font-size: 12px;
-    margin: 0 0 10px;
-  }
-
-  span.shop {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: .5px;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 3px
-  }
-
-  .sonicdeals {
-    margin: 0 -10px 0
-  }
-
-  .ui-mobile-viewport .sonicdeals {
-    margin: 0;
-    padding: 0 10px
-  }
-
-  .heightAlign {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    width: 1px
-  }
-
-  .seasonalOffer {
-    border: 1px solid #eee;
-    margin-bottom: 25px;
-    border-radius: 5px
-  }
-
-  .tbl {
-    display: table;
-    font-family: ubuntu;
-    table-layout: fixed;
-    width: 100%
-  }
-
-  a.tcell {
-    text-decoration: none;
-    padding: 1.5rem;
-    text-decoration: none;
-    overflow: hidden;
-    direction: ltr;
-    display: table-cell;
-    vertical-align: top;
-    background: #000 url(https://www.sonicelectronix.com/landing/New-icons/new-img/jlaStealthboxv3-new.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 5px 0 0 5px;
-    width: 33.33%;
-    max-width: 33.33%
-  }
-
-  a.tcell:hover {
-    text-decoration: none;
-  }
-
-  .tbl a:hover {
-    text-decoration: none
-  }
-
-  .contentCell {
-    width: 66.66%;
-    max-width: 66.66%;
-    overflow: hidden;
-    direction: ltr;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 10px;
-    background: #fff
-  }
-
-  .imgTabe {
-    display: block;
-    max-width: 120px;
-    height: 120px;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    vertical-align: middle;
-    margin-bottom: 1rem
-  }
-
-  .catalogItm {
-    float: left;
-    width: 25%;
-    box-sizing: border-box;
-    padding: 0 5px;
-    border-radius: 2px
-  }
-
-  .catalogItm .thumby {
-    border-radius: 2px
-  }
-
-  a.tcell span.seasonH {
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 180px;
-    display: block;
-    text-transform: uppercase
-  }
-
-  .imgTabe img {
-    max-width: 100%;
-    max-height: 100%;
-    vertical-align: middle;
-    display: inline-block
-  }
-
-  .img-help {
-    display: inline-block;
-    height: 100%;
-    width: 0;
-    vertical-align: middle
-  }
-
-  .cLabe {
-    font-weight: 500;
-    font-size: 12px;
-    display: block;
-    white-space: normal;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #303030;
-    height: 2.6em;
-    line-height: 1.3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    text-align: center;
-    margin: 0 0 15px
-  }
-
-  span.btn-orange,
-  a.baraginBuy {
-    text-transform: uppercase;
-    background: #f15722;
-    display: inline-block;
-    padding: 10px 12px;
-    color: #fff;
-    border: none;
-    font-size: 15px;
-    font-weight: 700
-  }
-
-  .ui-mobile-viewport a.tcell,
-  .ui-mobile-viewport .contentCell {
-    width: 100%;
-    max-width: 100%;
-    display: block
-  }
-
-  a.thumby {
-    padding: 5px 0;
-    display: block;
-    background: #fff;
-    text-align: center;
-    text-decoration: none
-  }
-
-  a.tcell span {
-    display: block
-  }
-
-  .ui-mobile-viewport .catalogItm {
-    width: 50%
-  }
-
-  .offerContainer {
-    display: table;
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px
-  }
-
-  .ui-mobile-viewport a.tcell,
-  .offerContainer {
-    border-radius: 0
-  }
-
-  .ui-mobile-viewport .imgTabe {
-    height: 90px;
-    max-height: 90px
-  }
-
-  .brandOffer {
-    display: table-cell;
-    vertical-align: middle
-  }
-
-  .singleLayout .catalogItm {
-    float: none;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  .afgWrapper {
-    padding: 0 10px;
-    postion: relative;
-    height: 100%
-  }
-
-  .col-deal {
-    margin-right: 10px;
- 
-    border-radius: 3px;
-  }
-
-  span.dealShop {
-    display: block;
-    text-align: center;
-    padding: 15px;
-    background: #f15722;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    z-index: 1
-  }
-
-  .col-deal,
-  .col-afg {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  }
-
-  .col-row {
-    display: flex;
-    flex-wrap: wrap
-  }
-
-  .col-row:after {
-    clear: both;
-    display: table;
-    content: '';
-  }
-
-  .col-deal {
-    float: left;
-    max-width: 622px;
-    width: 60%;
-    flex: 1 1 60%
-
-    /*border-radius: 3px 3px 0 0;*/
-
-  }
-
-  .col-afg {
-    float: right;
-    width: 40%;
-    flex: 1 1 40%
-  }
-
-  a.dealBanner {
-    text-decoration: none;
-    display: block;
-    position: relative;
-   border: solid 1px #000;
-    border-radius: 3px;
-    overflow: hidden
-  }
-
-  a.dealBanner:hover,
-  a.dealBanner:active {
-    text-decoration: none;
-  }
-
-  .dealBanner img {
-    max-width: 100%;
-  }
-
-  @media (min-width:768px) {
-    .col-row {
-      display: flex;
-      flex-wrap: inherit;
-    }
-  }
-
-
-  .ui-mobile-viewport .col-deal,
-  .ui-mobile-viewport .col-afg {
-    width: 100%;
-    float: none;
-    flex: 100%
-  }
-
-  .imgIco.stereo {
-    background-position: -7px -3px;
-    width: 74px;
-    height: 62px;
-  }
-
-  .imgIco.subwoofer {
-    background-position: -104px -3px;
-    width: 63px;
-    height: 61px;
-  }
-
-  .imgIco.speaker {
-    background-position: -361px -4px;
-    width: 65px;
-    height: 60px;
-  }
-
-  .imgIco.amplifier {
-    background-position: -522px -13px;
-    width: 73px;
-    height: 50px;
-  }
-
-  .imgIco.processors {
-    background-position: -435px -10px;
-    width: 62px;
-    height: 50px;
-  }
-
-  .imgIco.installParts {
-    background-position: -282px -4px;
-    width: 58px;
-    height: 60px;
-  }
-
-  .imgIco.packages {
-    background-position: -613px -3px;
-    width: 68px;
-    height: 63px;
-  }
-
-  .imgIco.camera {
-    background-position: -691px -13px;
-    width: 71px;
-    height: 45px;
-  }
-
-  .imgIco.marine {
-    background-position: -188px -16px;
-    width: 85px;
-    height: 34px;
-  }
-
-  .icoContainer {
-    display: block;
-    height: 75px;
-    text-align: center;
-    white-space: nowrap
-  }
-
-  span.icoLabel {
-    display: block;
-    padding: 5px
-  }
-
-  .ui-mobile-viewport .col-deal {
-    padding-left: 10px;
-  }
-
-  .dealBannerImg {
-    display: block;
-    overflow: hidden;
-    text-align: center
-  }
-
-  .ui-mobile-viewport a.dealBanner {
-    margin: 0 0 10px;
-  }
-
-  .bannerStyleImg {
-    display: block;
-    min-height: 200px;
-    width: 100%;
-    margin: 0;
-  }
-
-  a.bannerStyleImg:hover {
-    opacity: 0.8;
-  }
-
-  .bannerContent {
-    padding: 10px;
-  }
-
-  .ui-mobile-viewport .bannerContent {
-    flex: 1
-  }
-
-  .bannerLogo {
-    display: block;
-    max-width: 150px;
-    max-height: 50px;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .offerThumbnails {
-    display: flex;
-    margin: 0 0 25px;
-    flex-wrap: wrap;
-  }
-
-  .thumbnailOffer {
-    flex: 0 0 33.333%;
-    float: left;
-    padding: 0 10px
-  }
-
-  .offerDiscount {
-    display: block;
-    padding: 10px 0 0;
-    text-align: center;
-  }
-
-  .thamount {
-    font-size: 48px;
-  }
-
-  .part,
-  .thamount,
-  .bannerLogoWrapper span {
-    display: inline-block;
-    vertical-align: middle
-  }
-
-  .OfferAmount,
-  .off {
-    line-height: 1;
-    display: block;
-    font-size: 20px
-  }
-
-  .thumbnailOfferContainer {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    overflow: hidden
-  }
-
-  .sblock {
-    display: block;
-  }
-
-  .ui-mobile-viewport .thumbnailOffer {
-    flex: 1 1 100%;
-    margin: 0 0 10px;
-  }
-
-  .ui-mobile-viewport .bannerStyleImg {
-    height: 150px;
-    flex: 0 0 50%
-  }
-
-  .bannerLogoWrapper {
-    height: 50px;
-    text-align: center;
-    margin: auto;
-    white-space: nowrap
-  }
-
-  span.hlign {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .ui-mobile-viewport .thumbnailOfferContainer {
-    display: flex
-  }
-
-  span.hpbannerCta {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    background: #000;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 0 0 3px 3px
-  }
-
-  .banner3-container {
-        /*overflow: hidden;*/
-        border-radius: 0.2rem;
-        margin-right: 0.5rem;
-        text-align:center;
-        max-width:1162px;
-     
-      }
-
-
-        .banner3ImageMobile {
- border:solid 1px #014a77;
-         display:none;
-       }
-
-  .banner3-container .cerwin-head {
-        display: inline-block;
-      }
-
-      .cerwin-container .cerwin-text {
-        display: inline-block;
-        max-width: 18rem;
-      }
-
-      .cerwin-head {
-       margin-right:3%;
-      }
-
-      @media screen and (max-width: 769px) {
-      .banner3-container {
-        margin-right: 0;
-        margin: 0.5rem;
-border:solid 1px #014a77;
-        
-      }
-
-      .banner3ImageMobile {
-         width:100%;
-         display:inline-block;
-         margin-top:-20px;
-
-       }
-
-
-      .banner3-container .cerwin-head {
-        display: inline-block;
-        max-width:10rem;
-      }
-
-      .banner3-container .cerwin-text {
-        max-width: 9rem;
-        margin: 1rem auto 0rem auto;
-      }
-
-        .banner3Img{
-        display:none;
-      }
-      }
-</style>
-<div class="homeWrapper">
-	<div class="container content home ui-content clearfix">
-		<div class="col-row">
-			<div class="col-deal">
-				<a class="dealBanner" data-role="none" href="https://www.sonicelectronix.com/lp/15-off-nvx"><img alt="kicker-save" hpbannercta="" src="/landing/images/nvx/NVX15Homepage.jpg" /><span class="hpbannerCta">Shop Now</span></a>
-			</div>
-
-			<div class="col-afg">
-				<div class="afgWrapper">
-					<div class="afgVehicleSelector clearfix" id="afgVehicleSelector">
-						<form action="/afg/vehicle/select" class="afg-selector-form" data-ajax="false" id="yw0" method="get">
-						<div class="afg-content">
-							<div class="afgTable">
-								<div class="columnTD">
-									<div class="afgBrand clearfix">
-										<div class="afgLogo">
-											 
-										</div>
-
-										<div class="afgnameContainer">
-											<p class="vfHeading">Vehicle Fit <span style="font-weight:300">Guide</span></p>
-
-											<p class="vinfo">Find gear that fits your ride</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="columnTD">
-									<div class="afg-selector afg-selector-medium">
-										<div class="panel-body">
-											<div class="vehicleChoice">
-												<p class="carselected"> </p>
-
-												<p class="cRemove"><span id="removeV">Change</span> <span>/</span> <span id="removeR">Remove</span></p>
-											</div>
-
-											<div class="formContainer afg-mobile-home-content">
-												<div class="drop-down-container">
-													<select class="form-control afg_year afg-required" data-role="none" id="yw0_year" name="afg[year]" tabindex="-1"><option value="">Choose your year</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option> </select>
-												</div>
-
-												<div class="drop-down-placeholder">
-													Make
-												</div>
-
-												<div class="drop-down-container" style="display:none">
-													<select class="form-control afg_make afg-required" data-role="none" id="yw0_make" name="afg[make]" tabindex="-1"></select>
-												</div>
-
-												<div class="drop-down-placeholder">
-													Model
-												</div>
-
-												<div class="drop-down-container" style="display:none">
-													<select class="form-control afg_model afg-required" data-role="none" id="yw0_model" name="afg[model]" tabindex="-1"></select>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="columnTD">
-									<div class="text-center">
-										<button class="afg-selector-submit-btn ctaOrange" data-role="none" disabled="disabled" name="" type="submit">Find them Now <span aria-hidden="true" class="fa fa-angle-double-right"> </span></button>
-									</div>
-								</div>
-							</div>
-						</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--Banner 3 -->
-
-		<div class="banner3-container">
-			<a href="https://www.sonicelectronix.com/lp/polk-audio-promo"> <img class="banner3Img" src="https://www.sonicelectronix.com/landing/images/Polkwidebanner.jpg" style=" border:solid 1px #014a77;" /> <img class="banner3ImageMobile" src="https://www.sonicelectronix.com/landing/images/Polkwidebanner.jpg" style=" border:solid 1px #014a77;" /> </a>
-		</div>
-
-		<div class="featuredItems">
-			<p class="sectionHeading">Shop our popular categories</p>
-
-			<ul class="catMenu clearfix">
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i9_car-stereos-radios.html" title="Car Stereos &amp; In-Dash Receivers"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco stereo"> </span></span><span class="icoLabel">Car Stereos</span></a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i39_car-subwoofers.html" title="Car Subwoofers"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco subwoofer"> </span></span><span class="icoLabel">Car Subwoofers</span></a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i7_car-speakers.html" title="Car Speakers"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco speaker"> </span></span> <span class="icoLabel">Car Speakers</span> </a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i22_car-amplifiers.html" title="Car Amplifiers"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco amplifier"> </span></span><span class="icoLabel">Car Amplifiers</span></a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i20_sound-processors.html" title="Sound Processors for Car Audio Systems"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco processors"> </span></span><span class="icoLabel">Sound Processors</span></a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i656_car-audio-accessories-installation.html" title="Car Audio Accessories &amp; Installation"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco installParts"> </span></span><span class="icoLabel">Car Audio Installation</span></a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i2873_car-audio-packages.html" title="Car Audio Packages"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco packages"> </span></span><span class="icoLabel">Car Audio Packages</span></a></li>
-				<li class="catItemWrapper"><a data-ajax="false" href="/cat_i1313_marine-motorcycle-atv-audio.html" title="Marine, Motorcycle &amp; ATV Audio"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco marine"> </span></span><span class="icoLabel">Marine & Powersports</span></a></li>
-				<li class="catItemWrapper hidden-desk"><a data-ajax="false" href="/cat_i1504_vehicle-cameras.html" title="Vehicle Cameras"><span class="icoContainer"><span class="heightAlign"> </span><span class="imgIco camera"> </span></span><span class="icoLabel">Vehicle Cameras</span></a></li>
-			</ul>
-		</div>
-
-		<div class="nosto-product-carousel nosto_element clearfix" id="frontpage-nosto-1">
-			<span style="display:none"> </span>
-		</div>
-
-		<div class="seasonalOffer clearfix">
-			<div class="tbl">
-				<a class="tcell position-relative" data-ajax="false" href="https://www.sonicelectronix.com/lp/pla-jl-audio-stealthboxes" title="JL Audio stealthboxes 10% off"><span class="seasonH"><span style="font-weight:500;margin:0 0 5px"><img alt="JLAudio logo" class="lazyload" data-src="https://www.sonicelectronix.com/landing/images/jlLogoWhite.png" style="max-height:30px" /></span>Save 10% on all Stealthboxes</span></a>
-
-				<div class="contentCell">
-					<div class="row">
-						<div class="col-xs-6 col-sm-3">
-							<a class="thumby" data-ajax="false" href="https://www.sonicelectronix.com/item_125611_JL-Audio-SB-F-MUSCPE-12TW3.html"><span class="imgTabe"><img src="https://images.sonicelectronix.com/images/3735267/main/sbfmuscpe12tw3.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="cLabe">JL Audio Stealthbox for 2015 - Up Ford Mustang Coupe</span><span class="price">$764.99</span></a>
-						</div>
-
-						<div class="col-xs-6 col-sm-3">
-							<a class="thumby" data-ajax="false" href="https://www.sonicelectronix.com/item_93419_JL-Audio-Jeep-Wrangler-Stealthbox-SB-J-WRUD-10TW1-BK.html"><span class="imgTabe"><img src="https://images.sonicelectronix.com/images/2510840/main/sbjwrud10tw1bk_driver.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="cLabe">JL Audio Jeep Wrangler Stealthbox</span><span class="price">$539.99</span></a>
-						</div>
-
-						<div class="col-xs-6 col-sm-3">
-							<a class="thumby" data-ajax="false" href="https://www.sonicelectronix.com/item_142893_JL-Audio-Stealthbox-SB-GM-3GSLVCNSL-10TW1.html"><span class="imgTabe"><img src="https://images.sonicelectronix.com/images/3801677/main/sbgm3gslvcnsl10tw1.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="cLabe">JL Audio Stealthbox for select 2014-Up Chevrolet Silverado</span><span class="price">$584.99</span></a>
-						</div>
-
-						<div class="col-xs-6 col-sm-3">
-							<a class="thumby" data-ajax="false" href="https://www.sonicelectronix.com/item_13662_JL-Audio-SB-GM-CFMINI-10W3v3.html"><span class="imgTabe"><img src="https://images.sonicelectronix.com/images/3735657/main/sbgmcfmini10w3v3.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="cLabe">JL Audio Stealthbox for 1993-2002 Chevrolet Camaro</span><span class="price">$539.99</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="featuredItems">
-			<p class="sectionHeading">Shop our Product Bundles</p>
-
-			<div class="pairedPromos">
-				<div class="clearfix">
-					<div class="promoUnit">
-						<a class="promoInner clearfix" data-ajax="false" data-role="none" href="/lp/free-car-audio-battery"><span class="promoImg"><span class="promoImgWrp"><img class="lazyload" data-src="https://www.sonicelectronix.com/landing/images/hc600bluFreeBatterIcon.jpg" /></span></span><span class="promoContent"><span class="free">FREE</span><span class="promoText">Car Audio Battery</span><span class="promoMain">with purchase of Car Amplifier</span><span class="promoVal">$58 Value</span></span></a>
-					</div>
-					<!--<div class="promoUnit">
-						<a class="promoInner clearfix" data-ajax="false" data-role="none" href="/lp/free-sound-dampening"><span class="promoImg"><span class="promoImgWrp"><img class="lazyload" data-src="https://images.sonicelectronix.com/images/2409685/small/sdsk2.jpg" /></span></span><span class="promoContent"><span class="free">FREE</span><span class="promoText">Sound Deadening</span><span class="promoMain">with purchase of Car Speakers</span><span class="promoVal">$15 Value</span></span></a>
-					</div>-->
-
-					<div class="promoUnit">
-						<a class="promoInner clearfix" data-ajax="false" data-role="none" href="/lp/free-subwoofer-enclosure"><span class="promoImg"><span class="promoImgWrp"><img class="lazyload" data-src="https://images.sonicelectronix.com/images/2349985/small/1sv12b.jpg" /></span></span><span class="promoContent"><span class="free">FREE</span><span class="promoText">Subwoofer Enclosure</span><span class="promoMain">with purchase of 12" Subwoofer</span><span class="promoVal">$40 Value</span></span></a>
-					</div>
-					<!--<div class="promoUnit">
-						<a class="promoInner clearfix" data-ajax="false" data-role="none" href="/lp/free-backup-camera"><span class="promoImg"><span class="promoImgWrp"><img class="lazyload" data-src="https://images.sonicelectronix.com/images/2758711/small/vtb16b.jpg" /></span></span><span class="promoContent"><span class="free">FREE</span><span class="promoText">Backup Camera</span><span class="promoMain">with purchase of select Car Stereos</span><span class="promoVal">$60 Value</span></span></a>
-					</div>-->
-
-					<div class="promoUnit">
-						<a class="promoInner clearfix" data-ajax="false" data-role="none" href="/lp/free-sirius-xm-radio"><span class="promoImg"><span class="promoImgWrp"><img class="lazyload" data-src="https://images.sonicelectronix.com/images/2354459/small/sxv300v1.jpg" /></span></span><span class="promoContent"><span class="free">SAVE</span><span class="promoText">SiriusXM Radio</span><span class="promoMain">with purchase of select Car Stereos</span><span class="promoVal">$50 Value</span></span></a>
-					</div>
-
-					<div class="promoUnit">
-						<a class="promoInner clearfix" data-ajax="false" data-role="none" href="/lp/free-amp-kit"><span class="promoImg"><span class="promoImgWrp"><img class="lazyload" data-src="https://images.sonicelectronix.com/images/2453323/small/bak02bl.jpg" /></span></span><span class="promoContent"><span class="free">SAVE</span><span class="promoText">Wiring Kit</span><span class="promoMain">with purchase of select Car Amplifiers</span><span class="promoVal">$60 Value</span></span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container content home ui-content clearfix">
-			<div class="featuredItems">
-				<div class="productsF">
-					<p class="sectionHeading Gr">Hot Marine Gear</p>
-
-					<p> </p>
-
-					<div class="product-carousel clearfix condenseItem" id="pfeaturedItems">
-						{{#Products}}
-						<div class="mix saleItem">
-							<div class="thumb">
-								<a class="imgContainer" data-ajax="false" href="{{viewProductUrl}}">{{#in_stock}} {{/in_stock}}{{^in_stock}} <span class="outofStock"> <span class="inside"> <span>SOLD OUT</span> </span> </span> {{/in_stock}} <span class="tabeCell"><span class="pairedOffer">{{#sortedPairedPromo}} <span class="promoName amt-{{rebate}}"><span class="promoImg deskTag"><span class="promoImgWrp"><img alt="{{PromoProduct.mainPictureParams.alt}}" class="lazyload" data-src="{{PromoProduct.mainPictureParams.url}}" /></span></span><span style="background:#fff">{{display_name}}</span></span> {{/sortedPairedPromo}}</span><span class="tagContainer">{{#is_on_sale}} <span class="fTag saleActive">PRICE DROP <i aria-hidden="true" class="fa fa-arrow-down"><span style="display:none"> </span></i></span> {{/is_on_sale}}</span><img alt="{{mainPictureParams.alt}}" class="lazyload" data-src="{{mainPictureParams.url}}" /></span></a>
-
-								<div class="contents">
-									<div class="infoContainer">
-										<a class="brand" data-ajax="false" href="{{Manufacturer.url}}" onclick="_gaq.push(['_trackEvent', 'Home', 'Featured Items', 'Brand- Click -{{id}}']);" title="{{Manufacturer.name}}">{{Manufacturer.name}}{{#is_vip}}<img alt="VIP Guarantee" src="https://www.sonicelectronix.com/landing/home-page/vipBadge.png" style="position:absolute;right:0;top:0;max-width:75px" /> {{/is_vip}}</a><a class="name" data-ajax="false" dir="ltr" href="{{viewProductUrl}}" onclick="_gaq.push(['_trackEvent', 'Home', 'Featured Items', 'Product Name - Click -{{id}}']);" title="{{name}}">{{Manufacturer.name}} {{subtitle}}</a>
-									</div>
-
-									<div class="reviews">
-										{{#numReviews}} <span class="stars" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'Sale Item', 'Click - Reviews']);" score="{{avgReviewRatingOverall}}" title="{{avgReviewRatingOverall}} stars"><span class="fa" data-star="1"><span style="display:none">_</span></span> <span class="fa" data-star="2"><span style="display:none">_</span></span> <span class="fa" data-star="3"><span style="display:none">_</span></span> <span class="fa" data-star="4"><span style="display:none">_</span></span> <span class="fa" data-star="5"><span style="display:none">_</span></span> <span class="numberReviews">({{numReviews}})</span></span>{{/numReviews}}
-									</div>
-
-									<div class="bottomThumbContent">
-										<div class="pricesWrapper clearfix">
-											<span class="prices">${{price}}</span><span class="shippingStr">FREE Shipping</span><span class="stockCount" data-s="0">In-Stock</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						{{/Products}}
-
-						<div class="moreContainer clearfix">
-							<button class="showMore" data-role="none">Show More</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container content home ui-content clearfix">
-			<div class="clearfix" style="position:relative">
-				<div class="experts-carousel" id="experts">
-					<div class="expertSlide item">
-						<div class="topBar clearfix">
-							<div class="expLeft">
-								 
-							</div>
-
-							<div class="expRight">
-								<div class="headwrap">
-									<h4 class="text-white">Expert Advice</h4>
-
-									<h2>How to remove the front door panel</h2>
-								</div>
-							</div>
-						</div>
-
-						<div class="row" style="background:#fff">
-							<div class="expLeft">
-								<div class="expertProfile clearfix">
-									<div class="expertImgWrap">
-										<img alt="Car Audio Expert" class="lazyload profileImg" data-src="https://www.sonicelectronix.com/landing/home-page/Sonic_Home_Tips_Allen.png" />
-									</div>
-
-									<div class="expertInfo">
-										<p class="expertName">Allyn Rahim</p>
-
-										<p class="expertType">Car Audio & Video Expert</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="expRight">
-								<blockquote>
-								<p class="quoted-advice"><i class="quoteIco fa fa-quote-left"><span style="display:none"> </span></i> Removing a vehicle’s door panel can seem like a difficult, time consuming and potentially costly endevour for many. Luckily, these types of projects are often times fairly simple, straight forward undertakings. This guide provides a simple step-by-step process to removing the front door panel in your 2013 or 2014 Honda Accord for your aftermarket sound system installations</p>
-								<a class="learnMore" data-ajax="false" href="https://knowledge.sonicelectronix.com/2013-1414-honda-accord-how-to-remove-the-front-door-panel/" onclick="_gaq.push(['_trackEvent', 'Home', 'Experts', 'Learn More']);" target="_blank">Continue Reading <i aria-hidden="true" class="fa fa-external-link"><span style="display:none"> </span></i></a></blockquote>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="featuredItems nostoSlideWrapper" id="recentlyViewedItems">
-			<div class="featContain clearfix">
-				<p class="sectionHeading mSection">Recently viewed items</p>
-
-				<div class="recentContainer clearfix condenseItem">
-					{{#RecentlyViewedProducts}}
-					<div class="mix saleItem recentItem">
-						<div class="thumb clearfix">
-							<a class="imgContainer" data-ajax="false" href="/viewitem.php?id={{id}}"><span class="tabeCell" title="{{name}}">{{#in_stock}} {{/in_stock}}{{^in_stock}} <span class="outofStock"> <span class="inside"> <span>SOLD OUT</span> </span> </span> {{/in_stock}}<span class="tagContainer">{{#is_on_sale}} <span class="fTag saleActive">PRICE DROP <i aria-hidden="true" class="fa fa-arrow-down"><span style="display:none"> </span></i></span> {{/is_on_sale}}{{#is_vip}}<span class="fTag bestSeller">10% Rewards</span>{{/is_vip}}</span><img class="lazyload" data-src="{{mainPictureParams.url}}" /> </span></a>
-
-							<div class="contents clearfix">
-								<div class="infoContainer">
-									<a class="name" data-ajax="false" href="/viewitem.php?id={{id}}" onclick="_gaq.push(['_trackEvent', 'Home', 'Featured Items', 'Name - Click - {{id}}']);" title="{{Manufacturer.name}} {{subtitle}}">{{Manufacturer.name}} {{subtitle}}</a>
-								</div>
-
-								<div class="prices">
-									<span class="displayPrice">${{price}}</span><span class="stockCount" data-s="{{in_stock_counter}}">In-Stock</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					{{/RecentlyViewedProducts}}
-
-					<div class="moreContainer clearfix">
-						<span style="display:none">Show More </span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="featContain clearfix sonicdeals">
-			<div class="deal-column">
-				<a data-role="none" href="/coupons" style="border:1px solid #737373"><span class="depName">Coupon Hub</span> <span class="depDesc">Our latest and hottest coupons and promos.</span> <span class="link-deal"><span class="shop bg-blue">Shop Coupons</span> </span> </a>
-			</div>
-
-			<div class="deal-column">
-				<a data-role="none" href="/cat_i2244_deals.html" style="border:1px solid #737373"><span class="depName">Current Deals</span> <span class="depDesc">Every kind of car audio deal imaginable.</span> <span class="link-deal"><span class="shop bg-gold-gradient">Shop Deals</span> </span> </a>
-			</div>
-
-			<div class="deal-column">
-				<a data-role="none" href="/cat_i857_car-audio-video-gps.html?ls=1" style="border:1px solid #737373"><span class="depName">Liquidation Station</span> <span class="depDesc">Huge savings on open box & refurbished items.</span> <span class="link-deal"><span class="shop bg-blue">Shop Open Box</span> </span> </a>
-			</div>
-		</div>
-	</div>
-</div>
 <script type="text/javascript">
-  (function($) {
-    $(document).ready(function() {
-      var mobile = $('.ui-mobile-viewport'),
-        count = 1,
-        vehicleSelected = false,
-        yy = '',
-        mm = '',
-        md = '';
-      if (year !== "" && make !== "" && model !== "") {
-        var urlMake = make.replace(/\+/g, '-').replace(/%26/g, '&').replace(/\s+/g, '-'),
-          urlModel = model.replace(/\+/g, '-').replace(/%26/g, '&').replace(/\s+/g, '-'),
-          displayMake = make.replace(/\+/g, ' '),
-          displayModel = model.replace(/\+/g, ' ').replace(/%26/g, 'and');
-        $('.afg-selector').addClass('on');
-        var years = $('.formContainer .drop-down-container').eq(0).html();
-        $('.formContainer .drop-down-container').eq(0).detach();
-        $('#yw0').attr('action', '/afg/' + urlMake + '/' + urlModel + '/' + year);
-        $('.vehicleChoice .carselected').text(year + " " + displayModel);
-        $('button.ctaOrange').removeAttr('disabled');
-        $('#yw0').append('<input type="hidden" name="afgnew" value="' + year + '-' + urlMake + '-' + urlModel + '">');
-        vehicleSelected = true;
-      }
-      var rec = document.getElementsByClassName('recentItem').length;
-      if (rec > 1) {
-        document.getElementById('recentlyViewedItems').style.display = "block";
-      }
-      if (rec > 4) {
-        document.getElementsByClassName('moreContainer')[0].innerHTML = '<button class="showMore" data-role="none">SHOW MORE</button>';
-      }
-      var condenseitem = document.getElementsByClassName('condenseItem');
-      var list = 0;
-      for (var k = 0; k < condenseitem.length; k++) {
-        initems = condenseitem[k].getElementsByClassName('saleItem');
-        for (var c = 0; c < initems.length; c++) {
-          if (c > 3) {
-            thclass = initems[c].className;
-            initems[c].className = thclass + ' condensedList';
-          }
+    /* Violator Mobile */
+    globalDiscount = 0;
+    function setCookie(e, t, n) {
+        var o = new Date;
+        o.setTime(o.getTime() + 24 * n * 60 * 60 * 1e3);
+        var r = "expires=" + o.toUTCString();
+        document.cookie = e + "=" + t + "; " + r + "; path=/";
+    }
+    function getCookie(e) {
+        for (var t = e + "=", n = document.cookie.split(";"), o = 0; o < n.length; o++) {
+            for (var r = n[o];
+                    " " == r.charAt(0); )
+                r = r.substring(1);
+            if (0 == r.indexOf(t))
+                return r.substring(t.length, r.length);
         }
-        list++;
-      }
-
-      var fetItem = document.getElementsByClassName('mix');
-      for (var i = 0; i < fetItem.length; i++) {
-        thisItem = fetItem[i];
-        stockLevel = $(thisItem).find('.stockCount').attr('data-s');
-        if (stockLevel <= 2 && stockLevel > 0) {
-          $(thisItem).find('.tagContainer').prepend('<span class="fTag limitedQuantity">LIMITED STOCK</span>');
-          $(thisItem).find('.stockCount').text('Only ' + stockLevel + ' Left');
-          $(thisItem).find('.stockCount').css('display', 'inline-block');
+        return "";
+    }
+    var QueryString = function () {
+        for (var e = {}, t = window.location.search.substring(1), n = t.split("&"), o = 0; o < n.length; o++) {
+            var r = n[o].split("=");
+            if ("undefined" == typeof e[r[0]])
+                e[r[0]] = decodeURIComponent(r[1]);
+            else if ("string" == typeof e[r[0]]) {
+                var i = [e[r[0]], decodeURIComponent(r[1])];
+                e[r[0]] = i;
+            } else
+                e[r[0]].push(decodeURIComponent(r[1]));
         }
-        itemPrice = $(thisItem).find('.prices').text();
-        if (itemPrice) {
-          itemPrice = itemPrice.replace('$', '');
-          if (Number(itemPrice) > 49) {
-            $(thisItem).find('.shippingStr').css('display', 'inline-block');
-          }
+        return e;
+    }();
+    if (typeof brontoCart === "undefined") {
+        var brontoCart = {};
+        brontoCart.subtotal = 0;
+        brontoCart.lineItems = [];
+        brontoCart.discountAmount = 0;
+    }
+    flashdiscount = ['FLSOUND5', 5, 20, 20];
+    efl = getCookie('eflash');
+    if (QueryString.utm_campaign == 'Flash_Sale' || efl !== '') {
+        flashdiscount = ['EFLSOUND10', 10, 30, 30];
+        if (efl == '') {
+            setCookie('eflash', 1);
         }
-        vip = $(thisItem).find('.vipBadge');
-        if (vip.length) {
-          rewards = "FREE 2-Day Shipping"
-        }
-        stars = $(thisItem).find('.stars span');
-        for (var e = stars.length - 1; e >= 0; e--) {
-          thisStar = stars[e];
-          num = $(thisStar).attr('data-star');
-          score = $(thisStar).parent().attr('score');
-          p = num - score;
-          if (score >= num) {
-            $(thisStar).addClass('fa-star');
-          } else if (p > 0 && p < 1) {
-            $(thisStar).addClass('fa-star-half-o');
-          } else if (score <= num) {
-            $(thisStar).addClass('fa-star-o');
-          }
-        }
-      };
-      $('button.showMore').click(function(e) {
-        var shortList = $(this).parent().parent().find('.saleItem');
-        if (shortList.length > 0) {
-          shortList.removeClass('condensedList');
-          $(this).parent().css('display', 'none');
-        }
-      });
-      $('#yw0').submit(function(e) {
-        e.preventDefault();
-        $('.afg-selector-submit-btn').html('<i class="fa fa-spinner fa-spin fa-fw font-xs"></i> searching millions of parts');
-        carinfo = $(this).serializeArray();
-        if (vehicleSelected) {
-          afgredirect = $(this).attr('action');
-          window.location.href = afgredirect;
-        } else {
-          for (var i = carinfo.length - 1; i >= 0; i--) {
-            if (carinfo[i].name == 'afg[year]') {
-              yy = carinfo[i].value;
-            }
-            if (carinfo[i].name == 'afg[make]') {
-              mm = carinfo[i].value;
-              mm = mm.replace(/\+/g, '-').replace(/%26/g, '&').replace(/\s+/g, '-');
-            }
-            if (carinfo[i].name == 'afg[model]') {
-              md = carinfo[i].value;
-              md = md.replace(/\+/g, '-').replace(/%26/g, '&').replace(/\s+/g, '-');
-            }
-          }
-          window.location.href = '/afg/' + mm + '/' + md + '/' + yy;
-
-        }
-      });
-      $('#removeV').click(function() {
-        vehicleSelected = false;
-        $('.afg-selector').removeClass('on');
-        $('#yw0').attr('action', '/afg/vehicle/select');
-        $('.formContainer').prepend('<div class="drop-down-container">' + years + '</div>');
-        $('button.ctaOrange').attr('disabled', 'disabled');
-      });
-      $('#removeR').click(function() {
-        vehicleSelected = false;
-        document.cookie = "car_afg_year=''; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
-        document.cookie = "car_afg_make=''; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
-        document.cookie = "car_afg_model=''; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
-        $('.afg-selector').removeClass('on');
-        $('#yw0').attr('action', '/afg/vehicle/select');
-        $('.formContainer').prepend('<div class="drop-down-container">' + years + '</div>');
-        $('button.ctaOrange').attr('disabled', 'disabled');
-      });
-    });
-  })(jQuery);
-</script><script type="text/javascript" src="https://www.sonicelectronix.com/landing/homepage.js"></script>
+    }
+    dTit = document.title;
+    freeCodes = ['KICK25'];
+    cReviewCode = 'HDREVIEW50509';
+    utmOffers = {};
+    utmOffers['Shopping-Campaign-Promo-Coupon-50OFFBASS'] = ['50OFFBASS', '$50 Off', 50];
+    utmOffers['Shopping-Campaign-Promo-Coupon-100OFFBASS'] = ['100OFFBASS', '$100 Off', 100];
+    utmOffers['119-car-subwoofer-stealthboxes-vehicle-specific'] = ['SAVESTEALTH', '15% Off', 0.15];
+    utmOffers['jl-audio-stealthboxes-coupon'] = ['SAVESTEALTH', '15% Off', 0.15];
+    paidOffer = utmOffers[QueryString.utm_campaign];
+    </script>
+    <div id="headerWrapper" data-ship-eta="{{# freeFastGroundShipping }}{{ freeFastGroundShipping }}{{/ freeFastGroundShipping }}{{^ freeFastGroundShipping }}false{{/ freeFastGroundShipping }}">
+      <div id="header" class="page-header-sonic">
+        <div class="page-header-container">
+          <div class="header-logo">
+            <a href="/"><span class="logo"></span></a>
+          </div>
+          <div class="left-content">
+            <!-- Navigation -->
+            <div id="navigationBar">
+              <div class="black-overlay"></div>
+              <nav class="navigationIn" id="nav">
+                <a id="mobile-menu-button" class="hamburger"> <span class="top"></span> <span class="middle"></span> <span class="bottom"></span> </a>
+                <!-- SIDEBAR HAMBURGER MEGA MENU FOR DESKTOP AND MOBILE  -->
+                <div class="hero-menu">
+                  <div class="top-bar">
+                    <a class="hero-menu-logo" href="https://www.sonicelectronix.com/"> <img src="https://www.sonicelectronix.com/landing/images/whiteTransLogo.png" alt=""> </a>
+                    <div class="close-hero-menu">
+                      <div class="ham-bar"></div>
+                      <div class="ham-bar"></div>
+                    </div>
+                  </div>
+                  <div class="top-section">
+                    <ul>
+                      <li class="account_link"><a class="sidebar-account-icon" style="color: #000000; font-weight:400;" href="/customer/login">Your account</a></li>
+                      <li><a style="color:#000000; font-size: 1.1rem;font-weight: 400;" class="sidebar-my-vehicle-icon" id="myVehicle" href="/afg" onclick="_gaq.push(['_trackEvent', 'Global', 'Header', 'My Vehicle']);">Your vehicle</a></li>
+                      <li> <a class="sidebar-help-icon"  target="_blank" style="color: #000000; font-weight:400;" href="https://help.sonicelectronix.com/support/home">Help</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-section">
+                    <ul class="menu level-1" >
+                      <!-- Parent -->
+                      <div class="category-div">SHOP BY CATEGORY <a href="/viewcat.php" style="text-decoration: underline;color: inherit;position: absolute;right: 0;top: 0.3rem;">See all</a></div>
+                      <li class='no-border-top has-child-level-1'>
+                        <h4 class="title">Car &amp; Automotive</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i465_car-electronics-auto-parts.html">Car &amp; Automotive <span class="see-all-link">See all</span></a></li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Car Audio</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i857_car-audio.html">CAR AUDIO <span class="see-all-link">See all</span></a></li>
+                              <li><a href="/cat_i9_car-stereos-radios.html"> Car Stereos </a></li>
+                              <li><a href="/cat_i7_car-speakers.html"> Car Speakers </a></li>
+                              <li><a href="/cat_i39_car-subwoofers.html"> Car Subwoofers </a></li>
+                              <li><a href="/cat_i22_car-amplifiers.html">Car Amplifiers </a></li>
+                              <li class="has-child-level-3">
+                                <h4 class="title">Installation Parts</h4>
+                                <!--LEVEL 4 SUB Menu Start Here-->
+                                <ul class="level-4">
+                                  <li><a class="dynamic-title-link" href="/cat_i656_car-audio-accessories-installation-parts.html">INSTALLATION PARTS <span class="see-all-link">See all</span></a></li>
+                                  <li><a href="/cat_i1733_car-stereo-accessories-installation.html"> Stereo Installation </a>
+                                  <li><a href="/cat_i166_speaker-installation-accessories.html"> Speaker Installation </a></li>
+                                  <li><a href="/cat_i453_subwoofer-installation-accessories.html"> Sub Boxes &amp; Installation </a></li>
+                                  <li><a href="/cat_i3_amplifier-installation-accessories.html"> Amplifier Installation </a></li>
+                                  <li><a rel="nofollow" href="/cat_i656_car-audio-accessories-installation-parts.html">Shop all Installation Parts</a></li>
+                                </ul>
+                                <!--LEVEL 4 End Here  -->
+                              </li>
+                              <li class="has-child-level-3">
+                                <h4 class="title">Accessories &amp; Add-ons</h4>
+                                <!--LEVEL 4 SUB Menu Start Here-->
+                                <ul class="level-4">
+                                  <li><a class="dynamic-title-link" href="/cat_i656_car-audio-accessories-installation-parts.html">ACCESSORIES &amp; ADD-ONS <span class="see-all-link">See all</span></a></li>
+                                  <li><a href="/cat_i145_sound-dampening-deadening.html"> Sound Damping </a></li>
+                                  <li><a href="/cat_i701_car-batteries-power.html"> Batteries, Capacitors &amp; Power </a></li>
+                                  <li><a href="/cat_i20_eqs-sound-processors.html"> EQs &amp; Sound Processors</a></li>
+                                  <li><a href="/cat_i104_siriusxm-satellite-radio.html"> SiriusXM Satellite Radio </a></li>
+                                  <li><a href="/cat_i430_bluetooth-car-kits.html"> Bluetooth Kits &amp; Controllers </a></li>
+                                  <li><a href="/cat_i2941_android-apple-iphone-integration.html"> Android &amp; iPhone Integration </a></li>
+                                  <li><a href="/cat_i978_cell-phone-car-mounts.html?from=1733"> Phone Mounts &amp; Chargers </a></li>
+                                  <li><a rel="nofollow" href="/cat_i656_car-audio-accessories-installation-parts.html">Shop all Accessories &amp; Add-ons</a></li>
+                                </ul>
+                                <!--LEVEL 4 End Here  -->
+                              </li>
+                              <li><a href="/cat_i20_eqs-sound-processors.html"> EQs &amp; Sound Processors</a></li>
+                              <li><a href="/cat_i2873_car-audio-packages-bundles.html"> Audio Packages &amp; Bundles</a></li>
+                              <li><a rel="nofollow" href="/cat_i857_car-audio.html">Shop all Car Audio</a></li>
+                            </ul>
+                          </li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Cameras, Video &amp; GPS</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i16_car-cameras-video-safety-gps.html">CAMERAS, VIDEO &amp; GPS <span class="see-all-link">See all</span></a></li>
+                              <li><a href="/cat_i249_rearview-backup-cameras.html"> Backup Cameras </a></li>
+                              <li><a href="/cat_i960_dash-cams-vehicle-dvr.html?from=16"> Dash Cameras &amp; DVR </a></li>
+                              <li><a href="/cat_i2252_car-lcd-monitors-screens.html"> Headrest &amp; Overhead Video </a></li>
+                              <li><a href="/cat_i178_in-dash-video-dvd-players.html?from=16"> In-dash Video/DVD </a></li>
+                              <li><a href="/cat_i321_in-dash-car-gps-navigation.html?from=186"> In-dash Navigation </a></li>
+                              <li><a href="/cat_i186_gps-navigation.html"> GPS Navigation </a></li>
+                              <li><a href="/cat_i2268_driver-assistance-vehicle-safety.html"> Driver Safety </a></li>
+                              <li><a rel="nofollow" href="/cat_i16_car-cameras-video-safety-gps.html">Shop all Cameras, Video &amp; GPS</a></li>
+                            </ul>
+                          </li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Remote Start &amp; Car Alarms</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i27_remote-start-car-alarms.html">REMOTE START &amp; ALARMS <span class="see-all-link">See all</span></a></li>
+                              <li><a href="/cat_i479_remote-start.html"> Remote Start </a></li>
+                              <li><a href="/cat_i133_all-car-alarms.html"> Car Alarms </a></li>
+                              <li><a href="/cat_i1088_keyless-entry.html"> Keyless Entry </a></li>
+                              <li><a href="/cat_i509_vehicle-specific-immobilizer-bypass-modules.html"> Immobilizer Bypass </a></li>
+                              <li><a href="/cat_i440_vehicle-gps-tracking.html"> Tracking &amp; Monitoring </a></li>
+                              <li><a href="/cat_i510_car-alarm-accessories-installation.html"> Car Security Accessories </a></li>
+                              <li><a rel="nofollow" href="/cat_i27_remote-start-car-alarms.html">Shop all Remote Start &amp; Alarms</a></li>
+                            </ul>
+                          </li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Automotive Accessories</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i847_car-parts-auto-accessories.html">AUTO ACCESSORIES <span class="see-all-link">See all</span></a></li>
+                              <li><a href="/cat_i978_cell-phone-car-mounts.html?from=1733"> Phone Mounts &amp; Chargers </a></li>
+                              <li><a href="/cat_i1340_automotive-lighting.html"> Vehicle Lighting </a></li>
+                              <li><a href="/cat_i136_radar-detectors-accessories.html?from=847"> Radar Detectors </a></li>
+                              <li><a rel="nofollow" href="/cat_i847_car-parts-auto-accessories.html">Shop all Automotive Accessories</a></li>
+                            </ul>
+                          </li>
+                          <li><a rel="nofollow" href="/cat_i465_car-electronics-auto-parts.html">Shop all Car &amp; Automotive</a></li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">Marine</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i131_marine-audio-electronics.html">MARINE <span class="see-all-link">See all</span></a></li>
+                          <li><a href="/cat_i183_marine-stereo-radio.html"> Radios &amp; Stereos </a></li>
+                          <li><a href="/cat_i2735_marine-bluetooth-controllers-kits.html"> Bluetooth Controllers </a></li>
+                          <li><a href="/cat_i2615_marine-amplifiers.html"> Amplifiers </a></li>
+                          <li><a href="/cat_i181_marine-speakers.html"> All Speakers </a></li>
+                          <li><a href="/cat_i455_marine-tower-speakers.html"> Tower Speakers </a></li>
+                          <li><a href="/cat_i2727_marine-sound-bar-speakers-soundbars.html"> Sound Bars </a></li>
+                          <li><a href="/cat_i184_marine-subwoofers.html"> Subwoofers &amp; Boxes </a></li>
+                          <li><a href="/cat_i2401_marine-audio-packages-bundles.html"> Audio Packages &amp; Bundles </a></li>
+                          <li><a href="/cat_i454_marine-accessories-installation.html"> Accessories &amp; Installation Parts </a></li>
+                          <li><a href="/cat_i131_marine-audio-electronics.html">Shop all Marine</a></li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">UTV &amp; ATV</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i1313_powersports-utv-sxs-atv.html">UTV &amp; ATV <span class="see-all-link">See all</span></a></li>
+                          <li><a href="/cat_i1851_utv-atv-sxs-stereos-bluetooth.html"> Radios &amp; Receivers </a></li>
+                          <li><a href="/cat_i2839_bluetooth-kits-for-utv-atv-sxs.html"> Bluetooth Controllers &amp; Kits </a></li>
+                          <li><a href="/cat_i2611_utv-atv-sxs-amplifiers.html"> Amplifiers </a></li>
+                          <li><a href="/cat_i1854_utv-atv-sxs-speakers.html"> All Speakers </a></li>
+                          <li><a href="/cat_i1318_utv-atv-sxs-sound-bars-pod-speakers.html"> Sound Bars &amp; Pods </a></li>
+                          <li><a href="/cat_i2415_utv-atv-sxs-subwoofers-sub-boxes.html"> Subwoofers &amp; Enclosures </a></li>
+                          <li><a href="/cat_i2408_utv-atv-sxs-vehicle-specific-upgrades.html"> Vehicle Specific </a></li>
+                          <li><a href="/cat_i2403_utv-atv-sxs-packages-bundles.html"> Audio Packages &amp; Bundles </a></li>
+                          <li><a href="/cat_i1852_utv-atv-sxs-accessories.html"> Accessories &amp; Install Parts </a></li>
+                          <li><a href="/cat_i1313_powersports-utv-sxs-atv.html">Shop all UTV, ATV &amp; SxS</a></li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">Motorcycle</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i1850_motorcycle-audio-electronics.html">MOTORCYCLE <span class="see-all-link">See all</span></a></li>
+                          <li><a href="/cat_i2613_motorcycle-stereos.html"> Radios &amp; Stereos </a></li>
+                          <li><a href="/cat_i1314_motorcycle-amplifiers.html"> Amplifiers </a></li>
+                          <li><a href="/cat_i2937_motorcycle-speakers-subs-speaker-kits.html"> Speakers &amp; Speaker Kits </a></li>
+                          <li><a href="/cat_i2406_motorcycle-accessories-installation-parts.html"> Accessories &amp; Install Parts </a></li>
+                          <li><a href="/cat_i2531_motorcycle-lighting.html"> Lighting </a></li>
+                          <li><a href="/cat_i2359_motorcycle-audio-packages.html"> Audio Packages &amp; Bundles </a></li>
+                          <li><a href="/cat_i1850_motorcycle-audio-electronics.html">Shop all Motorcycle</a></li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">Portables</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i226_portable-personal-electronics.html">PORTABLES <span class="see-all-link">See all</span></a></li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Headphones</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i354_headphones.html">HEADPHONES</a></li>
+                              <li><a href="/cat_i355_in-ear-headphones-earbuds.html"> In-Ear (Earbuds) </a></li>
+                              <li><a href="/cat_i1085_on-ear-headphones.html"> On-Ear </a></li>
+                              <li><a href="/cat_i736_over-ear-headphones.html"> Over-Ear </a></li>
+                              <li><a href="/cat_i646_bluetooth-wireless-headphones.html"> Bluetooth Wireless </a></li>
+                              <li><a rel="no-follow" href="/cat_i354_headphones.html">Shop all Headphones</a></li>
+                            </ul>
+                          </li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Speakers &amp; Audio</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i885_portable-speakers-radios-players.html">SPEAKERS &amp; AUDIO <span class="see-all-link">See all</span></a></li>
+                              <li><a href="/cat_i1663_portable-bluetooth-speakers.html"> Wireless Bluetooth Speakers </a></li>
+                              <li><a href="/cat_i364_boomboxes.html"> Boomboxes </a></li>
+                              <li><a href="/cat_i343_bluetooth-audio-accessories.html"> Bluetooth Accessories </a></li>
+                              <li><a rel="no-follow" href="/cat_i885_portable-speakers-radios-players.html">Shop all Speakers &amp; Audio</a></li>
+                            </ul>
+                          </li>
+                          <li class="has-child-level-2">
+                            <h4 class="title">Accessories &amp; More</h4>
+                            <ul class="level-3">
+                              <li><a class="dynamic-title-link" href="/cat_i2251_portable-audio-accessories.html">ACCESSORIES &amp; MORE <span class="see-all-link">See all</span></a></li>
+                              <li><a href="/cat_i462_cables-connectors.html"> Chargers &amp; Power Adapters </a></li>
+                              <li><a href="/cat_i1559_laptop-stands.html"> Docks &amp; Stands </a></li>
+                              <li><a href="/cat_i1322_power-banks-backup-batteries.html"> Battery Power Banks </a></li>
+                              <li><a href="/cat_i234_cell-phone-accessories.html"> Cell Phone Accessories </a></li>
+                              <li><a rel="no-follow" href="/cat_i2251_portable-audio-accessories.html">Shop all Accessories &amp; More</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="/cat_i226_personal-portable-electronics.html">Shop all Portables</a></li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">Fitness</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i2927_fitness-health.html">FITNESS <span class="see-all-link">See all</span></a></li>
+                          <li><a href="/cat_m1379_i1585_victor-fitness-massagers.html"> Vibrating REVIVE Roller </a></li>
+                          <li><a href="/item_168543_Victor.Fitness-LiftLocks1-Black.html"> Barbell Collars (LiftLocks) </a></li>
+                          <li><a href="/item_168535_Victor.Fitness-PYNpad.html"> Barbell Pad (PYNpad) </a></li>
+                          <li><a href="/cat_m1379_i2931_victor-fitness-resistance-bands.html"> Resistance Bands </a></li>
+                          <li><a href="/item_168509_Victor.Fitness-TrigStick1.html"> Massage Stick </a></li>
+                          <li><a href="/item_168505_Victor.Fitness-VicGrips.html"> Weightlifting Gloves</a></li>
+                          <li><a href="/cat_m1379_i2933_victor-fitness-yoga.html"> Yoga Mats </a></li>
+                          <li><a href="/cat_i2927_fitness-health.html">Shop all Fitness</a> </li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">Home &amp; Office</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i499_home-office-electronics.html">HOME &amp; OFFICE <span class="see-all-link">See all</span></a></li>
+                          <li><a href="/cat_i1559_laptop-stands.html"> Laptop Stands </a></li>
+                          <li><a href="/cat_i1558_macbook-laptop-docking-stations-usb-hub-adapters.html"> USB Hubs &amp; Docking Stations </a></li>
+                          <li><a href="/cat_i2943_phone-mounts-chargers-for-home-desk-office.html"> Phone Mounts &amp; Chargers </a></li>
+                          <li><a href="/cat_i1663_portable-bluetooth-speakers.html"> Bluetooth Wireless Speakers </a></li>
+                          <li><a href="/cat_i364_boomboxes.html"> Boomboxes </a></li>
+                          <li><a href="/cat_i354_headphones.html"> Headphones </a></li>
+                          <li><a href="/cat_i499_home-office-electronics.html">Shop all Home &amp; Office</a></li>
+                        </ul>
+                      </li>
+                      <!-- Parent -->
+                      <li class='has-child-level-1'>
+                        <h4 class="title">Specials</h4>
+                        <ul class="level-2">
+                          <li><a class="dynamic-title-link" href="/cat_i2244_specials-promotions.html">SPECIALS <span class="see-all-link">See all</span></a></li>
+                          <li><a href="/lp/on-sale"> Price Drops </a></li>
+                          <li><a href="/lp/vip-rewards"> VIP: Free 2-day + 10% Rewards </a></li>
+                          <li><a href="/coupons"> Coupons </a></li>
+                          <li><a href="/liquidation_station.html"> Outlet (Open Box, Refurbished) </a></li>
+                          <li><a href="/cat_i1856_gift-guides.html"> Gift Guides </a></li>
+                          <li><a href="/cat_i2244_specials-promotions.html">Shop all Specials</a></li>
+                        </ul>
+                      </li>
+                      {{# hasRecentlyViewed }}
+                      <li class="has-child-level-1 recent">
+                        <h4 class="title">Recently Viewed</h4>
+                        <ul class="level-2">
+                          {{# recentlyViewed }}
+                          <li><a href="{{ viewProductURL }}">{{ name }}</a></li>
+                          {{/ recentlyViewed }}
+                        </ul>
+                      </li>
+                      {{/ hasRecentlyViewed }}
+                    </ul>
+                  </div>
+                  <!--END OF MAIN HERO MENU-->
+                </div>
+              </nav>
+            </div>
+            <a href="/cart" class="skip-link skip-cart" data-target-element="#header-cart">{{# cartItemCount }}<span class="cCount">{{ cartItemCount }}</span>{{/ cartItemCount }}<span class="icon"></span></a>
+            <a href="#header-search" id="header-search" class="skip-link skip-search"> <span class="icon"></span> </a>
+          </div>
+        </div>
+        <div id="searchbox"  class="searchbox skip-search">
+          <form method="get" action="/search" data-ajax="false">
+            <div class="searchContainer">
+              <input type="text" name="keyword" id="searchField" class="search-basic hasclear" placeholder="Keyword, brand, model #" data-role="none" value="" autocomplete="off"/>
+              <span class="clearer reset-icon">X</span>
+              <button type="submit" name="Submit" id="search" class="search-btn" data-role="none">Search</button>
+              <div class="searchajax">
+                <div class="searchShelf" id="searchShelf"> </div>
+              </div>
+            </div>
+          </form>
+          <div id="search-msg" class="search-msg" >Please enter keyword(s) and try again.</div>
+        </div>
+      </div>
+    </div>
+    <div id="globalPromo" style="position:relative"></div>

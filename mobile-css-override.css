@@ -22,9 +22,9 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .blue-btn, .blue-btn-unique, .carInformation .carInformationProduct #car-edit a, .callInBtn, .bootstrap-iso a.orangeButton, a.selectVehicleCatBranch {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important;border: 1px solid #0299fe !important;}
 .blue-btn-unique {left: 1rem;right: 1rem;padding: 10px;bottom: 1rem;text-align: center;font-size: 1rem;}
 .carInformation .carInformationProduct #car-edit a:active, .callInBtn:active, .bootstrap-iso a.orangeButton:active, a.selectVehicleCatBranch:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
-.orangeButton:not(.buyWithPaypal), .checkoutMain, .headerBtn {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;}
-.orangeButton:not(.buyWithPaypal):active, .checkoutMain:active, .headerBtn:active {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
-.yellowButton, .greenButton, .toggleFreshDesk.freshDeskToggle {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;}
+.orangeButton:not(.buyWithPaypal), .checkoutMain, .headerBtn {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
+.orangeButton:not(.buyWithPaypal):active, .checkoutMain:active, .headerBtn:active {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
+.yellowButton, .greenButton, .toggleFreshDesk.freshDeskToggle {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
 .yellowButton:active, .greenButton:active, .toggleFreshDesk.freshDeskToggle:hover {background-image: linear-gradient(#000000, #737373)!important;}
 .descriptionWrap .description-list .readfull {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
 /* .descriptionWrap .description-list .readfull {background-image: linear-gradient(#115ea7, #0299fe)!important;} */
