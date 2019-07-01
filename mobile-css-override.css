@@ -26,8 +26,8 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .orangeButton:not(.buyWithPaypal):active, .checkoutMain:active, .headerBtn:active {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
 .yellowButton, .greenButton, .toggleFreshDesk.freshDeskToggle {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
 .yellowButton:active, .greenButton:active, .toggleFreshDesk.freshDeskToggle:hover {background-image: linear-gradient(#000000, #737373)!important;}
-.descriptionWrap .description-list .readfull {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
-/* .descriptionWrap .description-list .readfull {background-image: linear-gradient(#115ea7, #0299fe)!important;} */
+.descriptionWrap .description-list .readfull {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;border-radius: 0 !important;}
+.descriptionWrap:active .description-list:active .readfull:active {background-image: linear-gradient(#115ea7, #0299fe)!important;border-radius: 0 !important;}
 .descriptionWrap .description-list .ui-collapsible-heading, .shopping-cart-step1 .extendedWarrantyRow .extendedWarrantyRowWrap i {background: #115ea7 !important;}
 a.freeinstallpr{color:#737373!important;}
 .priceShipping .pRice {color:#000000 !important;}
