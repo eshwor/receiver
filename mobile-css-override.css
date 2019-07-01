@@ -46,6 +46,7 @@ a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:
 .cCount {background: #FCA40A !important;border-color: #FCA40A!important;color: #000000 !important;font-size: 12px !important; font-weight: bold !important;border-radius: 100%;padding: 3px;border-radius: 3px !important;}
 span.subtotalAmt span, .inStockStatus  {color: #0d8245 !important;}
 #cart_form li.ui-li.ui-li-static.ui-btn-up-c {width: auto !important;float: none !important;margin: 5px;border-radius: 3px;background: #FFFFFF !important;border-width: 0 !important;}
+.greyButton {border: 2px solid #707070!important;}
 .shopping-cart-step1.shopping-cart-step-one.content.ui-content .cart-item-quantity {width:4rem !important;}
 .shopping-cart-step1 .price {color: #636363 !important;font-size: 16px !important;}
 .shopping-cart-step1 .right-part-shop-step-1 .in-stock, .shopping-cart-step1 .refurbished_warning, .shopping-cart-step1 .shipping_warning_green, .coupon_text {color: #737373 !important;}
