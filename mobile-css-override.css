@@ -50,7 +50,7 @@ span.subtotalAmt span, .inStockStatus  {color: #0d8245 !important;}
 .shopping-cart-step1 .price {color: #636363 !important;font-size: 16px !important;}
 .shopping-cart-step1 .right-part-shop-step-1 .in-stock, .shopping-cart-step1 .refurbished_warning, .shopping-cart-step1 .shipping_warning_green {color: #737373 !important;}
 .subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
-#cart_form .ui-grid-b.drop-content {background: #C7C7C7;width: 100%;margin-top: 3rem;padding-top: 1rem;}
+#cart_form .ui-grid-b.drop-content {width: 100%;margin-top: 3rem;padding-top: 1rem;}
 .icon_arrow_down {background-size: 16px !important;}
 .shopping-cart-step1 .li-content .drop-content .ui-block-a {width: 0px !important;}
 .shopping-cart-step1 .extendedWarrantyRow {text-align: left !important;}
