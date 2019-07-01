@@ -28,14 +28,14 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .yellowButton:active, .greenButton:active, .toggleFreshDesk.freshDeskToggle:hover {background-image: linear-gradient(#000000, #737373)!important;}
 .descriptionWrap .description-list .readfull {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
 .descriptionWrap .description-list .readfull {background-image: linear-gradient(#115ea7, #0299fe)!important;}
-.descriptionWrap .description-list .ui-collapsible-heading {background: #115ea7 !important;}
+.descriptionWrap .description-list .ui-collapsible-heading, .shopping-cart-step1 .extendedWarrantyRow .extendedWarrantyRowWrap i {background: #115ea7 !important;}
 a.freeinstallpr{color:#737373!important;}
 .priceShipping .pRice {color:#000000 !important;}
 .content-category .ui-btn .ui-btn-inner .ui-btn-text .ui-link-inherit .right-part-cat-leaf .price-div {color: #636363 !important;}
 #categoryLeafContent .pairedPromo p {color:#737373!important;}
 a.navigationArrow.prevArrow.ui-link, a.navigationArrow.nextArrow.ui-link {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important; border: 1px solid #0299fe !important;}
 a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
-.ui-grid-a.photowr .ui-link, #reviewsLink, #bundledSavingsSlider a, a.prodBuyingBuide, .ui-body-c .ui-link:not(.orangeButton, .readfull), #content_wrapper .catThumbCell a {color: #115ea7 !important;}
+.ui-grid-a.photowr .ui-link, #reviewsLink, #bundledSavingsSlider a, a.prodBuyingBuide, .ui-body-c .ui-link:not(.orangeButton, .readfull), #content_wrapper .catThumbCell a, #cart_form .li-content a, #public_cart .vip_banner {color: #115ea7 !important;}
 .pText {font-size: 12px;padding: 0.5rem;}
 /* .page > .content .ui-listview .ui-icon-custom-arrow {content: "";position: absolute;right: 5px;top: 40%;border: 4px solid #115ea7;border-bottom: 0;border-right: 0;padding: 2px;-webkit-transform: translate(-50%, -50%) rotate(133deg);transform: translate(-50%, -50%) rotate(133deg);background: none;width: 7px;height: 7px;margin:0 !important;} */
 #bundledSavingsSlider .sliderNavigation.next {content: "";position: absolute;right: 5px;top: 50%;border: 5px solid #115ea7;border-bottom: 0;border-right: 0;padding: 0px;-webkit-transform: translate(-50%, -50%) rotate(132deg);transform: translate(-50%, -50%) rotate(132deg);background: none !important; width: 21px;height: 20px;margin: 0 !important;right: 0px;}
@@ -44,12 +44,14 @@ a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:
 .ui-tooltip, .qtip {border-radius: 10px !important;}
 .ui-tooltip-tipped .ui-tooltip-content {background: #737373ed !important;color: #FFF !important;border-color: #737373 !important;border-radius: 3px !important;border: none !important;padding:1rem !important;}
 .cCount {background: #FCA40A !important;border-color: #FCA40A!important;color: #000000 !important;font-size: 12px !important; font-weight: bold !important;border-radius: 100%;padding: 3px;}
-span.subtotalAmt span {color: #0d8245 !important;}
+span.subtotalAmt span, .inStockStatus  {color: #0d8245 !important;}
 #cart_form li.ui-li.ui-li-static.ui-btn-up-c {width: auto !important;float: none !important;margin: 5px;border-radius: 3px;background: #FFFFFF !important;border-width: 0 !important;}
 .shopping-cart-step1.shopping-cart-step-one.content.ui-content .cart-item-quantity {width:4rem !important;}
 .shopping-cart-step1 .price {color: #636363 !important;font-size: 16px !important;}
+.shopping-cart-step1 .right-part-shop-step-1 .in-stock, .shopping-cart-step1 .refurbished_warning, .shopping-cart-step1 .shipping_warning_green {color: #737373 !important;}
 .subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
 #cart_form .ui-grid-b.drop-content {background: #C7C7C7;width: 100%;margin-top: 3rem;padding-top: 1rem;}
 .icon_arrow_down {background-size: 16px !important;}
 .shopping-cart-step1 .li-content .drop-content .ui-block-a {width: 0px !important;}
 .shopping-cart-step1 .extendedWarrantyRow {text-align: left !important;}
+.paypal-button.paypal-button-color-gold {background:#FFFFFF; border: 1px solid !important;}
