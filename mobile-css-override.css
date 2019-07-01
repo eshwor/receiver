@@ -35,7 +35,7 @@ a.freeinstallpr{color:#737373!important;}
 #categoryLeafContent .pairedPromo p {color:#737373!important;}
 a.navigationArrow.prevArrow.ui-link, a.navigationArrow.nextArrow.ui-link {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important; border: 1px solid #0299fe !important;}
 a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
-.ui-grid-a.photowr .ui-link, #reviewsLink, #bundledSavingsSlider a, a.prodBuyingBuide, .ui-body-c .ui-link:not(.orangeButton, .readfull), #content_wrapper .catThumbCell a, #cart_form .li-content a, #public_cart .vip_banner {color: #115ea7 !important;}
+.ui-grid-a.photowr .ui-link, #reviewsLink, #bundledSavingsSlider a, a.prodBuyingBuide, .ui-body-c .ui-link:not(.orangeButton, .readfull), #content_wrapper .catThumbCell a, #cart_form .li-content a, #public_cart .vip_banner, .mix a.name, ul.catMenu a {color: #115ea7 !important;}
 .pText {font-size: 12px;padding: 0.5rem;}
 /* .page > .content .ui-listview .ui-icon-custom-arrow {content: "";position: absolute;right: 5px;top: 40%;border: 4px solid #115ea7;border-bottom: 0;border-right: 0;padding: 2px;-webkit-transform: translate(-50%, -50%) rotate(133deg);transform: translate(-50%, -50%) rotate(133deg);background: none;width: 7px;height: 7px;margin:0 !important;} */
 #bundledSavingsSlider .sliderNavigation.next {content: "";position: absolute;right: 5px;top: 50%;border: 5px solid #115ea7;border-bottom: 0;border-right: 0;padding: 0px;-webkit-transform: translate(-50%, -50%) rotate(132deg);transform: translate(-50%, -50%) rotate(132deg);background: none !important; width: 21px;height: 20px;margin: 0 !important;right: 0px;}
