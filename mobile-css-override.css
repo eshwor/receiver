@@ -19,12 +19,12 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .footer .footer-tab .footer-btn + .footer-btn {border-left: 1px solid #FFFFFF !important;}
 .nav-bar.footer.phone-email a.eSignupBtn {background: #115ea7 !important;border-left: 1px solid #FFFFFF !important;}
 .nav-bar.footer a {background: #115ea7 !important;}
-.blue-btn, .blue-btn-unique, .carInformation .carInformationProduct #car-edit a, .callInBtn, .bootstrap-iso a.orangeButton, a.selectVehicleCatBranch, .greenButton.actionButton {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important;border: 1px solid #0299fe !important;}
+.blue-btn, .blue-btn-unique, .carInformation .carInformationProduct #car-edit a, .callInBtn, .bootstrap-iso a.orangeButton, a.selectVehicleCatBranch, .greenButton.actionButton {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important;border: 1px solid #0299fe !important; border-radius: 0 !important;}
 .blue-btn-unique {left: 1rem;right: 1rem;padding: 10px;bottom: 1rem;text-align: center;font-size: 1rem;}
-.carInformation .carInformationProduct #car-edit a:active, .callInBtn:active, .bootstrap-iso a.orangeButton:active, a.selectVehicleCatBranch:active, .greenButton.actionButton:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
-.orangeButton:not(.buyWithPaypal), .checkoutMain, .headerBtn {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
-.orangeButton:not(.buyWithPaypal):active, .checkoutMain:active, .headerBtn:active {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
-.yellowButton, .greenButton, .toggleFreshDesk.freshDeskToggle {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
+.carInformation .carInformationProduct #car-edit a:active, .callInBtn:active, .bootstrap-iso a.orangeButton:active, a.selectVehicleCatBranch:active, .greenButton.actionButton:active {background-image: linear-gradient(#115ea7, #0299fe)!important; border-radius: 0 !important;}
+.orangeButton:not(.buyWithPaypal), .checkoutMain, .headerBtn {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
+.orangeButton:not(.buyWithPaypal):active, .checkoutMain:active, .headerBtn:active {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
+.yellowButton, .greenButton, .toggleFreshDesk.freshDeskToggle {background-image: linear-gradient(#737373, #000000);color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
 .yellowButton:active, .greenButton:active, .toggleFreshDesk.freshDeskToggle:hover {background-image: linear-gradient(#000000, #737373)!important;}
 .descriptionWrap .description-list .readfull {background-image: linear-gradient(#0299fe, #115ea7)!important;color: #FFFFFF !important;border: 1px solid #0299fe !important;}
 /* .descriptionWrap .description-list .readfull {background-image: linear-gradient(#115ea7, #0299fe)!important;} */
@@ -33,8 +33,8 @@ a.freeinstallpr{color:#737373!important;}
 .priceShipping .pRice {color:#000000 !important;}
 .content-category .ui-btn .ui-btn-inner .ui-btn-text .ui-link-inherit .right-part-cat-leaf .price-div {color: #636363 !important;}
 #categoryLeafContent .pairedPromo p {color:#737373!important;}
-a.navigationArrow.prevArrow.ui-link, a.navigationArrow.nextArrow.ui-link, span.hpbannerCta, .bootstrap-iso button.ctaOrange {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important; border: 1px solid #0299fe !important;}
-a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:active,span.hpbannerCta:active, .bootstrap-iso button.ctaOrange:active {background-image: linear-gradient(#115ea7, #0299fe)!important;}
+a.navigationArrow.prevArrow.ui-link, a.navigationArrow.nextArrow.ui-link, span.hpbannerCta, .bootstrap-iso button.ctaOrange {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important; border: 1px solid #0299fe !important; border-radius: 0 !important;}
+a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:active,span.hpbannerCta:active, .bootstrap-iso button.ctaOrange:active {background-image: linear-gradient(#115ea7, #0299fe)!important; border-radius: 0 !important;}
 .ui-grid-a.photowr .ui-link, #reviewsLink, #bundledSavingsSlider a, a.prodBuyingBuide, .ui-body-c .ui-link:not(.orangeButton, .readfull), #content_wrapper .catThumbCell a, #cart_form .li-content a, #public_cart .vip_banner, .mix a.name, ul.catMenu a, .category-box a {color: #115ea7 !important;}
 .pText {font-size: 12px;padding: 0.5rem;}
 /* .page > .content .ui-listview .ui-icon-custom-arrow {content: "";position: absolute;right: 5px;top: 40%;border: 4px solid #115ea7;border-bottom: 0;border-right: 0;padding: 2px;-webkit-transform: translate(-50%, -50%) rotate(133deg);transform: translate(-50%, -50%) rotate(133deg);background: none;width: 7px;height: 7px;margin:0 !important;} */

@@ -50,14 +50,15 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 #productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, .afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a, .vehicleSpecificAccessoriesContainer a:not(.orangeButton, .btn) {color: #115ea7 !important;}
 .greyButton {border: 2px solid #707070!important;}
 #content_wrapper .catThumbCell a, #cart_form .item_row a, ul.catMenu a, .mix a.name, .category-box a {color: #115ea7 !important;}
-.orangeButton, .checkoutMain, .addAcessory {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important}
-.orangeButton:hover, .checkoutMain:hover, .addAcessory:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
-.yellowButton, .greenButton, .make_offer, .addAcessory.remove {background-image: linear-gradient(#737373, #000000) !important;color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important;}
-.yellowButton:hover, .greenButton:hover, .addAcessory.remove:hover {background-image: linear-gradient(#000000, #737373)!important;}
+.orangeButton, .checkoutMain, .addAcessory {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
+.orangeButton:hover, .checkoutMain:hover, .addAcessory:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important; border-radius: 0 !important;}
+.yellowButton, .greenButton, .make_offer, .addAcessory.remove {background-image: linear-gradient(#737373, #000000) !important;color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
+.yellowButton:hover, .greenButton:hover, .addAcessory.remove:hover {background-image: linear-gradient(#000000, #737373)!important; border-radius: 0 !important;}
 .blue-btn, .blue-btn-unique, a.select-vehicle.afgSelectVehicleNewBtn .select-vehicle.selectVehicleCatBranch, a.selectVehicleCatBranch, .bootstrap-iso a.orangeButton, .contact-us, span.hpbannerCta, .bootstrap-iso button.ctaOrange {
     background-image: linear-gradient(#0299fe, #115ea7)!important;
     color: #FFFFFF !important;
     border: 1px solid #0299fe !important;
+    border-radius: 0 !important;
 }
 .blue-btn-unique {
     left: 1rem;
@@ -66,8 +67,9 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     bottom: 1rem;
     text-align: center;
     font-size: 1rem;
+    border-radius: 0 !important;
 }
-.blue-btn:hover, .blue-btn-unique:hover, a.select-vehicle.afgSelectVehicleNewBtn:hover, .bootstrap-iso a.orangeButton:hover, a.selectVehicleCatBranch:hover, .contact-us:hover, span.hpbannerCta:hover, .bootstrap-iso button.ctaOrange:hover {background-image: linear-gradient(#115ea7, #0299fe)!important;}
+.blue-btn:hover, .blue-btn-unique:hover, a.select-vehicle.afgSelectVehicleNewBtn:hover, .bootstrap-iso a.orangeButton:hover, a.selectVehicleCatBranch:hover, .contact-us:hover, span.hpbannerCta:hover, .bootstrap-iso button.ctaOrange:hover {background-image: linear-gradient(#115ea7, #0299fe)!important; border-radius: 0 !important;}
 .buyWithPaypal {border:2px solid !important;}
 .productName a {color: #115ea7!important;font-weight: bold;}
 .overflowAnchor {color:#737373 !important; padding:2px 5px !important; font-weight:bold;border:1px solid;}
