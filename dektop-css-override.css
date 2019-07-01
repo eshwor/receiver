@@ -9,7 +9,7 @@
 #footer .aboutSonic .toggleButton {background: #178ddf !important;}
 #footer .aboutSonic .contentContainer {background: #178ddf !important; border:none !important;}
 #footer .aboutSonic .contentContainer p {font-size: 1rem !important;}
-#footer .legal {padding:2rem !important;}
+#footer .legal {padding:3rem !important;}
 #footer .legal > span, #footer .legal > a { color: #FFFFFF !important; font-size: 1rem !important; display:block !important;padding: 3px;text-align: center;}
 #footer .legal {border:none !important;}
 #footer .innerWrap {background:none !important;}
@@ -102,7 +102,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .afg-content .drop-down-container.success .select2-container--default{box-shadow: 0px 0px 4px 0px #0d8245;}
 .afg-content .drop-down-container.error .select2-container--default{box-shadow: 0px 0px 4px 0px red !important; border-color: red !important;}
 .afg-content .drop-down-container.error .errorMessage{color: red !important;}
-
+.subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
 
 @keyframes blink {
     50% {
