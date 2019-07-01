@@ -75,7 +75,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .overflowAnchor {color:#737373 !important; padding:2px 5px !important; font-weight:bold;border:1px solid;}
 .categoryLeafTable .productRow .productMedia .mediaLinks a {color:#115ea7!important;}
 #productContainer > .header > h1 {color: #115ea7!important;}
-#freeInstallationAccessories,.seeMore, .learn {background: #115ea7 !important;}
+#freeInstallationAccessories,.seeMore, .learn, .revcount {background: #115ea7 !important;}
 .afg-content .checkVehicleFit .checkVehicleAnchor {color: #115ea7 !important;}
 #productContainer .belowTheFold > .main #productTabs .tab > a {background: #737373 !important;color:#FFFFFF!important;}
 #productContainer .belowTheFold > .main #productTabs .tab > a:hover,#productContainer .belowTheFold > .main #productTabs .tab > a:focus {background: #C7C7C7 !important; color:#000000 !important;}
