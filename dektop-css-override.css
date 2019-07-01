@@ -93,9 +93,8 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     background-size: contain;
     top: -7px !important;
 }
-.guidedBrowsingSliderWrapper .slider .ui-slider-handle.ui-state-focus {
-    outline:none !important;
-}
+.shopping-cart-step1 .right-part-shop-step-1 .in-stock, .shopping-cart-step1 .refurbished_warning, .shopping-cart-step1 .shipping_warning_green, .coupon_text, .mailInRebateTitle {color: #737373 !important;}
+.guidedBrowsingSliderWrapper .slider .ui-slider-handle.ui-state-focus {outline:none !important;}
 .guidedBrowsingSliderWrapper .left, .guidedBrowsingSliderWrapper .right {background: none !important;}
 .clear_all {background: #115ea7 !important; }
 .shoppingCart a .itemCount > span {background: none !important; color:#000000 !important;}
