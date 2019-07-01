@@ -31,7 +31,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .descriptionWrap .description-list .ui-collapsible-heading, .shopping-cart-step1 .extendedWarrantyRow .extendedWarrantyRowWrap i {background: #115ea7 !important;}
 a.freeinstallpr{color:#737373!important;}
 .priceShipping .pRice {color:#000000 !important;}
-.content-category .ui-btn .ui-btn-inner .ui-btn-text .ui-link-inherit .right-part-cat-leaf .price-div {color: #636363 !important;}
+.content-category .ui-btn .ui-btn-inner .ui-btn-text .ui-link-inherit .right-part-cat-leaf .price-div, .accessoriesPrice {color: #636363 !important;}
 #categoryLeafContent .pairedPromo p {color:#737373!important;}
 a.navigationArrow.prevArrow.ui-link, a.navigationArrow.nextArrow.ui-link, span.hpbannerCta, .bootstrap-iso button.ctaOrange {background-image: linear-gradient(#0299fe, #115ea7)!important; color: #FFFFFF !important; border: 1px solid #0299fe !important; border-radius: 0 !important;}
 a.navigationArrow.prevArrow.ui-link:active, a.navigationArrow.nextArrow.ui-link:active,span.hpbannerCta:active, .bootstrap-iso button.ctaOrange:active {background-image: linear-gradient(#115ea7, #0299fe)!important; border-radius: 0 !important;}
