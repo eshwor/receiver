@@ -47,7 +47,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .breadcrumbs a:hover {color: inherit!important;text-decoration: underline;}
 #footer .information .links a, #footer .information .links h3 {color:#FFFFFF !important;}
 #footer .information .links a:hover, #footer .information .links a:focus, #footer .information .links a:active {text-decoration:underline;}
-a, #productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a, .vehicleSpecificAccessoriesContainer a:not(.orangeButton, .btn) {color: #115ea7 !important;}
+a, #productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, .afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a, .vehicleSpecificAccessoriesContainer a:not(.orangeButton, .btn) {color: #115ea7 !important;}
 #content_wrapper .catThumbCell a {color: #115ea7 !important;}
 .orangeButton, .checkoutMain, .addAcessory {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;}
 .orangeButton:hover, .checkoutMain:hover, .addAcessory:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important;}
