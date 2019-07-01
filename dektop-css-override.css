@@ -98,19 +98,8 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .guidedBrowsingSliderWrapper .left, .guidedBrowsingSliderWrapper .right {background: none !important;}
 .clear_all {background: #115ea7 !important; }
 .shoppingCart a .itemCount > span {background: none !important; color:#000000 !important;}
-#mainInformation .productPoints .freeShipping p {color:#115ea7!important; font-weight:bold; animation: blink 1s step-start 0s infinite;-webkit-animation: blink 1s step-start 0s infinite;}
+#mainInformation .productPoints .freeShipping p {color:#115ea7!important; font-weight:bold;}
 .afg-content .drop-down-container.success .select2-container--default{box-shadow: 0px 0px 4px 0px #0d8245;}
 .afg-content .drop-down-container.error .select2-container--default{box-shadow: 0px 0px 4px 0px red !important; border-color: red !important;}
 .afg-content .drop-down-container.error .errorMessage{color: red !important;}
 .subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
-
-@keyframes blink {
-    50% {
-      opacity: 0.0;
-    }
-  }
-  @-webkit-keyframes blink {
-    50% {
-      opacity: 0.0;
-    }
-  }
