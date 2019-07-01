@@ -57,3 +57,4 @@ span.subtotalAmt span, .inStockStatus  {color: #0d8245 !important;}
 .shopping-cart-step1 .extendedWarrantyRow {text-align: left !important;}
 .paypal-button.paypal-button-color-gold {background:#FFFFFF; border: 1px solid !important;}
 .orangeButton.afg-selector-submit-btn + .btn.grayButton {background: none;border: none;color: #115ea7 !important;text-decoration: underline;}
+.descriptionWrap .description-list .ui-collapsible-heading .ui-collapsible-heading-toggle .ui-btn-inner .ui-icon.ui-icon-plus {background-position: 0.5px 2px !important;}
