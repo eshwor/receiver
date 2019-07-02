@@ -50,6 +50,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 #productPanes a:not(.greyButton), .relatedSearches a, .summaryContent a, .toWishlist a, .changeLink a, .afgVehicleSelectorNew a, span.readguide, li.catItemWrapper a, div#categoryContentWrapper .content_table a, .vehicleSpecificAccessoriesContainer a:not(.orangeButton, .btn) {color: #115ea7 !important;}
 .greyButton {border: 2px solid #707070!important;}
 #content_wrapper .catThumbCell a, #cart_form .item_row a, ul.catMenu a, .mix a.name, .category-box a {color: #115ea7 !important;}
+.price {color: #636363 !important;}
 .orangeButton, .checkoutMain, .addAcessory {background-image: linear-gradient(#Fdcf77, #FCA40A);color: #000000 !important;border: 1px solid #b47f00 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
 .orangeButton:hover, .checkoutMain:hover, .addAcessory:hover {background-image: linear-gradient(#FCA40A, #Fdcf77) !important; border-radius: 0 !important;}
 .yellowButton, .greenButton, .make_offer, .addAcessory.remove {background-image: linear-gradient(#737373, #000000) !important;color: #FFF !important;border: 1px solid #C7C7C7 !important;font-weight: 400 !important;font-family: 'Ubuntu', sans-serif !important; border-radius: 0 !important;}
