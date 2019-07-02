@@ -53,7 +53,7 @@ span.subtotalAmt span, .inStockStatus  {color: #0d8245 !important;}
 .buyWithPaypal, .price, .price p {color: #636363 !important;}
 .shopping-cart-step1 .right-part-shop-step-1 .in-stock, .shopping-cart-step1 .refurbished_warning, .shopping-cart-step1 .shipping_warning_green, .coupon_text {color: #737373 !important;}
 .subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
-#cart_form .ui-grid-b.drop-content {width: 100%;margin-top: 2rem;margin-bottom: 2rem;padding-top: 1rem;border-top: 2px solid #F1F1F1;}
+#cart_form .ui-grid-b.drop-content {width: 100%;margin-top: 2rem;margin-bottom: 2rem;padding-top: 1rem;}
 .shopping-cart-step1 .left-part-shop-step-1 .remove-btn {position: absolute;bottom: 2px;right: 0px;width: 2rem;}
 .shopping-cart-step1 .left-part-shop-step-1 .remove-btn .ui-btn-inner .ui-btn-text {display: block;font-size: 0px !important;background: url(https://www.sonicelectronix.com/landing/New-icons/top-icons/rubbish-bin.png) no-repeat;background-size: contain;width: 1.5rem;height: 1.5rem;}
 .shopping-cart-step1 .left-part-shop-step-1 .remove-btn:active, .shopping-cart-step1 .left-part-shop-step-1 .remove-btn:hover {background: none !important;}
