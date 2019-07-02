@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 /*FOOTER OVERRIDE*/
 #footer {top:0rem!important;}
-.footer-top-section{
-    display: flex;
-    justify-content: space-between;
-}
+.footer-top-section{display: flex;justify-content: space-between;}
 #footerGoogleBadge {position: absolute;bottom: 2rem;}
 #footer .aboutSonic .toggleButton {background: #178ddf !important;}
 #footer .aboutSonic .contentContainer {background: #178ddf !important; border:none !important;}
@@ -61,15 +58,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
     border: 1px solid #0299fe !important;
     border-radius: 0 !important;
 }
-.blue-btn-unique {
-    left: 1rem;
-    right: 1rem;
-    padding: 10px;
-    bottom: 1rem;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 0 !important;
-}
+.blue-btn-unique {left: 1rem;right: 1rem;padding: 10px;bottom: 1rem;text-align: center;font-size: 1rem;border-radius: 0 !important;}
 .blue-btn:hover, .blue-btn-unique:hover, a.select-vehicle.afgSelectVehicleNewBtn:hover, .bootstrap-iso a.orangeButton:hover, a.selectVehicleCatBranch:hover, .contact-us:hover, span.hpbannerCta:hover, .bootstrap-iso button.ctaOrange:hover, .otherButtons:hover {background-image: linear-gradient(#115ea7, #0299fe)!important; border-radius: 0 !important;}
 .buyWithPaypal {border:2px solid !important;}
 .productName a {color: #115ea7!important;font-weight: bold;}
@@ -88,9 +77,7 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .promotionalContent div p { margin:0 !important; padding:10px 0;}
 .ui-tooltip, .qtip {border-radius: 10px !important;}
 .ui-tooltip-tipped .ui-tooltip-content {background: #737373ed !important;color: #FFF !important;border-color: #737373 !important;border-radius: 3px !important;border: none !important;padding:1rem !important;}
-.guidedBrowsingSliderWrapper .slider, .guidedBrowsingSliderWrapper .slider .ui-slider-range {
-    background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderBar.png') no-repeat;
-}
+.guidedBrowsingSliderWrapper .slider, .guidedBrowsingSliderWrapper .slider .ui-slider-range {background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderBar.png') no-repeat;}
 .guidedBrowsingSliderWrapper .slider .ui-slider-handle {
     background: url('https://www.sonicelectronix.com/landing/New-icons/new-img/PriceSliderCircle.png') no-repeat;
     background-size: contain;
@@ -108,6 +95,4 @@ a:not(.orangeButton), p { font-family: 'Open Sans', sans-serif !important;}
 .subscription-popup .close-subscription-popup {border-color: #115ea7 !important;background: #115ea7 !important;}
 .paypal-button.paypal-button-color-gold {background: #FFFFFF !important; border: 1px solid !important;}
 .orangeButton.afg-selector-submit-btn + .btn.grayButton {background: none;border: none;color: #115ea7 !important;text-decoration: underline;}
-button.orangeButton {
-    border:1px solid black !important;
-}
+button.orangeButton {border:1px solid black !important;}
