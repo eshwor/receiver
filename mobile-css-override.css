@@ -66,3 +66,4 @@ span.subtotalAmt span, .inStockStatus  {color: #0d8245 !important;}
 .descriptionWrap .description-list .ui-collapsible-heading .ui-collapsible-heading-toggle .ui-btn-inner .ui-icon.ui-icon-minus {background-position: -14.7px 2px !important; }
 .shopping-cart-step1 .extendedWarrantyRow .extendedWarrantyRowWrap i {line-height: 17px !important;}
 .accesories-skip .greenButton.next, .skip-btn a {color: #115ea7 !important;border: none !important;text-decoration: underline;}
+#accessoriesTab .accessoriesAddColumn .actionButton {color: #636363 !important;border-radius: 0 !important;}
