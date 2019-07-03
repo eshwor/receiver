@@ -4,7 +4,7 @@
 @import url("https://eshwor.github.io/receiver/landing-page-template.css");
 </style>
 
-<!-- HEADER BANNER START -->
+<!--************** HEADER BANNER START **************-->
 <div class="banner">
 	<div class="banner-wrapper" id="mbContent">
 		<img class="bannerimg" data-img="/landing/4th_july-compressor.png,/landing/4th_july-compressor.png" src="" />
@@ -25,5 +25,373 @@ for (var i = splashImgs.length - 1; i >= 0; i--) {
 };
 </script>
 </div>
-<!-- HEADER BANNER END -->
+<!--************** HEADER BANNER END **************-->
+
+
+<!--************** MAIN PRODUCT LIST START **************-->
+<div id="Container">
+    {{#ProductsWithPagination}}
+    <div class="mix saleItem {{MainCategoryProduct.Category.id}} m{{Manufacturer.id}} col-xs-6 col-sm-4 col-md-4" data-brand="{{Manufacturer.name}},{{Manufacturer.id}}" data-category="{{MainCategoryProduct.Category.name}},{{MainCategoryProduct.Category.id}}" data-discount="" data-msrp="{{msrp}}" data-popularity="{{best_match_base_score}}" data-price="{{price}}" data-s="{{in_stock_counter}}" data-vendor="{{Manufacturer.name}}" id="{{id}}">
+        <div style="position:relative">
+            <div class="flyout">
+                <div class="thumb">
+                    <div class="imgContainer">
+                        {{#is_vip}}
+                        <div class="thumnailvip">
+                            <img class="vip" src="/landing/vip_guarantee/vipguaranteepromo.png" />
+                        </div>
+                        {{/is_vip}}{{#in_stock}}
+
+                        <div class="quantityLeft">
+                            <span class="stockCount">{{in_stock_counter}}</span>
+
+                            <div class="limitedQuantity">
+                                LIMITED STOCK
+                            </div>
+                        </div>
+                        {{/in_stock}} {{^in_stock}}<span class="outofStock"><span class="inside"><span>SOLD OUT</span></span></span>{{/in_stock}} <span class="img"><a data-role="none" href="/viewitem.php?id={{id}}"><img class="lazyload" data-src="{{mainPictureParams.url}}" /></a></span>
+                    </div>
+
+                    <div class="contents">
+                        <div class="infoContainer">
+                            <a class="name" data-ajax="false" href="/viewitem.php?id={{id}}&amp;utm_source=internal&amp;utm_medium=landing-page&amp;utm_campaign=5fire">{{name}}</a>
+
+                            <div class="reviews">
+                                {{#numReviews}}
+                                <div class="stars" data-ajax="false" score="{{avgReviewRatingOverall}}">
+                                    <span class="fa" data-star="1"><span style="display:none">_</span></span> <span class="fa" data-star="2"><span style="display:none">_</span></span> <span class="fa" data-star="3"><span style="display:none">_</span></span> <span class="fa" data-star="4"><span style="display:none">_</span></span> <span class="fa" data-star="5"><span style="display:none">_</span></span> <span>({{numReviews}})</span>
+                                </div>
+                                {{/numReviews}}
+                            </div>
+                            <a class="subtitle hidden-xs" data-ajax="false" href="/viewitem.php?id={{id}}&amp;utm_source=internal&amp;utm_medium=landing-page&amp;utm_campaign=5fire">{{subtitle}}</a>
+
+                            <div class="actionsContainer">
+                                <div class="clearfix">
+                                    <div class="left-section">
+                                        <div class="prices">
+                                            <div class="priceContainer">
+                                                <span class="msrp">$<span class="msrpVal">{{msrp}}</span></span> <span class="displayPrice">$<span class="displayPriceVal">{{price}}</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/ProductsWithPagination}}
+</div>
+
+<!--************** MAIN PRODUCT LIST END **************-->
+
+<div class="pagination noajax clearfix" id="pagination">
+        <span style="display:none">Next</span>
+    </div>
+
+<!-- Nosto Element Slider -->
+<div class="nosto_element" id="live-copy-1"></div>
+
+<script src="https://www.sonicelectronix.com/landing/specials/48-hour-flash-sale/jquery.plugin.min.js"></script><script src="https://www.sonicelectronix.com/landing/specials/48-hour-flash-sale/jquery.countdown.min.js"></script><script type="text/javascript">
+    (function ($) {
+      var dealexp = new Date("Jul 4, 2018 23:59:00");
+    
+    var now = new Date();
+    
+    function startDeal(time){
+         $("#Countdown").countdown({
+            until: time,
+            format: "HMS",
+            labels: ['y', 'm', 'w', 'D', 'HOURS', 'MINUTES', 'SECONDS'], 
+            labels1: ['y', 'm', 'w', 'D', 'HOURS', 'MINUTES', 'SECONDS'], 
+        });
+    }
+                    startDeal(dealexp);
+    
+      var playerParent= $("body");
+     var parentWidth = playerParent.width();
+    var multiplier = 0.6;
+        var aspectRatio = 9/16;
+    if(parentWidth < 700){
+    multiplier=0.9;
+    }
+    
+        var playerHeight = parentWidth*multiplier*aspectRatio;
+        var playerWidth = parentWidth *multiplier;
+    
+    
+    })(jQuery);
+    
+    
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="/landing/pla/js/lazy.js"></script><script type="text/javascript" src="/landing/specials/tax_refund/jquery.mixitup.min.js"></script><script type="text/javascript">
+    var cats = [],
+        brands = [],
+        deals = {},
+        year = getCookie("car_afg_year"),
+        make = getCookie("car_afg_make"),
+        model = getCookie("car_afg_model"),
+    catParam = QueryString.category,
+            manParam = QueryString.manufacturer,
+            cathtml = '',
+            bhtml = '',
+            onclass = '',
+            bselected = '',
+            cselected = '',
+            indept = '',
+    code = '',
+    prevActive = '';
+    
+    ! function(t) {
+        if (year !== "" && make !== "" && model !== "") {
+            var urlMake = make.replace(/\+/g, '-'),
+                urlModel = model.replace(/\+/g, '-').replace(/%26/g, '&'),
+                displayMake = make.replace(/\+/g, ' '),
+                displayModel = model.replace(/\+/g, ' ').replace(/%26/g, 'and');
+            t('.myVehicle').html('<span class="filter" data-filter=".fitsCar">My Vehicle: ' + year + ' ' + displayModel + ' <a class="fancyB vehicleSelector" data-role="none"  data-cke-saved-href="#afgPopup" href="#afgPopup"><span class="fa fa-remove"></span></a>')
+        }
+        var theIndex = 0;
+        t('.mix').each(function() {
+            el = t(this);
+            idval = el.attr("id");
+            type = el.attr("type");
+            if (deals[idval] !== undefined) {
+                theIndex = deals[idval]
+            }
+            msrp = el.attr("data-msrp");
+    if(msrp==0.00){el.find('.msrp').css('display', 'none');}
+            stock = el.attr("data-s");
+            if (stock == 1) {
+                el.find('.limitedQuantity').css('display', 'block')
+            }
+            el.find('.addtoBag').attr("href", "/cart/add/item/" + idval + "?redeem_coupon=" + code);
+            el.find('.stars span').each(function() {
+                num = jQuery(this).attr("data-star");
+                rscore = jQuery(this).parent().attr("score");
+                var diff = num - rscore;
+                rscore >= num ? jQuery(this).addClass("fa-star") : diff > 0 && 1 > diff ? jQuery(this).addClass("fa-star-half-o") : rscore <= num && jQuery(this).addClass("fa-star-o")
+            });
+            fitment = el.find('.fitmentInfo');
+            if (fitment.hasClass('doesFit')) {
+                el.addClass('fitsCar')
+            }
+        }), t('.giftToggle').click(function(e) {
+            t('#lpContainer').toggleClass('open')
+        });
+        if (t('.ui-mobile-viewport').length == 0) {
+            t(".mix .thumb").hover(function() {
+                t(this).parent().parent().parent().addClass("on")
+            }, function() {
+                t(this).parent().parent().parent().removeClass("on")
+            });
+        }
+        t('.toTop').click(function(e) {
+            e.preventDefault(), t('html, body').animate({
+                opacity: 1,
+                scrollTop: t('body').offset().top
+            }, 0)
+        });
+        var e = "all";
+        if (window.location.hash) {
+            var s = window.location.hash,
+                r = new RegExp(/#\w+/g),
+                l = r.exec(s),
+                i = String(l);
+            e = i.replace("#", ".")
+        }
+        t('document').ready(function() {
+    
+        if (catParam !== undefined || manParam !== undefined || QueryString.Product_page !== undefined) {
+    setTimeout(function(){
+            jQuery('html, body').animate({
+                opacity: 1,
+                scrollTop: jQuery('#Container').offset().top - 60
+            }, 500);
+    },500);
+        }
+            t('#Container').mixItUp({
+                load: {
+                    sort: "popularity:desc",
+                    filter: e
+                },
+                animation: {
+                    enable: !1
+                },
+                callbacks: {
+                    onMixFail: function() {
+                        alert('No items were found matching the selected filters. Select another category or use promo code 5SAVER for 5% off')
+                    },
+                    onMixEnd: function(mixobj) {}
+                }
+            });
+        });
+    
+        var pagehref = window.location.href;
+        var pagehrefcl = pagehref.replace(/(&|\?)Product_page=\d+/, '');
+        pagebase = /\?/g.test(pagehrefcl);
+        if (pagebase) {
+            pagelink = pagehrefcl += '&Product_page='
+        } else {
+            pagelink = pagehrefcl += '?Product_page='
+        }
+        var Pagination = {
+            code: '',
+            Extend: function(data) {
+                data = data || {};
+                Pagination.size = data.size || 300;
+                Pagination.page = data.page || 1;
+                Pagination.step = data.step || 3
+            },
+            Add: function(s, f) {
+                for (var i = s; i < f; i++) {
+                    Pagination.code += '<li><a  data-cke-saved-href="' + pagelink + i + '" href="' + pagelink + i + '">' + i + '</a></li>'
+                }
+            },
+            Last: function() {
+                Pagination.code += '<i>...</i><a>' + Pagination.size + '</a>'
+            },
+            First: function() {
+                Pagination.code += '<a>1</a><i>...</i>'
+            },
+            Click: function() {
+                Pagination.page = +this.innerHTML;
+                Pagination.Start()
+            },
+            Prev: function() {
+                Pagination.page--;
+                if (Pagination.page < 1) {
+                    Pagination.page = 1
+                }
+                Pagination.Redirect()
+            },
+            Next: function() {
+                Pagination.page++;
+                if (Pagination.page > Pagination.size) {
+                    Pagination.page = Pagination.size
+                }
+                Pagination.Redirect()
+            },
+            Redirect: function() {
+                window.location.href = pagelink + Pagination.page
+            },
+            Bind: function() {
+                var a = Pagination.e.getElementsByTagName('a');
+                for (var i = 0; i < a.length; i++) {
+                    if (+a[i].innerHTML === Pagination.page) a[i].className = 'current';
+                    a[i].addEventListener('click', Pagination.Click, !1)
+                }
+            },
+            Finish: function() {
+                Pagination.e.innerHTML = Pagination.code;
+                Pagination.code = '';
+                Pagination.Bind()
+            },
+            Start: function() {
+                if (Pagination.size < Pagination.step * 2 + 6) {
+                    Pagination.Add(1, Pagination.size + 1)
+                } else if (Pagination.page < Pagination.step * 2 + 1) {
+                    Pagination.Add(1, Pagination.step * 2 + 4);
+                    Pagination.Last()
+                } else if (Pagination.page > Pagination.size - Pagination.step * 2) {
+                    Pagination.First();
+                    Pagination.Add(Pagination.size - Pagination.step * 2 - 2, Pagination.size + 1)
+                } else {
+                    Pagination.First();
+                    Pagination.Add(Pagination.page - Pagination.step, Pagination.page + Pagination.step + 1);
+                    Pagination.Last()
+                }
+                Pagination.Finish()
+            },
+            Buttons: function(e) {
+                var nav = e.getElementsByTagName('a');
+                nav[0].addEventListener('click', Pagination.Prev, !1);
+                nav[1].addEventListener('click', Pagination.Next, !1)
+            },
+            Create: function(e) {
+                var html = ['', '<ul class="pagination"><li class="previous"><a>&#9668;</a></li><li class="next"><a>&#9658;</a></li></ul>', ''];
+                e.innerHTML = html.join('');
+                Pagination.e = e.getElementsByTagName('ul')[0];
+                Pagination.Buttons(e)
+            },
+            Init: function(e, data) {
+                Pagination.Extend(data);
+                Pagination.Create(e);
+                Pagination.Start()
+            }
+        };
+        var myRe = /\d+(?=\s)/g;
+        var str = document.getElementsByClassName('summary')[0].innerHTML;
+        var myArray;
+        var pages = [];
+        pageSize = 50;
+        var startPage = /\d+/.exec(str);
+        while ((myArray = myRe.exec(str)) !== null) {
+            pages.push(myArray[0])
+        }
+        totalPages = Math.ceil(pages[1] / pageSize);
+        selectedPage = Math.floor(pages[0] / pageSize);
+        var systempages = pages[0] - startPage;
+        if (pages[0] == pages[1]) {
+            selectedPage = totalPages
+        } else if (systempages !== pageSize - 1) {
+            pageSize = pages[0];
+            totalPages = Math.ceil(pages[1] / pageSize);
+            selectedPage = Math.floor(pages[0] / pageSize)
+        }
+        var init = function() {
+            Pagination.Init(document.getElementById('pagination'), {
+                size: totalPages,
+                page: selectedPage,
+                step: 2
+            })
+        };
+        document.addEventListener('DOMContentLoaded', init, !1);
+        function postFilterActions(activeFilter) {
+            if (prevActive !== '') {
+                jQuery('.grouping.' + prevActive).removeClass('on');
+                jQuery('.filterTab[data-val="' + prevActive + '"]').removeClass('on')
+            }
+            if (prevActive !== activeFilter) {
+                jQuery('.grouping.' + activeFilter).addClass('on');
+                jQuery('.filterTab[data-val="' + activeFilter + '"]').addClass('on');
+                prevActive = activeFilter
+            } else {
+                prevActive = ''
+            }
+        }
+        jQuery('.filterTab').click(function() {
+            el = jQuery(this);
+            targetid = el.attr("data-val");
+            console.log(targetid);
+            postFilterActions(targetid)
+        });
+        t(".sorttrigger").click(function() {
+            t(this).parent().toggleClass("closed")
+        });
+        currentPanel = '';
+        t('.hTitle').click(function() {
+            if (currentPanel !== '') {
+                currentPanel.css({
+                    "height": "0px",
+                    "overflow": "hidden"
+                })
+            }
+            currentPanel = t(this).next();
+            panHeight = currentPanel.find('.groupingInner').innerHeight();
+            if (panHeight > 350) {
+                panHeight = 350
+            }
+            currentPanel.css({
+                "height": panHeight,
+                "overflow-y": "auto"
+            })
+        });
+    var clipboard=new Clipboard('.apply');
+    clipboard.on('success', function(e) {
+    jQuery(e.trigger).text('copied to clipboard');
+        });
+    
+    }(jQuery);
+    </script>
 
