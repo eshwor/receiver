@@ -38,8 +38,24 @@ span {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .pagination {
   border: 1px solid green;
+  display: inline-block;
+}
+
+.pagination li {
+  border: 1px solid yellow;
+  width: 3rem;
+  height: 1rem;
+  text-align: center;
+}
+
+.pagination .previous, .pagination .next {
+  display: none;
 }
 
 .pulledUp {
