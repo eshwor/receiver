@@ -52,6 +52,12 @@ span {
   width: 3rem;
   height: 1rem;
   text-align: center;
+  display: inline-block;
+}
+
+.pagination li.selected {
+  background: blue;
+  color: white;
 }
 
 .pagination .previous, .pagination .next {
