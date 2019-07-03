@@ -63,4 +63,8 @@ span {
 #sortByDrop.closed .sortMenu {
   display: none;
 }
+
+.item {
+  border: 1px solid blue;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
