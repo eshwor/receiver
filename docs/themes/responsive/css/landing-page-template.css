@@ -29,4 +29,8 @@ img {
 .pulledUp {
   border: 2px solid black;
 }
+
+#sortByDrop.closed .sortMenu {
+  display: none;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
