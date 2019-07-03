@@ -17,4 +17,8 @@
 img {
   width: 100%;
 }
+
+.filterColumn-wrapper {
+  border: 1px solid red;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
