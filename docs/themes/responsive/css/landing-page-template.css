@@ -56,8 +56,11 @@ span {
 }
 
 .pagination li.selected {
-  background: blue;
-  color: white;
+  background: #115ea7;
+}
+
+.pagination li.selected a {
+  color: #FFFFFF;
 }
 
 .pagination .previous, .pagination .next {
