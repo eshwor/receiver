@@ -71,10 +71,6 @@ span {
   display: none;
 }
 
-.pulledUp {
-  border: 2px solid black;
-}
-
 #sortByDrop .sorttrigger:after {
   content: "";
 }
