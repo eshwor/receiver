@@ -48,7 +48,7 @@ span {
 }
 
 .pagination li {
-  border: 1px solid yellow;
+  border: 1px solid gray;
   width: 3rem;
   height: 1rem;
   text-align: center;
