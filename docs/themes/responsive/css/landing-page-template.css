@@ -1,4 +1,12 @@
 #heroWrapper {
   display: none;
 }
+
+.content {
+  width: 100%;
+}
+
+#content_wrapper {
+  padding: 0;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
