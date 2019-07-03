@@ -34,6 +34,10 @@ span {
   border: 2px solid black;
 }
 
+#sortByDrop .sorttrigger:after {
+  content: "";
+}
+
 #sortByDrop .sortMenu {
   width: 100%;
   background: #F1F1F1;
