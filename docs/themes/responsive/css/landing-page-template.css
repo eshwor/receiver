@@ -19,8 +19,11 @@ img {
 }
 
 .filterColumn-wrapper {
-  border: 1px solid red;
   max-width: 15rem;
+}
+
+span {
+  font-size: 1rem;
 }
 
 .pagination_filter {
@@ -31,8 +34,14 @@ img {
   border: 2px solid black;
 }
 
+#sortByDrop .sortMenu {
+  width: 100%;
+  background: #F1F1F1;
+}
+
 #sortByDrop .sortMenu span {
   display: block;
+  font-size: 1rem;
 }
 
 #sortByDrop.closed .sortMenu {
