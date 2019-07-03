@@ -21,4 +21,8 @@ img {
 .filterColumn-wrapper {
   border: 1px solid red;
 }
+
+.pagination_filter {
+  display: none !important;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
