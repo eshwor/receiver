@@ -25,4 +25,8 @@ img {
 .pagination_filter {
   display: none !important;
 }
+
+.pulledUp {
+  border: 2px solid black;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
