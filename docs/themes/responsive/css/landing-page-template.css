@@ -38,6 +38,10 @@ span {
   display: none;
 }
 
+.pagination {
+  border: 1px solid green;
+}
+
 .pulledUp {
   border: 2px solid black;
 }
