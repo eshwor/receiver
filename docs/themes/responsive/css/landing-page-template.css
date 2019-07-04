@@ -126,5 +126,10 @@ span {
 .items div.saleItem .flyout {
   margin: 0.5rem;
   padding: 0.5rem;
+  border: 1px solid gray;
+}
+
+.items div.saleItem.on .flyout {
+  border-color: red;
 }
 /*# sourceMappingURL=landing-page-template.css.map */
