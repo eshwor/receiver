@@ -157,10 +157,13 @@ span {
 }
 
 .items div.saleItem .imgContainer img {
-  width: auto;
-  height: auto;
   max-width: 175px;
   max-height: 175px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .items div.saleItem .contents {
