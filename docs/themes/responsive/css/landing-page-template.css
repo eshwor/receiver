@@ -112,11 +112,7 @@ span {
 
 @media (min-width: 992px) {
   .items div.saleItem {
-    width: 20%;
+    width: 50%;
   }
-}
-
-.items div.saleItem.on {
-  border: 1px solid red;
 }
 /*# sourceMappingURL=landing-page-template.css.map */
