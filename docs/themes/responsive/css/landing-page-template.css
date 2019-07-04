@@ -16,6 +16,7 @@
 
 .container {
   width: auto !important;
+  max-width: 992px;
 }
 
 .container.inner {
