@@ -164,16 +164,22 @@ span {
           transform: translate(-50%, -50%);
 }
 
-.items div.saleItem .contents {
-  height: 8rem;
-}
-
 .items div.saleItem .name {
   font-size: 1rem;
 }
 
 .items div.saleItem .subtitle {
   display: none;
+}
+
+.items div.saleItem .contents {
+  position: relative;
+  height: 8rem;
+}
+
+.items div.saleItem .infoContainer {
+  height: 4rem;
+  border: 1px solid green;
 }
 
 .items div.saleItem .actionsContainer {
@@ -186,6 +192,10 @@ span {
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid red;
+  width: 100%;
 }
 
 .items div.saleItem .left-section, .items div.saleItem .right-section {
