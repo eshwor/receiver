@@ -99,4 +99,8 @@ span {
   width: 25%;
   margin: 0.5rem;
 }
+
+.items div.saleItem .on {
+  border: 1px solid red;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
