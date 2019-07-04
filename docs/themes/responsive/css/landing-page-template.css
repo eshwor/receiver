@@ -102,7 +102,7 @@ span {
 }
 
 .items div.saleItem {
-  width: 30%;
+  width: 50%;
   max-width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -112,7 +112,7 @@ span {
 
 @media (min-width: 992px) {
   .items div.saleItem {
-    width: 50%;
+    width: 25%;
   }
 }
 /*# sourceMappingURL=landing-page-template.css.map */
