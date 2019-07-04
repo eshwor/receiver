@@ -94,4 +94,9 @@ span {
   display: -ms-flexbox;
   display: flex;
 }
+
+.items div.saleItem {
+  width: 25%;
+  margin: 0.5rem;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
