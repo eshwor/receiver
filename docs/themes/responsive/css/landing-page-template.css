@@ -191,6 +191,7 @@ span {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
+  background: #F1F1F1;
 }
 
 .items div.saleItem .left-section, .items div.saleItem .right-section {
@@ -209,16 +210,25 @@ span {
 
 .items div.saleItem .addtoBag {
   display: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#Fdcf77), to(#FCA40A));
-  background-image: linear-gradient(#Fdcf77, #FCA40A);
-  color: #000000 !important;
-  border: 1px solid #b47f00 !important;
-  font-weight: 400 !important;
-  font-family: 'Ubuntu', sans-serif !important;
-  border-radius: 0 !important;
 }
 
 .items div.saleItem.on .flyout {
   border-color: #737373;
+}
+
+.items div.saleItem.on .subtitle {
+  display: block;
+}
+
+.items div.saleItem.on .contents {
+  height: 11rem;
+}
+
+.items div.saleItem.on .infoContainer {
+  height: 8rem;
+}
+
+.items div.saleItem.on .addtoBag {
+  display: block;
 }
 /*# sourceMappingURL=landing-page-template.css.map */
