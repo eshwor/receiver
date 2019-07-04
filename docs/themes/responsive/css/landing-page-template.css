@@ -133,7 +133,7 @@ span {
   padding: 0;
   height: 350px;
   position: relative;
-  margin-bottom: 1rem;
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -237,23 +237,27 @@ span {
   text-align: center;
 }
 
-.items div.saleItem.on .flyout {
+.items .on div.saleItem {
+  z-index: 5;
+}
+
+.items .on .flyout {
   border-color: #737373;
 }
 
-.items div.saleItem.on .subtitle {
+.items .on .subtitle {
   display: block;
 }
 
-.items div.saleItem.on .contents {
+.items .on .contents {
   height: 11rem;
 }
 
-.items div.saleItem.on .infoContainer {
+.items .on .infoContainer {
   height: 8rem;
 }
 
-.items div.saleItem.on .addtoBag {
+.items .on .addtoBag {
   display: block;
 }
 /*# sourceMappingURL=landing-page-template.css.map */
