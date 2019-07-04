@@ -122,4 +122,9 @@ span {
     width: 25%;
   }
 }
+
+.items div.saleItem .flyout {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
 /*# sourceMappingURL=landing-page-template.css.map */
