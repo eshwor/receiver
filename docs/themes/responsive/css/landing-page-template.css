@@ -237,27 +237,27 @@ span {
   text-align: center;
 }
 
-.items .on div.saleItem {
+.items div.saleItem.on {
   z-index: 5;
 }
 
-.items .on .flyout {
+.items div.saleItem.on .flyout {
   border-color: #737373;
 }
 
-.items .on .subtitle {
+.items div.saleItem.on .subtitle {
   display: block;
 }
 
-.items .on .contents {
+.items div.saleItem.on .contents {
   height: 11rem;
 }
 
-.items .on .infoContainer {
+.items div.saleItem.on .infoContainer {
   height: 8rem;
 }
 
-.items .on .addtoBag {
+.items div.saleItem.on .addtoBag {
   display: block;
 }
 /*# sourceMappingURL=landing-page-template.css.map */
