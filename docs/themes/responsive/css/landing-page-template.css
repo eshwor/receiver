@@ -1,3 +1,20 @@
+/**
+$black: #000000;
+$blue: #115ea7;
+$darkBlue: #034977;
+$cyan: #178ddf;
+$gray: #737373;
+$lightGray: #F1F1F1;
+$mediumGray: #C7C7C7;
+$green: #0d8245;
+$orange: #f15722;
+$red: #ff0000;
+$white: #FFFFFF;
+$yellow: #ffed00;
+$lightYellow: #Fdcf77;
+$darkYellow: #FCA40A;
+$lightBlue: #0299fe;
+*/
 #heroWrapper {
   display: none;
 }
@@ -114,6 +131,9 @@ span {
       -ms-flex: none;
           flex: none;
   padding: 0;
+  height: 350px;
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,6 +151,11 @@ span {
 .items div.saleItem .flyout {
   margin: 0.5rem;
   border: 1px solid #C7C7C7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .items div.saleItem .quantityLeft {
@@ -196,7 +221,6 @@ span {
 
 .items div.saleItem .left-section, .items div.saleItem .right-section {
   width: 50%;
-  display: inherit;
 }
 
 .items div.saleItem .msrp {
@@ -210,6 +234,7 @@ span {
 
 .items div.saleItem .addtoBag {
   display: none;
+  text-align: center;
 }
 
 .items div.saleItem.on .flyout {
