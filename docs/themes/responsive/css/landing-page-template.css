@@ -15,6 +15,14 @@ $lightYellow: #Fdcf77;
 $darkYellow: #FCA40A;
 $lightBlue: #0299fe;
 */
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
 #heroWrapper {
   display: none;
 }
