@@ -81,7 +81,6 @@ span {
 }
 
 .pagination {
-  border: 1px solid green;
   display: inline-block;
 }
 
@@ -212,7 +211,6 @@ span {
 
 .items div.saleItem .infoContainer {
   height: 4rem;
-  border: 1px solid green;
 }
 
 .items div.saleItem .actionsContainer {
