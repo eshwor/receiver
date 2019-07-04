@@ -103,6 +103,7 @@ span {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  border: 1px solid gray;
 }
 
 .items div.saleItem.on {
