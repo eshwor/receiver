@@ -149,6 +149,12 @@ span {
           justify-content: space-between;
 }
 
+.items div.saleItem .imgContainer {
+  border: 1px solid red;
+  overflow: hidden;
+  height: 15rem;
+}
+
 .items div.saleItem .imgContainer img {
   max-width: 175px;
   max-height: 175px;
