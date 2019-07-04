@@ -89,7 +89,9 @@ span {
   display: none;
 }
 
-.item {
-  border: 1px solid blue;
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=landing-page-template.css.map */
