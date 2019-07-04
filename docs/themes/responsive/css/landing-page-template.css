@@ -164,6 +164,10 @@ span {
           transform: translate(-50%, -50%);
 }
 
+.items div.saleItem .contents {
+  height: 8rem;
+}
+
 .items div.saleItem .name {
   font-size: 1rem;
 }
