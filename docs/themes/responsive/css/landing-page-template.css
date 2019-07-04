@@ -135,13 +135,10 @@ span {
 }
 
 .items div.saleItem .quantityLeft {
-  display: none;
   background: #115ea7;
   color: #FFFFFF;
   padding: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -151,10 +148,12 @@ span {
 }
 
 .items div.saleItem .imgContainer {
-  width: auto;
-  height: auto;
-  max-width: 175px;
-  max-height: 175px;
+  position: relative;
+  display: table;
+  height: 185px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid red;
 }
 
 .items div.saleItem .imgContainer img {
