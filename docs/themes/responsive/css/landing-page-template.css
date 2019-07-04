@@ -149,6 +149,11 @@ span {
           justify-content: space-between;
 }
 
+.items div.saleItem .imgContainer img {
+  max-width: 175px;
+  max-height: 175px;
+}
+
 .items div.saleItem .contents {
   padding: 0.5rem;
 }
