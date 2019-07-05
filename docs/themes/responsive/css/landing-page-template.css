@@ -83,7 +83,7 @@ span {
 }
 
 .pagination li {
-  border: 1px solid gray;
+  border: 1px solid #737373;
   display: inline-block;
   width: auto;
 }
