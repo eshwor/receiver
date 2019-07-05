@@ -70,6 +70,8 @@ img {
 
 .filterColumn-wrapper {
   max-width: 15rem;
+  -webkit-transition: 300ms padding, border;
+  transition: 300ms padding, border;
 }
 
 .onFixed .filterColumn-wrapper {
@@ -80,8 +82,6 @@ img {
   z-index: 10;
   background: #f1f1f1cf;
   border-radius: 3px;
-  -webkit-transition: 300ms padding, border;
-  transition: 300ms padding, border;
 }
 
 span {
