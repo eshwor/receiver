@@ -23,8 +23,19 @@ a {
   color: #737373;
 }
 
+.gray-link:after {
+  content: "\00bb";
+  padding-left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .gray-link:hover, .gray-link:active, .gray-link:focus {
   text-decoration: underline;
+}
+
+.gray-link:hover:after, .gray-link:active:after, .gray-link:focus:after {
+  padding-left: 1;
 }
 
 .stars {
@@ -121,7 +132,7 @@ span {
 }
 
 #sortByDrop .sorttrigger:after {
-  content: "\00bb";
+  content: ">";
 }
 
 #sortByDrop .sortMenu {
