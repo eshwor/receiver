@@ -246,8 +246,6 @@ span {
 .items div.saleItem .addtoBag {
   display: none;
   text-align: center;
-  position: relative;
-  left: -7rem;
 }
 
 .items div.saleItem.on {
