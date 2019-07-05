@@ -277,8 +277,8 @@ span {
 
 .items div.saleItem.on .subtitle {
   display: block;
-  -webkit-animation: slider 3s ease-in-out forwards;
-          animation: slider 3s ease-in-out forwards;
+  -webkit-animation: slider 500ms ease-in-out forwards;
+          animation: slider 500ms ease-in-out forwards;
 }
 
 .items div.saleItem.on .addtoBag {
