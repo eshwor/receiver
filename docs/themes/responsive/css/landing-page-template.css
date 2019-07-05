@@ -96,6 +96,10 @@ span {
   color: #115ea7;
 }
 
+.pagination li a:hover {
+  background: #F1F1F1;
+}
+
 .pagination li.selected {
   background: #115ea7;
 }
