@@ -209,6 +209,10 @@ span {
   position: relative;
 }
 
+.items div.saleItem .infoContainer {
+  height: 3.5rem;
+}
+
 .items div.saleItem .actionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,6 +249,10 @@ span {
 
 .items div.saleItem.on .thumb {
   border-color: #737373;
+  height: auto;
+}
+
+.items div.saleItem.on .infoContainer {
   height: auto;
 }
 
