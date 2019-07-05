@@ -90,7 +90,10 @@ span {
 
 .pagination li a {
   font-size: 1rem;
-  padding: 1rem;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  color: #115ea7;
 }
 
 .pagination li.selected {
