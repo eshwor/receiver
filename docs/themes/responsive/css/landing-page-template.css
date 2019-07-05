@@ -206,7 +206,7 @@ span {
 
 .items div.saleItem .contents {
   position: relative;
-  height: 8rem;
+  height: 100%;
 }
 
 .items div.saleItem .infoContainer {
@@ -253,10 +253,6 @@ span {
 
 .items div.saleItem.on .subtitle {
   display: block;
-}
-
-.items div.saleItem.on .contents {
-  height: 12.2rem;
 }
 
 .items div.saleItem.on .infoContainer {
