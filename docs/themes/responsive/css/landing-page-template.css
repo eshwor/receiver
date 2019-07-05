@@ -262,8 +262,8 @@ span {
 .items div.saleItem.on .thumb {
   border-color: #737373;
   height: auto;
-  -webkit-animation: slider 1s ease-in-out forwards;
-          animation: slider 1s ease-in-out forwards;
+  -webkit-animation: slider 3s ease-in-out forwards;
+          animation: slider 3s ease-in-out forwards;
 }
 
 .items div.saleItem.on .infoContainer {
