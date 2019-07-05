@@ -121,7 +121,7 @@ span {
 }
 
 #sortByDrop .sorttrigger:after {
-  content: "";
+  content: "\00bb";
 }
 
 #sortByDrop .sortMenu {
