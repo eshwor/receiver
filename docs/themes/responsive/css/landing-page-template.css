@@ -69,9 +69,13 @@ img {
 }
 
 .filterColumn-wrapper {
-  max-width: 17rem;
+  max-width: 15rem;
   -webkit-transition: 300ms padding, border;
   transition: 300ms padding, border;
+}
+
+.filterColumn-wrapper #filters {
+  width: auto !important;
 }
 
 .onFixed .filterColumn-wrapper {
