@@ -280,19 +280,19 @@ span {
 
 @-webkit-keyframes slider {
   form {
-    background: blue;
+    height: 19rem;
   }
   to {
-    background: yellow;
+    height: 25rem;
   }
 }
 
 @keyframes slider {
   form {
-    background: blue;
+    height: 19rem;
   }
   to {
-    background: yellow;
+    height: 25rem;
   }
 }
 /*# sourceMappingURL=landing-page-template.css.map */
