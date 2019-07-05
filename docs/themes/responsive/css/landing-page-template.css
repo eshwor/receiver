@@ -217,6 +217,8 @@ span {
 .items div.saleItem .subtitle {
   display: none;
   color: #737373;
+  position: relative;
+  top: 4rem;
 }
 
 .items div.saleItem .contents {
@@ -225,6 +227,7 @@ span {
 
 .items div.saleItem .infoContainer {
   height: 3.7rem;
+  overflow: hidden;
 }
 
 .items div.saleItem .actionsContainer {
@@ -266,8 +269,6 @@ span {
   height: auto;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-animation: slider 3s ease-in-out forwards;
-          animation: slider 3s ease-in-out forwards;
 }
 
 .items div.saleItem.on .infoContainer {
@@ -276,6 +277,8 @@ span {
 
 .items div.saleItem.on .subtitle {
   display: block;
+  -webkit-animation: slider 3s ease-in-out forwards;
+          animation: slider 3s ease-in-out forwards;
 }
 
 .items div.saleItem.on .addtoBag {
@@ -284,15 +287,19 @@ span {
 
 @-webkit-keyframes slider {
   form {
+    top: 4rem;
   }
   to {
+    top: 0rem;
   }
 }
 
 @keyframes slider {
   form {
+    top: 4rem;
   }
   to {
+    top: 0rem;
   }
 }
 /*# sourceMappingURL=landing-page-template.css.map */
