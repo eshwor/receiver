@@ -54,7 +54,7 @@
              <!-- HEADER PART FILTER END -->
             
             <!-- PAGINATION TOP --><div class="noajax pagination clearfix" id="firstPager"></div><!-- PAGINATION END -->
-			<div class="row" id="Container">
+			<div class="row mb-5 pb-3" id="Container">
                 <span class="errorMsg filter" data-filter="all">There are no results for your search. <a class="reset" data-ajax="false" href="/lp/year-end-clearance">Reset Filters</a></span>
                 {{#ProductsWithPagination}}
 				<div class="mix saleItem cat-{{ProductGroup.id}} brand-{{Manufacturer.id}} col-xs-6 col-sm-4 col-md-3" data-brand="{{Manufacturer.name}},{{Manufacturer.id}}" data-category="{{ProductGroup.name}},{{ProductGroup.id}}" data-discount="" data-id="{{id}}" data-msrp="{{msrp}}" data-popularity="{{quantity_sold_in_past_30_days}}" data-price="{{price}}" data-type="{{ProductGroup.id}}">
