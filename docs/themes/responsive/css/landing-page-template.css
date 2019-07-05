@@ -134,7 +134,7 @@ span {
       -ms-flex: none;
           flex: none;
   padding: 0;
-  height: 350px;
+  height: 314px;
   position: relative;
   z-index: 1;
 }
@@ -162,6 +162,7 @@ span {
 .items div.saleItem .thumb {
   margin: 0.5rem;
   border: 1px solid #C7C7C7;
+  height: 19rem;
 }
 
 .items div.saleItem .quantityLeft {
@@ -245,6 +246,7 @@ span {
 
 .items div.saleItem.on .thumb {
   border-color: #737373;
+  height: auto;
 }
 
 .items div.saleItem.on .subtitle {
