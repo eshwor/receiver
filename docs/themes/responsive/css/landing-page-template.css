@@ -73,13 +73,15 @@ img {
 }
 
 .onFixed .filterColumn-wrapper {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   border: 2px solid black;
   position: fixed !important;
   top: 2rem;
   z-index: 10;
   background: #f1f1f1cf;
   border-radius: 3px;
+  -webkit-transition: 300ms padding, border;
+  transition: 300ms padding, border;
 }
 
 span {
