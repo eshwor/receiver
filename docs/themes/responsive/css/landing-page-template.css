@@ -69,7 +69,7 @@ img {
 }
 
 .filterColumn-wrapper {
-  max-width: 15rem;
+  max-width: 17rem;
   -webkit-transition: 300ms padding, border;
   transition: 300ms padding, border;
 }
@@ -124,7 +124,7 @@ span {
 }
 
 .pagination li.selected a {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .pagination li a {
