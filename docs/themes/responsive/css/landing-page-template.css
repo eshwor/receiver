@@ -231,19 +231,7 @@ span {
 }
 
 .items div.saleItem .actionsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
   background: #F1F1F1;
-}
-
-.items div.saleItem .left-section, .items div.saleItem .right-section {
-  width: 50%;
 }
 
 .items div.saleItem .msrp {
