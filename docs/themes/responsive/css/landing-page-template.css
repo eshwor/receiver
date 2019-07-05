@@ -205,13 +205,14 @@ span {
 @media screen and (min-width: 768px) {
   .items div.saleItem {
     width: 33.333%;
-    height: 314px;
+    height: 380px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .items div.saleItem {
     width: 25%;
+    height: 314px;
   }
 }
 
