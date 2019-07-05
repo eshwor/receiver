@@ -42,6 +42,7 @@ a {
 
 .container.inner {
   border: 1px solid black;
+  padding-bottom: 4rem;
 }
 
 img {
