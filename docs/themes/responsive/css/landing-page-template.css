@@ -258,6 +258,10 @@ span {
 .items div.saleItem .addtoBag {
   display: none;
   text-align: center;
+  position: relative;
+  left: -7rem;
+  -webkit-animation: sliderLeftToRight 500ms ease-in-out forwards;
+          animation: sliderLeftToRight 500ms ease-in-out forwards;
 }
 
 .items div.saleItem.on {
@@ -277,15 +281,15 @@ span {
 
 .items div.saleItem.on .subtitle {
   display: block;
-  -webkit-animation: slider 500ms ease-in-out forwards;
-          animation: slider 500ms ease-in-out forwards;
+  -webkit-animation: sliderUp 500ms ease-in-out forwards;
+          animation: sliderUp 500ms ease-in-out forwards;
 }
 
 .items div.saleItem.on .addtoBag {
   display: block;
 }
 
-@-webkit-keyframes slider {
+@-webkit-keyframes sliderUp {
   form {
     top: 4rem;
   }
@@ -294,12 +298,30 @@ span {
   }
 }
 
-@keyframes slider {
+@keyframes sliderUp {
   form {
     top: 4rem;
   }
   to {
     top: 0rem;
+  }
+}
+
+@-webkit-keyframes sliderLeftToRight {
+  form {
+    left: -7rem;
+  }
+  to {
+    right: 0rem;
+  }
+}
+
+@keyframes sliderLeftToRight {
+  form {
+    left: -7rem;
+  }
+  to {
+    right: 0rem;
   }
 }
 /*# sourceMappingURL=landing-page-template.css.map */
