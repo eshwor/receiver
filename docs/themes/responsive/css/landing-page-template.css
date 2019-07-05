@@ -209,10 +209,6 @@ span {
   height: 100%;
 }
 
-.items div.saleItem .infoContainer {
-  height: 4rem;
-}
-
 .items div.saleItem .actionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,10 +249,6 @@ span {
 
 .items div.saleItem.on .subtitle {
   display: block;
-}
-
-.items div.saleItem.on .infoContainer {
-  height: 8rem;
 }
 
 .items div.saleItem.on .addtoBag {
