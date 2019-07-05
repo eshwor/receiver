@@ -74,7 +74,12 @@ img {
 
 .onFixed .filterColumn-wrapper {
   padding: 0.5rem;
-  border: 1px solid gray;
+  border: 2px solid black;
+  position: fixed !important;
+  top: 2rem;
+  z-index: 5;
+  background: #f1f1f1cf;
+  border-radius: 3px;
 }
 
 span {
