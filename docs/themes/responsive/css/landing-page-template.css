@@ -262,6 +262,8 @@ span {
 .items div.saleItem.on .thumb {
   border-color: #737373;
   height: auto;
+  -webkit-animation: slider 1s ease-in-out;
+          animation: slider 1s ease-in-out;
 }
 
 .items div.saleItem.on .infoContainer {
@@ -278,15 +280,19 @@ span {
 
 @-webkit-keyframes slider {
   form {
+    background: blue;
   }
   to {
+    background: yellow;
   }
 }
 
 @keyframes slider {
   form {
+    background: blue;
   }
   to {
+    background: yellow;
   }
 }
 /*# sourceMappingURL=landing-page-template.css.map */
