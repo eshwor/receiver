@@ -77,7 +77,9 @@ span {
 }
 
 .pagination {
-  display: inline-block;
+  display: block;
+  border: 1px solid #115ea7;
+  text-align: right;
 }
 
 .pagination li {
