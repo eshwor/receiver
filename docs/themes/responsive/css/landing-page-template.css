@@ -155,9 +155,10 @@ span {
 }
 
 #sortByDrop .sortMenu {
-  width: 100%;
   background: #F1F1F1;
   border: 1px solid #C7C7C7;
+  left: 0;
+  right: 0;
 }
 
 #sortByDrop .sortMenu span {
