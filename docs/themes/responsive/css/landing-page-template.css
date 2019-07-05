@@ -175,8 +175,6 @@ span {
   margin: 0.5rem;
   border: 1px solid #C7C7C7;
   height: 19rem;
-  -webkit-animation: slider 3s ease-in-out forwards;
-          animation: slider 3s ease-in-out forwards;
 }
 
 .items div.saleItem .quantityLeft {
@@ -264,6 +262,8 @@ span {
 .items div.saleItem.on .thumb {
   border-color: #737373;
   height: auto;
+  -webkit-animation: slider 3s ease-in-out forwards;
+          animation: slider 3s ease-in-out forwards;
 }
 
 .items div.saleItem.on .infoContainer {
