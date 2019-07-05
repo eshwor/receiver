@@ -192,13 +192,13 @@ span {
 }
 
 .items div.saleItem {
-  width: 50%;
+  width: 100%;
   max-width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
   padding: 0;
-  height: 314px;
+  height: 380px;
   position: relative;
   z-index: 1;
 }
@@ -212,6 +212,7 @@ span {
 @media screen and (min-width: 992px) {
   .items div.saleItem {
     width: 25%;
+    height: 314px;
   }
 }
 
@@ -226,9 +227,15 @@ span {
 .items div.saleItem .thumb {
   margin: 0.5rem;
   border: 1px solid #C7C7C7;
-  height: 19rem;
+  height: 23rem;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+@media screen and (min-width: 992px) {
+  .items div.saleItem .thumb {
+    height: 19rem;
+  }
 }
 
 .items div.saleItem .quantityLeft {
@@ -296,8 +303,14 @@ span {
 }
 
 .items div.saleItem .addtoBag {
-  display: none;
+  display: block;
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .items div.saleItem .addtoBag {
+    display: none;
+  }
 }
 
 .items div.saleItem.on {
