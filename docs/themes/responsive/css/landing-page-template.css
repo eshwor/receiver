@@ -19,10 +19,6 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
-  text-decoration: underline;
-}
-
 #heroWrapper {
   display: none;
 }
@@ -156,13 +152,16 @@ span {
 }
 
 .items div.saleItem .flyout {
-  margin: 0.5rem;
-  border: 1px solid #C7C7C7;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.items div.saleItem .thumb {
+  margin: 0.5rem;
+  border: 1px solid #C7C7C7;
 }
 
 .items div.saleItem .quantityLeft {
@@ -202,6 +201,7 @@ span {
 
 .items div.saleItem .subtitle {
   display: none;
+  color: #737373;
 }
 
 .items div.saleItem .contents {
@@ -247,7 +247,7 @@ span {
   z-index: 5;
 }
 
-.items div.saleItem.on .flyout {
+.items div.saleItem.on .thumb {
   border-color: #737373;
 }
 
