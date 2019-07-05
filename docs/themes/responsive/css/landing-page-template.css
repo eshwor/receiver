@@ -175,6 +175,8 @@ span {
   margin: 0.5rem;
   border: 1px solid #C7C7C7;
   height: 19rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .items div.saleItem .quantityLeft {
@@ -262,6 +264,8 @@ span {
 .items div.saleItem.on .thumb {
   border-color: #737373;
   height: auto;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   -webkit-animation: slider 3s ease-in-out forwards;
           animation: slider 3s ease-in-out forwards;
 }
@@ -280,19 +284,15 @@ span {
 
 @-webkit-keyframes slider {
   form {
-    height: 19rem;
   }
   to {
-    height: 25rem;
   }
 }
 
 @keyframes slider {
   form {
-    height: 19rem;
   }
   to {
-    height: 25rem;
   }
 }
 /*# sourceMappingURL=landing-page-template.css.map */
