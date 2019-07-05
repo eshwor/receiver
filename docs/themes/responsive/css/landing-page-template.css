@@ -260,8 +260,6 @@ span {
   text-align: center;
   position: relative;
   left: -7rem;
-  -webkit-animation: sliderLeftToRight 500ms ease-in-out forwards;
-          animation: sliderLeftToRight 500ms ease-in-out forwards;
 }
 
 .items div.saleItem.on {
@@ -287,7 +285,8 @@ span {
 
 .items div.saleItem.on .addtoBag {
   display: block;
-  position: relative;
+  -webkit-animation: sliderLeftToRight 500ms ease-in-out forwards;
+          animation: sliderLeftToRight 500ms ease-in-out forwards;
 }
 
 @-webkit-keyframes sliderUp {
