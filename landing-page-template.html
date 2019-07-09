@@ -1,14 +1,282 @@
+<link href="/landing/pla/styles/cssmin.css" rel="stylesheet" type="text/css" />
+<style type="text/css">#heroWrapper{display:none}
+.page .content{width: 100%}
+#content_wrapper{padding-top:0}
+.bootstrap-iso .container{font-family:ubuntu;}
+ul.catMenu li a:hover,ul.catMenu li a:active{border-color:#0072d9}
+ul.catMenu li a:hover .imgIco{border-color:#0072d9}
+ul.catMenu li a:active .imgIco{background:#eee}
+ul.catMenu li a:hover{color:#00579d}
+ul.catMenu li a:active{color:#00579d}
+.ui-mobile-viewport ul.catMenu{padding:0}
+.featuredItems p{font-weight:400;font-size:20px;margin: 0;padding: 15px 10px}
+.pairedPromos,ul.catMenu{display: flex;flex-wrap:wrap;list-style:none;margin:0;padding:0 4px}
+.promoUnit,.catMenu li{display:flex;flex:25%;float:left;padding: 15px;}
+ul.catMenu li{padding:4px}
+ul.catMenu li a{flex-grow:1;text-decoration:none;font-size:14px;color:#0072d9;font-weight:600;padding:5px;display:block;border-radius:2px;text-align:center;border:1px solid #d1d1d1}
+.ui-mobile-viewport .promoUnit{flex:100%}
+.ui-mobile-viewport ul.catMenu li{flex:49%}
+.promoUnit a{flex-grow:1;padding:7px;text-decoration:none;background: #fff;border:2px solid #ddd;}
+.promoUnit a:hover,.promoUnit a:active{text-decoration: none;border-color:#0072d9;}
+.promoUnit .promoContent{overflow: hidden}
+.promoContent,.promoContent span{display: block;margin-bottom: 5px}
+a .promoContent span{color:#303030;}
+.promoContent:before{clear:both;display: table;content: ''}
+.promoUnit .promoImg{float:left;width:40%;margin:10px 15px 0 0}
+.promoUnit a img{max-width:100%}
+span.promoText{font-size: 16px;font-weight: 500}
+.imgIco{display: table;height:100px;width: 100%;text-align: center;}
+.imgTD{display: table-cell;vertical-align: middle}
+.imgIco img{max-width: 100%}
+.ui-mobile-viewport .imgIco img{max-height:60px}
+.ui-mobile-viewport .imgIco{height:60px}
+a .promoContent span.free{font-size:26px;font-weight:700;color:#f15722}
+.banner{position:relative;}
+.banner-wrapper{max-width: 974px;text-align: center;margin: auto}
+span.promoMain,span.promoVal{font-size: 14px}
+a .promoContent span.promoVal{color:#f15722;}
+.ui-mobile-viewport .pairedPromos,.ui-mobile-viewport ul.catMenu{flex-wrap: wrap}
+.bannerimg{max-width: 100%;margin: auto}
+.ui-mobile-viewport .categoryHeading{font-size:20px;text-align:center;color:#7f7f7f;font-weight:500}
+.ui-mobile-viewport ul.catMenu li a{background:#fff;border:1px solid #ddd;font-weight:400;color:#7f7f7f;font-size:12px}
+.ui-mobile-viewport .bootstrap-iso .container{padding:0 10px}
+.thumb{text-align:center;margin-bottom:10px;font-size:15px;line-height:22px;}
+.displayPrice{font-weight:600}
+.featuredItems{margin-bottom:25px}
+.ui-mobile-viewport .nosto.mix .thumb{background:#fff}
+p.sectionHeading.mSection{margin-bottom:10px;background:transparent;color:#707070;}
+.tbl{display:table;font-family:ubuntu;table-layout:fixed;width:100%}
+a.tcell{padding:1.5rem;text-decoration:none;overflow:hidden;direction:ltr;display:table-cell;vertical-align:top;background:#FFD11B url(/img/violator/Desktop_20170606_162058.png);background-position:center;background-size:cover;-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;-ms-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;width:33.333333333333%;max-width:33.333333333333%}
+a.tcell:hover{text-decoration:none;}
+.contentCell{width:66.666666666667%;max-width:66.666666666667%;overflow:hidden;direction:ltr;display:table-cell;vertical-align:middle;padding-left:20px;padding-right:20px;background:#fff}
+.imgTabe{display:block;max-width:120px;height:120px;text-align:center;margin-right:auto;margin-left:auto;vertical-align:middle;margin-bottom:1rem}
+.col-xs-6{float:left;width:25%;box-sizing:border-box}
+a.tcell span.seasonH{font-size:30px;font-weight:300;color:#fff;text-decoration:none;margin-bottom:105px;display:block;text-transform:uppercase}
+.imgTabe img{max-width:100%;max-height:100%;vertical-align:middle;display:inline-block}
+.img-help{display:inline-block;height:100%;width:0;vertical-align:middle}
+.cLabe{font-weight:500;font-size:12px;display:block;white-space:normal;text-overflow:ellipsis;overflow:hidden;color:#303030;height:2.6em;line-height:1.3;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-align:center}
+span.btn-orange,a.baraginBuy{text-transform:uppercase;background:#f15722;display:inline-block;padding:10px 12px;color:#fff;border:none;font-size:15px;font-weight:700}
+.ui-mobile-viewport a.tcell,.ui-mobile-viewport .contentCell{width:100%;max-width:100%;display:block}
+a.thumby{padding:10px 0;display:block;background:#fff;text-align:center}
+a.tcell span{display:block}
+.cWrapper{position:absolute;top:0;left:0;display:block;width:100%;text-align:center;font-size:16px;padding:10px 0}
+.countdown-section{display:inline-block;margin-right:3px;font-size:24px}
+.countdown-amount{display:block;font-weight:600;padding:0 8px;line-height:1.5;text-align:center;background:rgba(0,0,0,0.8);color:#fff;border-bottom:1px solid}
+.countdown-period{display:block;text-align:center;font-size:45%;background:rgba(0,0,0,0.8);color:#fff;padding:5px}
+.bootstrap-iso small, .bootstrap-iso .small{font-size:60%}
+.ui-mobile-viewport .banner-wrapper{/*padding:15px*/}
+.ui-mobile-viewport ul.catMenu{margin:0 0 20px}
+.price{font-size:16px;line-height:21px;color:#303030;font-weight:600}
+.youtubeIcon{position: absolute;top: 50%;margin-top: -16px;left: 50%;margin-left: -16px;}
+span.imgHelper{position:relative;height:100%;display:inline-block;vertical-align:middle;width:0}
+.barginTitle{display:block;color:#fff;padding:5px;font-size:18px;background:#fff}
+.priceWrapper{float:right;margin:0 0 10px 10px;text-align:right}
+.bargininfo{padding:0 0 10px;background:#fff}
+.barginbuy{display:block;position:relative;padding:5px;background:#eee;color:#303030;border-bottom:1px solid #303030;margin:0 0 5px;font-size:14px}
+.usethiscode,.freeship{display:block;font-size:14px;color:#fff}
+.barginbuy b{font-size:24px}
+.dinline{display:inline-block;vertical-align:top;}
+p.bargainsnippet{font-size:12px;line-height:1.5}
+.baraginWrap{padding:10px;background:#00579d;border:1px solid #fff;margin-top:-15px}
+.ui-mobile-viewport .baraginWrap{margin:0}
+.bargainPrice{position:absolute;top:-10px;right:-10px;}
+a.bargainVid{display:block;padding:10px;background:#fff;position:relative;border:1px solid #d1d1d1}
+a.bargainVid:hover{opacity:0.8}
+a.bargininfo{background:#f15722;}
+a.vidBuy{display:inline-block;float:left;width:50%;box-sizing:border-box;padding:15px;background:#f15722;color:#fff;text-decoration:none;text-align:center;font-size:18px}
+.mobilesaleText{display:none}
+.ui-mobile-viewport .bannerimg{max-width:100%}
+.ui-mobile-viewport .mobilesaleText{display:block;padding:7px;color:#fff;background:#00579d;font-size:14px;font-weight:600;text-align:center;}
+.barginContainer{background:#fff;position:relative;}
 
-<link href="/landing/cinco/cinco3.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-@import url("https://eshwor.github.io/receiver/landing-page-template.css");
+/* code for grads page */
+
+page .content{width:100%}
+.bootstrap-iso{font-family:ubuntu;color:#303030;font-size:13px;}
+.productInfo{margin-bottom:25px}
+.productSale{position:absolute;top:5px;left:5px}
+.mainPic{text-align:center}
+.reviews{min-heigt:28px}
+.reviews *{display:none;vertical-align:middle;color:#707070}
+a.stars span{font-size:10px;position:relative;display:inline-block;vertical-align:middle;color:#00579d}
+a.stars span:last-child{font-size:.8em}
+a.numberReviews{font-size:.7em;vertical-align:baseline;display:inline-block}
+
+.addContainer{padding:20px 0;text-align:right}
+h1.mTitle{font-size:24px;color:#303030;font-weight:400}
+h2.fPrice{display:inline-block;color:#303030;font-weight:400;font-size:43px;vertical-align:middle;margin-top:0}
+h2.rPrice{color:red;display:inline;padding-left:5px;font-size:17px}
+.bootstrap-iso a.btn-cart{display:inline-block;font-size:20px;background-color:#f15722;color:#fff!important;font-weight:500}
+.bootstrap-iso a.btn-cart:hover{background-color:#dc3800}
+.bootstrap-iso a.btn-cart:active{background-color:#ca3400}
+.bootstrap-iso a.btn-details{background-color:#00579d;color:#fff!important}
+.bootstrap-iso a.btn-details:hover{background-color:#014982}
+.bootstrap-iso a.btn-details:active{background-color:#003b6a}
+.bootstrap-iso a{color:#087cce}
+.priceSection .msrp{font-size:.7em;text-decoration:line-through;font-weight:normal;margin-right:5px}
+.manufact a,.learnMore{font-size:1.5em;line-height:1}
+h4.inStock{color:#46A62D}
+h4.outOfStock{color:#707070}
+.addContainer p{font-size:15px;font-weight:400}
+.addContainer p:last-child{margin-bottom:0px}
+p.shipping{color:#00579d}
+#installKit{color:#f15722}
+.youPay{display:inline-block;margin-right:7px;vertical-align:middle}
+.bootstrap-iso p.shortdesc{padding:10px 0;border-top:1px solid #dedede;color:#303030;font-size:14px;line-height:22px;margin-bottom:0}
+.valueAdds{position:relative;text-align:center;padding:10px 0}
+.valueAdds img{max-width:44px}
+.valueAdds .perk{position:relative}
+.indicator{opacity:0;transition:.3s;text-align:center;font-size:12px;color:#4192d9}
+.valueAdds .perk.active .indicator{opacity:1}
+.valueAdds h6,.confidence{height:30px;overflow:hidden}
+.confidence{font-size:18px;text-align:center;text-transform:uppercase;color:#707070;font-weight:500;margin:0}
+.addLower{color:#3170A6;font-size:18px}
+.checkoutcontrols{position:relative;border:1px solid #dedede;margin-bottom:15px}
+.similarContainer{text-align:justify}
+.similarProducts{font-size:24px}
+.bootstrap-iso .mix{position:relative;min-height:330px}
+.bootstrap-iso a.addtoBag,.bootstrap-iso a.notifyMe{font-size:1.2em;line-height:1;font-weight:500;background:#d3d3d3;color:#fff;position:absolute;right:0;bottom:0;padding:7px;transition:.3s;-moz-transition:.3s;-webkit-transition:.3s}
+.mix a.subtitle,.mix .msrp,.mix a.addtoBag,.mix a.notifyMe{display:none}
+.mix .flyout{visibility:hidden;position:absolute;top:0;left:0;width:100%}
+.mix.on .flyout{visibility:visible;z-index:10}
+.right-section{float:right}
+.left-section{float:left}
+.quantityLeft{position:absolute;background:rgba(255,196,3,0.8);top:0;left:1px;width:100%}
+.quantityLeft span.stockCount{display:none!important}
+.quantityLeft .limitedQuantity{display:none;font-size:10px;font-weight:700}
+.bootstrap-iso .mix .thumb{visibility:visible;position:relative;display:block;font-size:13px;line-height:17px;text-align:left;background:#fff;border:1px solid #ddd;margin-bottom:15px}
+.mix .thumb a{text-decoration:none}
+.mix .thumb a{text-decoration:none}
+.mix .thumb a:hover{text-decoration:none}
+.mix .infoContainer .name,.infoContainer .subtitle{display:block}
+.mix a.name{font-size:1.2em;line-height:1.2;height:36px;color:#0072d9;margin-bottom:5px;overflow:hidden}
+.mix a.subtitle{height:65px;overflow:hidden;color:#707070!important;margin-bottom:5px}
+.thumb .contents{padding:7px 7px 0}
+.thumb .actionsContainer{position:relative;padding:15px 7px 0;margin-left:-7px;margin-right:-7px;background:#e7e7e7}
+.mix .imgContainer{position:relative;display:table;height:185px;width:100%;text-align:center}
+.mix .imgContainer span{display:table-cell;vertical-align:middle;padding:0 5px}
+.mix .imgContainer img{width:auto;height:auto;max-width:175px;max-height:175px}
+.mix .prices .salePrice{font-size:1.5em;line-height:1;color:#303030;font-weight:500}
+.mix .msrp{font-size:1em;color:#707070;margin-right:5px;text-decoration:line-through}
+.timerWrapper{display:inline-block;vertical-align:middle;text-align:left}
+.mix.on .thumb{border:1px solid #0072d9!important}
+.mix.on a.addtoBag,.mix.on a.subtitle,.mix.on .msrp,.mix.on a.notifyMe{display:block}
+.mix.on .prices .salePrice{color:#e73b2c;font-weight:600}
+.outofStock{position:absolute;background:rgba(255,255,255,0.8);top:0;left:0;width:100%;height:100%;z-index:3}
+.outofStock .inside{display:table;height:100%;width:100%;padding:0 10px;text-align:center}
+.outofStock .inside div{display:table-cell;vertical-align:middle;font-size:28px;line-height:1.3;color:#707070}
+a.addtoBag:hover{background:#f15722}
+a.notifyMe:hover{background:#707070}
+.bootstrap-iso .items:before{content:'';clear:both;display:table}
+.bootstrap-iso .mainSubtitle,.bootstrap-iso .mainSubtitle a.ui-link{font-size:14px;line-height:17px}
+.bootstrap-iso .priceDrop h4,.bootstrap-iso .priceDrop h6{color:#f00}
+.actionsContainer .priceDrop{position:absolute;top:0;left:0}
+#vip img{max-height:30px}
+#thumnailvip img{max-height:21px}
+#thumnailvip{position:absolute;top:5px;left:5px;z-index:4}
+#yw0{padding-bottom:30px}
+#yw0 .items:after{content:' ';display:table;clear:both}
+.filGr{display:none;position:fixed;bottom:10px;left:10px;z-index:10;padding:10px;color:#06579e;font-weight:500;font-size:14px;cursor:pointer}
+.filGr.topAvail{display:inline-block}
+.swiper-container{height:100%}
+.swiper-slide:first-child{border:1px solid #4192d9}
+.swiper-slide{display:table;width:100%;text-align:center;border:1px solid #ddd;border-radius:3px}
+.easyzoom img{vertical-align:bottom}
+.easyzoom.is-loading img{cursor:progress}
+.easyzoom-notice{position:absolute;top:50%;left:50%;z-index:150;width:10em;margin:-1em 0 0 -5em;line-height:2em;text-align:center;background:#FFF;box-shadow:0 0 10px #888}
+.easyzoom-flyout{position:absolute;z-index:100;overflow:hidden;background:#FFF;-webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.3);-moz-box-shadow:0 0 10px 0 rgba(0,0,0,0.3);box-shadow:0 0 10px 0 rgba(0,0,0,0.3);border:1px solid #707070}
+.easyzoom--overlay .easyzoom-flyout{top:0;left:0;width:100%;height:100%}
+.easyzoom--adjacent .easyzoom-flyout{top:0;left:100%;width:100%;height:100%;margin-left:20px;width:570px;height:500px}
+.swiper-wrapper{height:320px}
+.thumbnails a{display:table-cell;vertical-align:middle}
+.swiper-slide img{width:auto;height:auto;max-height:50px;max-width:50px}
+.easyzoom .aZoom{display:table;width:100%;height:320px;text-align:center}
+.easyzoom .aZoom span{display:table-cell;vertical-align:middle}
+.easyzoom .aZoom img{width:auto;height:auto;max-width:250px;max-height:250px}
+.swiper-button-next, .swiper-button-prev{bottom:auto;left:50%;top:auto;right:auto;height:20px;width:20px;margin: 0 0 0 -10px;background-size:20px;-ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);}
+.swiper-button-next{bottom:5px} 
+.swiper-button-prev{top:5px}
+#inline{max-width:720px}
+#inline img{display:block;float:none!important;max-width:100%}
+.list-view .summary{font-size:14px;color:#707070;text-align:left;}
+ul.yiiPager a:link,ul.yiiPager a:visited{color:#707070;border:none;font-size:1.7em}
+ul.yiiPager a:hover{color:#0072d9}
+ul.yiiPager .selected a{background:transparent;color:#0072d9}
+.banner{background-image: url("/landing/images/kicker_banner.jpg");}
+.banner .inner{padding:100px 15px 150px}
+.banner h1,.banner h3{margin:0;color:#fff;font-weight:300}
+.pulledUp{position:relative;padding:15px 0;margin-bottom:40px;}
+.pulledUp .inner{padding-top:15px;padding-bottom:15px;background:#f3f3f3;-webkit-box-shadow:0 0 2px 2px rgba(48,48,48,0.15);-moz-box-shadow:0 0 2px 2px rgba(48,48,48,0.15);box-shadow:0 0 2px 2px rgba(48,48,48,0.15)}
+
+
+@media (min-width: 990px) {
+}
+@media (max-width: 767px) {
+.right-section,.left-section{float:none}
+.container{padding:0 2%}
+.checkoutcontrols{background:rgba(235,235,235,0.5)}
+h1.mTitle{font-size:24px;margin-top:0px}
+.fPrice{font-size:32px}
+.addContainer{margin:0;text-align:left}
+.similarContainer{padding:2%}
+a.subtitle.ui-link{font-weight:normal}
+.thePrice{font-size:1.65em}
+.productInfo{margin-bottom:10px}
+a.name.ui-link{font-weight:500}
+.msrp{font-size:.6em}
+.bootstrap-iso a.btn-cart{display:block}
+.similarProducts{font-size:18px}
+.swiper-container{width:100%;float:none}
+.swiper-slide img{width:auto;height:auto;max-height:200px;max-width:200px}
+.swiper-slide,.swiper-slide:first-child{border:none}
+.swiper-wrapper{height:220px}
+.easyzoom{display:none!important}
+.list-view .summary{margin-bottom:10px;padding-left:0;text-align:center}
+.bootstrap-iso .list-view .pagination{text-align:center}
+ul.yiiPager li.previous,ul.yiiPager li.next{display:none}
+.mix .imgContainer{display:table;height:125px;width:100%;text-align:center}
+.mix .imgContainer img{width:auto;height:auto;max-width:115px;max-height:115px}
+.mix{padding-left:5px!important;padding-right:5px!important}
+.mix .flyout{position:relative}
+.mix.on .flyout{visibility:hidden}
+.right-section,.left-section{float:none}
+.bootstrap-iso .mix{min-height:30px;padding:0 5px!important}
+.thumb .actionsContainer{padding:10px 5px}
+.mix.on a.addtoBag,.mix.on a.subtitle,.mix.on a.notifyMe{display:none!important}
+.mix .msrp{display:block}
+.bootstrap-iso .mix .thumb{margin-bottom:10px}
+ul.yiiPager a.ui-link:visited{color:#707070;border:none;font-size:1.7em}
+ul.yiiPager .selected a.ui-link,ul.yiiPager a.ui-link:active{color:#0072d9}
+.confidence{font-size:1.3em}
+/*.pulledUp{margin:-45px auto 30px;padding:0}*/
+.banner .inner{padding:20px 15px 65px}
+.banner h1{font-size:1.5em}
+.pulledUp .inner{max-width:90%;margin:auto;padding-top:10px;padding-bottom:10px}
+}
+
+#content_wrapper{
+
+margin-bottom: -5rem;
+padding: inherit;
+}
+
+span h1{
+background-color:red;
+}
+
+#heroWrapper {
+display:none;
+
+}
+.pagination_filter {
+padding:1%;
+
+}
 </style>
-
-<!--************** HEADER BANNER START **************-->
-<div class="banner">
+<div class="banner" style="background:#999;border-bottom:1px solid #999; padding-bottom:4px;">
 	<div class="banner-wrapper" id="mbContent">
-		<img class="bannerimg" data-img="/landing/4th_july-compressor.png,/landing/4th_july-compressor.png" src="" />
-</div>
+		<img class="bannerimg" src="https://www.sonicelectronix.com/landing/images/fathersday/FatherdayLandingPagev3.jpg" />
+	</div>
 	<script type="text/javascript">
 var splashImgs = document.getElementsByClassName("bannerimg");
 var ismobile = document.getElementsByClassName("ui-mobile");
@@ -25,373 +293,215 @@ for (var i = splashImgs.length - 1; i >= 0; i--) {
 };
 </script>
 </div>
-<!--************** HEADER BANNER END **************-->
+
+<div class="container">
+	<div class="featuredItems">
+		<div class="row" style="margin:0 0 25px">
+			<div class="col-xs-12 col-md-8">
+				<p class="sectionHeading categoryHeading">SHOP OUR POPULAR CATEGORIES | <span style="font-size:16px;"><a href="https://www.sonicelectronix.com/lp/fathers-day">View All Items >> </a></span></p>
+
+				<ul class="catMenu clearfix">
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=131" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Stereos']);" title="Car Stereos &amp; In-Dash Receivers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/2401-1424120153.jpg" /></span></span><span>Marine Audio</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=1236" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Subwoofers']);" title="Car Subwoofers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/39-1488848596.jpg" /></span></span><span>Car Subwoofers</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=1741" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Speakers']);" title="Car Speakers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/7-1489169426.jpg" /></span></span><span>Car Speakers</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=1702" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Speakers']);" title="Car Speakers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/22-1489169421.jpg" /></span></span><span>Car Amplifiers</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=234" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Speakers']);" title="Car Speakers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/978-1552333715.jpg" /></span></span><span>Cell Phone Accessories</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=354" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Speakers']);" title="Car Speakers"><span class="imgIco"><span class="imgTD"><img src="https://images.sonicelectronix.com/images/3027153/small/xpt100.jpg" /></span></span><span>Headphones</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=1553" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Speakers']);" title="Car Speakers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/499-1552428596.jpg" /></span></span><span>Home Office Gear</span></a></li>
+					<li><a class="catItemWrapper" data-ajax="false" href="?category=2927" onclick="_gaq.push(['_trackEvent', 'Home', 'Categories', 'Click - Car Speakers']);" title="Car Speakers"><span class="imgIco"><span class="imgTD"><img src="https://www.sonicelectronix.com/images/cats/1585-1551209376.jpg" /></span></span><span>Fitness Gear</span></a></li>
+				</ul>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="baraginWrap">
+					<p class="sectionHeading categoryHeading dinline" style="color:#fff">Father&#39;s Day Subwoofer Package</p>
+
+					<div class="bargain clearfix">
+						<div class="bargininfo">
+							<span class="priceWrapper"><span class="barginbuy">was <b><span style="text-decoration:line-through"><span style="font-size:0.6em;vertical-align:0.3em">$</span>199<span style="font-size:0.6em;vertical-align:0.3em">.99</span></span></b><br />
+							now <b style="color:#e73b2c"><span style="font-size:0.6em;vertical-align:0.3em">$</span>89<span style="font-size:0.6em;vertical-align:0.3em">.95</span></b></span><span style="padding:5px;"><b>$110.00 Savings</b></span></span> <span class="barginTitle"><span style="color:#303030"><b>Belva BLB112LED</b> Single 12-inch 750W Loaded Ported Car Subwoofer with Multi-Color LED and Remote</span></span>
+						</div>
+
+						<div class="barginContainer">
+							<a data-role="none" href="https://www.sonicelectronix.com/item_165535_Belva-BLB112LED.html"><img class="img-responsive" src="https://images.sonicelectronix.com/images/4524449/main/blb112led.jpg" style="margin:auto" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pulledUp">
+			<div class="container inner">
+				<div class="row">
+					<div class="col-xs-12 similarContainer">
+						{{#ProductsWithPagination}}
+						<div class="mix saleItem {{ProductGroup.id}} {{Manufacturer.name}} col-xs-6 col-sm-4 col-md-3" data-brand="{{Manufacturer.name}}" data-category="{{ProductGroup.name}} {{ProductGroup.id}}" data-popularity="{{quantity_sold_in_past_year}}" id="{{id}}">
+							<div style="position:relative">
+								<div class="flyout">
+									<div class="thumb">
+										<div class="imgContainer">
+											{{#is_vip}}
+											<div data-tooltip="This item is Backed by our VIP Guarantee. Claim your FREE rewards" id="thumnailvip">
+												<img src="/landing/vip_guarantee/vipguaranteepromo.png" />
+											</div>
+											{{/is_vip}}{{^is_vip}}
+
+											<div class="quantityLeft">
+												<span class="stockCount">{{in_stock_counter}}</span>
+
+												<div class="limitedQuantity">
+													LIMITED STOCK
+												</div>
+											</div>
+											{{/is_vip}} {{#in_stock}} <span style="position:absolute;top:0;left:0;z-index:-1"> </span> {{/in_stock}} {{^in_stock}}
+
+											<div class="outofStock">
+												<div class="inside">
+													<div>
+														OUT OF STOCK
+													</div>
+												</div>
+											</div>
+											{{/in_stock}} <span><a data-ajax="false" href="/viewitem.php?id={{id}}" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'LOWvember', 'Clicked Deal Image']);"><img src="{{mainPictureParams.url}}" /></a></span>
+										</div>
+
+										<div class="contents">
+											<div class="infoContainer">
+												<a class="name" data-ajax="false" href="/viewitem.php?id={{id}}" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'LOWvember', 'Clicked Deal Name']);">{{Manufacturer.name}} {{subtitle}}</a>
+											</div>
+
+											<div class="actionsContainer clearfix">
+												<div class="left-section">
+													<div class="prices">
+														<p class="msrp">${{msrp}}</p>
+
+														<p class="salePrice">${{price}}{{#is_on_sale}}<span style="font-size:.45em;vertical-align:middle;color:#f00"> Price Drop</span>{{/is_on_sale}}</p>
+													</div>
+												</div>
+
+												<div class="right-section">
+													<div class="reviews">
+														{{#numReviews}} <a class="stars" data-ajax="false" href="/viewitem.php?id={{id}}&amp;show_tab=2#productTabbedContainer" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'Sale Item', 'Click - Reviews']);" score="{{avgReviewRatingOverall}}" title="{{avgReviewRatingOverall}} stars"><span class="fa" data-star="1"><span style="display:none">_</span></span> <span class="fa" data-star="2"><span style="display:none">_</span></span> <span class="fa" data-star="3"><span style="display:none">_</span></span> <span class="fa" data-star="4"><span style="display:none">_</span></span> <span class="fa" data-star="5"><span style="display:none">_</span></span> <span>({{numReviews}})</span></a>{{/numReviews}}
+													</div>
+													{{#in_stock}}<a class="addtoBag" data-ajax="false" href="/cart/add/item/{{id}}" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'LOWvember', 'Added Deal to Cart']);">Add to Cart</a> {{/in_stock}}{{^in_stock}} <a class="fancybox notifyMe fancybox.iframe" data-ajax="false" href="/instock_notify.php?item_id={{id}}" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'LOWvember', 'Added Deal to Cart']);">Notify Me</a> {{/in_stock}}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{{/ProductsWithPagination}} <!--<div class="clearfix" style="border:1px solid #ddd;margin-bottom:25px;border-radius:5px">
+			<div class="tbl">
+				<a class="tcell" data-ajax="false" href="/viewcat.php?category_id=1236&amp;filter_f_ch_2267_10935=1" title="Kicker Subwoofers BOGO"><span class="seasonH"><span style="font-weight:500;"><img src="/landing/kicker_black.png" style="max-height:30px" /></span>Buy one, get one half off! <span class="btn btn-orange" style="background:#FFD11B;color:#303030">Shop Now</span></span></a>
+
+				<div class="contentCell">
+					<div class="row">
+						{{#Products}}
+						<div class="col-xs-6 col-sm-3">
+							<a class="thumby" data-ajax="false" href="/viewitem.php?id={{id}}"><span class="imgTabe"><img alt="{{mainPictureParams.alt}}" src="{{mainPictureParams.url}}" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">${{price}}</span><span class="cLabe">{{subtitle}}</span></a>
+						</div>
+						{{/Products}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix" style="border:1px solid #ddd;margin-bottom:25px;border-radius:5px">
+			<div class="contentCell" style="display:block;width:100%;max-width:100%;">
+				<div class="row">
+					<div class="col-xs-6 col-sm-2">
+						<a class="thumby" data-ajax="false" href="/viewitem.php?id=106971"><span class="imgTabe"><img alt="BVB9364RC" src="https://images.sonicelectronix.com/images/2833347/main/bvb9364rc.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">$119.95</span><span class="cLabe">Double DIN Bluetooth In-Dash DVD/CD/AM/FM Car Stereo w/ 6.2" Touchscreen Display, Rear Camera Input and SWC</span></a>
+					</div>
+
+					<div class="col-xs-6 col-sm-2">
+						<a class="thumby" data-ajax="false" href="/viewitem.php?id=121901"><span class="imgTabe"><img alt="XAV-AX100" src="https://images.sonicelectronix.com/images/3903553/main/xavax100.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">$398.00</span><span class="cLabe">6.4" TouchScreen Media receiver with BLUETOOTH® Carplay/Android Auto and Dynamic Stage Organizer (DSO) technology</span></a>
+					</div>
+
+					<div class="col-xs-6 col-sm-2">
+						<a class="thumby" data-ajax="false" href="/viewitem.php?id=137139"><span class="imgTabe"><img alt="VX6628" src="https://images.sonicelectronix.com/images/3997827/main/vx6628.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">$249.95</span><span class="cLabe">Double DIN In-Dash Navigation DVD/CD/AM/FM SiriusXM Ready Bluetooth Car Stereo Receiver with 6.2" Touchscreen, HDMI Mirror & Control</span></a>
+					</div>
+
+					<div class="col-xs-6 col-sm-2">
+						<a class="thumby" data-ajax="false" href="/viewitem.php?id=137873"><span class="imgTabe"><img alt="DEH-S1000UB" src="https://images.sonicelectronix.com/images/3903081/main/dehs1000ub.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">$63.99</span><span class="cLabe">Single DIN In-Dash CD/AM/FM Car Stereo Receiver w/ MIXTRAX and ARC Support</span></a>
+					</div>
+
+					<div class="col-xs-6 col-sm-2">
+						<a class="thumby" data-ajax="false" href="/viewitem.php?id=138557"><span class="imgTabe"><img alt="KD-X350BTS" src="https://images.sonicelectronix.com/images/3901215/main/kdx350bts.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">$85.99</span><span class="cLabe">Single DIN SiriusXM Ready Bluetooth In-Dash Digital Media Car Stereo Receiver w/ Streaming DJ</span></a>
+					</div>
+
+					<div class="col-xs-6 col-sm-2">
+						<a class="thumby" data-ajax="false" href="/viewitem.php?id=150035"><span class="imgTabe"><img alt="DPX303MBT" src="https://images.sonicelectronix.com/images/3929989/main/dpx303mbt.jpg" style="border:0" /><span class="imgHelper"><span style="display:none">audio</span></span></span><span class="price">$109.99</span><span class="cLabe">Double DIN Bluetooth In-Dash Digital Media Car Stereo Receiver, SiriusXM Ready, Spotify and Pandora</span></a>
+					</div>
+				</div>
+			</div>
+			<a class="tcell" data-ajax="false" href="/cat_i2869_father-s-day-sale.html?product_type=10" style="width:100%;max-width:100%;display:block;color:#fff;background:#0271e1 url(https://www.sonicelectronix.com/landing/images/fathersday/FathersDayLPupdate.jpg) no-repeat;background-position:bottom;border-radius:0px;background-size:cover" title="Father's day 10% Off Car Stereos"><span class="seasonH" style="margin-bottom:0;color:#fff"><span style="font-weight:500">Car stereos</span> <span>Save 10% with code <b>DAD10</b></span><span><button class="btn btn-orange" data-role="none" style="color:#fff;background:#00b2ec">Shop Now</button></span></span> </a>
+		</div>
+	</div>
+
+		<div class="featuredItems">
+			<div class="nosto_element" id="live-copy-1">
+				<span style="display:none"> </span>
+			</div>
+		</div>
+
+		<div class="nosto_element" id="landing-nosto-2">
+			<span style="display:none"> </span>
+		</div>--> <script src="https://www.sonicelectronix.com/landing/specials/48-hour-flash-sale/jquery.plugin.min.js"></script><script src="https://www.sonicelectronix.com/landing/specials/48-hour-flash-sale/jquery.countdown.min.js"></script><script type="text/javascript">
+(function ($) {
+  var dealexp = new Date("Jun 17, 2018 23:59:00");
+
+var now = new Date();
+
+function startDeal(time){
+     $("#Countdown").countdown({
+        until: time,
+        format: "HMS",
+        labels: ['y', 'm', 'w', 'D', 'HOURS', 'MINUTES', 'SECONDS'], 
+        labels1: ['y', 'm', 'w', 'D', 'HOURS', 'MINUTES', 'SECONDS'], 
+    });
+}
+ //               startDeal(dealexp);
+
+  var playerParent= $("body");
+ var parentWidth = playerParent.width();
+var multiplier = 0.6;
+    var aspectRatio = 9/16;
+if(parentWidth < 700){
+multiplier=0.9;
+}//
+
+    var playerHeight = parentWidth*multiplier*aspectRatio;
+    var playerWidth = parentWidth *multiplier;
+
+$(".bargainVid").fancybox({
+    padding: 0,
+    openEffect: 'elastic',
+    closeEffect: 'elastic',
+    prevEffect: 'fade',
+    nextEffect: 'fade',
+    href  : this.href,
+width: playerWidth,
+height: playerHeight ,
+    type: 'iframe',
+    scrolling: 'no',
+    iframe: {
+        preload: false
+    },
+afterShow: function(){
+$(".fancybox-outer").append('<a class="vidBuy" data-ajax="false" data-role="none" href="https://www.sonicelectronix.com/item_127847_Audio-Technica-Headphone-Bundle-ATH-AX5iSBK-ATH-CKP200iSBK.html">More Info</a><a class="vidBuy" href="/cart/add/item/127847?redeem_coupon=SUMMERTM20" data-ajax="false" data-role="none">Buy Now</a>')
+setCookie("pContentE",1,30);
+}
+     
+        });
 
 
-<!--************** MAIN PRODUCT LIST START **************-->
-<div id="Container">
-    {{#ProductsWithPagination}}
-    <div class="mix saleItem {{MainCategoryProduct.Category.id}} m{{Manufacturer.id}} col-xs-6 col-sm-4 col-md-4" data-brand="{{Manufacturer.name}},{{Manufacturer.id}}" data-category="{{MainCategoryProduct.Category.name}},{{MainCategoryProduct.Category.id}}" data-discount="" data-msrp="{{msrp}}" data-popularity="{{best_match_base_score}}" data-price="{{price}}" data-s="{{in_stock_counter}}" data-vendor="{{Manufacturer.name}}" id="{{id}}">
-        <div style="position:relative">
-            <div class="flyout">
-                <div class="thumb">
-                    <div class="imgContainer">
-                        {{#is_vip}}
-                        <div class="thumnailvip">
-                            <img class="vip" src="/landing/vip_guarantee/vipguaranteepromo.png" />
-                        </div>
-                        {{/is_vip}}{{#in_stock}}
+})(jQuery);
 
-                        <div class="quantityLeft">
-                            <span class="stockCount">{{in_stock_counter}}</span>
 
-                            <div class="limitedQuantity">
-                                LIMITED STOCK
-                            </div>
-                        </div>
-                        {{/in_stock}} {{^in_stock}}<span class="outofStock"><span class="inside"><span>SOLD OUT</span></span></span>{{/in_stock}} <span class="img"><a data-role="none" href="/viewitem.php?id={{id}}"><img class="lazyload" data-src="{{mainPictureParams.url}}" /></a></span>
-                    </div>
-
-                    <div class="contents">
-                        <div class="infoContainer">
-                            <a class="name" data-ajax="false" href="/viewitem.php?id={{id}}&amp;utm_source=internal&amp;utm_medium=landing-page&amp;utm_campaign=5fire">{{name}}</a>
-
-                            <div class="reviews">
-                                {{#numReviews}}
-                                <div class="stars" data-ajax="false" score="{{avgReviewRatingOverall}}">
-                                    <span class="fa" data-star="1"><span style="display:none">_</span></span> <span class="fa" data-star="2"><span style="display:none">_</span></span> <span class="fa" data-star="3"><span style="display:none">_</span></span> <span class="fa" data-star="4"><span style="display:none">_</span></span> <span class="fa" data-star="5"><span style="display:none">_</span></span> <span>({{numReviews}})</span>
-                                </div>
-                                {{/numReviews}}
-                            </div>
-                            <a class="subtitle hidden-xs" data-ajax="false" href="/viewitem.php?id={{id}}&amp;utm_source=internal&amp;utm_medium=landing-page&amp;utm_campaign=5fire">{{subtitle}}</a>
-
-                            <div class="actionsContainer">
-                                <div class="clearfix">
-                                    <div class="left-section">
-                                        <div class="prices">
-                                            <div class="priceContainer">
-                                                <span class="msrp">$<span class="msrpVal">{{msrp}}</span></span> <span class="displayPrice">$<span class="displayPriceVal">{{price}}</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{/ProductsWithPagination}}
+</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-<!--************** MAIN PRODUCT LIST END **************-->
-
-<div class="pagination noajax clearfix" id="pagination">
-        <span style="display:none">Next</span>
-    </div>
-
-<!-- Nosto Element Slider -->
-<div class="nosto_element" id="live-copy-1"></div>
-
-<script src="https://www.sonicelectronix.com/landing/specials/48-hour-flash-sale/jquery.plugin.min.js"></script><script src="https://www.sonicelectronix.com/landing/specials/48-hour-flash-sale/jquery.countdown.min.js"></script><script type="text/javascript">
-    (function ($) {
-      var dealexp = new Date("Jul 4, 2018 23:59:00");
-    
-    var now = new Date();
-    
-    function startDeal(time){
-         $("#Countdown").countdown({
-            until: time,
-            format: "HMS",
-            labels: ['y', 'm', 'w', 'D', 'HOURS', 'MINUTES', 'SECONDS'], 
-            labels1: ['y', 'm', 'w', 'D', 'HOURS', 'MINUTES', 'SECONDS'], 
-        });
-    }
-                    startDeal(dealexp);
-    
-      var playerParent= $("body");
-     var parentWidth = playerParent.width();
-    var multiplier = 0.6;
-        var aspectRatio = 9/16;
-    if(parentWidth < 700){
-    multiplier=0.9;
-    }
-    
-        var playerHeight = parentWidth*multiplier*aspectRatio;
-        var playerWidth = parentWidth *multiplier;
-    
-    
-    })(jQuery);
-    
-    
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="/landing/pla/js/lazy.js"></script><script type="text/javascript" src="/landing/specials/tax_refund/jquery.mixitup.min.js"></script><script type="text/javascript">
-    var cats = [],
-        brands = [],
-        deals = {},
-        year = getCookie("car_afg_year"),
-        make = getCookie("car_afg_make"),
-        model = getCookie("car_afg_model"),
-    catParam = QueryString.category,
-            manParam = QueryString.manufacturer,
-            cathtml = '',
-            bhtml = '',
-            onclass = '',
-            bselected = '',
-            cselected = '',
-            indept = '',
-    code = '',
-    prevActive = '';
-    
-    ! function(t) {
-        if (year !== "" && make !== "" && model !== "") {
-            var urlMake = make.replace(/\+/g, '-'),
-                urlModel = model.replace(/\+/g, '-').replace(/%26/g, '&'),
-                displayMake = make.replace(/\+/g, ' '),
-                displayModel = model.replace(/\+/g, ' ').replace(/%26/g, 'and');
-            t('.myVehicle').html('<span class="filter" data-filter=".fitsCar">My Vehicle: ' + year + ' ' + displayModel + ' <a class="fancyB vehicleSelector" data-role="none"  data-cke-saved-href="#afgPopup" href="#afgPopup"><span class="fa fa-remove"></span></a>')
-        }
-        var theIndex = 0;
-        t('.mix').each(function() {
-            el = t(this);
-            idval = el.attr("id");
-            type = el.attr("type");
-            if (deals[idval] !== undefined) {
-                theIndex = deals[idval]
-            }
-            msrp = el.attr("data-msrp");
-    if(msrp==0.00){el.find('.msrp').css('display', 'none');}
-            stock = el.attr("data-s");
-            if (stock == 1) {
-                el.find('.limitedQuantity').css('display', 'block')
-            }
-            el.find('.addtoBag').attr("href", "/cart/add/item/" + idval + "?redeem_coupon=" + code);
-            el.find('.stars span').each(function() {
-                num = jQuery(this).attr("data-star");
-                rscore = jQuery(this).parent().attr("score");
-                var diff = num - rscore;
-                rscore >= num ? jQuery(this).addClass("fa-star") : diff > 0 && 1 > diff ? jQuery(this).addClass("fa-star-half-o") : rscore <= num && jQuery(this).addClass("fa-star-o")
-            });
-            fitment = el.find('.fitmentInfo');
-            if (fitment.hasClass('doesFit')) {
-                el.addClass('fitsCar')
-            }
-        }), t('.giftToggle').click(function(e) {
-            t('#lpContainer').toggleClass('open')
-        });
-        if (t('.ui-mobile-viewport').length == 0) {
-            t(".mix .thumb").hover(function() {
-                t(this).parent().parent().parent().addClass("on")
-            }, function() {
-                t(this).parent().parent().parent().removeClass("on")
-            });
-        }
-        t('.toTop').click(function(e) {
-            e.preventDefault(), t('html, body').animate({
-                opacity: 1,
-                scrollTop: t('body').offset().top
-            }, 0)
-        });
-        var e = "all";
-        if (window.location.hash) {
-            var s = window.location.hash,
-                r = new RegExp(/#\w+/g),
-                l = r.exec(s),
-                i = String(l);
-            e = i.replace("#", ".")
-        }
-        t('document').ready(function() {
-    
-        if (catParam !== undefined || manParam !== undefined || QueryString.Product_page !== undefined) {
-    setTimeout(function(){
-            jQuery('html, body').animate({
-                opacity: 1,
-                scrollTop: jQuery('#Container').offset().top - 60
-            }, 500);
-    },500);
-        }
-            t('#Container').mixItUp({
-                load: {
-                    sort: "popularity:desc",
-                    filter: e
-                },
-                animation: {
-                    enable: !1
-                },
-                callbacks: {
-                    onMixFail: function() {
-                        alert('No items were found matching the selected filters. Select another category or use promo code 5SAVER for 5% off')
-                    },
-                    onMixEnd: function(mixobj) {}
-                }
-            });
-        });
-    
-        var pagehref = window.location.href;
-        var pagehrefcl = pagehref.replace(/(&|\?)Product_page=\d+/, '');
-        pagebase = /\?/g.test(pagehrefcl);
-        if (pagebase) {
-            pagelink = pagehrefcl += '&Product_page='
-        } else {
-            pagelink = pagehrefcl += '?Product_page='
-        }
-        var Pagination = {
-            code: '',
-            Extend: function(data) {
-                data = data || {};
-                Pagination.size = data.size || 300;
-                Pagination.page = data.page || 1;
-                Pagination.step = data.step || 3
-            },
-            Add: function(s, f) {
-                for (var i = s; i < f; i++) {
-                    Pagination.code += '<li><a  data-cke-saved-href="' + pagelink + i + '" href="' + pagelink + i + '">' + i + '</a></li>'
-                }
-            },
-            Last: function() {
-                Pagination.code += '<i>...</i><a>' + Pagination.size + '</a>'
-            },
-            First: function() {
-                Pagination.code += '<a>1</a><i>...</i>'
-            },
-            Click: function() {
-                Pagination.page = +this.innerHTML;
-                Pagination.Start()
-            },
-            Prev: function() {
-                Pagination.page--;
-                if (Pagination.page < 1) {
-                    Pagination.page = 1
-                }
-                Pagination.Redirect()
-            },
-            Next: function() {
-                Pagination.page++;
-                if (Pagination.page > Pagination.size) {
-                    Pagination.page = Pagination.size
-                }
-                Pagination.Redirect()
-            },
-            Redirect: function() {
-                window.location.href = pagelink + Pagination.page
-            },
-            Bind: function() {
-                var a = Pagination.e.getElementsByTagName('a');
-                for (var i = 0; i < a.length; i++) {
-                    if (+a[i].innerHTML === Pagination.page) a[i].className = 'current';
-                    a[i].addEventListener('click', Pagination.Click, !1)
-                }
-            },
-            Finish: function() {
-                Pagination.e.innerHTML = Pagination.code;
-                Pagination.code = '';
-                Pagination.Bind()
-            },
-            Start: function() {
-                if (Pagination.size < Pagination.step * 2 + 6) {
-                    Pagination.Add(1, Pagination.size + 1)
-                } else if (Pagination.page < Pagination.step * 2 + 1) {
-                    Pagination.Add(1, Pagination.step * 2 + 4);
-                    Pagination.Last()
-                } else if (Pagination.page > Pagination.size - Pagination.step * 2) {
-                    Pagination.First();
-                    Pagination.Add(Pagination.size - Pagination.step * 2 - 2, Pagination.size + 1)
-                } else {
-                    Pagination.First();
-                    Pagination.Add(Pagination.page - Pagination.step, Pagination.page + Pagination.step + 1);
-                    Pagination.Last()
-                }
-                Pagination.Finish()
-            },
-            Buttons: function(e) {
-                var nav = e.getElementsByTagName('a');
-                nav[0].addEventListener('click', Pagination.Prev, !1);
-                nav[1].addEventListener('click', Pagination.Next, !1)
-            },
-            Create: function(e) {
-                var html = ['', '<ul class="pagination"><li class="previous"><a>&#9668;</a></li><li class="next"><a>&#9658;</a></li></ul>', ''];
-                e.innerHTML = html.join('');
-                Pagination.e = e.getElementsByTagName('ul')[0];
-                Pagination.Buttons(e)
-            },
-            Init: function(e, data) {
-                Pagination.Extend(data);
-                Pagination.Create(e);
-                Pagination.Start()
-            }
-        };
-        var myRe = /\d+(?=\s)/g;
-        var str = document.getElementsByClassName('summary')[0].innerHTML;
-        var myArray;
-        var pages = [];
-        pageSize = 50;
-        var startPage = /\d+/.exec(str);
-        while ((myArray = myRe.exec(str)) !== null) {
-            pages.push(myArray[0])
-        }
-        totalPages = Math.ceil(pages[1] / pageSize);
-        selectedPage = Math.floor(pages[0] / pageSize);
-        var systempages = pages[0] - startPage;
-        if (pages[0] == pages[1]) {
-            selectedPage = totalPages
-        } else if (systempages !== pageSize - 1) {
-            pageSize = pages[0];
-            totalPages = Math.ceil(pages[1] / pageSize);
-            selectedPage = Math.floor(pages[0] / pageSize)
-        }
-        var init = function() {
-            Pagination.Init(document.getElementById('pagination'), {
-                size: totalPages,
-                page: selectedPage,
-                step: 2
-            })
-        };
-        document.addEventListener('DOMContentLoaded', init, !1);
-        function postFilterActions(activeFilter) {
-            if (prevActive !== '') {
-                jQuery('.grouping.' + prevActive).removeClass('on');
-                jQuery('.filterTab[data-val="' + prevActive + '"]').removeClass('on')
-            }
-            if (prevActive !== activeFilter) {
-                jQuery('.grouping.' + activeFilter).addClass('on');
-                jQuery('.filterTab[data-val="' + activeFilter + '"]').addClass('on');
-                prevActive = activeFilter
-            } else {
-                prevActive = ''
-            }
-        }
-        jQuery('.filterTab').click(function() {
-            el = jQuery(this);
-            targetid = el.attr("data-val");
-            console.log(targetid);
-            postFilterActions(targetid)
-        });
-        t(".sorttrigger").click(function() {
-            t(this).parent().toggleClass("closed")
-        });
-        currentPanel = '';
-        t('.hTitle').click(function() {
-            if (currentPanel !== '') {
-                currentPanel.css({
-                    "height": "0px",
-                    "overflow": "hidden"
-                })
-            }
-            currentPanel = t(this).next();
-            panHeight = currentPanel.find('.groupingInner').innerHeight();
-            if (panHeight > 350) {
-                panHeight = 350
-            }
-            currentPanel.css({
-                "height": panHeight,
-                "overflow-y": "auto"
-            })
-        });
-    var clipboard=new Clipboard('.apply');
-    clipboard.on('success', function(e) {
-    jQuery(e.trigger).text('copied to clipboard');
-        });
-    
-    }(jQuery);
-    </script>
-
