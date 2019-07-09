@@ -249,8 +249,15 @@ span {
 
 @media screen and (min-width: 768px) {
   .items div.saleItem {
-    width: 25%;
+    width: 50%;
     height: 380px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .items div.saleItem {
+    width: 25%;
+    height: 314px;
   }
 }
 
