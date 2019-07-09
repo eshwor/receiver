@@ -87,10 +87,6 @@ img {
   width: auto !important;
 }
 
-span {
-  font-size: 1rem;
-}
-
 .errorMsg {
   display: none;
 }
