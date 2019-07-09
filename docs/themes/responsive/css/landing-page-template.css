@@ -328,12 +328,7 @@ span {
 .items div.saleItem .infoContainer {
   height: 100%;
   overflow: hidden;
-}
-
-@media screen and (min-width: 992px) {
-  .items div.saleItem .infoContainer {
-    height: 3.7rem;
-  }
+  height: 3.7rem;
 }
 
 .items div.saleItem .actionsContainer {
