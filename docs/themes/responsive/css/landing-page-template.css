@@ -355,8 +355,13 @@ span {
 .items div.saleItem.on .thumb {
   border-color: #737373;
   height: auto;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+}
+
+@media screen and (min-width: 992px) {
+  .items div.saleItem.on .thumb {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
 }
 
 .items div.saleItem.on .infoContainer {
