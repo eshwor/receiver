@@ -136,10 +136,6 @@ span {
   background: #115ea7;
 }
 
-.pagination li.selected a, .pagination li.selected .ui-link {
-  color: #FFFFFF !important;
-}
-
 .pagination li a {
   font-size: 1rem;
   text-decoration: none;
