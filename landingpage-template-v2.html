@@ -1,7 +1,7 @@
 <style>
         @import url('https://eshwor.github.io/receiver/docs/themes/responsive/css/landing-page-template.css');
         @import url('https://www.sonicelectronix.com/landing/New-override-css/test4-global.css');
-        </style>
+</style>
         
         <script type="text/javascript" src="/landing/pla/js/lazy.js"></script>
         <!--************** HEADER BANNER START **************-->
@@ -313,27 +313,28 @@
                     })();
                 </script>
 
+                <!-- AUTO SCROLL DOWN TO THE LIST OF THE ITEMS AFTER FILTERING THE PRODUCT -->
                 <script>
-                        function autoScroll() {
-                            var div = document.getElementById("bookmark");
-                            var top = div.offsetTop;
-                            if(window.scrollTop != top) {
-                                div.scrollIntoView();
-                            }
+                    function autoScroll() {
+                        var div = document.getElementById("bookmark");
+                        var top = div.offsetTop;
+                        if(window.scrollTop != top) {
+                            div.scrollIntoView();
                         }
-                        function loadAutoScroll() {
-                            autoScroll();
-                            window.onload = null;
-                            return false;
-                        }
-                        function scrollAutoScroll() {
-                            autoScroll();
-                            window.setTimeout(function(){ 
-                                window.onscroll = null; }, 0);
-                            return false;
-                        }
-                        window.onload = loadAutoScroll;
-                        window.onscroll = scrollAutoScroll;
+                    }
+                    function loadAutoScroll() {
+                        autoScroll();
+                        window.onload = null;
+                        return false;
+                    }
+                    function scrollAutoScroll() {
+                        autoScroll();
+                        window.setTimeout(function(){ 
+                            window.onscroll = null; }, 0);
+                        return false;
+                    }
+                    window.onload = loadAutoScroll;
+                    window.onscroll = scrollAutoScroll;
                     </script>
             </div>
             </div> <!-- END OF PULLED UP CONTAINER -->

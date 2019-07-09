@@ -304,10 +304,16 @@ span {
 }
 
 .items div.saleItem .subtitle {
-  display: none;
+  display: block;
   color: #737373;
   position: relative;
   top: 4rem;
+}
+
+@media screen and (min-width: 992px) {
+  .items div.saleItem .subtitle {
+    display: none;
+  }
 }
 
 .items div.saleItem .contents {
