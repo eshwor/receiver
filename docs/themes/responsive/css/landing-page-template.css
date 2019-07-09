@@ -328,6 +328,7 @@ span {
 
 .items div.saleItem .contents {
   position: relative;
+  background: #FFFFFF;
 }
 
 .items div.saleItem .infoContainer {
