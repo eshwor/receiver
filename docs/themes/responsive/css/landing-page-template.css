@@ -157,6 +157,10 @@ span {
   display: none;
 }
 
+#sortByDrop .sorttrigger {
+  cursor: pointer;
+}
+
 #sortByDrop .sorttrigger:after {
   content: "";
   position: absolute;
@@ -165,8 +169,8 @@ span {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #737373;
-  top: 3px;
-  margin-left: 0.5rem;
+  top: 5px;
+  right: 0;
 }
 
 #sortByDrop .sortMenu {
