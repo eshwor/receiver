@@ -204,12 +204,6 @@ span {
   width: 50%;
 }
 
-@media screen and (min-width: 768px) {
-  .catMenu li {
-    width: 33.333%;
-  }
-}
-
 @media screen and (min-width: 992px) {
   .catMenu li {
     width: 25%;
