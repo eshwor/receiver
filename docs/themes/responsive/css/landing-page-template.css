@@ -194,7 +194,7 @@ span {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #737373;
+  border-bottom: 7px solid blue;
   top: 5px;
   right: 0;
 }
