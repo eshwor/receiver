@@ -179,6 +179,7 @@ span {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #737373;
+  border-bottom: none;
   top: 5px;
   right: 0;
 }
@@ -195,6 +196,7 @@ span {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-bottom: 7px solid blue;
+  border-top: none;
   top: 5px;
   right: 0;
 }
