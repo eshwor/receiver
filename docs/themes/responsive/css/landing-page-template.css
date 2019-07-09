@@ -192,6 +192,22 @@ span {
 }
 
 /*TOP CATEGORY LIST*/
+.catMenu li {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .catMenu li {
+    width: 33.333%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .catMenu li {
+    width: 25%;
+  }
+}
+
 .inner-cat-wrapper a {
   border: 1px solid #C7c7c7;
   border-radius: 3px;
