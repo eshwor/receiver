@@ -197,6 +197,11 @@ span {
   border-radius: 3px;
 }
 
+.inner-cat-wrapper a:hover, .inner-cat-wrapper a:focus, .inner-cat-wrapper a:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /*MAIN ITEM LISTS*/
 .items {
   display: -webkit-box;
