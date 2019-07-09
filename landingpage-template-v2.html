@@ -31,7 +31,7 @@
                         <div class="filterColumn">
                             <div class="HelpBar" id="filters">
                             <div class="mb-3 border rounded p-2 closed" id="sortByDrop">
-                                    <span class="sorttrigger position-relative d-block">Sort By</span>
+                                    <span class="sorttrigger position-relative d-block" style="font-size:1rem;">Sort By</span>
                                     <div class="sortMenu position-absolute">
                                         <span class="sort py-2 px-2" data-sort="price:asc">Sort By Lowest Price</span>
                                         <span class="sort py-2 px-2" data-sort="price:desc">Sort By Highest Price</span>
@@ -103,7 +103,7 @@
                                                     <span class="salePrice">${{price}}</span>
                                                 </div>
                                                 <div class="reviews" style="float:right;">{{#numReviews}} <a class="stars" data-ajax="false" href="/viewitem.php?id={{id}}&amp;show_tab=2#productTabbedContainer" onclick="_gaq.push(['_trackEvent', 'Landing Page', 'Sale Item', 'Click - Reviews']);" score="{{avgReviewRatingOverall}}" title="{{avgReviewRatingOverall}} stars"><span class="fa" data-star="1"><span style="display:none">_</span></span> <span class="fa" data-star="2"><span style="display:none">_</span></span> <span class="fa" data-star="3"><span style="display:none">_</span></span> <span class="fa" data-star="4"><span style="display:none">_</span></span> <span class="fa" data-star="5"><span style="display:none">_</span></span> <span>({{numReviews}})</span></a>{{/numReviews}}</div>
-                                                {{#in_stock}}<a class="addtoBag btn-sm primary-btn mt-5" data-id="{{id}}" href="/cart/add/item/{{id}}">Add to Cart</a>{{/in_stock}}{{^in_stock}}<a class="addtoBag" data-id="{{id}}" href="/cart/add/item/{{id}}" style="background:transparent;color:#C41220">Sold Out</a>{{/in_stock}}
+                                                {{#in_stock}}<a class="addtoBag btn-xsm primary-btn mt-5" data-id="{{id}}" href="/cart/add/item/{{id}}">Add to Cart</a>{{/in_stock}}{{^in_stock}}<a class="addtoBag" data-id="{{id}}" href="/cart/add/item/{{id}}" style="background:transparent;color:#C41220">Sold Out</a>{{/in_stock}}
                                             </div>
                                         </div>
                                     </div>

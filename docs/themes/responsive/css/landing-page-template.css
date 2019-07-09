@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+.page {
+  background: white !important;
+}
+
 ul li {
   list-style: none;
 }
