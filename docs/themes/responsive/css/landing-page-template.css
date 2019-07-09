@@ -191,6 +191,18 @@ span {
   border-color: #F1F1F1;
 }
 
+#sortByDrop.closed .sorttrigger:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #737373;
+  top: 5px;
+  right: 0;
+}
+
 #sortByDrop.closed .sortMenu {
   display: none;
 }
