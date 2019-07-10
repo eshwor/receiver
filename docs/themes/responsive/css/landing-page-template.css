@@ -189,6 +189,10 @@ img {
   right: 0;
 }
 
+#sortByDrop.active .sortMenu {
+  display: block;
+}
+
 /*TOP CATEGORY LIST*/
 .catMenu li {
   width: 50%;

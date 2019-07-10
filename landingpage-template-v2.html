@@ -30,7 +30,7 @@
                     <div class="clearfix position-relative my-4 filterColumn-wrapper">
                         <div class="filterColumn">
                             <div class="HelpBar" id="filters">
-                            <div class="mb-3 border rounded p-2 closed" id="sortByDrop">
+                            <div class="mb-3 border rounded p-2" id="sortByDrop">
                                     <span class="sorttrigger position-relative d-block" style="font-size:1rem;">Sort By</span>
                                     <div class="sortMenu position-absolute">
                                         <span class="sort py-2 px-2" data-sort="price:asc">Sort By Lowest Price</span>
@@ -176,12 +176,10 @@
                         $(".sorttrigger").click(function () {
                             $(this).parent().toggleClass("active");
                         });
-                        // $('body').click(function(){
-                        //     if(! $(".sorttrigger").parent().hasClass('closed')){
-                        //         $(".sorttrigger").parent().addClass('closed');
-                        //         console.log("Auch !! dude");
-                        //     }
-                        // });
+                        $('body').click(function(){
+                            $(".sorttrigger").parent().removeClass('active');
+                            console.log("Auch !! dude");
+                        });
                         var e = "all";
                         if (window.location.hash) {
                             var s = window.location.hash,
