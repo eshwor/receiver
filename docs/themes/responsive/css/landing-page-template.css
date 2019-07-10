@@ -159,7 +159,7 @@ img {
   border-color: #F1F1F1;
 }
 
-#sortByDrop.closed .sorttrigger:after {
+#sortByDrop .sorttrigger:after {
   content: "";
   position: absolute;
   width: 0;
@@ -172,11 +172,11 @@ img {
   right: 0;
 }
 
-#sortByDrop.closed .sortMenu {
+#sortByDrop .sortMenu {
   display: none;
 }
 
-#sortByDrop:not(closed) .sorttrigger:after {
+#sortByDrop.active .sorttrigger:after {
   content: "";
   position: absolute;
   width: 0;
