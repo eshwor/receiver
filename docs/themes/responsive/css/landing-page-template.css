@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-.page:not(selected) {
+.page.ui-page {
   background: white !important;
 }
 
