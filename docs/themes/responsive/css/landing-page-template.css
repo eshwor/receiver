@@ -129,7 +129,7 @@ img {
 }
 
 .pagination li.selected a {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .pagination li a {
