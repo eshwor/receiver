@@ -144,6 +144,7 @@ img {
 #sortByDrop .sortMenu {
   background: #F1F1F1;
   border: 1px solid #C7C7C7;
+  top: 10px;
   left: 0;
   right: 0;
 }

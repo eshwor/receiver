@@ -173,13 +173,14 @@
                         $("#pairedOfferMobile").click(function () {
                             $(this).parent().parent().toggleClass("on");
                         });
+                       
                         $(".sorttrigger").click(function () {
-                            $(this).parent().toggleClass("active");
+                            $(this).parent().addClass("active");
+                            $(document).mouseup(function (e){
+                             $(".sorttrigger").parent().removeClass('active');
+                            });
                         });
-                        $('body').click(function(){
-                            $(".sorttrigger").parent().removeClass('active');
-                            console.log("Auch !! dude");
-                        });
+                        
                         var e = "all";
                         if (window.location.hash) {
                             var s = window.location.hash,
