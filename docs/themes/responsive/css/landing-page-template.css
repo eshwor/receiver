@@ -76,6 +76,10 @@ img {
   width: 100%;
 }
 
+.catFilterWrapper select {
+  padding: 0 !important;
+}
+
 .filterColumn-wrapper {
   max-width: 15rem;
   -webkit-transition: 300ms padding, border;
