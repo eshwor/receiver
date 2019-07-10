@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-.page {
+.page:not(selected) {
   background: white !important;
 }
 
@@ -126,6 +126,10 @@ img {
 
 .pagination li.selected {
   background: #115ea7;
+}
+
+.pagination li.selected a {
+  color: #FFFFFF;
 }
 
 .pagination li a {
