@@ -145,7 +145,7 @@ img {
 
 .pagination li a:hover {
   background: #F1F1F1;
-  color: #115ea7;
+  color: #115ea7 !important;
 }
 
 .pagination .previous, .pagination .next {
