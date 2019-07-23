@@ -74,6 +74,42 @@ function prodPageActions(e, a, t, r, i) {
 	})
 }
 
+
+
+function conflictingOffer() {
+	return count = 0, count += jQuery(".flsDeal").length, count += jQuery("#promoEmail").length, count += globalDiscount, freeGood && count++, count > 0 && count
+}
+
+function addCouponCode(val) {
+	var salePrice = pPrice - val.discount;
+	var max = val.max;
+	if (max > 0) {
+		dmax = ' • Max: $' + max;
+	} else {
+		dmax = '';
+	}
+	var discountOff = val.discount;
+	var cdiscountOff = '$' + val.discount + ' off';
+	if (val.discount < 1) {
+		salePrice = pPrice * val.discount;
+		discountOff = Math.round((1 - val.discount) * 100);
+		cdiscountOff = discountOff + '% off';
+	}
+	var nprice = salePrice.toFixed(2);
+	if (nprice > 0 && jQuery('.backorder').length == 0) {
+		jQuery(".price_row .yprice").html('<div style="font-size:11px;font-weight:400;">Copy Code</div><div style="display: inline-block;vertical-align:middle;position:relative"><div class="mCouponCode">' + val.code + '</div><div style="position:absolute;width:100%;font-size:11px;line-height:1.5;left:0">' + cdiscountOff + dmax + '</div></div><span style="font-size: 15px;text-decoration: line-through;color: #303030;">$' + pPrice + '</span><div class="breaker"></div><span>$' + nprice + '</span>');
+	}
+	addcode++;
+}
+
+
+
+function videoGuide() {
+	jQuery(".row.afg-specs-mobile").prepend('<div id="moreBelow"><span class="fa fa-level-down"></span> More Items Below</div><a class="fancyB fancybox.iframe clearfix ymmBuyingGuide" href="https://www.youtube.com/embed/9o6IJ98Q-vs?rel=0&showinfo=0&theme=light&iv_load_policy=3" data-ajax="false"><span style="float:left;margin-right:10px;" class="fa fa-info-circle fa-2x"></span><div style="display: block;overflow: hidden;font-size: 14px;">Need help choosing a stereo?</div></a>'), onet = 0, jQuery(window).scroll(function () {
+		0 == onet && jQuery(window).scrollTop() > 30 && (jQuery("#moreBelow").css("display", "none").fadeOut("slow"), onet = 1)
+	})
+}
+
 function InsertImg(e, a) {
 	jQuery(e).prepend('<img style="position:absolute;bottom:-15px;right:10px;border-radius:3px;height:50px;" src="' + a + '">')
 }
@@ -91,7 +127,7 @@ function getPageInfo() {
 		if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
 			var a = dataLayer[e].pageType,
 				t = dataLayer[e].pageCategory;
-			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner"))), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
+			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
 		}
 	return a
 }
@@ -122,11 +158,78 @@ function addDynCoup(e) {
 	}))
 }
 
+function ProductOffer() {
+	pPrice > 30 && /In Stock|Available|Special/g.test(pStatus) && -1 == pName.indexOf("Open Box") && jQuery.ajax({
+		method: "GET",
+		url: "/landing/query/productapi3.php?ids=" + pId + "&type=product",
+		success: function (e) {
+			co = conflictingOffer(),e.makeOffer > 0 && e.makeOfferShow > 0 && 0 == addcode && !co ? insertMakeOffer(e.makeOfferHtml) : "" != e.coupHtml && 0 == addcode && !co & !exclB && addDynCoup(e.coupHtml), "" != e.combos && jQuery(e.combos).insertBefore("#nosto-product-prod-mobile"), "" != e.catContent && jQuery(e.catContent).insertAfter("#nosto-product-prod-mobile"), "" != e.recentlyViewed && jQuery(".productPage").append(e.recentlyViewed)
+		}
+	})
+}
 
 function cleanQuery(e) {
 	return suggstrip = e.replace(/<b>|<\/b>/g, "").replace(":_all", ""), repIn = /\din/.exec(suggstrip), repIn && (sizeRep = repIn[0].replace(/in/g, "%22"), suggstrip = suggstrip.replace(repIn[0], sizeRep)), suggsname = e.replace(":_all", "").replace(":", " "), sStr = "/search?keyword=" + encodeURIComponent(suggstrip), squery = suggstrip.toLowerCase(), [suggsname, sStr, squery]
 }
 
+function fetchItems(e) {
+	jQuery.ajax({
+		method: "GET",
+		url: "https://eucs2.klevu.com/cloud-search/n-search/search?ticket=klevu-14612696479213421&term=" + e + "&autoComplete=true&paginationStartsFrom=0&sortPrice=false&ipAddress=undefined&analyticsApiKey=klevu-14612696479213421&klevuShowOutOfStockProducts=false&typeOfSuggestions=cms&klevuFetchPopularTerms=false&noOfResultsAC=6&autoCompleteFilters=category&noOfResults=0&klevuSort=rel&responseType=json&resultForZero=1",
+		success: function (e) {
+			if (res = "", suggs = e.autoComplete, prods = e.result, suggs.length > 0) {
+				res += '<div class="suggestionsContainer">';
+				for (var a = 0; a < suggs.length; a++) suggstrip = suggs[a].replace(/<b>|<\/b>/g, "").replace(":_all", ""), quRes = cleanQuery(suggs[a]), sRedirect = redirects[quRes[2]], redStr = quRes[1], void 0 !== sRedirect && (redStr = sRedirect), /:_all:/g.test(suggs[a]) || (res += '<a href="' + redStr + '" class="sSuggestion">' + quRes[0] + "</a>");
+				res += "</div>"
+			}
+			if (prods.length > 0) {
+				for (res += "<div>", a = 0; a < prods.length; a++) {
+					if (prods[a].category == 'vehicles') {
+						ppstr = '<div class="searchSuggestItemPrice cms">Shop Vehicle</div>';
+						psugimg = '/landing/home-page/AFG_Icon.png'
+					} else if (/knowledge/.test(prods[a].id)) {
+						ppstr = '<div class="searchSuggestItemPrice cms">Read Article</div>';
+						psugimg = ''
+					} else {
+						ppstr = '<div class="searchSuggestItemPrice">$' + prods[a].salePrice + '</div>';
+						psugimg = prods[a].image
+					}
+					res += '<div class="searchSuggestItem"><a href="' + prods[a].url + '" class="searchSuggestItemThumbnail"><div class="searchSuggestItemImg"><img src="' + psugimg + '"></div><div class="searchSuggestItemInfo"><div class="searchSuggestItemName">' + prods[a].name + '</div>' + ppstr + '</div></a></div>'
+				}
+				res += "</div>"
+			}
+			jQuery("#searchShelf").html('<div id="autoSuggestions" dir="auto">' + res + "</div>")
+		}
+	})
+}
+
+function cartOfferFromEvent(e, a, t) {
+	setTimeout(function () {
+		"makeOffer" == t && ProductOffer()
+	}, a)
+}
+
+function triggerCartUrg(e) {
+	"product" == pageInfo && cartOfferFromEvent(e, 5e3, "makeOffer")
+}
+
+function get_viewport_width() {
+	return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+}
+
+function globalFancy(e) {
+	var a = get_viewport_width();
+	$(".fancyB").fancybox({
+		padding: 0,
+		beforeShow: function () {
+			this.href.indexOf("youtube") > -1 ? (ga("send", "event", "YoutubeVideos", "Open", "Mobile - " + e + " - " + this.href), this.width = .9 * a, this.height = .9 * a * .563) : (this.maxWidth = 600, this.maxHeight = 600)
+		}
+	})
+}
+
+function isTouchDevice() {
+	return "ontouchstart" in window || "onmsgesturechange" in window
+}
 var bot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent),
 	sonicZipHtml = "";
 freeGood = !1, sonicZip = getCookie("sonic_zip"), year = getCookie("car_afg_year"), make = getCookie("car_afg_make"), model = getCookie("car_afg_model"), urlMake = make.replace(/\+/g, "-").replace(/%26/g, "&").replace(/\s+/g, "-"), urlModel = model.replace(/\+/g, "-").replace(/%26/g, "&").replace(/\s+/g, "-"), displayMake = make.replace(/\+/g, " "), displayModel = model.replace(/\+/g, " ").replace(/%26/g, "and"), addcode = 0, pOffer = 0, trigC = 0, isOpenBox = !1, fld = new Date, pageT = document.title, currurl = window.location.href, ref = document.referrer, sonic_cart = getCookie("sonic_cart_id"), pType = "", pageUrl = document.location.href, thisurl = document.location.pathname, comboProd = jQuery(".comboProduct"), otherCond = jQuery(".other-condition-products"), disPrice = jQuery("#addProductForm .mainInput"), disvehicleSpecific = jQuery("#addProductForm .addProductToCard"), outOfStockMatches = '<div class="nosto_element" id="productpage-nosto-3"></div>', shstr = '<span class="fa fa-truck"></span> <span>', valHtml = "", hideprice = 0, c = 0, cartC = 0, pflash = 0, alrOff = 0, flashHistory = {}, thisexp = "", dynamicpriceCooke = getCookie("dynamicpriceCooke"), valueAdd = "", wattNm = "", cleanres = "", dataHtml = "", reviewhtml = "", noflash = 0, redirects = {}, jquerySubmit = '<style>.offerClose{display:none}</style><a data-role="none" href="javascript:;" class="offerAdd">Redeem</a><div class="offerMsg offerInfo">Claim your additional savings!</div>', flashEndTime = getCookie("flashSaleEnd"), flashexp = new Date(flashEndTime), emailSpecial = getCookie("emailSpecial"), globalPromo = getCookie("globalPromo"), flashprint = "Minimum " + flashdiscount[3] + " order. Max " + flashdiscount[2] + " Discount. Offer can't be combined with other promotions. One time use per customer. Save this promo code to your cart for usage at a later date.", "" !== year && "" !== model && "" !== make && (document.getElementById("myVehicle").innerHTML = '<a data-ajax="false" href="/afg/' + urlMake + "/" + urlModel + "/" + year + '" data-level="L4" style="padding: 0;font-weight: 400;color: #000000;"><span>Your vehicle [<small style="text-transform:capitalize">' + displayMake + " " + displayModel + "</small>]</span></a>"), /review-write/g.test(pageUrl) && addScript("/landing/reviewSimplify5.js"), jQuery("#navigation-menu a").click(function () {
@@ -138,7 +241,7 @@ Date.prototype.addDays = function (e) {
 	var a = new Date(this.valueOf());
 	return a.setDate(a.getDate() + e), a
 }, jQuery("#searchField").keyup(function () {
-	inp = jQuery(this), q = inp.val(), width = inp.parent().width(), left = inp.position().left, jQuery("#searchShelf").css({
+	inp = jQuery(this), q = inp.val(), fetchItems(q), width = inp.parent().width(), left = inp.position().left, jQuery("#searchShelf").css({
 		width: width + "px",
 		top: "-10px",
 		display: "block",
@@ -161,4 +264,9 @@ Date.prototype.addDays = function (e) {
 			display: "none"
 		})
 	}, 500)
-}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo))
+}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo), globalFancy(pageInfo))
+// Function to determine whether we are on the home page
+function isHomePage() {
+	var pageID = $('.ui-page-active').attr('id');
+	return pageID == 'public_home' || pageID == 'public_search';
+}
