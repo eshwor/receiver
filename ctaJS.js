@@ -1,7 +1,7 @@
 //Fresh Function 
 //This function includes :
 (function(){
-    //todo
+    console.log("Application is ready to rock now !!");
 })();
 
 
