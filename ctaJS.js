@@ -7,24 +7,6 @@
 
 
 
-
-
-
-
-
-
-function freeGoods() {
-	if (pos = "left", promofree = "", promoSavings = [], promoAmt = 0, bundle = document.getElementsByClassName("bundledSavings"), bundle.length > 0) {
-		if (bundles = bundle[0].getElementsByClassName("slide"), bundles.length > 5) return !1;
-		if (bundles.length > 0)
-			for (var e = bundles.length - 1; e >= 0; e--) promofree = bundles[e].getElementsByClassName("name")[0].innerHTML, (promofree.indexOf("FREE") > -1 || promofree.indexOf("Free") > -1 || promofree.indexOf("50%") > -1) && (pricingp = bundles[e].getElementsByClassName("itemInformation")[0].getElementsByTagName("p"), 3 == pricingp.length && (pricepres = /\d+.\d{2}/.exec(pricingp[2].innerHTML), promoSavings.push([e, Number(pricepres[0])])));
-		if (promoSavings.length > 0) return promoSavings.sort(function (e, a) {
-			return a[1] - e[1]
-		}), promoAmt = Math.round(promoSavings[0][1]), !(promoAmt < 14) && (slideoffset = 100 * promoSavings[0][0] * -1, 1)
-	}
-	return !1
-}
-
 function orangeCoupon(coupon) {
 	orangeadd = jQuery(".orangeButton"), orangepop = jQuery(".addToCartAccessoryRecommendationLink"), accTrigger = jQuery(".addProductToCard"), orangeadd.length > 0 && (orangepop.length > 0 ? (orangepop.html("Add to Cart <small>w/ Coupon</small>"), orangeadd.click(function () {
 		addextraCode(coupon)
@@ -79,7 +61,7 @@ function redoCtaSection() {
 		e.length > 0 ? (t = CheckShipping(e.text()), etaTime = t.join(" ")) : /free 2-day/g.test(a) ? (ctaObj.shipping = '<div class="fShip">+ FREE 2-Day Shipping</div>', changezip = '', sonicZipHtml = "") : a.indexOf("Special") > -1 ? (sonicZipHtml = "") : a.indexOf("Available") > -1 ? etaTime = getEta(30) : (zipActive = "", etaTime = "", sonicZipHtml = '<div class="zipCta zipTrigger"><div>Get Delivery ETA</div><div>Enter Zip Code</div></div>'), getZip = '<div class="zipInputWrapper"><div class="zipContainer"><div class="zipInputC"><input id="zipInput" type="number" placeholder="Zip Code" value="' + sonicZip + '"></div><div id="zipSubmit" class="fa fa-search"></div></div></div>', ctaObj.eta = '<div class="estDelivery' + zipActive + '">' + sonicZipHtml + getZip + '<div class="estDeliveryContainer zipTrigger"><div class="esttime">Est. Delivery ' + etaTime + '</div><div class="estLabel">' + changezip + '</div></div></div>'
 	}
 	jQuery(".apair").length > 0 && (ctaObj.pair = '<div class="apair">A PAIR</div>');
-	paidOffer !== undefined ? (discount = paidOffer[2], coupon = paidOffer[0], offer = paidOffer[1], ctaObj.vip = '<div class="ctaCoupon" data-dis="' + discount + '" data-coupon="' + coupon + '"><i class="fa fa-tags" ></i><span class="offer">' + offer + '</br>' + coupon + '</span></div>') : jQuery(".mobileVip").length > 0 ? (rewardAmt = Math.round(.1 * pPrice), rewardAmt = "$" + rewardAmt + " Rewards", ctaObj.vip = '<a class="fancyB fancybox.ajax mobileVip" href="/landing/vippopup.html"><img src="/landing/vipoffer.png"><span>' + rewardAmt + "</span></a>") : jQuery(".bundledSavingsWrap").length > 0 && (freeGood = freeGoods(), freeGood && (ctaObj.vip = '<a id="freeTag" class="freeTag" href="javascript:;"><div class="hangTag freeVersion"></div><div class="freeText">View Special<br/>Bundles</div></a>')), jQuery("#freeInstallationAccessories").length > 0 && (ctaObj.acs = '<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeinstallpr"><div class="fa fa-wrench"></div> FREE Installation Accessories Included - up to $30</a>'), jQuery(".price_row").html('<div class="wrapperCta"><div class="priceShipping">' + ctaObj.vip + '<div class="pRice">$' + pPrice + "</div>" + ctaObj.pair + ctaObj.shipping + '</div><div class="stockNDelivery"><div class="stockDelivery"><div class="stockInfo' + color + '">' + pStatus + '</div><div class="stockCondition">' + ctaObj.condition + "</div></div>" + ctaObj.eta + '</div></div><div class="promoInfo">' + ctaObj.acs + "</div></div>"), initZipBtns()
+	paidOffer !== undefined ? (discount = paidOffer[2], coupon = paidOffer[0], offer = paidOffer[1], ctaObj.vip = '<div class="ctaCoupon" data-dis="' + discount + '" data-coupon="' + coupon + '"><i class="fa fa-tags" ></i><span class="offer">' + offer + '</br>' + coupon + '</span></div>') : jQuery(".mobileVip").length > 0 ? (rewardAmt = Math.round(.1 * pPrice), rewardAmt = "$" + rewardAmt + " Rewards", ctaObj.vip = '<a class="fancyB fancybox.ajax mobileVip" href="/landing/vippopup.html"><img src="/landing/vipoffer.png"><span>' + rewardAmt + "</span></a>") : jQuery(".bundledSavingsWrap").length > 0 && (ctaObj.acs = '<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeinstallpr"><div class="fa fa-wrench"></div> FREE Installation Accessories Included - up to $30</a>'), jQuery(".price_row").html('<div class="wrapperCta"><div class="priceShipping">' + ctaObj.vip + '<div class="pRice">$' + pPrice + "</div>" + ctaObj.pair + ctaObj.shipping + '</div><div class="stockNDelivery"><div class="stockDelivery"><div class="stockInfo' + color + '">' + pStatus + '</div><div class="stockCondition">' + ctaObj.condition + "</div></div>" + ctaObj.eta + '</div></div><div class="promoInfo">' + ctaObj.acs + "</div></div>"), initZipBtns()
 }
 
 function prodPageActions(e, a, t, r, i) {
