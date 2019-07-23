@@ -74,12 +74,6 @@ function prodPageActions(e, a, t, r, i) {
 	})
 }
 
-function videoGuide() {
-	jQuery(".row.afg-specs-mobile").prepend('<div id="moreBelow"><span class="fa fa-level-down"></span> More Items Below</div><a class="fancyB fancybox.iframe clearfix ymmBuyingGuide" href="https://www.youtube.com/embed/9o6IJ98Q-vs?rel=0&showinfo=0&theme=light&iv_load_policy=3" data-ajax="false"><span style="float:left;margin-right:10px;" class="fa fa-info-circle fa-2x"></span><div style="display: block;overflow: hidden;font-size: 14px;">Need help choosing a stereo?</div></a>'), onet = 0, jQuery(window).scroll(function () {
-		0 == onet && jQuery(window).scrollTop() > 30 && (jQuery("#moreBelow").css("display", "none").fadeOut("slow"), onet = 1)
-	})
-}
-
 function InsertImg(e, a) {
 	jQuery(e).prepend('<img style="position:absolute;bottom:-15px;right:10px;border-radius:3px;height:50px;" src="' + a + '">')
 }
@@ -97,7 +91,7 @@ function getPageInfo() {
 		if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
 			var a = dataLayer[e].pageType,
 				t = dataLayer[e].pageCategory;
-			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
+			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner"))), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
 		}
 	return a
 }
@@ -168,5 +162,3 @@ Date.prototype.addDays = function (e) {
 		})
 	}, 500)
 }), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo))
-
-//end of the file
