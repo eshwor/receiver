@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    console.log("Hey tester what's up?");
+});
+
 
 function addScript(e) {
 	var a = document.createElement("script");
