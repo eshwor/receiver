@@ -74,24 +74,12 @@ function prodPageActions(e, a, t, r, i) {
 	})
 }
 
-function InsertImg(e, a) {
-	jQuery(e).prepend('<img style="position:absolute;bottom:-15px;right:10px;border-radius:3px;height:50px;" src="' + a + '">')
-}
-
-function loopImgArr() {
-	jQuery.getJSON("https://spreadsheets.google.com/feeds/list/1SBjNkU_KtHrU04gT0YpAGaXqKLhxW2FVXwHHE0KhoDk/1/public/values?alt=json", function (e) {
-		rmake = make.replace(/\+/g, " "), rmodel = model.replace(/\+/g, " "), colArr = e.feed.entry;
-		for (var a = colArr.length - 1; a >= 0; a--)
-			if (colArr[a].gsx$make.$t == make && colArr[a].gsx$model.$t == rmodel && colArr[a].gsx$year.$t == year) return InsertImg(".breadcrumb", colArr[a].gsx$urlsmall.$t), !1
-	})
-}
-
 function getPageInfo() {
 	for (var e = 0; e < dataLayer.length; e++)
 		if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
 			var a = dataLayer[e].pageType,
 				t = dataLayer[e].pageCategory;
-			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner"))), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
+			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner"))), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
 		}
 	return a
 }
