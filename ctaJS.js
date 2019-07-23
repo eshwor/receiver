@@ -646,13 +646,3 @@ $(".scrollfix").live('pageshow', function () {
 });
 
 $("#headerWrapper").data("shipEta");
-
-
-
-/*Cookie Functionality End **/
-
-
-
-/*NEW VIOLATOR SCRIPT CODE TO MAKE POPUP */
-
-
