@@ -75,49 +75,6 @@ function prodPageActions(e, a, t, r, i) {
 }
 
 
-function checkFlashHistory(e) {
-	if (void 0 == dynamicpriceCooke || "" == dynamicpriceCooke) expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
-		price: e,
-		exp: expirationDate
-	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360),  priceTicker(e, "", "", "", "flash");
-	else {
-		if (flashHistory = JSON.parse(dynamicpriceCooke), void 0 === flashHistory[pId]);
-		if (e = flashHistory[pId].price, !(thisexp > fld)) return !1;
-		expirationDate = thisexp, priceTicker(e, "", "", "", "flash")
-	}
-}
-
-function RunFlashOffer() {
-	if (ga("send", "event", "Global", "Footer", "Mobile Flash Sale Popup"), !confirm("Are you sure you want to start the Flash Sale? Get a " + flashdiscount[1] + "% discount on orders over $" + flashdiscount[3] + " order with a maximum $" + flashdiscount[2] + " discount. Offer can't be combined with other running promotions. Manufacturer exclusions apply. Redeem the savings on cart page.")) return !1;
-	var e = addMinutes(new Date, 60);
-	setCookie("flashSaleEnd", e, 2), jQuery(".offerCartCoupon").css("opacity", 0), setTimeout(function () {
-		globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo">The Clock is Ticking. Make it count!</div>', flashprint, "flash")
-	}, 1e3)
-}
-
-function globalOffers(e, a, t, r, i) {
-	return content = '<div id="offerCartCoupon" class="offerCartCoupon"><div class="offerCartContents"><a data-role="none" href="javascript:;" class="offerClose"><span class="fa fa-close"></span></a>' + t + '<div class="offerCartIcon offerInfo"><span class="fa fa-' + i + '"></span></div></div><div id="details" class="offerCartDetails">' + r + "</div></div>", jQuery("#globalPromo").html(content), globalDiscount = 1, jQuery(".offerInfo").click(function () {
-		jQuery("#details").toggleClass("on")
-	}), jQuery(".offerClose").click(function () {
-		jQuery("#offerCartCoupon").css("display", "none"), setCookie("globalPromo", 1)
-	}), "flash" != a && "flashCart" != a , "cart" != a && "flashCart" != a && "cartCloserCartInit" != a && "cartCloserOnCart" != a || jQuery(document).ready(function () {
-		jQuery("#coupons-basic").val(e), jQuery("#show-promo").css("display", "none"), jQuery("#promo-box").css("display", "block"), jQuery(".offerAdd").click(function () {
-			jQuery("#cart_form").submit()
-		})
-	}), "flashTrig" == a ? (flashTrig = document.getElementById("offerbtn"), void flashTrig.addEventListener("click", RunFlashOffer)) : void 0
-}
-
-function globalOffersInit(e) {
-	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB)
-		if (flashexp > fld)
-			if ("cart" == e) {
-				var a = "The promo code " + flashdiscount[0] + " has been added to your cart";
-				cpstr = jQuery(".promo-applied").text(), cpstr.indexOf(flashdiscount[0]) < 0 && (a = "<b>Hit the redeem button below</b>"), globalOffers(flashdiscount[0], "flashCart", '<style>.offerClose{display:none}</style><div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo">' + a + "</div>", flashprint, "check")
-			} else "" == globalPromo && globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + "% Off Flash Sale</b></div>", flashprint, "flash");
-	else globalOffers(flashdiscount[0], "flashTrig", '<a href="javascript:;" id="offerbtn" class="offerAdd" data-role="none">Start Sale</a><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + "% Off Flash Sale</b> - 1 Hour of shopping for great sound</div>", flashprint, "flash");
-	"Company_Review_Reward" == QueryString.utm_campaign && globalOffers(cReviewCode, "companyReview", '<div class="offerCode offerInfo">' + cReviewCode + '</div><div class="offerMsg offerInfo"><b>Your $5 Gift Code</b> Eligible with any purchase</span></div>', "Thank you for reviewing our company online. As a token of appreciation here is $5 promotional code for you to enjoy savings on your audio purchase", "money")
-}
-
 function afgFallback(e) {
 	jQuery('<div class="clearfix afgCustomMsg"><span class="noFitMsg">' + e + '</span></div><a data-role="none" href="' + window.location.pathname + '?afg=remove" class="shopAllFit">Shop All</a>').insertAfter(".afg-selector-mobile-general .links"), thumbs = document.getElementsByClassName("bg-white");
 	for (var a = thumbs.length - 1; a >= 0; a--) {
@@ -314,7 +271,7 @@ Date.prototype.addDays = function (e) {
 			display: "none"
 		})
 	}, 500)
-}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo || globalOffersInit(pageInfo)), globalFancy(pageInfo))
+}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo), globalFancy(pageInfo))
 // Function to determine whether we are on the home page
 function isHomePage() {
 	var pageID = $('.ui-page-active').attr('id');
