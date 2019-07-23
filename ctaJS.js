@@ -227,53 +227,6 @@ function afgFallback(e) {
 	}
 }
 
-function CategoryFunctions(e) {
-	cImg = jQuery(".category-img img");
-	for (var a = cImg.length - 1; a >= 0; a--) src = cImg[a].src, cImg[a].src = src.replace("thumbnail", "small");
-	if (catLeafPromos = jQuery(".catLeafBanner"), catLeafPromos.length > 0 && filterCheck && catLeafPromos.css("display", "none"), catPromos = jQuery("#promoCollection"), catPromos.length > 0 ? (catPromos.parent().css({
-			background: "#f3faff"
-		}), promoItems = catPromos.find(".promoItem"), promoItems.length > 1 && promoItems.css({
-			width: "80%",
-			"margin-right": "10px"
-		})) : jQuery("#buyingGuide").parent().css({
-			background: "#f3faff"
-		}), jQuery(".expertSnippet").click(function () {
-			jQuery(this).addClass("open")
-		}), spkoptions = document.getElementById("displayFitSpecs"), fitErrors = document.getElementsByClassName("afg-selector-mobile-general"), ispsk = /Speaker|Tweeter/g.test(e), void 0 !== spkoptions && null !== spkoptions && 0 == fitErrors.length) {
-		spklocaobj = {}, filters = spkoptions.getElementsByTagName("a");
-		for (var t = 0; t < filters.length; t++) linkTxt = filters[t].innerText, lineTxt = filters[t].parentNode.innerText, locstr = lineTxt.replace(linkTxt, "").replace(":", ""), linkhref = filters[t].href, onclass = "", '8"' == linkTxt && (linkhref = "https://www.sonicelectronix.com/cat_i1118_8-speakers.html"), ispsk ? void 0 !== spklocaobj[locstr] ? (locarr = spklocaobj[locstr], locarr = locarr.push([linkhref, linkTxt]), spklocaobj[locstr] = spkarr) : (spkarr = [], spkarr.push([linkhref, linkTxt]), spklocaobj[locstr] = spkarr) : (urlpat = new RegExp(linkhref), urlpat.test(currurl) && (onclass = " current"), filters[t].parentNode.innerHTML = '<a href="' + linkhref + '" class="' + onclass + '" data-role="none">' + linkTxt + "</a>");
-		if (ispsk) {
-			var r = "",
-				i = "";
-			for (a = {
-					32: "/images/cats/32-1490829363.jpg",
-					31: "/images/cats/31-1490829365.jpg",
-					33: "/images/cats/33-1490829366.jpg",
-					34: "/images/cats/34-1490829370.jpg",
-					35: "/images/cats/35-1490829382.jpg",
-					78: "/images/cats/78-1490829376.jpg",
-					47: "/images/cats/47-1490829380.jpg",
-					1118: "/images/cats/1118-1490829384.jpg",
-					36: "/images/cats/36-1490829386.jpg",
-					37: "/images/cats/37-1490829392.jpg",
-					30: "/images/cats/30-1490829396.jpg",
-					38: "/images/cats/38-1490829394.jpg",
-					40: "/landing/speakerIcons/ten.png"
-				}, spklocarr = Object.keys(spklocaobj), t = spklocarr.length - 1; t >= 0; t--) {
-				spklocid = spklocarr[t].replace(/\s/g, "-"), i += '<div class="LocationComponents" id="' + spklocid + '" style="display:none">', onclass = "";
-				for (var s = spklocaobj[spklocarr[t]].length - 1; s >= 0; s--) catsizelink = spklocaobj[spklocarr[t]][s][0], catsizeid = /\i(\d+)/g.exec(catsizelink), urlpat = new RegExp(catsizelink), urlpat.test(currurl) && (onclass = " current"), i += '<a href="' + catsizelink + '" data-role="none"><img data-src="' + a[catsizeid[1]] + '"> <span>Shop ' + spklocaobj[spklocarr[t]][s][1] + "</span></a>";
-				i += "</div>", r += '<li><a href="javascript:;" class="spkLoc' + onclass + '" data-id="' + spklocid + '" data-role="none">' + spklocarr[t] + "</a></li>"
-			}
-			oldclass = "", document.getElementById("displayFitSpecs").innerHTML = r, sizeElem = document.createElement("div"), sizeElem.setAttribute("id", "sizesContainer"), sizeElem.innerHTML = i, document.getElementById("displayFitSpecs").parentNode.insertBefore(sizeElem, document.getElementById("displayFitSpecs").nextSibling), spklocs = document.getElementsByClassName("spkLoc");
-			for (var o = spklocs.length - 1; o >= 0; o--) spklocs[o].addEventListener("click", function () {
-				idtarget = this.getAttribute("data-id"), catimgs = document.getElementById(idtarget).getElementsByTagName("img");
-				for (var e = catimgs.length - 1; e >= 0; e--) datasrc = catimgs[e].getAttribute("data-src"), catimgs[e].setAttribute("src", datasrc);
-				"" !== oldclass && (document.getElementById(oldclass).style.display = "none", document.querySelector('a[data-id="' + oldclass + '"]').className = "spkLoc"), oldclass !== idtarget ? (this.className += " on", document.getElementById(idtarget).style.display = "block", oldclass = idtarget) : oldclass = ""
-			})
-		}
-	} else(void 0 !== spkoptions || null !== spkoptions) && ispsk && fitErrors.length > 0 ? afgFallback('<span class="fa fa-info-circle"></span> Your vehicle speaker sizes have not been researched. We recommend that you confirm your speaker sizes.') : fitErrors.length > 0 && !ispsk && (void 0 == spkoptions || null !== spkoptions) && /stereo/g.test(pageUrl) && afgFallback('<span class="fa fa-info-circle"></span> Your vehicle DIN size has not been researched. We recommend that you confirm the din size.')
-}
-
 function conflictingOffer() {
 	return count = 0, count += jQuery(".flsDeal").length, count += jQuery("#promoEmail").length, count += globalDiscount, freeGood && count++, count > 0 && count
 }
@@ -318,16 +271,6 @@ function loopImgArr() {
 		for (var a = colArr.length - 1; a >= 0; a--)
 			if (colArr[a].gsx$make.$t == make && colArr[a].gsx$model.$t == rmodel && colArr[a].gsx$year.$t == year) return InsertImg(".breadcrumb", colArr[a].gsx$urlsmall.$t), !1
 	})
-}
-
-function getPageInfo() {
-	for (var e = 0; e < dataLayer.length; e++)
-		if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
-			var a = dataLayer[e].pageType,
-				t = dataLayer[e].pageCategory;
-			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
-		}
-	return a
 }
 
 function insertMakeOffer(e) {
@@ -462,7 +405,7 @@ Date.prototype.addDays = function (e) {
 			display: "none"
 		})
 	}, 500)
-}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo || globalOffersInit(pageInfo)), globalFancy(pageInfo))
+}), !0 !== bot && (cartPromo || globalOffersInit(pageInfo)), globalFancy(pageInfo)
 // Function to determine whether we are on the home page
 function isHomePage() {
 	var pageID = $('.ui-page-active').attr('id');
