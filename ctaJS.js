@@ -126,32 +126,6 @@ function addMinutes(e, a) {
 	return new Date(e.getTime() + 6e4 * a)
 }
 
-function priceTicker(e, a, t, r, i) {
-	"flash" == i && (jQuery(".dynamicPrice").css({
-		'pointer-events': 'none',
-		'opacity': '0.5'
-	}).addClass("inProgress"), dealamt = Math.round(pPrice - e), dealamt = "$" + dealamt, flashprice = e.toFixed(2), jQuery(".dynamicPrice .txt").text("Flash Sale in Progress")), jQuery(".pRice").html('<div class="oldprice inline">$' + pPrice + '</div><div class="priceTicker inline">$' + pPrice + "</div>");
-	var s = jQuery(".priceTicker"),
-		o = {
-			price: pPrice
-		},
-		n = {
-			price: e
-		};
-	jQuery().animate(n, {
-		duration: 1e3,
-		step: function () {
-			s.text("$" + Math.round(100 * this.price) / 100)
-		},
-		complete: function () {
-			nPr = Math.round(100 * n.price) / 100, nPr = nPr.toFixed(2), Number(s.text()) !== n.price && s.text("$" + nPr), "coupon" == i ? (jQuery("a.redeemCouponBtn").find("span.fa").removeClass("fa-spinner fa-pulse fa-fw").addClass("fa-check").html('<style type="text/css">.flyerHtml{display:none}</style>'), setTimeout(function () {
-				jQuery(".fixedCtaContainer").css("bottom", "-200px")
-			}, 1e3)) : (jQuery("#addProductForm .orangeButton").text("Add to Cart w/ Savings"), jQuery(".pRice").eq(1).html('<div class="oldprice inline">$' + pPrice + '</div><div class="inline">$' + nPr + "</div>"), jQuery(".price_row").prepend('<div class="flsDeal flsRunning"><div class="imgheight"></div><div class="flashInfo"><div class="svamt">You Save ' + dealamt + '</div><div class="countdown"></div></div></div>'), jQuery(".flsDeal").click(function () {
-				c = confirm("Would you like to cancel the flash sale? Once cancelled, the deal will end."), 1 == c && (jQuery(".flsDeal").css("display", "none"), document.cookie = "sonic_price_offerer='';expires=Thu, 18 Dec 2013 12:00:00 UTC", document.cookie = "dynamicpriceCooke='';expires=Thu, 18 Dec 2013 12:00:00 UTC")
-			}))
-		}
-	})
-}
 
 function adjustFlashCookie(e) {
 	expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
@@ -229,28 +203,6 @@ function afgFallback(e) {
 
 function conflictingOffer() {
 	return count = 0, count += jQuery(".flsDeal").length, count += jQuery("#promoEmail").length, count += globalDiscount, freeGood && count++, count > 0 && count
-}
-
-function addCouponCode(val) {
-	var salePrice = pPrice - val.discount;
-	var max = val.max;
-	if (max > 0) {
-		dmax = ' • Max: $' + max;
-	} else {
-		dmax = '';
-	}
-	var discountOff = val.discount;
-	var cdiscountOff = '$' + val.discount + ' off';
-	if (val.discount < 1) {
-		salePrice = pPrice * val.discount;
-		discountOff = Math.round((1 - val.discount) * 100);
-		cdiscountOff = discountOff + '% off';
-	}
-	var nprice = salePrice.toFixed(2);
-	if (nprice > 0 && jQuery('.backorder').length == 0) {
-		jQuery(".price_row .yprice").html('<div style="font-size:11px;font-weight:400;">Copy Code</div><div style="display: inline-block;vertical-align:middle;position:relative"><div class="mCouponCode">' + val.code + '</div><div style="position:absolute;width:100%;font-size:11px;line-height:1.5;left:0">' + cdiscountOff + dmax + '</div></div><span style="font-size: 15px;text-decoration: line-through;color: #303030;">$' + pPrice + '</span><div class="breaker"></div><span>$' + nprice + '</span>');
-	}
-	addcode++;
 }
 
 
