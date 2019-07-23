@@ -84,10 +84,6 @@ function getPageInfo() {
 	return a
 }
 
-function insertMakeOffer(e) {
-	jQuery("#header").append(e)
-}
-
 function addextraCode(e) {
 	setTimeout(function () {
 		jQuery.ajax({
