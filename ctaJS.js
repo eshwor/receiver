@@ -5,6 +5,37 @@
 })();
 
 
+function getEta(e) {
+	var a = fld.getUTCFullYear(),
+		t = fld.getUTCMonth(),
+		r = fld.getDay(),
+		i = fld.getUTCDate(),
+		s = fld.getUTCHours(),
+		o = fld.getUTCMinutes();
+	0 > (s -= 4) && (i -= 1, s = 24 + s);
+	var n = new Date(a, t, i, 10),
+		c = new Date(a, t, i, s, o);
+	return 5 > e && (4 == r || 5 == r || 6 == r ? e += 2 : 0 == r && e++, c > n && e++), dat = new Date(c), etatimeStamp = dat.addDays(e), etaMonth = monthArr[etatimeStamp.getMonth()], etaDay = etatimeStamp.getDate(), etaMonth + " " + etaDay
+}
+
+function freeGoods() {
+	if (pos = "left", promofree = "", promoSavings = [], promoAmt = 0, bundle = document.getElementsByClassName("bundledSavings"), bundle.length > 0) {
+		if (bundles = bundle[0].getElementsByClassName("slide"), bundles.length > 5) return !1;
+		if (bundles.length > 0)
+			for (var e = bundles.length - 1; e >= 0; e--) promofree = bundles[e].getElementsByClassName("name")[0].innerHTML, (promofree.indexOf("FREE") > -1 || promofree.indexOf("Free") > -1 || promofree.indexOf("50%") > -1) && (pricingp = bundles[e].getElementsByClassName("itemInformation")[0].getElementsByTagName("p"), 3 == pricingp.length && (pricepres = /\d+.\d{2}/.exec(pricingp[2].innerHTML), promoSavings.push([e, Number(pricepres[0])])));
+		if (promoSavings.length > 0) return promoSavings.sort(function (e, a) {
+			return a[1] - e[1]
+		}), promoAmt = Math.round(promoSavings[0][1]), !(promoAmt < 14) && (slideoffset = 100 * promoSavings[0][0] * -1, 1)
+	}
+	return !1
+}
+
+function orangeCoupon(coupon) {
+	orangeadd = jQuery(".orangeButton"), orangepop = jQuery(".addToCartAccessoryRecommendationLink"), accTrigger = jQuery(".addProductToCard"), orangeadd.length > 0 && (orangepop.length > 0 ? (orangepop.html("Add to Cart <small>w/ Coupon</small>"), orangeadd.click(function () {
+		addextraCode(coupon)
+	})) : (accTrigger.text(" Add to Cart w/ Coupon"), accTrigger.attr("href", "/cart/add/item/" + pId + "?redeem_coupon=" + coupon)))
+}
+
 function initZipBtns() {
 	itt = 0;
 	jQuery('.ctaCoupon').click(function () {
@@ -18,7 +49,7 @@ function initZipBtns() {
 				oPrice = pPrice * (1 - dis)
 			};
 			priceTicker(oPrice, "", "", "", "flash");
-		
+			orangeCoupon(coup)
 		}
 		itt++
 	}), jQuery("#freeTag").click(function () {
@@ -50,10 +81,10 @@ function redoCtaSection() {
 		if (sonicZip !== '') {
 			changezip = 'to ' + sonicZip + ' ' + changezip
 		}
-		e.length > 0 ? (t = CheckShipping(e.text()), etaTime = t.join(" ")) : /free 2-day/g.test(a) ? (ctaObj.shipping = '<div class="fShip">+ FREE 2-Day Shipping</div>', changezip = '', sonicZipHtml = "") : a.indexOf("Special") > -1 ? (sonicZipHtml = "") : a.indexOf("Available") > -1 ? etaTime = getEta(30) : (zipActive = "", etaTime = "", sonicZipHtml = '<div class="zipCta zipTrigger"><div>Get Delivery ETA</div><div>Enter Zip Code</div></div>'), getZip = '<div class="zipInputWrapper"><div class="zipContainer"><div class="zipInputC"><input id="zipInput" type="number" placeholder="Zip Code" value="' + sonicZip + '"></div><div id="zipSubmit" class="fa fa-search"></div></div></div>', ctaObj.eta = '<div class="estDelivery' + zipActive + '">' + sonicZipHtml + getZip + '<div class="estDeliveryContainer zipTrigger"><div class="esttime">Est. Delivery ' + etaTime + '</div><div class="estLabel">' + changezip + '</div></div></div>'
+		e.length > 0 ? (t = CheckShipping(e.text()), etaTime = t.join(" ")) : /free 2-day/g.test(a) ? (ctaObj.shipping = '<div class="fShip">+ FREE 2-Day Shipping</div>', changezip = '', etaTime = getEta(2), sonicZipHtml = "") : a.indexOf("Special") > -1 ? (etaTime = getEta(30), sonicZipHtml = "") : a.indexOf("Available") > -1 ? etaTime = getEta(30) : (zipActive = "", etaTime = "", sonicZipHtml = '<div class="zipCta zipTrigger"><div>Get Delivery ETA</div><div>Enter Zip Code</div></div>'), getZip = '<div class="zipInputWrapper"><div class="zipContainer"><div class="zipInputC"><input id="zipInput" type="number" placeholder="Zip Code" value="' + sonicZip + '"></div><div id="zipSubmit" class="fa fa-search"></div></div></div>', ctaObj.eta = '<div class="estDelivery' + zipActive + '">' + sonicZipHtml + getZip + '<div class="estDeliveryContainer zipTrigger"><div class="esttime">Est. Delivery ' + etaTime + '</div><div class="estLabel">' + changezip + '</div></div></div>'
 	}
 	jQuery(".apair").length > 0 && (ctaObj.pair = '<div class="apair">A PAIR</div>');
-	paidOffer !== undefined ? (discount = paidOffer[2], coupon = paidOffer[0], offer = paidOffer[1], ctaObj.vip = '<div class="ctaCoupon" data-dis="' + discount + '" data-coupon="' + coupon + '"><i class="fa fa-tags" ></i><span class="offer">' + offer + '</br>' + coupon + '</span></div>') : jQuery(".mobileVip").length > 0 ? (rewardAmt = Math.round(.1 * pPrice), rewardAmt = "$" + rewardAmt + " Rewards", ctaObj.vip = '<a class="fancyB fancybox.ajax mobileVip" href="/landing/vippopup.html"><img src="/landing/vipoffer.png"><span>' + rewardAmt + "</span></a>") : jQuery(".bundledSavingsWrap").length > 0 && (ctaObj.acs = '<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeinstallpr"><div class="fa fa-wrench"></div> FREE Installation Accessories Included - up to $30</a>'), jQuery(".price_row").html('<div class="wrapperCta"><div class="priceShipping">' + ctaObj.vip + '<div class="pRice">$' + pPrice + "</div>" + ctaObj.pair + ctaObj.shipping + '</div><div class="stockNDelivery"><div class="stockDelivery"><div class="stockInfo' + color + '">' + pStatus + '</div><div class="stockCondition">' + ctaObj.condition + "</div></div>" + ctaObj.eta + '</div></div><div class="promoInfo">' + ctaObj.acs + "</div></div>"), initZipBtns()
+	paidOffer !== undefined ? (discount = paidOffer[2], coupon = paidOffer[0], offer = paidOffer[1], ctaObj.vip = '<div class="ctaCoupon" data-dis="' + discount + '" data-coupon="' + coupon + '"><i class="fa fa-tags" ></i><span class="offer">' + offer + '</br>' + coupon + '</span></div>') : jQuery(".mobileVip").length > 0 ? (rewardAmt = Math.round(.1 * pPrice), rewardAmt = "$" + rewardAmt + " Rewards", ctaObj.vip = '<a class="fancyB fancybox.ajax mobileVip" href="/landing/vippopup.html"><img src="/landing/vipoffer.png"><span>' + rewardAmt + "</span></a>") : jQuery(".bundledSavingsWrap").length > 0 && (freeGood = freeGoods(), freeGood && (ctaObj.vip = '<a id="freeTag" class="freeTag" href="javascript:;"><div class="hangTag freeVersion"></div><div class="freeText">View Special<br/>Bundles</div></a>')), jQuery("#freeInstallationAccessories").length > 0 && (ctaObj.acs = '<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeinstallpr"><div class="fa fa-wrench"></div> FREE Installation Accessories Included - up to $30</a>'), jQuery(".price_row").html('<div class="wrapperCta"><div class="priceShipping">' + ctaObj.vip + '<div class="pRice">$' + pPrice + "</div>" + ctaObj.pair + ctaObj.shipping + '</div><div class="stockNDelivery"><div class="stockDelivery"><div class="stockInfo' + color + '">' + pStatus + '</div><div class="stockCondition">' + ctaObj.condition + "</div></div>" + ctaObj.eta + '</div></div><div class="promoInfo">' + ctaObj.acs + "</div></div>"), initZipBtns()
 }
 
 function prodPageActions(e, a, t, r, i) {
@@ -74,7 +105,101 @@ function prodPageActions(e, a, t, r, i) {
 	})
 }
 
+function flashEnd() {
+	window.location.href = currurl
+}
 
+function CountDownTimer(e, a) {
+	var t, r = new Date(e);
+	t = setInterval(function () {
+		var e = new Date,
+			i = r - e;
+		if (0 > i) return clearInterval(t), void flashEnd();
+		var s = '<div class="timeWrap"><div class="timeContainer">' + (Math.floor(i / 864e5), Math.floor(i % 864e5 / 36e5), Math.floor(i % 36e5 / 6e4)) + '</div><div class="timeLabel">Minutes</div></div><div class="timeWrap"><div class="timeContainer">' + Math.floor(i % 6e4 / 1e3) + '</div><div class="timeLabel">Seconds</div></div>';
+		if (document.getElementsByClassName(a)[0]) {
+			document.getElementsByClassName(a)[0].innerHTML = s;
+		}
+	}, 1e3)
+}
+
+function addMinutes(e, a) {
+	return new Date(e.getTime() + 6e4 * a)
+}
+
+
+function adjustFlashCookie(e) {
+	expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
+		price: e,
+		exp: expirationDate
+	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), priceTicker(e, '', '', '', "flash"), CountDownTimer(expirationDate, "countdown")
+}
+
+function calldynPrice(e, a) {
+	jQuery.ajax({
+		method: "GET",
+		url: "/landing/query/dynamicprice.php?ids=" + e,
+		success: function (e) {
+			ga("send", "event", "Product", "Flash Sale", pName + " for $" + e.offerprice), "update" == a ? adjustFlashCookie(e.offerprice) : checkFlashHistory(e.offerprice)
+		}
+	})
+}
+
+function flashInfo(e) {
+	jQuery(".dynamicPrice").click(function () {
+		"new" == e || "update" == e ? 1 == confirm("Are you sure that you want to begin the flash sale on the " + pName + "? You will get a discount from 5-50% off this item for 1 hour. This offer cannot be combined with other discounts, bundles, etc. Simply click ok and then add to cart.") && calldynPrice(pId, e) : alert("Add this item to cart to receive the savings. Cannot be combined with other offers.")
+	})
+}
+
+function checkFlashHistory(e) {
+	if (void 0 == dynamicpriceCooke || "" == dynamicpriceCooke) expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
+		price: e,
+		exp: expirationDate
+	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), flashInfo(), priceTicker(e, "", "", "", "flash"), CountDownTimer(expirationDate, "countdown");
+	else {
+		if (flashHistory = JSON.parse(dynamicpriceCooke), void 0 === flashHistory[pId]) return flashInfo("update"), !1;
+		if (e = flashHistory[pId].price, !(thisexp > fld)) return !1;
+		expirationDate = thisexp, flashInfo(), priceTicker(e, "", "", "", "flash"), CountDownTimer(expirationDate, "countdown")
+	}
+}
+
+function RunFlashOffer() {
+	if (ga("send", "event", "Global", "Footer", "Mobile Flash Sale Popup"), !confirm("Are you sure you want to start the Flash Sale? Get a " + flashdiscount[1] + "% discount on orders over $" + flashdiscount[3] + " order with a maximum $" + flashdiscount[2] + " discount. Offer can't be combined with other running promotions. Manufacturer exclusions apply. Redeem the savings on cart page.")) return !1;
+	var e = addMinutes(new Date, 60);
+	setCookie("flashSaleEnd", e, 2), jQuery(".offerCartCoupon").css("opacity", 0), setTimeout(function () {
+		globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo">The Clock is Ticking. Make it count!</div>', flashprint, "flash"), CountDownTimer(e, "globalCountdown")
+	}, 1e3)
+}
+
+function globalOffers(e, a, t, r, i) {
+	return content = '<div id="offerCartCoupon" class="offerCartCoupon"><div class="offerCartContents"><a data-role="none" href="javascript:;" class="offerClose"><span class="fa fa-close"></span></a>' + t + '<div class="offerCartIcon offerInfo"><span class="fa fa-' + i + '"></span></div></div><div id="details" class="offerCartDetails">' + r + "</div></div>", jQuery("#globalPromo").html(content), globalDiscount = 1, jQuery(".offerInfo").click(function () {
+		jQuery("#details").toggleClass("on")
+	}), jQuery(".offerClose").click(function () {
+		jQuery("#offerCartCoupon").css("display", "none"), setCookie("globalPromo", 1)
+	}), "flash" != a && "flashCart" != a || CountDownTimer(flashexp, "globalCountdown"), "cart" != a && "flashCart" != a && "cartCloserCartInit" != a && "cartCloserOnCart" != a || jQuery(document).ready(function () {
+		jQuery("#coupons-basic").val(e), jQuery("#show-promo").css("display", "none"), jQuery("#promo-box").css("display", "block"), jQuery(".offerAdd").click(function () {
+			jQuery("#cart_form").submit()
+		})
+	}), "flashTrig" == a ? (flashTrig = document.getElementById("offerbtn"), void flashTrig.addEventListener("click", RunFlashOffer)) : void 0
+}
+
+function globalOffersInit(e) {
+	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB)
+		if (flashexp > fld)
+			if ("cart" == e) {
+				var a = "The promo code " + flashdiscount[0] + " has been added to your cart";
+				cpstr = jQuery(".promo-applied").text(), cpstr.indexOf(flashdiscount[0]) < 0 && (a = "<b>Hit the redeem button below</b>"), globalOffers(flashdiscount[0], "flashCart", '<style>.offerClose{display:none}</style><div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo">' + a + "</div>", flashprint, "check")
+			} else "" == globalPromo && globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + "% Off Flash Sale</b></div>", flashprint, "flash");
+	else globalOffers(flashdiscount[0], "flashTrig", '<a href="javascript:;" id="offerbtn" class="offerAdd" data-role="none">Start Sale</a><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + "% Off Flash Sale</b> - 1 Hour of shopping for great sound</div>", flashprint, "flash");
+	"Company_Review_Reward" == QueryString.utm_campaign && globalOffers(cReviewCode, "companyReview", '<div class="offerCode offerInfo">' + cReviewCode + '</div><div class="offerMsg offerInfo"><b>Your $5 Gift Code</b> Eligible with any purchase</span></div>', "Thank you for reviewing our company online. As a token of appreciation here is $5 promotional code for you to enjoy savings on your audio purchase", "money")
+}
+
+function afgFallback(e) {
+	jQuery('<div class="clearfix afgCustomMsg"><span class="noFitMsg">' + e + '</span></div><a data-role="none" href="' + window.location.pathname + '?afg=remove" class="shopAllFit">Shop All</a>').insertAfter(".afg-selector-mobile-general .links"), thumbs = document.getElementsByClassName("bg-white");
+	for (var a = thumbs.length - 1; a >= 0; a--) {
+		thumbsA = thumbs[a].getElementsByTagName("a");
+		for (var t = thumbsA.length - 1; t >= 0; t--) thumbsA[t].href += "?afg=remove"
+	}
+}
 
 function conflictingOffer() {
 	return count = 0, count += jQuery(".flsDeal").length, count += jQuery("#promoEmail").length, count += globalDiscount, freeGood && count++, count > 0 && count
@@ -153,7 +278,7 @@ function addextraCode(e) {
 
 function addDynCoup(e) {
 	return "popup" == e ? flashexp > fld ? void globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">flashdiscount[0]</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + " Off Flash Sale</b></div>", flashprint, "flash") : void globalOffers(flashdiscount[0], "flashTrig", '<a href="javascript:;" id="offerbtn" class="offerAdd" data-role="none">Start Sale</a><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + " Off Flash Sale</b> - 1 Hour of shopping for great sound</div>", flashprint, "flash") : (jQuery(".page").append('<div class="dynCoupWrapper">' + e + "</div>"), void jQuery("a.redeemCouponBtn").click(function (e) {
-		e.preventDefault(), thiselem = jQuery(this), coupon = thiselem.attr("data-code"), savings = thiselem.attr("data-savings"), thiselem.html("Saving $" + savings + ' to cart <span class="fa fa-spinner fa-pulse fa-fw"></span>');
+		e.preventDefault(), thiselem = jQuery(this), coupon = thiselem.attr("data-code"), savings = thiselem.attr("data-savings"), thiselem.html("Saving $" + savings + ' to cart <span class="fa fa-spinner fa-pulse fa-fw"></span>'), orangeCoupon(coupon);
 		salePrice = pPrice - savings, priceTicker(salePrice, "", thiselem, coupon, "coupon")
 	}))
 }
@@ -264,7 +389,7 @@ Date.prototype.addDays = function (e) {
 			display: "none"
 		})
 	}, 500)
-}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo), globalFancy(pageInfo))
+}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo || globalOffersInit(pageInfo)), globalFancy(pageInfo))
 // Function to determine whether we are on the home page
 function isHomePage() {
 	var pageID = $('.ui-page-active').attr('id');
