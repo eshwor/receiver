@@ -106,7 +106,6 @@ function addDynCoup(e) {
 	}))
 }
 
-
 function cleanQuery(e) {
 	return suggstrip = e.replace(/<b>|<\/b>/g, "").replace(":_all", ""), repIn = /\din/.exec(suggstrip), repIn && (sizeRep = repIn[0].replace(/in/g, "%22"), suggstrip = suggstrip.replace(repIn[0], sizeRep)), suggsname = e.replace(":_all", "").replace(":", " "), sStr = "/search?keyword=" + encodeURIComponent(suggstrip), squery = suggstrip.toLowerCase(), [suggsname, sStr, squery]
 }
@@ -121,28 +120,4 @@ var monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", 
 Date.prototype.addDays = function (e) {
 	var a = new Date(this.valueOf());
 	return a.setDate(a.getDate() + e), a
-}, jQuery("#searchField").keyup(function () {
-	inp = jQuery(this), q = inp.val(), width = inp.parent().width(), left = inp.position().left, jQuery("#searchShelf").css({
-		width: width + "px",
-		top: "-10px",
-		display: "block",
-		left: left + "px"
-	})
-}).keydown(function (e) {
-	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (redirectHref = cleanQuery(q), window.location.href = redirectHref[1]))
-}), jQuery("#searchField").focus(function () {
-	0 == c && jQuery.ajax({
-		method: "GET",
-		dataType: "text",
-		url: "/landing/redirects11.js",
-		success: function (e) {
-			redirects = JSON.parse(e), c++
-		}
-	})
-}), jQuery("#searchField").blur(function () {
-	setTimeout(function () {
-		jQuery("#searchShelf").css({
-			display: "none"
-		})
-	}, 500)
-}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo))
+},!0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo))
