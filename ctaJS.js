@@ -74,9 +74,6 @@ function prodPageActions(e, a, t, r, i) {
 	})
 }
 
-function flashEnd() {
-	window.location.href = currurl
-}
 
 function CountDownTimer(e, a) {
 	var t, r = new Date(e);
