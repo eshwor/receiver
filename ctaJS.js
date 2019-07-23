@@ -41,9 +41,7 @@ function NightCheck() {
 	return e > 19 || 6 > e ? "night" : (6 == a || 5 == a || 0 == a) && "weekend"
 }
 
-function flashConditions(e, a) {
-	return inclMapBrands = includeBrands(e), !!(inclMapBrands && a > 150) || !!(/NVX/g.test(e) && a > 200) || !!(/Rockford/g.test(e) && a > 399) || void 0
-}
+
 
 function organicTraffic(e) {
 	return new RegExp(/google|bing|yahoo/g).test(e)
@@ -162,10 +160,8 @@ function prodPageActions(e, a, t, r, i) {
 		}
 	}), dynamicpriceCooke && (flashHistory = JSON.parse(dynamicpriceCooke), void 0 !== flashHistory[e] && (thisexp = new Date(flashHistory[e].exp)));
 	var s = excludedBrands(t),
-		o = NightCheck();
-	flashCriteria = flashConditions(t, a, i), (flashCriteria && globalDiscount < 1 && /In Stock|Available|Special/g.test(r) && !s && o || thisexp > fld) && (noflash++, "" !== dynamicpriceCooke ? checkFlashHistory(dynamicpriceCooke) : (flashInfo("new"))), paypalbtn = jQuery(".buyWithPaypal"), paypalbtn.length > 0 && a > 500 && 0 == noflash && (monthly = Math.round(a / 6), jQuery(".add-to-cart").append('<br>or<a href="/landing/paypalFinancing.html" class="fancyB fancybox.ajax paypalFinanceBtn" data-role="none"><span class="txt">As low as <span style="color:#f15722">$' + monthly + "/Month</span></span></a>"), jQuery("a.paypalFinanceBtn").click(function () {
-		ga("send", "event", "Product", "Top Price Section", "Buy Now With Paypal Financing - Click - " + t)
-	})), keepShopping = jQuery(".continueLink"), keepShopping.length > 0 && keepShopping.click(function () {
+        o = NightCheck();
+        keepShopping = jQuery(".continueLink"), keepShopping.length > 0 && keepShopping.click(function () {
 		jQuery("#nav"), jQuery("#mobile-menu-button").addClass("on"), jQuery("#navigation-menu").addClass("open")
 	}), viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
 		href: "/landing/query/specinfo.php",
