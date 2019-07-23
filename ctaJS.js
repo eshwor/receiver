@@ -5,11 +5,6 @@
 })();
 
 
-
-function organicTraffic(e) {
-	return new RegExp(/google|bing|yahoo/g).test(e)
-}
-
 function socialTraffic(e) {
 	return new RegExp(/instagram|forum|club|meade|youtube/g).test(e)
 }
@@ -461,8 +456,7 @@ freeGood = !1, sonicZip = getCookie("sonic_zip"), year = getCookie("car_afg_year
 	var e = (jQuery(this).html() + " - click - " + jQuery(this).data("level")).replace(/(<([^>]+)>)/gi, "").replace(/&/g, "&");
 	ga("send", "event", "Global", "Mobile Navigation Categories", e)
 });
-var trafsource = organicTraffic(ref),
-	socialTraffic = socialTraffic(ref),
+var socialTraffic = socialTraffic(ref),
 	monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
 Date.prototype.addDays = function (e) {
 	var a = new Date(this.valueOf());
