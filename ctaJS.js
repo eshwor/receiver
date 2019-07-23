@@ -1,10 +1,65 @@
-//Fresh Function 
-//This function includes :
-(function(){
-    //todo
-})();
 
 
+function addScript(e) {
+	var a = document.createElement("script");
+	a.setAttribute("async", ""), a.setAttribute("src", e), document.body.appendChild(a)
+}
+
+function addStyle(e) {
+	var a = document.createElement("link");
+	a.setAttribute("rel", "stylesheet"), a.setAttribute("type", "text/css"), a.setAttribute("href", e), document.head.appendChild(a)
+}
+
+function addSugs() {
+	jQuery.ajax({
+		method: "GET",
+		url: "/landing/query/oosMobile.php?ids=" + pId,
+		success: function (e) {
+			"" !== e && void 0 !== e && (jQuery(".productPage").prepend(e.oosSuggestions), jQuery(e.oosSuggestions).insertBefore('#nosto-product-prod-mobile'), it = 0, jQuery(".showMore").click(function () {
+				var e = jQuery(".sonicComboImg");
+				jQuery.each(e, function () {
+					lazyimg = jQuery(this).attr("data-bg"), jQuery(this).css("background-image", "url(" + lazyimg + ")")
+				}), jQuery(this).parent().find(".sonicComboItem.listHidden").removeClass("listHidden"), re = jQuery(this).attr("data-redirect"), nm = jQuery(this).attr("data-name"), jQuery(this).text(nm), 1 == it && (window.location.href = re), it = 1
+			}))
+		}
+	})
+}
+
+function addsearchSugs() {
+	jQuery('<div class="nosto_element" id="searchpage-nosto-1-copy"></div>').insertAfter(".content-category")
+}
+
+function checkPage() {
+	var e = new RegExp(/filter|page|cat_f|\?ls|price_max/g).test(currurl);
+	return /2267.10032/i.test(currurl) && (e = !1), e
+}
+
+function includeBrands(e) {
+	return new RegExp(/Wet Sounds/g).test(e)
+}
+
+function randomExpiration() {
+	var e = new Date;
+	e.setDate(e.getDate() + 1);
+	var a = e.getDate(),
+		t = e.getMonth();
+	return (t += 1) + "/" + a
+}
+
+function toTitleCase(e) {
+	return e.replace(/\w\S*/g, function (e) {
+		return e.charAt(0).toUpperCase() + e.substr(1).toLowerCase()
+	})
+}
+
+function getCatId() {
+	var e = new RegExp(/\d+(?=_)/g).exec(currurl);
+	return e || (e = [""]), e[0]
+}
+
+function excludedBrands(e) {
+	return new RegExp(/Open Box|Damaged|Refurbished|(Open Box)|UPGRADE|FREE|Rebate|JVC|Hifonics/g).test(e)
+}
 
 function NightCheck() {
 	var e = fld.getHours(),
@@ -12,7 +67,9 @@ function NightCheck() {
 	return e > 19 || 6 > e ? "night" : (6 == a || 5 == a || 0 == a) && "weekend"
 }
 
-
+function flashConditions(e, a) {
+	return inclMapBrands = includeBrands(e), !!(inclMapBrands && a > 150) || !!(/NVX/g.test(e) && a > 200) || !!(/Rockford/g.test(e) && a > 399) || void 0
+}
 
 function organicTraffic(e) {
 	return new RegExp(/google|bing|yahoo/g).test(e)
@@ -123,14 +180,20 @@ function redoCtaSection() {
 }
 
 function prodPageActions(e, a, t, r, i) {
-	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || socialTraffic || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
+	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || socialTraffic || jQuery(".product_discontinued").length > 0) && addSugs(r), t.indexOf("Mechman") > -1 && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
 		if (0 == cartC) {
 			acsImg = jQuery("#acessoryGrid .imageContainer a");
 			for (var e = acsImg.length - 1; e >= 0; e--) dataSrc = jQuery(acsImg[e]).attr("data-img"), jQuery(acsImg[e]).find("img").attr("src", dataSrc);
 			addScript("/landing/mobile-scripts/mobileac10.js"), cartC++
 		}
 	}), dynamicpriceCooke && (flashHistory = JSON.parse(dynamicpriceCooke), void 0 !== flashHistory[e] && (thisexp = new Date(flashHistory[e].exp)));
-        viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
+	var s = excludedBrands(t),
+		o = NightCheck();
+	flashCriteria = flashConditions(t, a, i), (flashCriteria && globalDiscount < 1 && /In Stock|Available|Special/g.test(r) && !s && o || thisexp > fld) && (noflash++, "" !== dynamicpriceCooke ? checkFlashHistory(dynamicpriceCooke) : (flashInfo("new"))), paypalbtn = jQuery(".buyWithPaypal"), paypalbtn.length > 0 && a > 500 && 0 == noflash && (monthly = Math.round(a / 6), jQuery(".add-to-cart").append('<br>or<a href="/landing/paypalFinancing.html" class="fancyB fancybox.ajax paypalFinanceBtn" data-role="none"><span class="txt">As low as <span style="color:#f15722">$' + monthly + "/Month</span></span></a>"), jQuery("a.paypalFinanceBtn").click(function () {
+		ga("send", "event", "Product", "Top Price Section", "Buy Now With Paypal Financing - Click - " + t)
+	})), keepShopping = jQuery(".continueLink"), keepShopping.length > 0 && keepShopping.click(function () {
+		jQuery("#nav"), jQuery("#mobile-menu-button").addClass("on"), jQuery("#navigation-menu").addClass("open")
+	}), viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
 		href: "/landing/query/specinfo.php",
 		"data-url": "#"
 	}), viewSpeakersFit.addClass("fancyB fancybox.ajax")), jQuery(".top-firstcon h2").click(function (e) {
@@ -173,7 +236,7 @@ function priceTicker(e, a, t, r, i) {
 		n = {
 			price: e
 		};
-	jQuery().animate(n, {
+	jQuery(o).animate(n, {
 		duration: 1e3,
 		step: function () {
 			s.text("$" + Math.round(100 * this.price) / 100)
@@ -244,7 +307,7 @@ function globalOffers(e, a, t, r, i) {
 }
 
 function globalOffersInit(e) {
-	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB || socialTraffic && "" == flashEndTime && !conflict && !exclB)
+	if (conflict = conflictingOffer(), exclB = excludedBrands(pageT), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB || socialTraffic && "" == flashEndTime && !conflict && !exclB)
 		if (flashexp > fld)
 			if ("cart" == e) {
 				var a = "The promo code " + flashdiscount[0] + " has been added to your cart";
@@ -265,7 +328,7 @@ function afgFallback(e) {
 function CategoryFunctions(e) {
 	cImg = jQuery(".category-img img");
 	for (var a = cImg.length - 1; a >= 0; a--) src = cImg[a].src, cImg[a].src = src.replace("thumbnail", "small");
-	if (catLeafPromos = jQuery(".catLeafBanner"), catLeafPromos.length > 0 && filterCheck && catLeafPromos.css("display", "none"), catPromos = jQuery("#promoCollection"), catPromos.length > 0 ? (catPromos.parent().css({
+	if (filterCheck = checkPage(), catLeafPromos = jQuery(".catLeafBanner"), catLeafPromos.length > 0 && filterCheck && catLeafPromos.css("display", "none"), catPromos = jQuery("#promoCollection"), catPromos.length > 0 ? (catPromos.parent().css({
 			background: "#f3faff"
 		}), promoItems = catPromos.find(".promoItem"), promoItems.length > 1 && promoItems.css({
 			width: "80%",
@@ -335,7 +398,26 @@ function addCouponCode(val) {
 	addcode++;
 }
 
-
+function runCart() {
+	var e = brontoCart.subtotal,
+		a = brontoCart.lineItems,
+		t = (JSON.stringify(a), 0),
+		r = jQuery(".vip_banner");
+	if (addScript("/landing/mobile-scripts/mbcart61.js"), jQuery('<div id="topCheckoutWrapper" style="text-align:center;padding:10px"><a id="topCartCheckout" href="/checkout/express" data-ajax="false" data-role="none" class="orangeButton extendedButton">Proceed to checkout</a></div>').insertBefore(".step1UL"), e > 500 && (monthly = Math.round(e / 6), jQuery('<div style="clear:both"> </div><span class="paymentSeparator padding-vertical-7">or</span><a data-role="none" href="/cart/index/action/paypal_express" class="paypalFinanceBtn"><span> As low as $' + monthly + "/Month</span></a>").insertBefore("div.check-arrow-cf"), jQuery("a.paypalFinanceBtn").click(function () {
+			ga("send", "event", "Cart", "Body", "Checkout Button (Paypal Financing) - click")
+		})), r.length > 0) {
+		for (var i = a.length - 1; i >= 0; i--) vipshippinginfo = jQuery("h2 a[href*=" + a[i].sku + "]").parent().next().find(".shipping_warning_green").text(), vipshippinginfo.indexOf("US48.") > 0 && (t += .1 * a[i].totalPrice);
+		t > 0 && (t = Math.round(t), r.prepend('Your cart qualifies for <a href="/landing/vippopup.html" style="color: #f15722;" class="fancyB fancybox.ajax" data-role="none">$' + t + " Rewards!</a>"))
+	}
+	"exp" == QueryString.msg && (dexp = randomExpiration(), globalOffers("", "cartmsg", '<div class="offerMsg offerInfo">Savings Redeemed! Complete your order before this offer ends.</div>', "Offer expires: " + dexp + " at 11:59 pst. Offer is cannot be combined with other promotions and is subject to exclusions", "redeemed")), jQuery(".saving-price").length > 0 && (saveAmt = jQuery(".saving-price").text(), jQuery(".subtotalAmt").html('<span style="display:block;"><span style="color:#303030;">Savings: </span>' + saveAmt + "</span>")), cpstr = jQuery(".promo-applied").text(), passcode = QueryString.fillsave;
+	if (passcode !== undefined) {
+		if (passcode == "") {
+			passcode = '5SAVER'
+		};
+		10 == cpstr.length && globalOffers(passcode, "cart", '<style>.offerClose{display:none}</style><div class="offerMsg offerInfo">Hit the redeem below to receive your savings!</div>', "Offer cannot be combined with other promotions")
+	};
+	se = jQuery(".shippingEstimate"), se.length > 0 && (sestr = se.html().replace("All items arrive", "Estimated Arrival"), se.html(sestr))
+}
 
 function videoGuide() {
 	jQuery(".row.afg-specs-mobile").prepend('<div id="moreBelow"><span class="fa fa-level-down"></span> More Items Below</div><a class="fancyB fancybox.iframe clearfix ymmBuyingGuide" href="https://www.youtube.com/embed/9o6IJ98Q-vs?rel=0&showinfo=0&theme=light&iv_load_policy=3" data-ajax="false"><span style="float:left;margin-right:10px;" class="fa fa-info-circle fa-2x"></span><div style="display: block;overflow: hidden;font-size: 14px;">Need help choosing a stereo?</div></a>'), onet = 0, jQuery(window).scroll(function () {
@@ -360,7 +442,7 @@ function getPageInfo() {
 		if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
 			var a = dataLayer[e].pageType,
 				t = dataLayer[e].pageCategory;
-			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
+			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addsearchSugs(), "AddCarSpecificAccessories" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart && runCart()
 		}
 	return a
 }
@@ -396,7 +478,7 @@ function ProductOffer() {
 		method: "GET",
 		url: "/landing/query/productapi3.php?ids=" + pId + "&type=product",
 		success: function (e) {
-			co = conflictingOffer(),e.makeOffer > 0 && e.makeOfferShow > 0 && 0 == addcode && !co ? insertMakeOffer(e.makeOfferHtml) : "" != e.coupHtml && 0 == addcode && !co & !exclB && addDynCoup(e.coupHtml), "" != e.combos && jQuery(e.combos).insertBefore("#nosto-product-prod-mobile"), "" != e.catContent && jQuery(e.catContent).insertAfter("#nosto-product-prod-mobile"), "" != e.recentlyViewed && jQuery(".productPage").append(e.recentlyViewed)
+			co = conflictingOffer(), exclB = excludedBrands(pageT), e.makeOffer > 0 && e.makeOfferShow > 0 && 0 == addcode && !co ? insertMakeOffer(e.makeOfferHtml) : "" != e.coupHtml && 0 == addcode && !co & !exclB && addDynCoup(e.coupHtml), "" != e.combos && jQuery(e.combos).insertBefore("#nosto-product-prod-mobile"), "" != e.catContent && jQuery(e.catContent).insertAfter("#nosto-product-prod-mobile"), "" != e.recentlyViewed && jQuery(".productPage").append(e.recentlyViewed)
 		}
 	})
 }
@@ -483,7 +565,7 @@ Date.prototype.addDays = function (e) {
 		left: left + "px"
 	})
 }).keydown(function (e) {
-	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (redirectHref = cleanQuery(q), window.location.href = redirectHref[1]))
+	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), capsQ = toTitleCase(q), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (redirectHref = cleanQuery(q), window.location.href = redirectHref[1]))
 }), jQuery("#searchField").focus(function () {
 	0 == c && jQuery.ajax({
 		method: "GET",
@@ -505,3 +587,151 @@ function isHomePage() {
 	var pageID = $('.ui-page-active').attr('id');
 	return pageID == 'public_home' || pageID == 'public_search';
 }
+
+$(".scrollfix").live('pageshow', function () {
+	$('#stopMobileLink').click(function () {
+		var date = new Date();
+		date.setTime(date.getTime() + (5 * 60 * 1000));
+		document.cookie = escape('sonic_stop_mobile') + "=" + escape('1') + "; expires=" + date.toGMTString() + "; path=/";
+	});
+
+	// Toggle category list box with the listIcon button
+	$('#mobile-menu-button').click(function (e) {
+		// Hide all stubs
+		e.preventDefault();
+		e.stopPropagation();
+
+		// Close search
+		$('.searchbox').removeClass('overlay');
+		$('#header').height(44);
+
+		$('.skip-content.skip-active, .skip-link.skip-active').removeClass('skip-active');
+		if (!$(this).hasClass('on')) {
+			$(this).addClass('on');
+			//$('.navigationIn').addClass('overlay');
+			$('#navigation-menu').addClass('open');
+		} else {
+			$(this).removeClass('on');
+			$('#navigation-menu').removeClass('open');
+			//$('.navigationIn').removeClass('overlay');
+		}
+	});
+	$('.navigationIn').click(function (e) {
+		if ($(this).hasClass('overlay')) {
+			$(this).removeClass('overlay');
+			$('#navigation-menu').removeClass('open');
+			$('#mobile-menu-button').removeClass('on');
+		}
+	});
+	$('#navigation-menu').click(function (e) {
+		e.stopPropagation();
+	});
+
+	var navList = $('#navigation-menu');
+	var navOpener = '<span class="open-child"></span>';
+
+	// navList.find('li:has(ul), li:has(h3.has-child)', this).each(function() {
+	//     $(this).prepend(navOpener);
+	// });
+	navList.find('li.parent-has-child', this).each(function () {
+		$(this).prepend(navOpener);
+	});
+
+	navList.find('.level0 a, .open-child').on('click', function (e) {
+		e.stopPropagation();
+		// $(this).css({"background": "#115ea7"});
+		// $(this).find('.category-name').css({"color": "white"});
+		$(this).parent().toggleClass('over').find('>> .menu-wrapper > ul, + .menu-wrapper > ul').slideToggle(200);
+	});
+
+	$('.skip-search').click(function (event) {
+		event.preventDefault();
+		event.stopImmediatePropagation();
+		if (!$('.searchbox').hasClass('overlay')) {
+			$('.headerListBox').css('display', 'none');
+			$('.searchbox').addClass('overlay');
+			$('#header').height('auto');
+			$(this).addClass('skip-active');
+			$('#searchField').focus();
+		} else {
+			$('.searchbox').removeClass('overlay');
+			$('#header').height(44);
+			$(this).removeClass('skip-active');
+			$('#searchField').blur();
+		}
+	});
+	$('.searchContainer').click(function (e) {
+		e.stopPropagation();
+	});
+	// search box close icon
+	$(".hasclear").keyup(function () {
+		var input = $(this);
+		input.next('span').toggle(Boolean(input.val()));
+	});
+
+	$(".clearer").hide($(this).prev('input').val());
+
+	$(".clearer").click(function () {
+		$(this).prev('input').val('').focus();
+		$(this).hide();
+	});
+});
+
+$("#headerWrapper").data("shipEta");
+
+/*Cookie Functionality @author :: Ishwor ~~ Please do not remove this code:::: use setupCookie() to setup the cookie, readCookie() to read the cookie, eraseCookie() to erase the cookie */
+function setupCookie(name, value, days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		var expires = "; expires=" + date.toGMTString()
+	} else var expires = "";
+	document.cookie = name + "=" + value + expires + "; path=/"
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+	}
+	return null
+}
+
+function eraseCookie(name) {
+	setupsCookie(name, "", -1)
+}
+/*Cookie Functionality End **/
+
+/*Subscription Script Code Start*/
+let subscriptionPopup = document.querySelector('.subscription-popup');
+let subscriptionClose = document.querySelector('.close-subscription-popup');
+let urlafg = window.location.href;
+if(urlafg.indexOf('/afg') > -1){
+    subscriptionPopup.classList.add('disable-sub-popup');
+}
+if (subscriptionPopup) {
+	subscriptionClose.addEventListener('click', function () {
+		setupCookie("subSCookie", "~~~subActive__", 7);
+		subscriptionPopup.classList.remove('active');
+	});
+	let readCookieSubscription = readCookie("subSCookie");
+	if (readCookieSubscription !== "~~~subActive__") {
+		subscriptionPopup.classList.add('active');
+	}
+}
+/*Subscription Script Code End*/
+
+/*NEW VIOLATOR SCRIPT CODE TO MAKE POPUP */
+let cpXcl = document.querySelector('#exclusions');
+if (cpXcl) {
+	cpXcl.addEventListener('click', function () {
+		document.querySelector('.violator-popup').classList.toggle('active-violator');
+		document.querySelector('.close-violator').addEventListener('click', function () {
+			document.querySelector('.violator-popup').classList.remove('active-violator');
+		});
+	});
+}
+/*NEW VIOLATOR SCRIPT CODE TO MAKE POPUP END HERE */
