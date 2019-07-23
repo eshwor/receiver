@@ -8,11 +8,6 @@
 
 
 
-function checkPage() {
-	var e = new RegExp(/filter|page|cat_f|\?ls|price_max/g).test(currurl);
-	return /2267.10032/i.test(currurl) && (e = !1), e
-}
-
 function includeBrands(e) {
 	return new RegExp(/Wet Sounds/g).test(e)
 }
@@ -307,7 +302,7 @@ function afgFallback(e) {
 function CategoryFunctions(e) {
 	cImg = jQuery(".category-img img");
 	for (var a = cImg.length - 1; a >= 0; a--) src = cImg[a].src, cImg[a].src = src.replace("thumbnail", "small");
-	if (filterCheck = checkPage(), catLeafPromos = jQuery(".catLeafBanner"), catLeafPromos.length > 0 && filterCheck && catLeafPromos.css("display", "none"), catPromos = jQuery("#promoCollection"), catPromos.length > 0 ? (catPromos.parent().css({
+	if (catLeafPromos = jQuery(".catLeafBanner"), catLeafPromos.length > 0 && filterCheck && catLeafPromos.css("display", "none"), catPromos = jQuery("#promoCollection"), catPromos.length > 0 ? (catPromos.parent().css({
 			background: "#f3faff"
 		}), promoItems = catPromos.find(".promoItem"), promoItems.length > 1 && promoItems.css({
 			width: "80%",
