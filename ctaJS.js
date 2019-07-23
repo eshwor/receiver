@@ -647,59 +647,12 @@ $(".scrollfix").live('pageshow', function () {
 
 $("#headerWrapper").data("shipEta");
 
-/*Cookie Functionality @author :: Ishwor ~~ Please do not remove this code:::: use setupCookie() to setup the cookie, readCookie() to read the cookie, eraseCookie() to erase the cookie */
-function setupCookie(name, value, days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		var expires = "; expires=" + date.toGMTString()
-	} else var expires = "";
-	document.cookie = name + "=" + value + expires + "; path=/"
-}
 
-function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
-	}
-	return null
-}
 
-function eraseCookie(name) {
-	setupsCookie(name, "", -1)
-}
 /*Cookie Functionality End **/
 
-/*Subscription Script Code Start*/
-let subscriptionPopup = document.querySelector('.subscription-popup');
-let subscriptionClose = document.querySelector('.close-subscription-popup');
-let urlafg = window.location.href;
-if(urlafg.indexOf('/afg') > -1){
-    subscriptionPopup.classList.add('disable-sub-popup');
-}
-if (subscriptionPopup) {
-	subscriptionClose.addEventListener('click', function () {
-		setupCookie("subSCookie", "~~~subActive__", 7);
-		subscriptionPopup.classList.remove('active');
-	});
-	let readCookieSubscription = readCookie("subSCookie");
-	if (readCookieSubscription !== "~~~subActive__") {
-		subscriptionPopup.classList.add('active');
-	}
-}
-/*Subscription Script Code End*/
+
 
 /*NEW VIOLATOR SCRIPT CODE TO MAKE POPUP */
-let cpXcl = document.querySelector('#exclusions');
-if (cpXcl) {
-	cpXcl.addEventListener('click', function () {
-		document.querySelector('.violator-popup').classList.toggle('active-violator');
-		document.querySelector('.close-violator').addEventListener('click', function () {
-			document.querySelector('.violator-popup').classList.remove('active-violator');
-		});
-	});
-}
-/*NEW VIOLATOR SCRIPT CODE TO MAKE POPUP END HERE */
+
+
