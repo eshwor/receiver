@@ -6,23 +6,6 @@
 
 
 
-
-
-
-function randomExpiration() {
-	var e = new Date;
-	e.setDate(e.getDate() + 1);
-	var a = e.getDate(),
-		t = e.getMonth();
-	return (t += 1) + "/" + a
-}
-
-function toTitleCase(e) {
-	return e.replace(/\w\S*/g, function (e) {
-		return e.charAt(0).toUpperCase() + e.substr(1).toLowerCase()
-	})
-}
-
 function getCatId() {
 	var e = new RegExp(/\d+(?=_)/g).exec(currurl);
 	return e || (e = [""]), e[0]
@@ -511,7 +494,7 @@ Date.prototype.addDays = function (e) {
 		left: left + "px"
 	})
 }).keydown(function (e) {
-	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), capsQ = toTitleCase(q), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (redirectHref = cleanQuery(q), window.location.href = redirectHref[1]))
+	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (redirectHref = cleanQuery(q), window.location.href = redirectHref[1]))
 }), jQuery("#searchField").focus(function () {
 	0 == c && jQuery.ajax({
 		method: "GET",
