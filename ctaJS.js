@@ -5,14 +5,6 @@
 })();
 
 
-
-
-function orangeCoupon(coupon) {
-	orangeadd = jQuery(".orangeButton"), orangepop = jQuery(".addToCartAccessoryRecommendationLink"), accTrigger = jQuery(".addProductToCard"), orangeadd.length > 0 && (orangepop.length > 0 ? (orangepop.html("Add to Cart <small>w/ Coupon</small>"), orangeadd.click(function () {
-		addextraCode(coupon)
-	})) : (accTrigger.text(" Add to Cart w/ Coupon"), accTrigger.attr("href", "/cart/add/item/" + pId + "?redeem_coupon=" + coupon)))
-}
-
 function initZipBtns() {
 	itt = 0;
 	jQuery('.ctaCoupon').click(function () {
@@ -26,7 +18,7 @@ function initZipBtns() {
 				oPrice = pPrice * (1 - dis)
 			};
 			priceTicker(oPrice, "", "", "", "flash");
-			orangeCoupon(coup)
+		
 		}
 		itt++
 	}), jQuery("#freeTag").click(function () {
@@ -255,7 +247,7 @@ function addextraCode(e) {
 
 function addDynCoup(e) {
 	return "popup" == e ? flashexp > fld ? void globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">flashdiscount[0]</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + " Off Flash Sale</b></div>", flashprint, "flash") : void globalOffers(flashdiscount[0], "flashTrig", '<a href="javascript:;" id="offerbtn" class="offerAdd" data-role="none">Start Sale</a><div class="offerMsg offerInfo"><b>' + flashdiscount[1] + " Off Flash Sale</b> - 1 Hour of shopping for great sound</div>", flashprint, "flash") : (jQuery(".page").append('<div class="dynCoupWrapper">' + e + "</div>"), void jQuery("a.redeemCouponBtn").click(function (e) {
-		e.preventDefault(), thiselem = jQuery(this), coupon = thiselem.attr("data-code"), savings = thiselem.attr("data-savings"), thiselem.html("Saving $" + savings + ' to cart <span class="fa fa-spinner fa-pulse fa-fw"></span>'), orangeCoupon(coupon);
+		e.preventDefault(), thiselem = jQuery(this), coupon = thiselem.attr("data-code"), savings = thiselem.attr("data-savings"), thiselem.html("Saving $" + savings + ' to cart <span class="fa fa-spinner fa-pulse fa-fw"></span>');
 		salePrice = pPrice - savings, priceTicker(salePrice, "", thiselem, coupon, "coupon")
 	}))
 }
