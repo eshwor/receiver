@@ -74,32 +74,6 @@ function prodPageActions(e, a, t, r, i) {
 	})
 }
 
-
-
-function addCouponCode(val) {
-	var salePrice = pPrice - val.discount;
-	var max = val.max;
-	if (max > 0) {
-		dmax = ' • Max: $' + max;
-	} else {
-		dmax = '';
-	}
-	var discountOff = val.discount;
-	var cdiscountOff = '$' + val.discount + ' off';
-	if (val.discount < 1) {
-		salePrice = pPrice * val.discount;
-		discountOff = Math.round((1 - val.discount) * 100);
-		cdiscountOff = discountOff + '% off';
-	}
-	var nprice = salePrice.toFixed(2);
-	if (nprice > 0 && jQuery('.backorder').length == 0) {
-		jQuery(".price_row .yprice").html('<div style="font-size:11px;font-weight:400;">Copy Code</div><div style="display: inline-block;vertical-align:middle;position:relative"><div class="mCouponCode">' + val.code + '</div><div style="position:absolute;width:100%;font-size:11px;line-height:1.5;left:0">' + cdiscountOff + dmax + '</div></div><span style="font-size: 15px;text-decoration: line-through;color: #303030;">$' + pPrice + '</span><div class="breaker"></div><span>$' + nprice + '</span>');
-	}
-	addcode++;
-}
-
-
-
 function videoGuide() {
 	jQuery(".row.afg-specs-mobile").prepend('<div id="moreBelow"><span class="fa fa-level-down"></span> More Items Below</div><a class="fancyB fancybox.iframe clearfix ymmBuyingGuide" href="https://www.youtube.com/embed/9o6IJ98Q-vs?rel=0&showinfo=0&theme=light&iv_load_policy=3" data-ajax="false"><span style="float:left;margin-right:10px;" class="fa fa-info-circle fa-2x"></span><div style="display: block;overflow: hidden;font-size: 14px;">Need help choosing a stereo?</div></a>'), onet = 0, jQuery(window).scroll(function () {
 		0 == onet && jQuery(window).scrollTop() > 30 && (jQuery("#moreBelow").css("display", "none").fadeOut("slow"), onet = 1)
