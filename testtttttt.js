@@ -30,26 +30,17 @@
         }
         return e;
     }();
-    if (typeof brontoCart === "undefined") {
-        var brontoCart = {};
-        brontoCart.subtotal = 0;
-        brontoCart.lineItems = [];
-        brontoCart.discountAmount = 0;
-    }
-    flashdiscount = ['FLSOUND5', 5, 20, 20];
+
+    flashdiscount = [];
     efl = getCookie('eflash');
     if (QueryString.utm_campaign == 'Flash_Sale' || efl !== '') {
-        flashdiscount = ['EFLSOUND10', 10, 30, 30];
+        flashdiscount = [];
         if (efl == '') {
             setCookie('eflash', 1);
         }
     }
     dTit = document.title;
-    freeCodes = ['KICK25'];
-    cReviewCode = 'HDREVIEW50509';
+    freeCodes = [];
+    cReviewCode = '';
     utmOffers = {};
-    utmOffers['Shopping-Campaign-Promo-Coupon-50OFFBASS'] = ['50OFFBASS', '$50 Off', 50];
-    utmOffers['Shopping-Campaign-Promo-Coupon-100OFFBASS'] = ['100OFFBASS', '$100 Off', 100];
-    utmOffers['119-car-subwoofer-stealthboxes-vehicle-specific'] = ['SAVESTEALTH', '15% Off', 0.15];
-    utmOffers['jl-audio-stealthboxes-coupon'] = ['SAVESTEALTH', '15% Off', 0.15];
     paidOffer = utmOffers[QueryString.utm_campaign];
