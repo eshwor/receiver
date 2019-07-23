@@ -1,3 +1,140 @@
+//Fresh Function 
+//This function includes :
+(function(){
+    //todo
+})();
+
+
+
+
+
+function addScript(e) {
+	var a = document.createElement("script");
+	a.setAttribute("async", ""), a.setAttribute("src", e), document.body.appendChild(a)
+}
+
+function addStyle(e) {
+	var a = document.createElement("link");
+	a.setAttribute("rel", "stylesheet"), a.setAttribute("type", "text/css"), a.setAttribute("href", e), document.head.appendChild(a)
+}
+
+function addSugs() {
+	jQuery.ajax({
+		method: "GET",
+		url: "/landing/query/oosMobile.php?ids=" + pId,
+		success: function (e) {
+			"" !== e && void 0 !== e && (jQuery(".productPage").prepend(e.oosSuggestions), jQuery(e.oosSuggestions).insertBefore('#nosto-product-prod-mobile'), it = 0, jQuery(".showMore").click(function () {
+				var e = jQuery(".sonicComboImg");
+				jQuery.each(e, function () {
+					lazyimg = jQuery(this).attr("data-bg"), jQuery(this).css("background-image", "url(" + lazyimg + ")")
+				}), jQuery(this).parent().find(".sonicComboItem.listHidden").removeClass("listHidden"), re = jQuery(this).attr("data-redirect"), nm = jQuery(this).attr("data-name"), jQuery(this).text(nm), 1 == it && (window.location.href = re), it = 1
+			}))
+		}
+	})
+}
+
+function addsearchSugs() {
+	jQuery('<div class="nosto_element" id="searchpage-nosto-1-copy"></div>').insertAfter(".content-category")
+}
+
+function checkPage() {
+	var e = new RegExp(/filter|page|cat_f|\?ls|price_max/g).test(currurl);
+	return /2267.10032/i.test(currurl) && (e = !1), e
+}
+
+function includeBrands(e) {
+	return new RegExp(/Wet Sounds/g).test(e)
+}
+
+function randomExpiration() {
+	var e = new Date;
+	e.setDate(e.getDate() + 1);
+	var a = e.getDate(),
+		t = e.getMonth();
+	return (t += 1) + "/" + a
+}
+
+function toTitleCase(e) {
+	return e.replace(/\w\S*/g, function (e) {
+		return e.charAt(0).toUpperCase() + e.substr(1).toLowerCase()
+	})
+}
+
+function getCatId() {
+	var e = new RegExp(/\d+(?=_)/g).exec(currurl);
+	return e || (e = [""]), e[0]
+}
+
+function excludedBrands(e) {
+	return new RegExp(/Open Box|Damaged|Refurbished|(Open Box)|UPGRADE|FREE|Rebate|JVC|Hifonics/g).test(e)
+}
+
+function NightCheck() {
+	var e = fld.getHours(),
+		a = fld.getDay();
+	return e > 19 || 6 > e ? "night" : (6 == a || 5 == a || 0 == a) && "weekend"
+}
+
+function flashConditions(e, a) {
+	return inclMapBrands = includeBrands(e), !!(inclMapBrands && a > 150) || !!(/NVX/g.test(e) && a > 200) || !!(/Rockford/g.test(e) && a > 399) || void 0
+}
+
+function organicTraffic(e) {
+	return new RegExp(/google|bing|yahoo/g).test(e)
+}
+
+function socialTraffic(e) {
+	return new RegExp(/instagram|forum|club|meade|youtube/g).test(e)
+}
+
+function nth(e) {
+	if (e > 3 && 21 > e) return "th";
+	switch (e % 10) {
+		case 1:
+			return "st";
+		case 2:
+			return "nd";
+		case 3:
+			return "rd";
+		default:
+			return "th"
+	}
+}
+
+function CheckShipping(e) {
+	return ret = "", monthPat = new RegExp(/\w+(?=.?\s\d+)/g), dayPat = new RegExp(/\d+/g), monthval = monthPat.exec(e), dayval = dayPat.exec(e), dayval += nth(dayval[0]), [monthval[0].substring(0, 3) + '.', dayval]
+}
+
+function getEta(e) {
+	var a = fld.getUTCFullYear(),
+		t = fld.getUTCMonth(),
+		r = fld.getDay(),
+		i = fld.getUTCDate(),
+		s = fld.getUTCHours(),
+		o = fld.getUTCMinutes();
+	0 > (s -= 4) && (i -= 1, s = 24 + s);
+	var n = new Date(a, t, i, 10),
+		c = new Date(a, t, i, s, o);
+	return 5 > e && (4 == r || 5 == r || 6 == r ? e += 2 : 0 == r && e++, c > n && e++), dat = new Date(c), etatimeStamp = dat.addDays(e), etaMonth = monthArr[etatimeStamp.getMonth()], etaDay = etatimeStamp.getDate(), etaMonth + " " + etaDay + nth(etaDay)
+}
+
+function freeGoods() {
+	if (pos = "left", promofree = "", promoSavings = [], promoAmt = 0, bundle = document.getElementsByClassName("bundledSavings"), bundle.length > 0) {
+		if (bundles = bundle[0].getElementsByClassName("slide"), bundles.length > 5) return !1;
+		if (bundles.length > 0)
+			for (var e = bundles.length - 1; e >= 0; e--) promofree = bundles[e].getElementsByClassName("name")[0].innerHTML, (promofree.indexOf("FREE") > -1 || promofree.indexOf("Free") > -1 || promofree.indexOf("50%") > -1) && (pricingp = bundles[e].getElementsByClassName("itemInformation")[0].getElementsByTagName("p"), 3 == pricingp.length && (pricepres = /\d+.\d{2}/.exec(pricingp[2].innerHTML), promoSavings.push([e, Number(pricepres[0])])));
+		if (promoSavings.length > 0) return promoSavings.sort(function (e, a) {
+			return a[1] - e[1]
+		}), promoAmt = Math.round(promoSavings[0][1]), !(promoAmt < 14) && (slideoffset = 100 * promoSavings[0][0] * -1, 1)
+	}
+	return !1
+}
+
+function orangeCoupon(coupon) {
+	orangeadd = jQuery(".orangeButton"), orangepop = jQuery(".addToCartAccessoryRecommendationLink"), accTrigger = jQuery(".addProductToCard"), orangeadd.length > 0 && (orangepop.length > 0 ? (orangepop.html("Add to Cart <small>w/ Coupon</small>"), orangeadd.click(function () {
+		addextraCode(coupon)
+	})) : (accTrigger.text(" Add to Cart w/ Coupon"), accTrigger.attr("href", "/cart/add/item/" + pId + "?redeem_coupon=" + coupon)))
+}
 
 function initZipBtns() {
 	itt = 0;
