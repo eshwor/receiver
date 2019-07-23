@@ -75,17 +75,6 @@ function prodPageActions(e, a, t, r, i) {
 }
 
 
-function afgFallback(e) {
-	jQuery('<div class="clearfix afgCustomMsg"><span class="noFitMsg">' + e + '</span></div><a data-role="none" href="' + window.location.pathname + '?afg=remove" class="shopAllFit">Shop All</a>').insertAfter(".afg-selector-mobile-general .links"), thumbs = document.getElementsByClassName("bg-white");
-	for (var a = thumbs.length - 1; a >= 0; a--) {
-		thumbsA = thumbs[a].getElementsByTagName("a");
-		for (var t = thumbsA.length - 1; t >= 0; t--) thumbsA[t].href += "?afg=remove"
-	}
-}
-
-function conflictingOffer() {
-	return count = 0, count += jQuery(".flsDeal").length, count += jQuery("#promoEmail").length, count += globalDiscount, freeGood && count++, count > 0 && count
-}
 
 function addCouponCode(val) {
 	var salePrice = pPrice - val.discount;
@@ -165,15 +154,6 @@ function addDynCoup(e) {
 	}))
 }
 
-function ProductOffer() {
-	pPrice > 30 && /In Stock|Available|Special/g.test(pStatus) && -1 == pName.indexOf("Open Box") && jQuery.ajax({
-		method: "GET",
-		url: "/landing/query/productapi3.php?ids=" + pId + "&type=product",
-		success: function (e) {
-			co = conflictingOffer(),e.makeOffer > 0 && e.makeOfferShow > 0 && 0 == addcode && !co ? insertMakeOffer(e.makeOfferHtml) : "" != e.coupHtml && 0 == addcode && !co & !exclB && addDynCoup(e.coupHtml), "" != e.combos && jQuery(e.combos).insertBefore("#nosto-product-prod-mobile"), "" != e.catContent && jQuery(e.catContent).insertAfter("#nosto-product-prod-mobile"), "" != e.recentlyViewed && jQuery(".productPage").append(e.recentlyViewed)
-		}
-	})
-}
 
 function cleanQuery(e) {
 	return suggstrip = e.replace(/<b>|<\/b>/g, "").replace(":_all", ""), repIn = /\din/.exec(suggstrip), repIn && (sizeRep = repIn[0].replace(/in/g, "%22"), suggstrip = suggstrip.replace(repIn[0], sizeRep)), suggsname = e.replace(":_all", "").replace(":", " "), sStr = "/search?keyword=" + encodeURIComponent(suggstrip), squery = suggstrip.toLowerCase(), [suggsname, sStr, squery]
@@ -208,16 +188,6 @@ function fetchItems(e) {
 			jQuery("#searchShelf").html('<div id="autoSuggestions" dir="auto">' + res + "</div>")
 		}
 	})
-}
-
-function cartOfferFromEvent(e, a, t) {
-	setTimeout(function () {
-		"makeOffer" == t && ProductOffer()
-	}, a)
-}
-
-function triggerCartUrg(e) {
-	"product" == pageInfo && cartOfferFromEvent(e, 5e3, "makeOffer")
 }
 
 function get_viewport_width() {
@@ -271,7 +241,7 @@ Date.prototype.addDays = function (e) {
 			display: "none"
 		})
 	}, 500)
-}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo = triggerCartUrg(pageInfo)), false && (cartPromo), globalFancy(pageInfo))
+}), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo), globalFancy(pageInfo))
 // Function to determine whether we are on the home page
 function isHomePage() {
 	var pageID = $('.ui-page-active').attr('id');
