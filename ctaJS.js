@@ -76,28 +76,6 @@ function prodPageActions(e, a, t, r, i) {
 
 
 
-function addMinutes(e, a) {
-	return new Date(e.getTime() + 6e4 * a)
-}
-
-
-function adjustFlashCookie(e) {
-	expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
-		price: e,
-		exp: expirationDate
-	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), priceTicker(e, '', '', '', "flash")
-}
-
-function calldynPrice(e, a) {
-	jQuery.ajax({
-		method: "GET",
-		url: "/landing/query/dynamicprice.php?ids=" + e,
-		success: function (e) {
-			ga("send", "event", "Product", "Flash Sale", pName + " for $" + e.offerprice), "update" == a ? adjustFlashCookie(e.offerprice) : checkFlashHistory(e.offerprice)
-		}
-	})
-}
-
 function flashInfo(e) {
 	jQuery(".dynamicPrice").click(function () {
 		"new" == e || "update" == e ? 1 == confirm("Are you sure that you want to begin the flash sale on the " + pName + "? You will get a discount from 5-50% off this item for 1 hour. This offer cannot be combined with other discounts, bundles, etc. Simply click ok and then add to cart.") && calldynPrice(pId, e) : alert("Add this item to cart to receive the savings. Cannot be combined with other offers.")
