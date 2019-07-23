@@ -5,9 +5,6 @@
 })();
 
 
-function socialTraffic(e) {
-	return new RegExp(/instagram|forum|club|meade|youtube/g).test(e)
-}
 
 function nth(e) {
 	if (e > 3 && 21 > e) return "th";
@@ -110,7 +107,7 @@ function redoCtaSection() {
 }
 
 function prodPageActions(e, a, t, r, i) {
-	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || socialTraffic || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
+	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
 		if (0 == cartC) {
 			acsImg = jQuery("#acessoryGrid .imageContainer a");
 			for (var e = acsImg.length - 1; e >= 0; e--) dataSrc = jQuery(acsImg[e]).attr("data-img"), jQuery(acsImg[e]).find("img").attr("src", dataSrc);
@@ -231,7 +228,7 @@ function globalOffers(e, a, t, r, i) {
 }
 
 function globalOffersInit(e) {
-	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB || socialTraffic && "" == flashEndTime && !conflict && !exclB)
+	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB)
 		if (flashexp > fld)
 			if ("cart" == e) {
 				var a = "The promo code " + flashdiscount[0] + " has been added to your cart";
@@ -456,8 +453,7 @@ freeGood = !1, sonicZip = getCookie("sonic_zip"), year = getCookie("car_afg_year
 	var e = (jQuery(this).html() + " - click - " + jQuery(this).data("level")).replace(/(<([^>]+)>)/gi, "").replace(/&/g, "&");
 	ga("send", "event", "Global", "Mobile Navigation Categories", e)
 });
-var socialTraffic = socialTraffic(ref),
-	monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+var monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
 Date.prototype.addDays = function (e) {
 	var a = new Date(this.valueOf());
 	return a.setDate(a.getDate() + e), a
