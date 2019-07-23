@@ -78,7 +78,7 @@ function prodPageActions(e, a, t, r, i) {
 
 function flashInfo(e) {
 	jQuery(".dynamicPrice").click(function () {
-		"new" == e || "update" == e ? 1 == confirm("Are you sure that you want to begin the flash sale on the " + pName + "? You will get a discount from 5-50% off this item for 1 hour. This offer cannot be combined with other discounts, bundles, etc. Simply click ok and then add to cart.") && calldynPrice(pId, e) : alert("Add this item to cart to receive the savings. Cannot be combined with other offers.")
+		"new" == e || "update" == e ? 1 == confirm("Are you sure that you want to begin the flash sale on the " + pName + "? You will get a discount from 5-50% off this item for 1 hour. This offer cannot be combined with other discounts, bundles, etc. Simply click ok and then add to cart.")
 	})
 }
 
