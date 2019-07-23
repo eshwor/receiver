@@ -93,6 +93,10 @@ function addextraCode(e) {
 	}, 1800)
 }
 
+function cleanQuery(e) {
+	return suggstrip = e.replace(/<b>|<\/b>/g, "").replace(":_all", ""), repIn = /\din/.exec(suggstrip), repIn && (sizeRep = repIn[0].replace(/in/g, "%22"), suggstrip = suggstrip.replace(repIn[0], sizeRep)), suggsname = e.replace(":_all", "").replace(":", " "), sStr = "/search?keyword=" + encodeURIComponent(suggstrip), squery = suggstrip.toLowerCase(), [suggsname, sStr, squery]
+}
+
 var bot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent),
 	sonicZipHtml = "";
 freeGood = !1, sonicZip = getCookie("sonic_zip"), year = getCookie("car_afg_year"), make = getCookie("car_afg_make"), model = getCookie("car_afg_model"), urlMake = make.replace(/\+/g, "-").replace(/%26/g, "&").replace(/\s+/g, "-"), urlModel = model.replace(/\+/g, "-").replace(/%26/g, "&").replace(/\s+/g, "-"), displayMake = make.replace(/\+/g, " "), displayModel = model.replace(/\+/g, " ").replace(/%26/g, "and"), addcode = 0, pOffer = 0, trigC = 0, isOpenBox = !1, fld = new Date, pageT = document.title, currurl = window.location.href, ref = document.referrer, sonic_cart = getCookie("sonic_cart_id"), pType = "", pageUrl = document.location.href, thisurl = document.location.pathname, comboProd = jQuery(".comboProduct"), otherCond = jQuery(".other-condition-products"), disPrice = jQuery("#addProductForm .mainInput"), disvehicleSpecific = jQuery("#addProductForm .addProductToCard"), outOfStockMatches = '<div class="nosto_element" id="productpage-nosto-3"></div>', shstr = '<span class="fa fa-truck"></span> <span>', valHtml = "", hideprice = 0, c = 0, cartC = 0, pflash = 0, alrOff = 0, flashHistory = {}, thisexp = "", dynamicpriceCooke = getCookie("dynamicpriceCooke"), valueAdd = "", wattNm = "", cleanres = "", dataHtml = "", reviewhtml = "", noflash = 0, redirects = {}, jquerySubmit = '<style>.offerClose{display:none}</style><a data-role="none" href="javascript:;" class="offerAdd">Redeem</a><div class="offerMsg offerInfo">Claim your additional savings!</div>', flashEndTime = getCookie("flashSaleEnd"), flashexp = new Date(flashEndTime), emailSpecial = getCookie("emailSpecial"), globalPromo = getCookie("globalPromo"), flashprint = "Minimum " + flashdiscount[3] + " order. Max " + flashdiscount[2] + " Discount. Offer can't be combined with other promotions. One time use per customer. Save this promo code to your cart for usage at a later date.", "" !== year && "" !== model && "" !== make && (document.getElementById("myVehicle").innerHTML = '<a data-ajax="false" href="/afg/' + urlMake + "/" + urlModel + "/" + year + '" data-level="L4" style="padding: 0;font-weight: 400;color: #000000;"><span>Your vehicle [<small style="text-transform:capitalize">' + displayMake + " " + displayModel + "</small>]</span></a>"), /review-write/g.test(pageUrl) && addScript("/landing/reviewSimplify5.js"), jQuery("#navigation-menu a").click(function () {
@@ -111,7 +115,7 @@ Date.prototype.addDays = function (e) {
 		left: left + "px"
 	})
 }).keydown(function (e) {
-	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (window.location.href = redirectHref[1]))
+	13 == e.which && (e.preventDefault(), inp = jQuery(this), q = inp.val(), redirectHref = redirects[q], redirectHref1 = redirects[capsQ], void 0 !== redirectHref ? window.location.href = redirectHref : void 0 !== redirectHref1 ? window.location.href = redirectHref1 : (redirectHref = cleanQuery(q), window.location.href = redirectHref[1]))
 }), jQuery("#searchField").focus(function () {
 	0 == c && jQuery.ajax({
 		method: "GET",
