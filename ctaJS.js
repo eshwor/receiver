@@ -75,18 +75,6 @@ function prodPageActions(e, a, t, r, i) {
 }
 
 
-function CountDownTimer(e, a) {
-	var t, r = new Date(e);
-	t = setInterval(function () {
-		var e = new Date,
-			i = r - e;
-		if (0 > i) return clearInterval(t), void flashEnd();
-		var s = '<div class="timeWrap"><div class="timeContainer">' + (Math.floor(i / 864e5), Math.floor(i % 864e5 / 36e5), Math.floor(i % 36e5 / 6e4)) + '</div><div class="timeLabel">Minutes</div></div><div class="timeWrap"><div class="timeContainer">' + Math.floor(i % 6e4 / 1e3) + '</div><div class="timeLabel">Seconds</div></div>';
-		if (document.getElementsByClassName(a)[0]) {
-			document.getElementsByClassName(a)[0].innerHTML = s;
-		}
-	}, 1e3)
-}
 
 function addMinutes(e, a) {
 	return new Date(e.getTime() + 6e4 * a)
@@ -97,7 +85,7 @@ function adjustFlashCookie(e) {
 	expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
 		price: e,
 		exp: expirationDate
-	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), priceTicker(e, '', '', '', "flash"), CountDownTimer(expirationDate, "countdown")
+	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), priceTicker(e, '', '', '', "flash")
 }
 
 function calldynPrice(e, a) {
@@ -120,11 +108,11 @@ function checkFlashHistory(e) {
 	if (void 0 == dynamicpriceCooke || "" == dynamicpriceCooke) expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
 		price: e,
 		exp: expirationDate
-	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), flashInfo(), priceTicker(e, "", "", "", "flash"), CountDownTimer(expirationDate, "countdown");
+	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), flashInfo(), priceTicker(e, "", "", "", "flash");
 	else {
 		if (flashHistory = JSON.parse(dynamicpriceCooke), void 0 === flashHistory[pId]) return flashInfo("update"), !1;
 		if (e = flashHistory[pId].price, !(thisexp > fld)) return !1;
-		expirationDate = thisexp, flashInfo(), priceTicker(e, "", "", "", "flash"), CountDownTimer(expirationDate, "countdown")
+		expirationDate = thisexp, flashInfo(), priceTicker(e, "", "", "", "flash")
 	}
 }
 
@@ -132,7 +120,7 @@ function RunFlashOffer() {
 	if (ga("send", "event", "Global", "Footer", "Mobile Flash Sale Popup"), !confirm("Are you sure you want to start the Flash Sale? Get a " + flashdiscount[1] + "% discount on orders over $" + flashdiscount[3] + " order with a maximum $" + flashdiscount[2] + " discount. Offer can't be combined with other running promotions. Manufacturer exclusions apply. Redeem the savings on cart page.")) return !1;
 	var e = addMinutes(new Date, 60);
 	setCookie("flashSaleEnd", e, 2), jQuery(".offerCartCoupon").css("opacity", 0), setTimeout(function () {
-		globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo">The Clock is Ticking. Make it count!</div>', flashprint, "flash"), CountDownTimer(e, "globalCountdown")
+		globalOffers(flashdiscount[0], "flash", '<div class="offerCode offerInfo">' + flashdiscount[0] + '</div><div class="globalCountdown offerInfo"></div><div class="offerMsg offerInfo">The Clock is Ticking. Make it count!</div>', flashprint, "flash")
 	}, 1e3)
 }
 
@@ -141,7 +129,7 @@ function globalOffers(e, a, t, r, i) {
 		jQuery("#details").toggleClass("on")
 	}), jQuery(".offerClose").click(function () {
 		jQuery("#offerCartCoupon").css("display", "none"), setCookie("globalPromo", 1)
-	}), "flash" != a && "flashCart" != a || CountDownTimer(flashexp, "globalCountdown"), "cart" != a && "flashCart" != a && "cartCloserCartInit" != a && "cartCloserOnCart" != a || jQuery(document).ready(function () {
+	}), "flash" != a && "flashCart" != a , "cart" != a && "flashCart" != a && "cartCloserCartInit" != a && "cartCloserOnCart" != a || jQuery(document).ready(function () {
 		jQuery("#coupons-basic").val(e), jQuery("#show-promo").css("display", "none"), jQuery("#promo-box").css("display", "block"), jQuery(".offerAdd").click(function () {
 			jQuery("#cart_form").submit()
 		})
