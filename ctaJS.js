@@ -6,14 +6,6 @@
 
 
 
-function NightCheck() {
-	var e = fld.getHours(),
-		a = fld.getDay();
-	return e > 19 || 6 > e ? "night" : (6 == a || 5 == a || 0 == a) && "weekend"
-}
-
-
-
 function organicTraffic(e) {
 	return new RegExp(/google|bing|yahoo/g).test(e)
 }
@@ -130,7 +122,6 @@ function prodPageActions(e, a, t, r, i) {
 			addScript("/landing/mobile-scripts/mobileac10.js"), cartC++
 		}
 	}), dynamicpriceCooke && (flashHistory = JSON.parse(dynamicpriceCooke), void 0 !== flashHistory[e] && (thisexp = new Date(flashHistory[e].exp)));
-	var o = NightCheck();
         viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
 		href: "/landing/query/specinfo.php",
 		"data-url": "#"
@@ -174,7 +165,7 @@ function priceTicker(e, a, t, r, i) {
 		n = {
 			price: e
 		};
-	jQuery(o).animate(n, {
+	jQuery().animate(n, {
 		duration: 1e3,
 		step: function () {
 			s.text("$" + Math.round(100 * this.price) / 100)
