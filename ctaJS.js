@@ -6,7 +6,28 @@
 
 
 function initZipBtns() {
-jQuery(".zipTrigger").click(function () {
+	i = 0;
+	jQuery('.ctaCoupon').click(function () {
+		if (i == 0) {
+			dis = jQuery(this).attr('data-dis');
+			coup = jQuery(this).attr('data-coupon');
+			console.log(dis);
+			if (Number(dis) > 1) {
+				oPrice = pPrice - dis
+			} else {
+				oPrice = pPrice * (1 - dis)
+			};
+			priceTicker(oPrice, "", "", "", "flash");
+		
+		}
+		i++
+	}), jQuery("#freeTag").click(function () {
+		window.scroll({
+			top: bundle[0].offsetTop - 50,
+			left: 0,
+			behavior: "smooth"
+		}), jQuery(".slidesRail").css("left", slideoffset + "%")
+	}), jQuery(".zipTrigger").click(function () {
 		jQuery(".estDelivery").toggleClass("on").removeClass("hasZip")
 	}), jQuery("#zipSubmit").click(function () {
 		return jQuery(".esttime").html('<img id="estLoader" src="/images/loading16.gif">'), zip = jQuery("#zipInput").val(), /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zip) ? void jQuery.ajax({
