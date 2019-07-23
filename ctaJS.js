@@ -75,22 +75,15 @@ function prodPageActions(e, a, t, r, i) {
 }
 
 
-
-function flashInfo(e) {
-	jQuery(".dynamicPrice").click(function () {
-		"new" == e || "update" == e ? 1 == confirm("Are you sure that you want to begin the flash sale on the " + pName + "? You will get a discount from 5-50% off this item for 1 hour. This offer cannot be combined with other discounts, bundles, etc. Simply click ok and then add to cart.")
-	})
-}
-
 function checkFlashHistory(e) {
 	if (void 0 == dynamicpriceCooke || "" == dynamicpriceCooke) expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
 		price: e,
 		exp: expirationDate
-	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360), flashInfo(), priceTicker(e, "", "", "", "flash");
+	}, setCookie("dynamicpriceCooke", JSON.stringify(flashHistory), 360),  priceTicker(e, "", "", "", "flash");
 	else {
-		if (flashHistory = JSON.parse(dynamicpriceCooke), void 0 === flashHistory[pId]) return flashInfo("update"), !1;
+		if (flashHistory = JSON.parse(dynamicpriceCooke), void 0 === flashHistory[pId]);
 		if (e = flashHistory[pId].price, !(thisexp > fld)) return !1;
-		expirationDate = thisexp, flashInfo(), priceTicker(e, "", "", "", "flash")
+		expirationDate = thisexp, priceTicker(e, "", "", "", "flash")
 	}
 }
 
