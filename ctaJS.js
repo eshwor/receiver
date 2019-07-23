@@ -169,3 +169,4 @@ Date.prototype.addDays = function (e) {
 	}, 500)
 }), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo))
 
+//end of the file
