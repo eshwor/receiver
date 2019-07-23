@@ -5,9 +5,6 @@
 })();
 
 
-function excludedBrands(e) {
-	return new RegExp(/Open Box|Damaged|Refurbished|(Open Box)|UPGRADE|FREE|Rebate|JVC|Hifonics/g).test(e)
-}
 
 function NightCheck() {
 	var e = fld.getHours(),
@@ -133,8 +130,7 @@ function prodPageActions(e, a, t, r, i) {
 			addScript("/landing/mobile-scripts/mobileac10.js"), cartC++
 		}
 	}), dynamicpriceCooke && (flashHistory = JSON.parse(dynamicpriceCooke), void 0 !== flashHistory[e] && (thisexp = new Date(flashHistory[e].exp)));
-	var s = excludedBrands(t),
-        o = NightCheck();
+	var o = NightCheck();
         viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
 		href: "/landing/query/specinfo.php",
 		"data-url": "#"
@@ -249,7 +245,7 @@ function globalOffers(e, a, t, r, i) {
 }
 
 function globalOffersInit(e) {
-	if (conflict = conflictingOffer(), exclB = excludedBrands(pageT), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB || socialTraffic && "" == flashEndTime && !conflict && !exclB)
+	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB || socialTraffic && "" == flashEndTime && !conflict && !exclB)
 		if (flashexp > fld)
 			if ("cart" == e) {
 				var a = "The promo code " + flashdiscount[0] + " has been added to your cart";
@@ -401,7 +397,7 @@ function ProductOffer() {
 		method: "GET",
 		url: "/landing/query/productapi3.php?ids=" + pId + "&type=product",
 		success: function (e) {
-			co = conflictingOffer(), exclB = excludedBrands(pageT), e.makeOffer > 0 && e.makeOfferShow > 0 && 0 == addcode && !co ? insertMakeOffer(e.makeOfferHtml) : "" != e.coupHtml && 0 == addcode && !co & !exclB && addDynCoup(e.coupHtml), "" != e.combos && jQuery(e.combos).insertBefore("#nosto-product-prod-mobile"), "" != e.catContent && jQuery(e.catContent).insertAfter("#nosto-product-prod-mobile"), "" != e.recentlyViewed && jQuery(".productPage").append(e.recentlyViewed)
+			co = conflictingOffer(),e.makeOffer > 0 && e.makeOfferShow > 0 && 0 == addcode && !co ? insertMakeOffer(e.makeOfferHtml) : "" != e.coupHtml && 0 == addcode && !co & !exclB && addDynCoup(e.coupHtml), "" != e.combos && jQuery(e.combos).insertBefore("#nosto-product-prod-mobile"), "" != e.catContent && jQuery(e.catContent).insertAfter("#nosto-product-prod-mobile"), "" != e.recentlyViewed && jQuery(".productPage").append(e.recentlyViewed)
 		}
 	})
 }
