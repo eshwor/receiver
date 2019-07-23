@@ -161,9 +161,7 @@ function prodPageActions(e, a, t, r, i) {
 	}), dynamicpriceCooke && (flashHistory = JSON.parse(dynamicpriceCooke), void 0 !== flashHistory[e] && (thisexp = new Date(flashHistory[e].exp)));
 	var s = excludedBrands(t),
         o = NightCheck();
-        keepShopping = jQuery(".continueLink"), keepShopping.length > 0 && keepShopping.click(function () {
-		jQuery("#nav"), jQuery("#mobile-menu-button").addClass("on"), jQuery("#navigation-menu").addClass("open")
-	}), viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
+        viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
 		href: "/landing/query/specinfo.php",
 		"data-url": "#"
 	}), viewSpeakersFit.addClass("fancyB fancybox.ajax")), jQuery(".top-firstcon h2").click(function (e) {
