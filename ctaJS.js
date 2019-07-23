@@ -56,6 +56,24 @@
         paidOffer !== undefined ? (discount = paidOffer[2], coupon = paidOffer[0], offer = paidOffer[1], ctaObj.vip = '<div class="ctaCoupon" data-dis="' + discount + '" data-coupon="' + coupon + '"><i class="fa fa-tags" ></i><span class="offer">' + offer + '</br>' + coupon + '</span></div>') : jQuery(".mobileVip").length > 0 ? (rewardAmt = Math.round(.1 * pPrice), rewardAmt = "$" + rewardAmt + " Rewards", ctaObj.vip = '<a class="fancyB fancybox.ajax mobileVip" href="/landing/vippopup.html"><img src="/landing/vipoffer.png"><span>' + rewardAmt + "</span></a>") : jQuery(".bundledSavingsWrap").length > 0 && (ctaObj.acs = '<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeinstallpr"><div class="fa fa-wrench"></div> FREE Installation Accessories Included - up to $30</a>'), jQuery(".price_row").html('<div class="wrapperCta"><div class="priceShipping">' + ctaObj.vip + '<div class="pRice">$' + pPrice + "</div>" + ctaObj.pair + ctaObj.shipping + '</div><div class="stockNDelivery"><div class="stockDelivery"><div class="stockInfo' + color + '">' + pStatus + '</div><div class="stockCondition">' + ctaObj.condition + "</div></div>" + ctaObj.eta + '</div></div><div class="promoInfo">' + ctaObj.acs + "</div></div>"), initZipBtns()
     }
     
+    function prodPageActions(e, a, t, r, i) {
+        /Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
+            if (0 == cartC) {
+                acsImg = jQuery("#acessoryGrid .imageContainer a");
+                for (var e = acsImg.length - 1; e >= 0; e--) dataSrc = jQuery(acsImg[e]).attr("data-img"), jQuery(acsImg[e]).find("img").attr("src", dataSrc);
+                addScript("/landing/mobile-scripts/mobileac10.js"), cartC++
+            }
+        }), dynamicpriceCooke && (flashHistory = JSON.parse(dynamicpriceCooke), void 0 !== flashHistory[e] && (thisexp = new Date(flashHistory[e].exp)));
+            viewSpeakersFit = jQuery("#viewSpeakersFit"), void 0 !== viewSpeakersFit && null !== viewSpeakersFit && (viewSpeakersFit.attr({
+            href: "/landing/query/specinfo.php",
+            "data-url": "#"
+        }), viewSpeakersFit.addClass("fancyB fancybox.ajax")), jQuery(".top-firstcon h2").click(function (e) {
+            jQuery(this).css({
+                display: "block"
+            })
+        })
+    }
+    
     function InsertImg(e, a) {
         jQuery(e).prepend('<img style="position:absolute;bottom:-15px;right:10px;border-radius:3px;height:50px;" src="' + a + '">')
     }
@@ -70,7 +88,7 @@
     
     function getPageInfo() {
         for (var e = 0; e < dataLayer.length; e++)
-            if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text()), dataLayer[e].pageType) {
+            if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
                 var a = dataLayer[e].pageType,
                     t = dataLayer[e].pageCategory;
                 "category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner"))), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
