@@ -8,30 +8,6 @@
 
 
 
-function addScript(e) {
-	var a = document.createElement("script");
-	a.setAttribute("async", ""), a.setAttribute("src", e), document.body.appendChild(a)
-}
-
-function addStyle(e) {
-	var a = document.createElement("link");
-	a.setAttribute("rel", "stylesheet"), a.setAttribute("type", "text/css"), a.setAttribute("href", e), document.head.appendChild(a)
-}
-
-function addSugs() {
-	jQuery.ajax({
-		method: "GET",
-		url: "/landing/query/oosMobile.php?ids=" + pId,
-		success: function (e) {
-			"" !== e && void 0 !== e && (jQuery(".productPage").prepend(e.oosSuggestions), jQuery(e.oosSuggestions).insertBefore('#nosto-product-prod-mobile'), it = 0, jQuery(".showMore").click(function () {
-				var e = jQuery(".sonicComboImg");
-				jQuery.each(e, function () {
-					lazyimg = jQuery(this).attr("data-bg"), jQuery(this).css("background-image", "url(" + lazyimg + ")")
-				}), jQuery(this).parent().find(".sonicComboItem.listHidden").removeClass("listHidden"), re = jQuery(this).attr("data-redirect"), nm = jQuery(this).attr("data-name"), jQuery(this).text(nm), 1 == it && (window.location.href = re), it = 1
-			}))
-		}
-	})
-}
 
 function addsearchSugs() {
 	jQuery('<div class="nosto_element" id="searchpage-nosto-1-copy"></div>').insertAfter(".content-category")
@@ -188,7 +164,7 @@ function redoCtaSection() {
 }
 
 function prodPageActions(e, a, t, r, i) {
-	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || socialTraffic || jQuery(".product_discontinued").length > 0) && addSugs(r), t.indexOf("Mechman") > -1 && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
+	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || socialTraffic || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
 		if (0 == cartC) {
 			acsImg = jQuery("#acessoryGrid .imageContainer a");
 			for (var e = acsImg.length - 1; e >= 0; e--) dataSrc = jQuery(acsImg[e]).attr("data-img"), jQuery(acsImg[e]).find("img").attr("src", dataSrc);
