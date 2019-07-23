@@ -8,9 +8,6 @@
 
 
 
-function includeBrands(e) {
-	return new RegExp(/Wet Sounds/g).test(e)
-}
 
 function randomExpiration() {
 	var e = new Date;
@@ -366,26 +363,7 @@ function addCouponCode(val) {
 	addcode++;
 }
 
-function runCart() {
-	var e = brontoCart.subtotal,
-		a = brontoCart.lineItems,
-		t = (JSON.stringify(a), 0),
-		r = jQuery(".vip_banner");
-	if (addScript("/landing/mobile-scripts/mbcart61.js"), jQuery('<div id="topCheckoutWrapper" style="text-align:center;padding:10px"><a id="topCartCheckout" href="/checkout/express" data-ajax="false" data-role="none" class="orangeButton extendedButton">Proceed to checkout</a></div>').insertBefore(".step1UL"), e > 500 && (monthly = Math.round(e / 6), jQuery('<div style="clear:both"> </div><span class="paymentSeparator padding-vertical-7">or</span><a data-role="none" href="/cart/index/action/paypal_express" class="paypalFinanceBtn"><span> As low as $' + monthly + "/Month</span></a>").insertBefore("div.check-arrow-cf"), jQuery("a.paypalFinanceBtn").click(function () {
-			ga("send", "event", "Cart", "Body", "Checkout Button (Paypal Financing) - click")
-		})), r.length > 0) {
-		for (var i = a.length - 1; i >= 0; i--) vipshippinginfo = jQuery("h2 a[href*=" + a[i].sku + "]").parent().next().find(".shipping_warning_green").text(), vipshippinginfo.indexOf("US48.") > 0 && (t += .1 * a[i].totalPrice);
-		t > 0 && (t = Math.round(t), r.prepend('Your cart qualifies for <a href="/landing/vippopup.html" style="color: #f15722;" class="fancyB fancybox.ajax" data-role="none">$' + t + " Rewards!</a>"))
-	}
-	"exp" == QueryString.msg && (dexp = randomExpiration(), globalOffers("", "cartmsg", '<div class="offerMsg offerInfo">Savings Redeemed! Complete your order before this offer ends.</div>', "Offer expires: " + dexp + " at 11:59 pst. Offer is cannot be combined with other promotions and is subject to exclusions", "redeemed")), jQuery(".saving-price").length > 0 && (saveAmt = jQuery(".saving-price").text(), jQuery(".subtotalAmt").html('<span style="display:block;"><span style="color:#303030;">Savings: </span>' + saveAmt + "</span>")), cpstr = jQuery(".promo-applied").text(), passcode = QueryString.fillsave;
-	if (passcode !== undefined) {
-		if (passcode == "") {
-			passcode = '5SAVER'
-		};
-		10 == cpstr.length && globalOffers(passcode, "cart", '<style>.offerClose{display:none}</style><div class="offerMsg offerInfo">Hit the redeem below to receive your savings!</div>', "Offer cannot be combined with other promotions")
-	};
-	se = jQuery(".shippingEstimate"), se.length > 0 && (sestr = se.html().replace("All items arrive", "Estimated Arrival"), se.html(sestr))
-}
+
 
 function videoGuide() {
 	jQuery(".row.afg-specs-mobile").prepend('<div id="moreBelow"><span class="fa fa-level-down"></span> More Items Below</div><a class="fancyB fancybox.iframe clearfix ymmBuyingGuide" href="https://www.youtube.com/embed/9o6IJ98Q-vs?rel=0&showinfo=0&theme=light&iv_load_policy=3" data-ajax="false"><span style="float:left;margin-right:10px;" class="fa fa-info-circle fa-2x"></span><div style="display: block;overflow: hidden;font-size: 14px;">Need help choosing a stereo?</div></a>'), onet = 0, jQuery(window).scroll(function () {
@@ -410,7 +388,7 @@ function getPageInfo() {
 		if (dataLayer[e].id && (pId = dataLayer[e].id, pPrice = dataLayer[e + 1].price, pName = dataLayer[e + 1].name, pCategory = dataLayer[e + 1].pageCategory, a = dataLayer[e + 1].pageType, pStatus = jQuery(".status p").text(), prodPageActions(pId, pPrice, pName, pStatus, pCategory, a)), dataLayer[e].pageType) {
 			var a = dataLayer[e].pageType,
 				t = dataLayer[e].pageCategory;
-			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart && runCart()
+			"category" != a && "brand" != a || CategoryFunctions(t, a), "vehicleLandingPage" == a && ("" !== year && "" !== make && "" !== model && (loopImgArr(), jQuery('<a data-role="none" href="/landing/freeinstall2.html" class="fancyB fancybox.ajax freeInstallBanner on"><i class="fa fa-wrench"></i><b>FREE KIT & HARNESS</b> for your ' + displayMake + " " + displayModel + "</a>").insertBefore(".afg-specs-selector-stereo-inner")), videoGuide()), "category" == a && t.indexOf("Car") < 0 && t.indexOf("Marine") < 0 && addScript("/landing/scripts/vsban.js"), "search" == a && addScript("/landing/mobile-scripts/mbStereoAccessories9.js"), false && "cart" == a && "undefined" != typeof brontoCart
 		}
 	return a
 }
