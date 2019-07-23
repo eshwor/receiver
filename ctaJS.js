@@ -159,42 +159,6 @@ function cleanQuery(e) {
 	return suggstrip = e.replace(/<b>|<\/b>/g, "").replace(":_all", ""), repIn = /\din/.exec(suggstrip), repIn && (sizeRep = repIn[0].replace(/in/g, "%22"), suggstrip = suggstrip.replace(repIn[0], sizeRep)), suggsname = e.replace(":_all", "").replace(":", " "), sStr = "/search?keyword=" + encodeURIComponent(suggstrip), squery = suggstrip.toLowerCase(), [suggsname, sStr, squery]
 }
 
-function fetchItems(e) {
-	jQuery.ajax({
-		method: "GET",
-		url: "https://eucs2.klevu.com/cloud-search/n-search/search?ticket=klevu-14612696479213421&term=" + e + "&autoComplete=true&paginationStartsFrom=0&sortPrice=false&ipAddress=undefined&analyticsApiKey=klevu-14612696479213421&klevuShowOutOfStockProducts=false&typeOfSuggestions=cms&klevuFetchPopularTerms=false&noOfResultsAC=6&autoCompleteFilters=category&noOfResults=0&klevuSort=rel&responseType=json&resultForZero=1",
-		success: function (e) {
-			if (res = "", suggs = e.autoComplete, prods = e.result, suggs.length > 0) {
-				res += '<div class="suggestionsContainer">';
-				for (var a = 0; a < suggs.length; a++) suggstrip = suggs[a].replace(/<b>|<\/b>/g, "").replace(":_all", ""), quRes = cleanQuery(suggs[a]), sRedirect = redirects[quRes[2]], redStr = quRes[1], void 0 !== sRedirect && (redStr = sRedirect), /:_all:/g.test(suggs[a]) || (res += '<a href="' + redStr + '" class="sSuggestion">' + quRes[0] + "</a>");
-				res += "</div>"
-			}
-			if (prods.length > 0) {
-				for (res += "<div>", a = 0; a < prods.length; a++) {
-					if (prods[a].category == 'vehicles') {
-						ppstr = '<div class="searchSuggestItemPrice cms">Shop Vehicle</div>';
-						psugimg = '/landing/home-page/AFG_Icon.png'
-					} else if (/knowledge/.test(prods[a].id)) {
-						ppstr = '<div class="searchSuggestItemPrice cms">Read Article</div>';
-						psugimg = ''
-					} else {
-						ppstr = '<div class="searchSuggestItemPrice">$' + prods[a].salePrice + '</div>';
-						psugimg = prods[a].image
-					}
-					res += '<div class="searchSuggestItem"><a href="' + prods[a].url + '" class="searchSuggestItemThumbnail"><div class="searchSuggestItemImg"><img src="' + psugimg + '"></div><div class="searchSuggestItemInfo"><div class="searchSuggestItemName">' + prods[a].name + '</div>' + ppstr + '</div></a></div>'
-				}
-				res += "</div>"
-			}
-			jQuery("#searchShelf").html('<div id="autoSuggestions" dir="auto">' + res + "</div>")
-		}
-	})
-}
-
-function get_viewport_width() {
-	return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-}
-
-
 var bot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent),
 	sonicZipHtml = "";
 freeGood = !1, sonicZip = getCookie("sonic_zip"), year = getCookie("car_afg_year"), make = getCookie("car_afg_make"), model = getCookie("car_afg_model"), urlMake = make.replace(/\+/g, "-").replace(/%26/g, "&").replace(/\s+/g, "-"), urlModel = model.replace(/\+/g, "-").replace(/%26/g, "&").replace(/\s+/g, "-"), displayMake = make.replace(/\+/g, " "), displayModel = model.replace(/\+/g, " ").replace(/%26/g, "and"), addcode = 0, pOffer = 0, trigC = 0, isOpenBox = !1, fld = new Date, pageT = document.title, currurl = window.location.href, ref = document.referrer, sonic_cart = getCookie("sonic_cart_id"), pType = "", pageUrl = document.location.href, thisurl = document.location.pathname, comboProd = jQuery(".comboProduct"), otherCond = jQuery(".other-condition-products"), disPrice = jQuery("#addProductForm .mainInput"), disvehicleSpecific = jQuery("#addProductForm .addProductToCard"), outOfStockMatches = '<div class="nosto_element" id="productpage-nosto-3"></div>', shstr = '<span class="fa fa-truck"></span> <span>', valHtml = "", hideprice = 0, c = 0, cartC = 0, pflash = 0, alrOff = 0, flashHistory = {}, thisexp = "", dynamicpriceCooke = getCookie("dynamicpriceCooke"), valueAdd = "", wattNm = "", cleanres = "", dataHtml = "", reviewhtml = "", noflash = 0, redirects = {}, jquerySubmit = '<style>.offerClose{display:none}</style><a data-role="none" href="javascript:;" class="offerAdd">Redeem</a><div class="offerMsg offerInfo">Claim your additional savings!</div>', flashEndTime = getCookie("flashSaleEnd"), flashexp = new Date(flashEndTime), emailSpecial = getCookie("emailSpecial"), globalPromo = getCookie("globalPromo"), flashprint = "Minimum " + flashdiscount[3] + " order. Max " + flashdiscount[2] + " Discount. Offer can't be combined with other promotions. One time use per customer. Save this promo code to your cart for usage at a later date.", "" !== year && "" !== model && "" !== make && (document.getElementById("myVehicle").innerHTML = '<a data-ajax="false" href="/afg/' + urlMake + "/" + urlModel + "/" + year + '" data-level="L4" style="padding: 0;font-weight: 400;color: #000000;"><span>Your vehicle [<small style="text-transform:capitalize">' + displayMake + " " + displayModel + "</small>]</span></a>"), /review-write/g.test(pageUrl) && addScript("/landing/reviewSimplify5.js"), jQuery("#navigation-menu a").click(function () {
@@ -206,7 +170,7 @@ Date.prototype.addDays = function (e) {
 	var a = new Date(this.valueOf());
 	return a.setDate(a.getDate() + e), a
 }, jQuery("#searchField").keyup(function () {
-	inp = jQuery(this), q = inp.val(), fetchItems(q), width = inp.parent().width(), left = inp.position().left, jQuery("#searchShelf").css({
+	inp = jQuery(this), q = inp.val(), width = inp.parent().width(), left = inp.position().left, jQuery("#searchShelf").css({
 		width: width + "px",
 		top: "-10px",
 		display: "block",
