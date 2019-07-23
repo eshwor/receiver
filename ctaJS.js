@@ -5,6 +5,41 @@
 })();
 
 
+
+function NightCheck() {
+	var e = fld.getHours(),
+		a = fld.getDay();
+	return e > 19 || 6 > e ? "night" : (6 == a || 5 == a || 0 == a) && "weekend"
+}
+
+
+
+function organicTraffic(e) {
+	return new RegExp(/google|bing|yahoo/g).test(e)
+}
+
+function socialTraffic(e) {
+	return new RegExp(/instagram|forum|club|meade|youtube/g).test(e)
+}
+
+function nth(e) {
+	if (e > 3 && 21 > e) return "th";
+	switch (e % 10) {
+		case 1:
+			return "st";
+		case 2:
+			return "nd";
+		case 3:
+			return "rd";
+		default:
+			return "th"
+	}
+}
+
+function CheckShipping(e) {
+	return ret = "", monthPat = new RegExp(/\w+(?=.?\s\d+)/g), dayPat = new RegExp(/\d+/g), monthval = monthPat.exec(e), dayval = dayPat.exec(e), dayval += nth(dayval[0]), [monthval[0].substring(0, 3) + '.', dayval]
+}
+
 function getEta(e) {
 	var a = fld.getUTCFullYear(),
 		t = fld.getUTCMonth(),
@@ -15,7 +50,7 @@ function getEta(e) {
 	0 > (s -= 4) && (i -= 1, s = 24 + s);
 	var n = new Date(a, t, i, 10),
 		c = new Date(a, t, i, s, o);
-	return 5 > e && (4 == r || 5 == r || 6 == r ? e += 2 : 0 == r && e++, c > n && e++), dat = new Date(c), etatimeStamp = dat.addDays(e), etaMonth = monthArr[etatimeStamp.getMonth()], etaDay = etatimeStamp.getDate(), etaMonth + " " + etaDay
+	return 5 > e && (4 == r || 5 == r || 6 == r ? e += 2 : 0 == r && e++, c > n && e++), dat = new Date(c), etatimeStamp = dat.addDays(e), etaMonth = monthArr[etatimeStamp.getMonth()], etaDay = etatimeStamp.getDate(), etaMonth + " " + etaDay + nth(etaDay)
 }
 
 function freeGoods() {
@@ -65,7 +100,7 @@ function initZipBtns() {
 			method: "GET",
 			url: "https://www.sonicelectronix.com/shipping/getCheapestUSShippingDetails?zip=" + zip + "&product_id=" + pId,
 			success: function (e) {
-				1 == e.success && (jQuery("#estLoader").remove(), jQuery(".estDelivery").removeClass("on").addClass("hasZip"), jQuery(".esttime").html('Est. Delivery ' + e.month.substring(0, 3) + ". " + e.date), jQuery('.estLabel').html('to ' + zip + ' <small class="changeZip">(change)</small>'), ga("send", "event", "Product", "Top Price Section", "Submit Zip Code"))
+				1 == e.success && (jQuery("#estLoader").remove(), jQuery(".estDelivery").removeClass("on").addClass("hasZip"), jQuery(".esttime").html('Est. Delivery ' + e.month.substring(0, 3) + ". " + e.date + nth(e.date)), jQuery('.estLabel').html('to ' + zip + ' <small class="changeZip">(change)</small>'), ga("send", "event", "Product", "Top Price Section", "Submit Zip Code"))
 			}
 		}) : (jQuery("input#zipInput").css("border-color", "#f44336"), jQuery("#estLoader").remove(), !1)
 	})
@@ -88,7 +123,7 @@ function redoCtaSection() {
 }
 
 function prodPageActions(e, a, t, r, i) {
-	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
+	/Open Box|Damaged|Refurbished|(Open Box)/g.test(t) && (isOpenBox = !0, addScript("/landing/scripts/obcondrating2.js")), redoCtaSection(), addScript("/landing/mobile-scripts/mbProd162.js"), comboProd.length > 0 && jQuery(".top-firstcon").prepend('<div class="exclusivelogo"><img src="/img/violator/Desktop_20170428_105116.png"></div>'), (/Out of Stock|Discontinued/g.test(r) || trafsource || socialTraffic || jQuery(".product_discontinued").length > 0) && i.indexOf("High Output") > -1 && addScript("/landing/scripts/mech2.js"), (i.indexOf("Amplifiers") > -1 || i.indexOf("Amps") > -1) && (subtitlestr = jQuery(".top-firstcon p").eq(0).text(), wattpt = new RegExp(/\d+(?= W RMS)|\d+(?=W RMS)|\d+(?= Watt RMS)/g), wattNm = wattpt.exec(subtitlestr), null !== wattNm && void 0 !== wattNm && wattNm[0] >= 2e3 && addScript("/landing/scripts/ampwarning2.js")), jQuery(".addToCartAccessoryRecommendationLink").click(function () {
 		if (0 == cartC) {
 			acsImg = jQuery("#acessoryGrid .imageContainer a");
 			for (var e = acsImg.length - 1; e >= 0; e--) dataSrc = jQuery(acsImg[e]).attr("data-img"), jQuery(acsImg[e]).find("img").attr("src", dataSrc);
@@ -126,6 +161,32 @@ function addMinutes(e, a) {
 	return new Date(e.getTime() + 6e4 * a)
 }
 
+function priceTicker(e, a, t, r, i) {
+	"flash" == i && (jQuery(".dynamicPrice").css({
+		'pointer-events': 'none',
+		'opacity': '0.5'
+	}).addClass("inProgress"), dealamt = Math.round(pPrice - e), dealamt = "$" + dealamt, flashprice = e.toFixed(2), jQuery(".dynamicPrice .txt").text("Flash Sale in Progress")), jQuery(".pRice").html('<div class="oldprice inline">$' + pPrice + '</div><div class="priceTicker inline">$' + pPrice + "</div>");
+	var s = jQuery(".priceTicker"),
+		o = {
+			price: pPrice
+		},
+		n = {
+			price: e
+		};
+	jQuery().animate(n, {
+		duration: 1e3,
+		step: function () {
+			s.text("$" + Math.round(100 * this.price) / 100)
+		},
+		complete: function () {
+			nPr = Math.round(100 * n.price) / 100, nPr = nPr.toFixed(2), Number(s.text()) !== n.price && s.text("$" + nPr), "coupon" == i ? (jQuery("a.redeemCouponBtn").find("span.fa").removeClass("fa-spinner fa-pulse fa-fw").addClass("fa-check").html('<style type="text/css">.flyerHtml{display:none}</style>'), setTimeout(function () {
+				jQuery(".fixedCtaContainer").css("bottom", "-200px")
+			}, 1e3)) : (jQuery("#addProductForm .orangeButton").text("Add to Cart w/ Savings"), jQuery(".pRice").eq(1).html('<div class="oldprice inline">$' + pPrice + '</div><div class="inline">$' + nPr + "</div>"), jQuery(".price_row").prepend('<div class="flsDeal flsRunning"><div class="imgheight"></div><div class="flashInfo"><div class="svamt">You Save ' + dealamt + '</div><div class="countdown"></div></div></div>'), jQuery(".flsDeal").click(function () {
+				c = confirm("Would you like to cancel the flash sale? Once cancelled, the deal will end."), 1 == c && (jQuery(".flsDeal").css("display", "none"), document.cookie = "sonic_price_offerer='';expires=Thu, 18 Dec 2013 12:00:00 UTC", document.cookie = "dynamicpriceCooke='';expires=Thu, 18 Dec 2013 12:00:00 UTC")
+			}))
+		}
+	})
+}
 
 function adjustFlashCookie(e) {
 	expirationDate = addMinutes(new Date, 60), flashHistory[pId] = {
@@ -183,7 +244,7 @@ function globalOffers(e, a, t, r, i) {
 }
 
 function globalOffersInit(e) {
-	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB)
+	if (conflict = conflictingOffer(), flashexp > fld || "Flash_Sale" == QueryString.utm_campaign && "" == flashEndTime || "facebook" == QueryString.utm_source && "cpc" == QueryString.utm_medium && !conflict && !exclB || socialTraffic && "" == flashEndTime && !conflict && !exclB)
 		if (flashexp > fld)
 			if ("cart" == e) {
 				var a = "The promo code " + flashdiscount[0] + " has been added to your cart";
@@ -199,6 +260,53 @@ function afgFallback(e) {
 		thumbsA = thumbs[a].getElementsByTagName("a");
 		for (var t = thumbsA.length - 1; t >= 0; t--) thumbsA[t].href += "?afg=remove"
 	}
+}
+
+function CategoryFunctions(e) {
+	cImg = jQuery(".category-img img");
+	for (var a = cImg.length - 1; a >= 0; a--) src = cImg[a].src, cImg[a].src = src.replace("thumbnail", "small");
+	if (catLeafPromos = jQuery(".catLeafBanner"), catLeafPromos.length > 0 && filterCheck && catLeafPromos.css("display", "none"), catPromos = jQuery("#promoCollection"), catPromos.length > 0 ? (catPromos.parent().css({
+			background: "#f3faff"
+		}), promoItems = catPromos.find(".promoItem"), promoItems.length > 1 && promoItems.css({
+			width: "80%",
+			"margin-right": "10px"
+		})) : jQuery("#buyingGuide").parent().css({
+			background: "#f3faff"
+		}), jQuery(".expertSnippet").click(function () {
+			jQuery(this).addClass("open")
+		}), spkoptions = document.getElementById("displayFitSpecs"), fitErrors = document.getElementsByClassName("afg-selector-mobile-general"), ispsk = /Speaker|Tweeter/g.test(e), void 0 !== spkoptions && null !== spkoptions && 0 == fitErrors.length) {
+		spklocaobj = {}, filters = spkoptions.getElementsByTagName("a");
+		for (var t = 0; t < filters.length; t++) linkTxt = filters[t].innerText, lineTxt = filters[t].parentNode.innerText, locstr = lineTxt.replace(linkTxt, "").replace(":", ""), linkhref = filters[t].href, onclass = "", '8"' == linkTxt && (linkhref = "https://www.sonicelectronix.com/cat_i1118_8-speakers.html"), ispsk ? void 0 !== spklocaobj[locstr] ? (locarr = spklocaobj[locstr], locarr = locarr.push([linkhref, linkTxt]), spklocaobj[locstr] = spkarr) : (spkarr = [], spkarr.push([linkhref, linkTxt]), spklocaobj[locstr] = spkarr) : (urlpat = new RegExp(linkhref), urlpat.test(currurl) && (onclass = " current"), filters[t].parentNode.innerHTML = '<a href="' + linkhref + '" class="' + onclass + '" data-role="none">' + linkTxt + "</a>");
+		if (ispsk) {
+			var r = "",
+				i = "";
+			for (a = {
+					32: "/images/cats/32-1490829363.jpg",
+					31: "/images/cats/31-1490829365.jpg",
+					33: "/images/cats/33-1490829366.jpg",
+					34: "/images/cats/34-1490829370.jpg",
+					35: "/images/cats/35-1490829382.jpg",
+					78: "/images/cats/78-1490829376.jpg",
+					47: "/images/cats/47-1490829380.jpg",
+					1118: "/images/cats/1118-1490829384.jpg",
+					36: "/images/cats/36-1490829386.jpg",
+					37: "/images/cats/37-1490829392.jpg",
+					30: "/images/cats/30-1490829396.jpg",
+					38: "/images/cats/38-1490829394.jpg",
+					40: "/landing/speakerIcons/ten.png"
+				}, spklocarr = Object.keys(spklocaobj), t = spklocarr.length - 1; t >= 0; t--) {
+				spklocid = spklocarr[t].replace(/\s/g, "-"), i += '<div class="LocationComponents" id="' + spklocid + '" style="display:none">', onclass = "";
+				for (var s = spklocaobj[spklocarr[t]].length - 1; s >= 0; s--) catsizelink = spklocaobj[spklocarr[t]][s][0], catsizeid = /\i(\d+)/g.exec(catsizelink), urlpat = new RegExp(catsizelink), urlpat.test(currurl) && (onclass = " current"), i += '<a href="' + catsizelink + '" data-role="none"><img data-src="' + a[catsizeid[1]] + '"> <span>Shop ' + spklocaobj[spklocarr[t]][s][1] + "</span></a>";
+				i += "</div>", r += '<li><a href="javascript:;" class="spkLoc' + onclass + '" data-id="' + spklocid + '" data-role="none">' + spklocarr[t] + "</a></li>"
+			}
+			oldclass = "", document.getElementById("displayFitSpecs").innerHTML = r, sizeElem = document.createElement("div"), sizeElem.setAttribute("id", "sizesContainer"), sizeElem.innerHTML = i, document.getElementById("displayFitSpecs").parentNode.insertBefore(sizeElem, document.getElementById("displayFitSpecs").nextSibling), spklocs = document.getElementsByClassName("spkLoc");
+			for (var o = spklocs.length - 1; o >= 0; o--) spklocs[o].addEventListener("click", function () {
+				idtarget = this.getAttribute("data-id"), catimgs = document.getElementById(idtarget).getElementsByTagName("img");
+				for (var e = catimgs.length - 1; e >= 0; e--) datasrc = catimgs[e].getAttribute("data-src"), catimgs[e].setAttribute("src", datasrc);
+				"" !== oldclass && (document.getElementById(oldclass).style.display = "none", document.querySelector('a[data-id="' + oldclass + '"]').className = "spkLoc"), oldclass !== idtarget ? (this.className += " on", document.getElementById(idtarget).style.display = "block", oldclass = idtarget) : oldclass = ""
+			})
+		}
+	} else(void 0 !== spkoptions || null !== spkoptions) && ispsk && fitErrors.length > 0 ? afgFallback('<span class="fa fa-info-circle"></span> Your vehicle speaker sizes have not been researched. We recommend that you confirm your speaker sizes.') : fitErrors.length > 0 && !ispsk && (void 0 == spkoptions || null !== spkoptions) && /stereo/g.test(pageUrl) && afgFallback('<span class="fa fa-info-circle"></span> Your vehicle DIN size has not been researched. We recommend that you confirm the din size.')
 }
 
 function conflictingOffer() {
@@ -361,7 +469,9 @@ freeGood = !1, sonicZip = getCookie("sonic_zip"), year = getCookie("car_afg_year
 	var e = (jQuery(this).html() + " - click - " + jQuery(this).data("level")).replace(/(<([^>]+)>)/gi, "").replace(/&/g, "&");
 	ga("send", "event", "Global", "Mobile Navigation Categories", e)
 });
-var monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+var trafsource = organicTraffic(ref),
+	socialTraffic = socialTraffic(ref),
+	monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
 Date.prototype.addDays = function (e) {
 	var a = new Date(this.valueOf());
 	return a.setDate(a.getDate() + e), a
