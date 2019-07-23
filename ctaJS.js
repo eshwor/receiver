@@ -5,25 +5,6 @@
 })();
 
 
-
-function nth(e) {
-	if (e > 3 && 21 > e) return "th";
-	switch (e % 10) {
-		case 1:
-			return "st";
-		case 2:
-			return "nd";
-		case 3:
-			return "rd";
-		default:
-			return "th"
-	}
-}
-
-function CheckShipping(e) {
-	return ret = "", monthPat = new RegExp(/\w+(?=.?\s\d+)/g), dayPat = new RegExp(/\d+/g), monthval = monthPat.exec(e), dayval = dayPat.exec(e), dayval += nth(dayval[0]), [monthval[0].substring(0, 3) + '.', dayval]
-}
-
 function getEta(e) {
 	var a = fld.getUTCFullYear(),
 		t = fld.getUTCMonth(),
@@ -34,7 +15,7 @@ function getEta(e) {
 	0 > (s -= 4) && (i -= 1, s = 24 + s);
 	var n = new Date(a, t, i, 10),
 		c = new Date(a, t, i, s, o);
-	return 5 > e && (4 == r || 5 == r || 6 == r ? e += 2 : 0 == r && e++, c > n && e++), dat = new Date(c), etatimeStamp = dat.addDays(e), etaMonth = monthArr[etatimeStamp.getMonth()], etaDay = etatimeStamp.getDate(), etaMonth + " " + etaDay + nth(etaDay)
+	return 5 > e && (4 == r || 5 == r || 6 == r ? e += 2 : 0 == r && e++, c > n && e++), dat = new Date(c), etatimeStamp = dat.addDays(e), etaMonth = monthArr[etatimeStamp.getMonth()], etaDay = etatimeStamp.getDate(), etaMonth + " " + etaDay
 }
 
 function freeGoods() {
@@ -84,7 +65,7 @@ function initZipBtns() {
 			method: "GET",
 			url: "https://www.sonicelectronix.com/shipping/getCheapestUSShippingDetails?zip=" + zip + "&product_id=" + pId,
 			success: function (e) {
-				1 == e.success && (jQuery("#estLoader").remove(), jQuery(".estDelivery").removeClass("on").addClass("hasZip"), jQuery(".esttime").html('Est. Delivery ' + e.month.substring(0, 3) + ". " + e.date + nth(e.date)), jQuery('.estLabel').html('to ' + zip + ' <small class="changeZip">(change)</small>'), ga("send", "event", "Product", "Top Price Section", "Submit Zip Code"))
+				1 == e.success && (jQuery("#estLoader").remove(), jQuery(".estDelivery").removeClass("on").addClass("hasZip"), jQuery(".esttime").html('Est. Delivery ' + e.month.substring(0, 3) + ". " + e.date), jQuery('.estLabel').html('to ' + zip + ' <small class="changeZip">(change)</small>'), ga("send", "event", "Product", "Top Price Section", "Submit Zip Code"))
 			}
 		}) : (jQuery("input#zipInput").css("border-color", "#f44336"), jQuery("#estLoader").remove(), !1)
 	})
