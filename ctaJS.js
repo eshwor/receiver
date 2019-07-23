@@ -242,8 +242,4 @@ Date.prototype.addDays = function (e) {
 		})
 	}, 500)
 }), !0 !== bot && (pageInfo = getPageInfo(), false && (cartPromo), globalFancy(pageInfo))
-// Function to determine whether we are on the home page
-function isHomePage() {
-	var pageID = $('.ui-page-active').attr('id');
-	return pageID == 'public_home' || pageID == 'public_search';
-}
+
